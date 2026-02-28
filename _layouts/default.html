@@ -7,25 +7,38 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;500&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/site.css">
+  {% if page.home %}<link rel="stylesheet" href="/assets/css/home.css">{% endif %}
   {% seo %}
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
       <a class="site-title" href="/">{{ site.title }}</a>
-      <p class="site-tagline">{{ site.description }}</p>
+      <p class="site-tagline">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.description }}{% endif %}</p>
+      {% if page.hero_subtitle %}<p class="site-hero-subtitle">{{ page.hero_subtitle }}</p>{% endif %}
     </div>
   </header>
 
   <nav class="site-nav" aria-label="Main navigation">
     <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/philosophy/">Philosophy</a></li>
-      <li><a href="/teaching/">Teaching</a></li>
-      <li><a href="/podcast/">Podcast</a></li>
+      <li><a href="/insights/">Insights</a></li>
+      <li><a href="/lectures/">Lectures</a></li>
+      <li><a href="/scholarship/">Scholarship</a></li>
+      <li><a href="/contact/">Contact</a></li>
     </ul>
   </nav>
+
+  {% if page.home %}
+  <nav class="home-local-nav" aria-label="On-page sections">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#commentary">Commentary</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+    </ul>
+  </nav>
+  {% endif %}
 
   <main class="site-content" id="main-content">
     {{ content }}

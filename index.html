@@ -1,881 +1,312 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seth C. Oranburg | Law Professor & Scholar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;500&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --catholic-red: #B21F2C;
-            --catholic-blue: #0A3255;
-            --bright-red: #E82F35;
-            --bright-blue: #2459A9;
-            --light-red: #E96955;
-            --light-blue: #6DACDE;
-            --yellow: #FFD65C;
-            --light-blue-green: #B5E1E1;
-        }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        header {
-            background: linear-gradient(135deg, var(--catholic-blue) 0%, var(--bright-blue) 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        
-        h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-        
-        .tagline {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.5rem;
-            font-weight: 400;
-            opacity: 0.95;
-            margin-bottom: 2rem;
-        }
-        
-        nav {
-            background-color: var(--catholic-red);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1.5rem;
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.1rem;
-            transition: background-color 0.3s;
-            border-radius: 4px;
-        }
-        
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        section {
-            margin: 4rem 0;
-            scroll-margin-top: 60px;
-        }
-        
-        h2 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2.5rem;
-            color: var(--catholic-blue);
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid var(--catholic-red);
-            padding-bottom: 0.5rem;
-        }
-        
-        h3 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.8rem;
-            color: var(--bright-blue);
-            margin: 2rem 0 1rem 0;
-        }
-        
-        h4 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.3rem;
-            color: var(--catholic-red);
-            margin: 1.5rem 0 0.75rem 0;
-            font-weight: 500;
-        }
-        
-        .bio-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            align-items: start;
-            margin-top: 2rem;
-        }
-        
-        .bio-image {
-            width: 100%;
-            aspect-ratio: 3/4;
-            background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-blue-green) 100%);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        
-        .bio-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .positions {
-            background-color: #f8f9fa;
-            padding: 1.5rem;
-            border-left: 4px solid var(--catholic-red);
-            margin: 1.5rem 0;
-        }
-        
-        .positions h4 {
-            margin-top: 0;
-        }
-        
-        .positions ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .positions li {
-            padding: 0.5rem 0;
-            color: #555;
-        }
-        
-        .book-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .book-card {
-            background: white;
-            border: 2px solid var(--light-blue);
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .book-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .book-title {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--catholic-blue);
-            margin-bottom: 0.5rem;
-        }
-        
-        .book-publisher {
-            color: #666;
-            font-size: 0.95rem;
-        }
-        
-        .article-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .article-list li {
-            padding: 1rem;
-            margin: 1rem 0;
-            background-color: #f8f9fa;
-            border-left: 4px solid var(--bright-blue);
-            transition: background-color 0.3s, transform 0.3s;
-            cursor: pointer;
-            position: relative;
-        }
-        
-        .article-list li:hover {
-            background-color: #e9ecef;
-            transform: translateX(5px);
-        }
-        
-        .article-abstract {
-            display: none;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #ddd;
-            color: #555;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        
-        .article-list li.expanded .article-abstract {
-            display: block;
-        }
-        
-        .expand-indicator {
-            position: absolute;
-            right: 1rem;
-            top: 1rem;
-            color: var(--bright-blue);
-            font-weight: bold;
-        }
-        
-        .article-title {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--catholic-blue);
-        }
-        
-        .article-journal {
-            color: #666;
-            font-style: italic;
-            margin-top: 0.25rem;
-        }
-        
-        .commentary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .commentary-card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: border-color 0.3s;
-        }
-        
-        .commentary-card:hover {
-            border-color: var(--catholic-red);
-        }
-        
-        .commentary-title {
-            font-weight: 500;
-            color: var(--catholic-blue);
-            margin-bottom: 0.5rem;
-        }
-        
-        .commentary-source {
-            color: var(--catholic-red);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        
-        .commentary-date {
-            color: #666;
-            font-size: 0.85rem;
-        }
-        
-        .teaching-photo {
-            margin: 2rem 0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        
-        .teaching-photo img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .photo-caption {
-            text-align: center;
-            font-style: italic;
-            color: #666;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-        }
-        
-        .award-box {
-            background: linear-gradient(135deg, var(--yellow) 0%, #ffe89c 100%);
-            padding: 2rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        .award-photo {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        
-        .award-photo img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        
-        .award-box h4 {
-            color: var(--catholic-blue);
-            margin-top: 0;
-        }
-        
-        .award-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .award-list li {
-            padding: 0.5rem 0;
-            color: #333;
-        }
-        
-        .contact-grid {
-            max-width: 800px;
-            margin: 2rem auto;
-        }
-        
-        .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            border: 2px solid var(--light-blue);
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            font-weight: 500;
-            color: var(--catholic-blue);
-            margin-bottom: 0.5rem;
-            font-family: 'Oswald', sans-serif;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #ddd;
-            border-radius: 4px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--bright-blue);
-        }
-        
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            background: linear-gradient(135deg, var(--catholic-red) 0%, var(--bright-red) 100%);
-            color: white;
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 4px;
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            width: 100%;
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(178, 31, 44, 0.3);
-        }
-        
-        .contact-info-box {
-            background: linear-gradient(135deg, var(--catholic-blue) 0%, var(--bright-blue) 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 2rem;
-        }
-        
-        .contact-card {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .contact-card {
-            background: linear-gradient(135deg, var(--catholic-blue) 0%, var(--bright-blue) 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .contact-card h4 {
-            color: white;
-            margin-top: 0;
-        }
-        
-        .contact-card a {
-            color: var(--yellow);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .contact-card a:hover {
-            text-decoration: underline;
-        }
-        
-        footer {
-            background-color: var(--catholic-blue);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .tagline {
-                font-size: 1.2rem;
-            }
-            
-            .bio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .award-box {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-form {
-                padding: 1.5rem;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav a {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>SETH C. ORANBURG</h1>
-        <p class="tagline">Law Professor | Fintech Scholar | Public Commentator</p>
-        <p style="font-size: 0.95rem; opacity: 0.9;">Researching how technological disruption destabilizes moral norms and social trust,<br>and how legal design can restore integrity to markets and institutions</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#commentary">Commentary</a></li>
-            <li><a href="#teaching">Teaching</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/philosophy/">Philosophy</a></li>
-            <li><a href="/teaching/">Teaching Hub</a></li>
-            <li><a href="/podcast/">Podcast</a></li>
-        </ul>
-    </nav>
-    
-    <main>
-        <section id="about">
-            <h2>About</h2>
-            <div class="bio-grid">
-                <div class="bio-image">
-                    <img src="SCO%20-%20Purple%20Suit.jpg" alt="Professor Seth Oranburg">
-                </div>
-                <div>
-                    <p>Seth C. Oranburg is a Professor of Law at The University of New Hampshire Franklin Pierce School of Law. He studies how technological disruption destabilizes moral norms and social trust, and how legal design can restore integrity to markets and institutions.</p>
-                    
-                    <p>His work spans corporate and securities regulation, contracts, trade secrets, and digital assets (including cryptocurrency and decentralized autonomous organizations). Oranburg asks how law builds organizational trust—and how it responds when institutions fail.</p>
-                    
-                    <p>Before entering academia, Oranburg practiced venture finance and emerging-company law at Fenwick & West LLP in Silicon Valley, and antitrust law at Cadwalader, Wickersham & Taft in Washington, DC. He earned his J.D., with honors, from the University of Chicago Law School and his B.A., magna cum laude, from the University of Florida.</p>
-                    
-                    <div class="positions">
-                        <h4>Current Positions</h4>
-                        <ul>
-                            <li><strong>Professor of Law</strong>, University of New Hampshire Franklin Pierce School of Law (2024-2026)</li>
-                            <li><strong>Director</strong>, Program on Organizations, Business and Markets, NYU Law Classical Liberal Institute</li>
-                            <li><strong>Chair</strong>, Law Faculty Section, Academic Engagement Network</li>
-                            <li><strong>Fellow</strong>, Faculty of Law, Haifa Center for Law and Technology</li>
-                        </ul>
-                    </div>
-                </div>
+---
+layout: default
+title: Home
+home: true
+tagline: "Law Professor | Fintech Scholar | Public Commentator"
+hero_subtitle: "Researching how technological disruption destabilizes moral norms and social trust, and how legal design can restore integrity to markets and institutions"
+---
+
+<section id="about">
+    <h2>About</h2>
+    <div class="bio-grid">
+        <div class="bio-image">
+            <img src="/SCO%20-%20Purple%20Suit.jpg" alt="Professor Seth Oranburg">
+        </div>
+        <div>
+            <p>Seth C. Oranburg is a Professor of Law at The University of New Hampshire Franklin Pierce School of Law. He studies how technological disruption destabilizes moral norms and social trust, and how legal design can restore integrity to markets and institutions.</p>
+
+            <p>His work spans corporate and securities regulation, contracts, trade secrets, and digital assets (including cryptocurrency and decentralized autonomous organizations). Oranburg asks how law builds organizational trust—and how it responds when institutions fail.</p>
+
+            <p>Before entering academia, Oranburg practiced venture finance and emerging-company law at Fenwick &amp; West LLP in Silicon Valley, and antitrust law at Cadwalader, Wickersham &amp; Taft in Washington, DC. He earned his J.D., with honors, from the University of Chicago Law School and his B.A., magna cum laude, from the University of Florida.</p>
+
+            <div class="positions">
+                <h4>Current Positions</h4>
+                <ul>
+                    <li><strong>Professor of Law</strong>, University of New Hampshire Franklin Pierce School of Law (2024–2026)</li>
+                    <li><strong>Director</strong>, Program on Organizations, Business and Markets, NYU Law Classical Liberal Institute</li>
+                    <li><strong>Chair</strong>, Law Faculty Section, Academic Engagement Network</li>
+                    <li><strong>Fellow</strong>, Faculty of Law, Haifa Center for Law and Technology</li>
+                </ul>
             </div>
-        </section>
-        
-        <section id="research">
-            <h2>Research & Publications</h2>
-            
-            <h3>Books</h3>
-            <div class="book-grid">
-                <div class="book-card">
-                    <div class="book-title">Business Associations: Law of the Firm</div>
-                    <div class="book-publisher">Aspen Press (forthcoming 2027)</div>
-                </div>
-                
-                <a href="https://cap-press.com/books/isbn/9781531034375/Protecting-Trade-Secrets" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="book-card">
-                        <div class="book-title">Protecting Trade Secrets</div>
-                        <div class="book-publisher">Carolina Academic Press (forthcoming 2026)</div>
-                        <div style="color: var(--catholic-red); margin-top: 0.5rem; font-size: 0.9rem;">→ Pre-order now</div>
-                    </div>
-                </a>
-                
-                <a href="https://cap-press.com/books/isbn/9781531033804/Contract-Law-Second-Edition" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="book-card">
-                        <div class="book-title">Contract Law: Rules, Cases, and Problems</div>
-                        <div class="book-publisher">2d ed., Carolina Academic Press (2025)</div>
-                        <div style="color: var(--catholic-red); margin-top: 0.5rem; font-size: 0.9rem;">→ Purchase</div>
-                    </div>
-                </a>
-                
-                <a href="https://cap-press.com/books/isbn/9781531029586/Questions-and-Answers-Business-Associations-Third-Edition" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="book-card">
-                        <div class="book-title">Questions & Answers: Business Associations</div>
-                        <div class="book-publisher">Carolina Academic Press (2024)<br>with John T. Rice and Douglas M. Branson</div>
-                        <div style="color: var(--catholic-red); margin-top: 0.5rem; font-size: 0.9rem;">→ Purchase</div>
-                    </div>
-                </a>
-                
-                <a href="https://www.cambridge.org/core/books/history-of-financial-technology-and-regulation/6E37443D9BC795031FF1E5B11F7B4CB3" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="book-card">
-                        <div class="book-title">A History of Financial Technology: From American Incorporation to Corporations and Crowdfunding</div>
-                        <div class="book-publisher">Cambridge University Press (2022)</div>
-                        <div style="color: var(--catholic-red); margin-top: 0.5rem; font-size: 0.9rem;">→ Purchase</div>
-                    </div>
-                </a>
+        </div>
+    </div>
+</section>
+
+<section id="research">
+    <h2>Research &amp; Publications</h2>
+
+    <h3>Books</h3>
+    <div class="book-grid">
+        <div class="book-card">
+            <div class="book-title">Business Associations: Law of the Firm</div>
+            <div class="book-publisher">Aspen Press (forthcoming 2027)</div>
+        </div>
+
+        <a href="https://cap-press.com/books/isbn/9781531034375/Protecting-Trade-Secrets" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="book-card">
+                <div class="book-title">Protecting Trade Secrets</div>
+                <div class="book-publisher">Carolina Academic Press (forthcoming 2026)</div>
+                <div style="color: var(--catholic-red); margin-top: 0.5rem; font-size: 0.9rem;">→ Pre-order now</div>
             </div>
-            
-            <h3>Recent Articles</h3>
-            <p style="color: #666; font-style: italic; margin-bottom: 1rem;">Click any article to read the abstract</p>
-            <ul class="article-list">
-                <li onclick="toggleAbstract(this)">
-                    <span class="expand-indicator">+</span>
-                    <div class="article-title">The GENIUS Dilemma: Innovation Versus Antifraud in Stablecoin Regulation</div>
-                    <div class="article-journal">Stanford Journal of Blockchain Law & Policy (forthcoming 2026) | <a href="https://dx.doi.org/10.2139/ssrn.5366627" target="_blank" style="color: var(--catholic-red);">SSRN</a></div>
-                    <div class="article-abstract">
-                        This article examines the tension between promoting financial innovation and preventing fraud in stablecoin regulation, analyzing how the GENIUS Act attempts to balance these competing concerns in the emerging digital asset marketplace.
-                    </div>
-                </li>
-                
-                <li onclick="toggleAbstract(this)">
-                    <span class="expand-indicator">+</span>
-                    <div class="article-title">The CLARITY Act: How Congress Will Transform Digital Asset Markets</div>
-                    <div class="article-journal">Review of Banking and Financial Law – Boston University (forthcoming 2026) | <a href="https://dx.doi.org/10.2139/ssrn.5288934" target="_blank" style="color: var(--catholic-red);">SSRN</a></div>
-                    <div class="article-abstract">
-                        This article analyzes the proposed CLARITY Act and its potential to reshape digital asset regulation, examining how Congress's comprehensive framework would provide legal certainty for cryptocurrency markets while addressing key regulatory gaps.
-                    </div>
-                </li>
-                
-                <li onclick="toggleAbstract(this)">
-                    <span class="expand-indicator">+</span>
-                    <div class="article-title">Function over Form: A Statutory Framework for Digital Asset Regulation</div>
-                    <div class="article-journal">Louisiana State University Law Review (forthcoming 2026) | <a href="https://dx.doi.org/10.2139/ssrn.5254743" target="_blank" style="color: var(--catholic-red);">SSRN</a></div>
-                    <div class="article-abstract">
-                        This article proposes a functional approach to digital asset regulation that focuses on economic substance rather than technical form, offering a comprehensive statutory framework that adapts traditional securities law principles to blockchain-based assets.
-                    </div>
-                </li>
-                
-                <li onclick="toggleAbstract(this)">
-                    <span class="expand-indicator">+</span>
-                    <div class="article-title">Antitrust Law for Blockchain Technology</div>
-                    <div class="article-journal">49 Journal of Corporation Law 379 (2024) | <a href="https://jcl.law.uiowa.edu/articles/2024/01/antitrust-law-blockchain-technology" target="_blank" style="color: var(--catholic-red);">Full Text</a></div>
-                    <div class="article-abstract">
-                        This article explores how traditional antitrust principles apply to decentralized blockchain networks, examining market power, coordination, and competition issues unique to distributed ledger technologies and proposing adaptations to existing antitrust frameworks.
-                    </div>
-                </li>
-                
-                <li onclick="toggleAbstract(this)">
-                    <span class="expand-indicator">+</span>
-                    <div class="article-title">Unintended Consequences of Mandatory ESG Disclosures</div>
-                    <div class="article-journal">77 Business Lawyer 697 (2023) | <a href="https://www.americanbar.org/groups/business_law/resources/business-lawyer/2022-summer/the-unintended-consequences-of-mandatory-esg-disclosures/" target="_blank" style="color: var(--catholic-red);">Full Text</a></div>
-                    <div class="article-abstract">
-                        This article examines how mandatory environmental, social, and governance (ESG) disclosure requirements may produce unintended negative effects, including increased litigation risk, standardization that obscures material differences, and strategic gaming by corporations.
-                    </div>
-                </li>
-                
-                <li onclick="toggleAbstract(this)">
-                    <span class="expand-indicator">+</span>
-                    <div class="article-title">The Gig Economy, Smart Contracts, and the Disruption of Traditional Work</div>
-                    <div class="article-journal">50 Journal of Legal Studies 219 (2021, with Liya Palagashvili) | <a href="https://scholars.unh.edu/law_facpub/489/" target="_blank" style="color: var(--catholic-red);">Full Text</a></div>
-                    <div class="article-abstract">
-                        This article analyzes how blockchain-based smart contracts could transform gig economy labor relationships, examining the potential for self-executing agreements to reduce transaction costs while raising new questions about worker protections and platform accountability.
-                    </div>
-                </li>
-                
-                <li onclick="toggleAbstract(this)">
-                    <span class="expand-indicator">+</span>
-                    <div class="article-title">Hyperfunding: Regulating Financing Innovation</div>
-                    <div class="article-journal">89 Colorado Law Review 1033 (2018) | <a href="https://scholar.law.colorado.edu/lawreview/vol89/iss4/2/" target="_blank" style="color: var(--catholic-red);">Full Text</a></div>
-                    <div class="article-abstract">
-                        This article introduces the concept of "hyperfunding"—the intersection of crowdfunding and cryptocurrency—and proposes a regulatory framework that balances innovation with investor protection as entrepreneurs increasingly turn to token sales and decentralized fundraising mechanisms.
-                    </div>
-                </li>
+        </a>
+
+        <a href="https://cap-press.com/books/isbn/9781531033804/Contract-Law-Second-Edition" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="book-card">
+                <div class="book-title">Contract Law: Rules, Cases, and Problems</div>
+                <div class="book-publisher">2d ed., Carolina Academic Press (2025)</div>
+                <div style="color: var(--catholic-red); margin-top: 0.5rem; font-size: 0.9rem;">→ Purchase</div>
+            </div>
+        </a>
+
+        <a href="https://cap-press.com/books/isbn/9781531029586/Questions-and-Answers-Business-Associations-Third-Edition" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="book-card">
+                <div class="book-title">Questions &amp; Answers: Business Associations</div>
+                <div class="book-publisher">Carolina Academic Press (2024)<br>with John T. Rice and Douglas M. Branson</div>
+                <div style="color: var(--catholic-red); margin-top: 0.5rem; font-size: 0.9rem;">→ Purchase</div>
+            </div>
+        </a>
+
+        <a href="https://www.cambridge.org/core/books/history-of-financial-technology-and-regulation/6E37443D9BC795031FF1E5B11F7B4CB3" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="book-card">
+                <div class="book-title">A History of Financial Technology: From American Incorporation to Corporations and Crowdfunding</div>
+                <div class="book-publisher">Cambridge University Press (2022)</div>
+                <div style="color: var(--catholic-red); margin-top: 0.5rem; font-size: 0.9rem;">→ Purchase</div>
+            </div>
+        </a>
+    </div>
+
+    <h3>Recent Articles</h3>
+    <p style="color: #666; font-style: italic; margin-bottom: 1rem;">Click any article to read the abstract</p>
+    <ul class="article-list">
+        <li onclick="toggleAbstract(this)">
+            <span class="expand-indicator">+</span>
+            <div class="article-title">The GENIUS Dilemma: Innovation Versus Antifraud in Stablecoin Regulation</div>
+            <div class="article-journal">Stanford Journal of Blockchain Law &amp; Policy (forthcoming 2026) | <a href="https://dx.doi.org/10.2139/ssrn.5366627" target="_blank" style="color: var(--catholic-red);">SSRN</a></div>
+            <div class="article-abstract">
+                This article examines the tension between promoting financial innovation and preventing fraud in stablecoin regulation, analyzing how the GENIUS Act attempts to balance these competing concerns in the emerging digital asset marketplace.
+            </div>
+        </li>
+
+        <li onclick="toggleAbstract(this)">
+            <span class="expand-indicator">+</span>
+            <div class="article-title">The CLARITY Act: How Congress Will Transform Digital Asset Markets</div>
+            <div class="article-journal">Review of Banking and Financial Law – Boston University (forthcoming 2026) | <a href="https://dx.doi.org/10.2139/ssrn.5288934" target="_blank" style="color: var(--catholic-red);">SSRN</a></div>
+            <div class="article-abstract">
+                This article analyzes the proposed CLARITY Act and its potential to reshape digital asset regulation, examining how Congress's comprehensive framework would provide legal certainty for cryptocurrency markets while addressing key regulatory gaps.
+            </div>
+        </li>
+
+        <li onclick="toggleAbstract(this)">
+            <span class="expand-indicator">+</span>
+            <div class="article-title">Function over Form: A Statutory Framework for Digital Asset Regulation</div>
+            <div class="article-journal">Louisiana State University Law Review (forthcoming 2026) | <a href="https://dx.doi.org/10.2139/ssrn.5254743" target="_blank" style="color: var(--catholic-red);">SSRN</a></div>
+            <div class="article-abstract">
+                This article proposes a functional approach to digital asset regulation that focuses on economic substance rather than technical form, offering a comprehensive statutory framework that adapts traditional securities law principles to blockchain-based assets.
+            </div>
+        </li>
+
+        <li onclick="toggleAbstract(this)">
+            <span class="expand-indicator">+</span>
+            <div class="article-title">Antitrust Law for Blockchain Technology</div>
+            <div class="article-journal">49 Journal of Corporation Law 379 (2024) | <a href="https://jcl.law.uiowa.edu/articles/2024/01/antitrust-law-blockchain-technology" target="_blank" style="color: var(--catholic-red);">Full Text</a></div>
+            <div class="article-abstract">
+                This article explores how traditional antitrust principles apply to decentralized blockchain networks, examining market power, coordination, and competition issues unique to distributed ledger technologies and proposing adaptations to existing antitrust frameworks.
+            </div>
+        </li>
+
+        <li onclick="toggleAbstract(this)">
+            <span class="expand-indicator">+</span>
+            <div class="article-title">Unintended Consequences of Mandatory ESG Disclosures</div>
+            <div class="article-journal">77 Business Lawyer 697 (2023) | <a href="https://www.americanbar.org/groups/business_law/resources/business-lawyer/2022-summer/the-unintended-consequences-of-mandatory-esg-disclosures/" target="_blank" style="color: var(--catholic-red);">Full Text</a></div>
+            <div class="article-abstract">
+                This article examines how mandatory environmental, social, and governance (ESG) disclosure requirements may produce unintended negative effects, including increased litigation risk, standardization that obscures material differences, and strategic gaming by corporations.
+            </div>
+        </li>
+
+        <li onclick="toggleAbstract(this)">
+            <span class="expand-indicator">+</span>
+            <div class="article-title">The Gig Economy, Smart Contracts, and the Disruption of Traditional Work</div>
+            <div class="article-journal">50 Journal of Legal Studies 219 (2021, with Liya Palagashvili) | <a href="https://scholars.unh.edu/law_facpub/489/" target="_blank" style="color: var(--catholic-red);">Full Text</a></div>
+            <div class="article-abstract">
+                This article analyzes how blockchain-based smart contracts could transform gig economy labor relationships, examining the potential for self-executing agreements to reduce transaction costs while raising new questions about worker protections and platform accountability.
+            </div>
+        </li>
+
+        <li onclick="toggleAbstract(this)">
+            <span class="expand-indicator">+</span>
+            <div class="article-title">Hyperfunding: Regulating Financing Innovation</div>
+            <div class="article-journal">89 Colorado Law Review 1033 (2018) | <a href="https://scholar.law.colorado.edu/lawreview/vol89/iss4/2/" target="_blank" style="color: var(--catholic-red);">Full Text</a></div>
+            <div class="article-abstract">
+                This article introduces the concept of "hyperfunding"—the intersection of crowdfunding and cryptocurrency—and proposes a regulatory framework that balances innovation with investor protection as entrepreneurs increasingly turn to token sales and decentralized fundraising mechanisms.
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section id="commentary">
+    <h2>Public Commentary</h2>
+
+    <h3>Latest Op-Ed</h3>
+    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 5px solid var(--catholic-red);">
+        <h4 style="margin-top: 0; color: var(--catholic-blue); font-size: 1.5rem;">
+            <a href="https://www.thecentersquare.com/opinion/article_401b483d-71a6-4f10-98ba-603642c1d764.html" target="_blank" style="color: inherit; text-decoration: none;">
+                Big banks destroying digital dollars
+            </a>
+        </h4>
+        <p style="color: var(--catholic-red); font-weight: 500; margin: 0.5rem 0;">The Center Square, February 6, 2026</p>
+        <p style="color: #555; line-height: 1.6;">
+            Wall Street gridlocks the CLARITY Act to secure its monopoly, risks handing financial hegemony to China. On January 1, 2026, China made its digital yuan interest-bearing. Fourteen days later, the U.S. Senate postponed a critical vote on whether digital dollars can pay interest, too. This American hesitation feints at unilateral financial disarmament.
+        </p>
+        <a href="https://www.thecentersquare.com/opinion/article_401b483d-71a6-4f10-98ba-603642c1d764.html" target="_blank" style="color: var(--bright-red); font-weight: 500; text-decoration: none;">
+            Read full article →
+        </a>
+    </div>
+
+    <h3>Recent Op-Eds &amp; Blog Posts</h3>
+    <div class="commentary-grid">
+        <a href="https://perma.cc/5NQX-8JTF" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="commentary-card">
+                <div class="commentary-title">This Veteran's Day, Keep America's Builders Working</div>
+                <div class="commentary-source">The Center Square</div>
+                <div class="commentary-date">November 10, 2025</div>
+            </div>
+        </a>
+
+        <a href="https://perma.cc/U5S2-GL3Z" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="commentary-card">
+                <div class="commentary-title">Truman-Era Securities Ruling That Governs Crypto Needs an Update</div>
+                <div class="commentary-source">Bloomberg Law</div>
+                <div class="commentary-date">October 27, 2025</div>
+            </div>
+        </a>
+
+        <a href="https://perma.cc/2M2A-CQC3" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="commentary-card">
+                <div class="commentary-title">The Golden Rule of Democracy: No Murder</div>
+                <div class="commentary-source">Washington Examiner</div>
+                <div class="commentary-date">October 1, 2025</div>
+            </div>
+        </a>
+
+        <a href="https://perma.cc/R5QC-PSUG" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="commentary-card">
+                <div class="commentary-title">GENIUS Act Revives Civil War-Era Banking Problem for States</div>
+                <div class="commentary-source">Bloomberg Law</div>
+                <div class="commentary-date">August 18, 2025</div>
+            </div>
+        </a>
+
+        <a href="https://perma.cc/6B4K-JFHW" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="commentary-card">
+                <div class="commentary-title">Crypto Decentralization Era Takes Shape as CLARITY Act Advances</div>
+                <div class="commentary-source">Bloomberg Law</div>
+                <div class="commentary-date">July 21, 2025</div>
+            </div>
+        </a>
+
+        <a href="https://perma.cc/SU7S-FHHC" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="commentary-card">
+                <div class="commentary-title">CLARITY Now: Congress Must Bring Truth to Crypto Markets</div>
+                <div class="commentary-source">Daily Caller</div>
+                <div class="commentary-date">June 21, 2025</div>
+            </div>
+        </a>
+    </div>
+
+    <h3>Media Appearances</h3>
+    <ul class="article-list">
+        <li>
+            <a href="https://perma.cc/7K8U-JJSL" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="article-title">Challenges to Academic Freedom on College Campuses</div>
+                <div class="article-journal">The Legal Impact Podcast (March 29, 2025)</div>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://perma.cc/45CU-MXHC" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="article-title">Campus Protests and Free Speech</div>
+                <div class="article-journal">The Legal Impact Podcast (September 23, 2024)</div>
+            </a>
+        </li>
+
+        <li>
+            <div class="article-title">California Ballot Measure Keeps "Gig" in Gig Economy</div>
+            <div class="article-journal">Marketplace (November 20, 2020)</div>
+        </li>
+    </ul>
+</section>
+
+<section id="teaching">
+    <h2>Teaching</h2>
+
+    <div class="award-box">
+        <div class="award-photo">
+            <img src="/SCO%20-%20Teacher%20of%20the%20Year%20Award.jpeg" alt="Seth Oranburg with 2024 Teaching Excellence Award">
+        </div>
+        <div>
+            <h4>Teaching Honors</h4>
+            <ul class="award-list">
+                <li>🏆 <strong>University Excellence in Teaching Award</strong> (2024)</li>
+                <li>🏆 <strong>Center for Teaching Excellence Inclusive Teaching Award</strong> (2021)</li>
+                <li>📜 <strong>Presidential Scholarship Award</strong> (2019)</li>
             </ul>
-        </section>
-        
-        <section id="commentary">
-            <h2>Public Commentary</h2>
-            
-            <h3>Latest Op-Ed</h3>
-            <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 5px solid var(--catholic-red);">
-                <h4 style="margin-top: 0; color: var(--catholic-blue); font-size: 1.5rem;">
-                    <a href="https://www.thecentersquare.com/opinion/article_401b483d-71a6-4f10-98ba-603642c1d764.html" target="_blank" style="color: inherit; text-decoration: none;">
-                        Big banks destroying digital dollars
-                    </a>
-                </h4>
-                <p style="color: var(--catholic-red); font-weight: 500; margin: 0.5rem 0;">The Center Square, February 6, 2026</p>
-                <p style="color: #555; line-height: 1.6;">
-                    Wall Street gridlocks the CLARITY Act to secure its monopoly, risks handing financial hegemony to China. On January 1, 2026, China made its digital yuan interest-bearing. Fourteen days later, the U.S. Senate postponed a critical vote on whether digital dollars can pay interest, too. This American hesitation feints at unilateral financial disarmament.
-                </p>
-                <a href="https://www.thecentersquare.com/opinion/article_401b483d-71a6-4f10-98ba-603642c1d764.html" target="_blank" style="color: var(--bright-red); font-weight: 500; text-decoration: none;">
-                    Read full article →
-                </a>
-            </div>
-            
-            <h3>Recent Op-Eds & Blog Posts</h3>
-            <div class="commentary-grid">
-                <a href="https://perma.cc/5NQX-8JTF" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="commentary-card">
-                        <div class="commentary-title">This Veteran's Day, Keep America's Builders Working</div>
-                        <div class="commentary-source">The Center Square</div>
-                        <div class="commentary-date">November 10, 2025</div>
-                    </div>
-                </a>
-                
-                <a href="https://perma.cc/U5S2-GL3Z" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="commentary-card">
-                        <div class="commentary-title">Truman-Era Securities Ruling That Governs Crypto Needs an Update</div>
-                        <div class="commentary-source">Bloomberg Law</div>
-                        <div class="commentary-date">October 27, 2025</div>
-                    </div>
-                </a>
-                
-                <a href="https://perma.cc/2M2A-CQC3" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="commentary-card">
-                        <div class="commentary-title">The Golden Rule of Democracy: No Murder</div>
-                        <div class="commentary-source">Washington Examiner</div>
-                        <div class="commentary-date">October 1, 2025</div>
-                    </div>
-                </a>
-                
-                <a href="https://perma.cc/R5QC-PSUG" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="commentary-card">
-                        <div class="commentary-title">GENIUS Act Revives Civil War-Era Banking Problem for States</div>
-                        <div class="commentary-source">Bloomberg Law</div>
-                        <div class="commentary-date">August 18, 2025</div>
-                    </div>
-                </a>
-                
-                <a href="https://perma.cc/6B4K-JFHW" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="commentary-card">
-                        <div class="commentary-title">Crypto Decentralization Era Takes Shape as CLARITY Act Advances</div>
-                        <div class="commentary-source">Bloomberg Law</div>
-                        <div class="commentary-date">July 21, 2025</div>
-                    </div>
-                </a>
-                
-                <a href="https://perma.cc/SU7S-FHHC" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="commentary-card">
-                        <div class="commentary-title">CLARITY Now: Congress Must Bring Truth to Crypto Markets</div>
-                        <div class="commentary-source">Daily Caller</div>
-                        <div class="commentary-date">June 21, 2025</div>
-                    </div>
-                </a>
-            </div>
-            
-            <h3>Media Appearances</h3>
-            <ul class="article-list">
-                <li>
-                    <a href="https://perma.cc/7K8U-JJSL" target="_blank" style="text-decoration: none; color: inherit;">
-                        <div class="article-title">Challenges to Academic Freedom on College Campuses</div>
-                        <div class="article-journal">The Legal Impact Podcast (March 29, 2025)</div>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="https://perma.cc/45CU-MXHC" target="_blank" style="text-decoration: none; color: inherit;">
-                        <div class="article-title">Campus Protests and Free Speech</div>
-                        <div class="article-journal">The Legal Impact Podcast (September 23, 2024)</div>
-                    </a>
-                </li>
-                
-                <li>
-                    <div class="article-title">California Ballot Measure Keeps "Gig" in Gig Economy</div>
-                    <div class="article-journal">Marketplace (November 20, 2020)</div>
-                </li>
-            </ul>
-        </section>
-        
-        <section id="teaching">
-            <h2>Teaching</h2>
-            
-            <div class="award-box">
-                <div class="award-photo">
-                    <img src="SCO%20-%20Teacher%20of%20the%20Year%20Award.jpeg" alt="Seth Oranburg with 2024 Teaching Excellence Award">
-                </div>
-                <div>
-                    <h4>Teaching Honors</h4>
-                    <ul class="award-list">
-                        <li>🏆 <strong>University Excellence in Teaching Award</strong> (2024)</li>
-                        <li>🏆 <strong>Center for Teaching Excellence Inclusive Teaching Award</strong> (2021)</li>
-                        <li>📜 <strong>Presidential Scholarship Award</strong> (2019)</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <h3>Course Offerings</h3>
-            <ul class="article-list">
-                <li>
-                    <div class="article-title">Contract Law</div>
-                    <div class="article-journal">Foundational course exploring when and how law should enforce voluntary agreements</div>
-                </li>
-                
-                <li>
-                    <div class="article-title">Business Associations</div>
-                    <div class="article-journal">Corporate formation, governance, and liability for entities and managers</div>
-                </li>
-                
-                <li>
-                    <div class="article-title">Securities Regulation</div>
-                    <div class="article-journal">Federal securities laws and capital markets regulation</div>
-                </li>
-                
-                <li>
-                    <div class="article-title">Venture Capital Transactions</div>
-                    <div class="article-journal">Practical course on startup financing and deal structures</div>
-                </li>
-                
-                <li>
-                    <div class="article-title">Trade Secret Law</div>
-                    <div class="article-journal">Protection of confidential business information and competitive strategy</div>
-                </li>
-                
-                <li>
-                    <div class="article-title">Corporate Finance</div>
-                    <div class="article-journal">Financial tools and concepts for legal practice</div>
-                </li>
-            </ul>
-            
-            <div class="teaching-photo">
-                <img src="SCO%20-%20Engaging%20Students%20in%20Mock%20Courtroom.JPG" alt="Professor Oranburg teaching in a courtroom setting">
-                <p class="photo-caption">Teaching and engaging with students in a moot courtroom setting</p>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-grid">
-                <div class="contact-form">
-                    <h3 style="margin-top: 0; color: var(--catholic-blue); text-align: center;">Send Me a Message</h3>
-                    <form id="contactForm" onsubmit="return sendEmail(event)">
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject *</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
-                
-                <div class="contact-info-box">
-                    <h4 style="color: white; margin-top: 0;">Professional Information</h4>
-                    <p>Professor of Law</p>
-                    <p style="margin-top: 1rem;">Licensed to practice law in New Hampshire, California, and the District of Columbia</p>
-                    <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.9;">Use the form to send me a message</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>© 2026 Seth C. Oranburg. All rights reserved.</p>
-    </footer>
-    
-    <script>
-        function toggleAbstract(element) {
-            // Prevent link clicks inside from triggering
-            if (event.target.tagName === 'A') {
-                return;
-            }
-            
-            element.classList.toggle('expanded');
-            const indicator = element.querySelector('.expand-indicator');
-            indicator.textContent = element.classList.contains('expanded') ? '−' : '+';
-        }
-        
-        function sendEmail(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Create email with special tag for filtering
-            const emailSubject = '[Website Contact] ' + subject;
-            const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-            
-            // Open user's email client with pre-filled information
-            window.location.href = `mailto:sco259@nyu.edu?subject=${encodeURIComponent(emailSubject)}&body=${emailBody}`;
-            
-            // Show confirmation
-            alert('Your email client will open with the message. Please send it from there.');
-            
-            return false;
-        }
-    </script>
-</body>
-</html>
+        </div>
+    </div>
+
+    <h3>Course Offerings</h3>
+    <ul class="article-list">
+        <li>
+            <div class="article-title">Contract Law</div>
+            <div class="article-journal">Foundational course exploring when and how law should enforce voluntary agreements</div>
+        </li>
+
+        <li>
+            <div class="article-title">Business Associations</div>
+            <div class="article-journal">Corporate formation, governance, and liability for entities and managers</div>
+        </li>
+
+        <li>
+            <div class="article-title">Securities Regulation</div>
+            <div class="article-journal">Federal securities laws and capital markets regulation</div>
+        </li>
+
+        <li>
+            <div class="article-title">Venture Capital Transactions</div>
+            <div class="article-journal">Practical course on startup financing and deal structures</div>
+        </li>
+
+        <li>
+            <div class="article-title">Trade Secret Law</div>
+            <div class="article-journal">Protection of confidential business information and competitive strategy</div>
+        </li>
+
+        <li>
+            <div class="article-title">Corporate Finance</div>
+            <div class="article-journal">Financial tools and concepts for legal practice</div>
+        </li>
+    </ul>
+
+    <div class="teaching-photo">
+        <img src="/SCO%20-%20Engaging%20Students%20in%20Mock%20Courtroom.JPG" alt="Professor Oranburg teaching in a courtroom setting">
+        <p class="photo-caption">Teaching and engaging with students in a moot courtroom setting</p>
+    </div>
+
+    <p style="margin-top: 1.5rem;">For in-depth teaching resources and lecture notes, visit the <a href="/lectures/" style="color: var(--bright-blue);">Lectures hub</a>.</p>
+</section>
+
+<section id="contact-cta">
+    <div class="contact-cta">
+        <h3>Get in Touch</h3>
+        <p>Questions about research, speaking engagements, or consulting? I'd love to hear from you.</p>
+        <a href="/contact/" class="btn">Contact Me</a>
+    </div>
+</section>
+
+<script>
+function toggleAbstract(element) {
+    if (event.target.tagName === 'A') { return; }
+    element.classList.toggle('expanded');
+    var indicator = element.querySelector('.expand-indicator');
+    indicator.textContent = element.classList.contains('expanded') ? '−' : '+';
+}
+</script>

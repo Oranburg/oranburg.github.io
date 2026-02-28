@@ -34,17 +34,24 @@ body {
 .site-header {
   background: linear-gradient(135deg, var(--catholic-blue) 0%, var(--bright-blue) 100%);
   color: #fff;
-  padding: 2.5rem 1.5rem;
+  padding: 4rem 2rem;
   text-align: center;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .site-title {
   font-family: 'Oswald', sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
 }
 
 .site-title:hover {
@@ -53,9 +60,18 @@ body {
 
 .site-tagline {
   font-family: 'Crimson Text', serif;
-  font-size: 1.1rem;
-  opacity: 0.9;
-  margin: 0.4rem 0 0;
+  font-size: 1.4rem;
+  opacity: 0.95;
+  margin: 0.6rem 0 0;
+}
+
+.site-hero-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin: 0.75rem auto 0;
+  max-width: 680px;
+  line-height: 1.6;
 }
 
 /* ---------- Navigation ---------- */
@@ -91,6 +107,39 @@ body {
 
 .site-nav a:hover,
 .site-nav a[aria-current="page"] {
+  border-bottom-color: var(--yellow);
+}
+
+/* ---------- Home local anchor nav (distinct from global nav) ---------- */
+.home-local-nav {
+  background-color: var(--catholic-blue);
+  padding: 0.45rem 1rem;
+}
+
+.home-local-nav ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.home-local-nav a {
+  color: var(--light-blue-green);
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.home-local-nav a:hover {
+  color: #fff;
   border-bottom-color: var(--yellow);
 }
 
@@ -265,6 +314,212 @@ body {
   margin: 1.5rem 0;
 }
 
+/* ---------- Contact form ---------- */
+.contact-page-grid {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.contact-form-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 2px solid var(--light-blue);
+  margin-bottom: 2rem;
+}
+
+.contact-form-box h2 {
+  font-family: 'Oswald', sans-serif;
+  color: var(--catholic-blue);
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: var(--catholic-blue);
+  margin-bottom: 0.5rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--bright-blue);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, var(--catholic-red) 0%, var(--bright-red) 100%);
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(178, 31, 44, 0.3);
+}
+
+.contact-info-box {
+  background: linear-gradient(135deg, var(--catholic-blue) 0%, var(--bright-blue) 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contact-info-box h3 {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  margin: 0 0 1rem;
+}
+
+/* ---------- Lectures hub ---------- */
+.lectures-toc {
+  background: #f8f9fa;
+  border-left: 4px solid var(--catholic-red);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 6px 6px 0;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.lectures-toc h2 {
+  font-family: 'Oswald', sans-serif;
+  color: var(--catholic-blue);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 0.75rem;
+}
+
+.lectures-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.lectures-toc a {
+  color: var(--bright-blue);
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.95rem;
+}
+
+.lectures-toc a:hover {
+  color: var(--catholic-red);
+  text-decoration: underline;
+}
+
+.lectures-topic {
+  margin: 3rem 0;
+  scroll-margin-top: 120px;
+}
+
+.lectures-topic h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  color: var(--catholic-blue);
+  border-bottom: 3px solid var(--catholic-red);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.lectures-topic h3 {
+  font-family: 'Oswald', sans-serif;
+  color: var(--bright-blue);
+  font-size: 1.4rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.lectures-topic p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Responsive podcast embed (non-16:9; fixed height) */
+.podcast-embed {
+  margin: 1.5rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.podcast-embed iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+/* ---------- Scholarship placeholder ---------- */
+.scholarship-intro {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-left: 5px solid var(--catholic-red);
+  padding: 2rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 2rem;
+}
+
+.scholarship-intro h1 {
+  font-family: 'Oswald', sans-serif;
+  color: var(--catholic-blue);
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+}
+
+.scholarship-intro p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.15rem;
+  color: #444;
+  margin: 0;
+}
+
+.scholarship-coming-soon {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #777;
+}
+
+.scholarship-coming-soon p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.1rem;
+  max-width: 540px;
+  margin: 0 auto 1.5rem;
+}
+
+.scholarship-coming-soon a {
+  color: var(--bright-blue);
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--catholic-blue);
@@ -277,8 +532,14 @@ body {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 600px) {
+  .site-header {
+    padding: 2.5rem 1.25rem;
+  }
   .site-title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+  }
+  .site-tagline {
+    font-size: 1.1rem;
   }
   .hub-intro h1,
   .post-title {

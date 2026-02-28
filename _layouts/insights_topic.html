@@ -3,6 +3,10 @@ layout: default
 ---
 <div class="hub-intro">
   <h1>{{ page.title }}</h1>
+  {% assign bucket = site.data.insights_taxonomy.buckets | where: "url", page.bucket_url | first %}
+  {% if bucket and bucket.image %}
+  <img class="topic-bucket-hero" src="{{ bucket.image | replace: ' ', '%20' | relative_url }}" alt="{{ bucket.name }}">
+  {% endif %}
   {% if page.description %}<p>{{ page.description }}</p>{% endif %}
 </div>
 

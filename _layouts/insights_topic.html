@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<div class="hub-intro">
+  <h1>{{ page.title }}</h1>
+  {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+</div>
+
+<p class="topic-breadcrumb">
+  <a href="{{ '/insights/' | relative_url }}">Insights</a> &rsaquo;
+  <a href="{{ '/insights/library/' | relative_url }}">Library</a> &rsaquo;
+  {% if page.bucket_title %}<a href="{{ page.bucket_url | relative_url }}">{{ page.bucket_title }}</a> &rsaquo; {% endif %}
+  {{ page.title }}
+</p>
+
+{% assign topic_posts = site.posts | where_exp: "post", "post.tags contains page.topic_tag" %}
+{% if topic_posts.size > 0 %}
+<ul class="post-list">
+  {% for post in topic_posts %}
+  <li class="post-list-item">
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      {% if post.kind %}<span class="post-kind-badge">{{ post.kind }}</span>{% endif %}
+    </p>
+    {% if post.excerpt %}
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    {% endif %}
+    {% if post.tags.size > 0 %}
+    <details class="post-tags-detail">
+      <summary>Tags</summary>
+      <p>{% for tag in post.tags %}<span class="post-tag">{{ tag }}</span> {% endfor %}</p>
+    </details>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="no-posts-notice">No posts in this topic yet. Check back soon.</p>
+{% endif %}
+
+<p class="back-to-library"><a href="{{ '/insights/library/' | relative_url }}">&larr; Back to the Library</a></p>

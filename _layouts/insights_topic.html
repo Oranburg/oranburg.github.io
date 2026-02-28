@@ -23,8 +23,10 @@ layout: default
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
       {% if post.kind %}<span class="post-kind-badge">{{ post.kind }}</span>{% endif %}
     </p>
-    {% if post.excerpt %}
-    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    {% if post.deck %}
+    <p class="post-excerpt">{{ post.deck }}</p>
+    {% elsif post.excerpt %}
+    <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
     {% endif %}
     {% if post.tags.size > 0 %}
     <details class="post-tags-detail">

@@ -8,6 +8,10 @@ permalink: /insights/
   <p>Essays, reflections, and commentary on law, fintech, markets, and legal education.</p>
 </div>
 
+<div class="explore-library-callout">
+  <p>Looking for a topic? Browse the structured <a href="{{ '/insights/library/' | relative_url }}">Insights Library &rarr;</a></p>
+</div>
+
 <h2>Featured Guides &amp; Essays</h2>
 {% assign featured_posts = site.posts | where: "featured", true %}
 {% if featured_posts.size > 0 %}
@@ -27,39 +31,6 @@ permalink: /insights/
 {% else %}
 <p>No featured posts yet.</p>
 {% endif %}
-
-<h2>Browse by Topic</h2>
-{% assign all_tags = "" | split: "" %}
-{% for post in site.posts %}
-  {% for tag in post.tags %}
-    {% unless all_tags contains tag %}
-      {% assign all_tags = all_tags | push: tag %}
-    {% endunless %}
-  {% endfor %}
-{% endfor %}
-{% assign all_tags = all_tags | sort %}
-<nav class="tag-nav">
-  <ul>
-    {% for tag in all_tags %}
-    <li><a href="#{{ tag | slugify }}">{{ tag }}</a></li>
-    {% endfor %}
-  </ul>
-</nav>
-
-{% for tag in all_tags %}
-{% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
-<section id="{{ tag | slugify }}">
-  <h3>{{ tag }}</h3>
-  <ul class="post-list">
-    {% for post in tag_posts %}
-    <li class="post-list-item">
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <span class="post-meta"> &mdash; <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></span>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-{% endfor %}
 
 <h2>Latest Notes &amp; Commentary</h2>
 {% if site.posts.size > 0 %}

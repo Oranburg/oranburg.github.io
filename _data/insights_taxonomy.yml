@@ -2,12 +2,16 @@ buckets:
   - name: "Organizations, Business & Markets"
     url: /insights/library/organizations-business-markets/
     description: "Corporate law, capital markets, fintech, and market structure."
+    image: /SCO - Board Room.png
   - name: "Law & Entrepreneurship"
     url: /insights/library/law-entrepreneurship/
     description: "Startup law, legal innovation, regulation, and entrepreneurship."
+    image: /SCO - Entrepreneurship.png
   - name: "Pluralism & Civil Society"
     url: /insights/library/pluralism-civil-society/
     description: "Civil institutions, religious liberty, democracy, and nonprofit law."
+    image: /SCO - Campus.png
   - name: "Lawyers & Learning"
     url: /insights/library/lawyers-learning/
     description: "Legal education, pedagogy, bar preparation, and experiential learning."
+    image: /SCO - Lecturing.png

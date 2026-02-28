@@ -5,15 +5,67 @@ permalink: /lectures/
 ---
 <div class="hub-intro">
   <h1>Lectures</h1>
-  <p>Listen to lectures on law, entrepreneurship, fintech, and ideas that matter. Episodes are hosted on Podbean.</p>
+  <p>Listen to and watch lectures on law, entrepreneurship, fintech, and ideas that matter.</p>
 </div>
 
-<h2>Trade Secrets</h2>
-<p>A podcast series exploring the law of trade secrets, confidential business information, and competitive strategy.</p>
+<nav class="lectures-toc" aria-label="Topic directory">
+  <h2>Topics</h2>
+  <ul>
+    <li><a href="#trade-secrets">Trade Secrets</a></li>
+    <li><a href="#contracts">Contracts</a></li>
+    <li><a href="#antitrust">Antitrust</a></li>
+    <li><a href="#skills">Skills (Exam &amp; Writing)</a></li>
+  </ul>
+</nav>
 
-<div class="lectures-embed">
-<p><iframe style="border: none; min-width: min(100%, 430px); height: 315px;" title="Organized: The Business Law Breakdown" src="https://www.podbean.com/player-v2/?i=p6w7w-1260bda-pbblog-playlist&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Trebuchet%20MS&amp;skin=3267a3&amp;font-color=auto&amp;logo_link=episode_page&amp;order=serial&amp;limit=30&amp;filter=season&amp;season=12&amp;ss=4fd5d0446d6f9ac6ae4a92fa2eee7c9f&amp;btn-skin=666666&amp;size=315" width="100%" height="315" loading="lazy" allowfullscreen="allowfullscreen" data-name="pb-iframe-player"></iframe></p>
-</div>
+<section id="trade-secrets" class="lectures-topic">
+  <h2>Trade Secrets</h2>
+  <p>A podcast series exploring the law of trade secrets, confidential business information, and competitive strategy.</p>
+  <details class="embed">
+    <summary>Listen to the Trade Secrets Podcast Playlist</summary>
+    <div class="podcast-embed">
+      <iframe style="border: none; min-width: min(100%, 430px);" title="Organized: The Business Law Breakdown" src="https://www.podbean.com/player-v2/?i=p6w7w-1260bda-pbblog-playlist&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Trebuchet%20MS&amp;skin=3267a3&amp;font-color=auto&amp;logo_link=episode_page&amp;order=serial&amp;limit=30&amp;filter=season&amp;season=12&amp;ss=4fd5d0446d6f9ac6ae4a92fa2eee7c9f&amp;btn-skin=666666&amp;size=315" width="100%" height="315" loading="lazy" allowfullscreen="allowfullscreen" data-name="pb-iframe-player"></iframe>
+    </div>
+  </details>
+</section>
+
+<section id="contracts" class="lectures-topic">
+  <h2>Contracts</h2>
+  <p>Video lectures on contract law fundamentals, cases, and problems.</p>
+  <!-- TODO: Add Contracts YouTube playlist embed when available -->
+</section>
+
+<section id="antitrust" class="lectures-topic">
+  <h2>Antitrust</h2>
+  <p>Video lectures on antitrust law principles, cases, and policy.</p>
+  <details class="embed">
+    <summary>Watch the Antitrust Lecture Playlist</summary>
+    <div class="embed-container">
+      <iframe src="https://www.youtube.com/embed/videoseries?si=ScWaQpenNRzbIeOP&amp;list=PL2OBGU7rnJY4V9xMrSd5Vu05jwrlZXzN3" title="Antitrust Lecture Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </details>
+</section>
+
+<section id="skills" class="lectures-topic">
+  <h2>Skills (Exam &amp; Writing)</h2>
+  <p>Practical guides on legal analysis, IRAC, and bar exam preparation.</p>
+
+  <h3>IRAC</h3>
+  <details class="embed">
+    <summary>Watch: IRAC Explained</summary>
+    <div class="embed-container">
+      <iframe src="https://www.youtube.com/embed/0FkP0cYy5o8?si=_hBIcZImFMEq5nVm" title="IRAC Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </details>
+
+  <h3>Bar Exam Multiple Choice</h3>
+  <details class="embed">
+    <summary>Watch: Bar Exam MCQ Strategy</summary>
+    <div class="embed-container">
+      <iframe src="https://www.youtube.com/embed/WmWJ21tyG_g?si=WESxq9txYWTicK11" title="Bar Exam MCQ Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </details>
+</section>
 
 {% assign lecture_posts = site.posts | where_exp: "post", "post.categories contains 'lectures'" %}
 

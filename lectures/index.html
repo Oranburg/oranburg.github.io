@@ -1,0 +1,43 @@
+---
+layout: default
+title: Lectures
+permalink: /lectures/
+---
+<div class="hub-intro">
+  <h1>Lectures</h1>
+  <p>Explore lecture series on law, entrepreneurship, and ideas that matter. Episodes are hosted on Podbean—use the player below or subscribe wherever you get your podcasts.</p>
+</div>
+
+<h2>Trade Secrets</h2>
+<div class="lecture-embed">
+  <iframe
+    title="Trade Secrets lecture series on Podbean"
+    src="https://www.podbean.com/media/player/multi?playlist=https%3A%2F%2Fplaylist.podbean.com%2F16818853%2Fplaylist_multi.xml&vjs=1&size=315&skin=1&post_id=0&download=1"
+    scrolling="no"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
+
+{% assign podcast_posts = site.posts | where_exp: "post", "post.categories contains 'podcast'" %}
+{% assign lecture_posts_cat = site.posts | where_exp: "post", "post.categories contains 'lectures'" %}
+{% assign lecture_posts = podcast_posts | concat: lecture_posts_cat | uniq %}
+
+{% if lecture_posts.size > 0 %}
+<h2>Episode Notes</h2>
+<ul class="post-list">
+  {% for post in lecture_posts %}
+  <li class="post-list-item">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    </p>
+    {% if post.excerpt %}
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>Episode notes coming soon!</p>
+{% endif %}

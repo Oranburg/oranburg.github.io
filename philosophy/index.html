@@ -1,0 +1,29 @@
+---
+layout: default
+title: Philosophy
+permalink: /philosophy/
+---
+<div class="hub-intro">
+  <h1>Philosophy</h1>
+  <p>Explorations in legal philosophy, ethics, and the foundations of law. These posts examine the <em>why</em> behind legal rules—drawing on continental and analytic traditions to illuminate the principles that shape our legal order.</p>
+</div>
+
+{% assign philosophy_posts = site.posts | where_exp: "post", "post.categories contains 'philosophy'" %}
+
+{% if philosophy_posts.size > 0 %}
+<ul class="post-list">
+  {% for post in philosophy_posts %}
+  <li class="post-list-item">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    </p>
+    {% if post.excerpt %}
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No philosophy posts yet. Check back soon!</p>
+{% endif %}

@@ -1,0 +1,329 @@
+/* ==========================================================================
+   Home-page specific styles
+   Loaded only on the home page (page.home: true) via the default layout.
+   ========================================================================== */
+
+/* Override site-content width for the wider home layout */
+.site-content {
+  max-width: 1200px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+section {
+  margin: 4rem 0;
+  scroll-margin-top: 60px;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  color: var(--catholic-blue);
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--catholic-red);
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  color: var(--bright-blue);
+  margin: 2rem 0 1rem 0;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  color: var(--catholic-red);
+  margin: 1.5rem 0 0.75rem 0;
+  font-weight: 500;
+}
+
+/* ---------- About ---------- */
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.bio-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-blue-green) 100%);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.bio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.positions {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-left: 4px solid var(--catholic-red);
+  margin: 1.5rem 0;
+}
+
+.positions h4 {
+  margin-top: 0;
+}
+
+.positions ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.positions li {
+  padding: 0.5rem 0;
+  color: #555;
+}
+
+/* ---------- Research ---------- */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.book-card {
+  background: white;
+  border: 2px solid var(--light-blue);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.book-title {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--catholic-blue);
+  margin-bottom: 0.5rem;
+}
+
+.book-publisher {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.article-list {
+  list-style: none;
+  padding: 0;
+}
+
+.article-list li {
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #f8f9fa;
+  border-left: 4px solid var(--bright-blue);
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.article-list li:hover {
+  background-color: #e9ecef;
+  transform: translateX(5px);
+}
+
+.article-abstract {
+  display: none;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.article-list li.expanded .article-abstract {
+  display: block;
+}
+
+.expand-indicator {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: var(--bright-blue);
+  font-weight: bold;
+}
+
+.article-title {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--catholic-blue);
+}
+
+.article-journal {
+  color: #666;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+/* ---------- Commentary ---------- */
+.commentary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.commentary-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: border-color 0.3s;
+}
+
+.commentary-card:hover {
+  border-color: var(--catholic-red);
+}
+
+.commentary-title {
+  font-weight: 500;
+  color: var(--catholic-blue);
+  margin-bottom: 0.5rem;
+}
+
+.commentary-source {
+  color: var(--catholic-red);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.commentary-date {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* ---------- Teaching ---------- */
+.teaching-photo {
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.teaching-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.award-box {
+  background: linear-gradient(135deg, var(--yellow) 0%, #ffe89c 100%);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.award-photo {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.award-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.award-box h4 {
+  color: var(--catholic-blue);
+  margin-top: 0;
+}
+
+.award-list {
+  list-style: none;
+  padding: 0;
+}
+
+.award-list li {
+  padding: 0.5rem 0;
+  color: #333;
+}
+
+/* ---------- Contact call-to-action (replaces full contact section on home) ---------- */
+.contact-cta {
+  background: linear-gradient(135deg, var(--catholic-blue) 0%, var(--bright-blue) 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 640px;
+}
+
+.contact-cta h3 {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  margin: 0 0 1rem;
+}
+
+.contact-cta p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin: 0 0 1.75rem;
+}
+
+.contact-cta .btn {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--catholic-blue);
+  padding: 0.75rem 2.25rem;
+  border-radius: 4px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-cta .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .bio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .award-box {
+    grid-template-columns: 1fr;
+  }
+}

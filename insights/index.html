@@ -12,6 +12,20 @@ permalink: /insights/
   <p>Looking for a topic? Browse the structured <a href="{{ '/insights/library/' | relative_url }}">Insights Library &rarr;</a></p>
 </div>
 
+<section class="browse-area-strip" aria-label="Browse by Area">
+  <h2 class="browse-area-title">Browse by Area</h2>
+  <div class="browse-area-grid">
+    {% for bucket in site.data.insights_taxonomy.buckets %}
+    <a class="browse-area-item" href="{{ bucket.url | relative_url }}">
+      {% if bucket.image %}
+      <img class="browse-area-thumb" src="{{ bucket.image | replace: ' ', '%20' | relative_url }}" alt="{{ bucket.name }}">
+      {% endif %}
+      <span class="browse-area-name">{{ bucket.name }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
 <h2>Featured Guides &amp; Essays</h2>
 {% assign featured_posts = site.posts | where: "featured", true %}
 {% if featured_posts.size > 0 %}

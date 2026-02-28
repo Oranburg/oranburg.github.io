@@ -1,0 +1,33 @@
+---
+layout: default
+title: Insights
+permalink: /insights/
+---
+<div class="hub-intro">
+  <h1>Insights</h1>
+  <p>Essays, reflections, and commentary on law, fintech, markets, and legal education.</p>
+</div>
+
+{% if site.posts.size > 0 %}
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li class="post-list-item">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      {% if post.categories.size > 0 %}
+        &mdash;
+        {% for cat in post.categories %}
+          <a class="post-category" href="/{{ cat }}/">{{ cat | capitalize }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% endif %}
+    </p>
+    {% if post.excerpt %}
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No posts yet. Check back soon!</p>
+{% endif %}

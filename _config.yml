@@ -14,9 +14,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - "*.JPG"
-  - "*.jpeg"
-  - "*.jpg"
   - vendor/
 
 # Plugins supported by GitHub Pages

@@ -1,0 +1,13 @@
+buckets:
+  - name: "Organizations, Business & Markets"
+    url: /insights/library/organizations-business-markets/
+    description: "Corporate law, capital markets, fintech, and market structure."
+  - name: "Law & Entrepreneurship"
+    url: /insights/library/law-entrepreneurship/
+    description: "Startup law, legal innovation, regulation, and entrepreneurship."
+  - name: "Pluralism & Civil Society"
+    url: /insights/library/pluralism-civil-society/
+    description: "Civil institutions, religious liberty, democracy, and nonprofit law."
+  - name: "Lawyers & Learning"
+    url: /insights/library/lawyers-learning/
+    description: "Legal education, pedagogy, bar preparation, and experiential learning."

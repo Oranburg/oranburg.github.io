@@ -5,7 +5,7 @@ permalink: /insights/
 ---
 <div class="hub-intro">
   <h1>Insights</h1>
-  <p>Essays, reflections, and commentary on law, fintech, markets, and legal education.</p>
+  <p>Essays and guides on law, institutions, and the organizations—public and private—that govern modern life.</p>
 </div>
 
 <div class="explore-library-callout">
@@ -16,18 +16,40 @@ permalink: /insights/
 {% assign featured_posts = site.posts | where: "featured", true %}
 {% if featured_posts.size > 0 %}
 <ul class="post-list">
-  {% for post in featured_posts %}
+  {% for post in featured_posts limit: 6 %}
   <li class="post-list-item">
     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
     <p class="post-meta">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
     </p>
-    {% if post.excerpt %}
-    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    {% if post.deck %}
+    <p class="post-excerpt">{{ post.deck }}</p>
+    {% elsif post.excerpt %}
+    <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
     {% endif %}
   </li>
   {% endfor %}
 </ul>
+{% if featured_posts.size > 6 %}
+<details class="show-more">
+  <summary>Show more</summary>
+  <ul class="post-list">
+    {% for post in featured_posts offset: 6 %}
+    <li class="post-list-item">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      </p>
+      {% if post.deck %}
+      <p class="post-excerpt">{{ post.deck }}</p>
+      {% elsif post.excerpt %}
+      <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</details>
+{% endif %}
 {% else %}
 <p>No featured posts yet.</p>
 {% endif %}
@@ -35,19 +57,42 @@ permalink: /insights/
 <h2>Latest Notes &amp; Commentary</h2>
 {% if site.posts.size > 0 %}
 <ul class="post-list">
-  {% for post in site.posts %}
+  {% for post in site.posts limit: 10 %}
   <li class="post-list-item">
     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
     <p class="post-meta">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
       {% if post.kind %}<span class="post-kind-badge">{{ post.kind }}</span>{% endif %}
     </p>
-    {% if post.excerpt %}
-    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    {% if post.deck %}
+    <p class="post-excerpt">{{ post.deck }}</p>
+    {% elsif post.excerpt %}
+    <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
     {% endif %}
   </li>
   {% endfor %}
 </ul>
+{% if site.posts.size > 10 %}
+<details class="show-more">
+  <summary>Show more</summary>
+  <ul class="post-list">
+    {% for post in site.posts offset: 10 %}
+    <li class="post-list-item">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        {% if post.kind %}<span class="post-kind-badge">{{ post.kind }}</span>{% endif %}
+      </p>
+      {% if post.deck %}
+      <p class="post-excerpt">{{ post.deck }}</p>
+      {% elsif post.excerpt %}
+      <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</details>
+{% endif %}
 {% else %}
 <p>No posts yet. Check back soon!</p>
 {% endif %}

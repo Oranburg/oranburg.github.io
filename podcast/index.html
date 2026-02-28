@@ -5,31 +5,5 @@ permalink: /podcast/
 ---
 <div class="hub-intro">
   <h1>Podcast</h1>
-  <p>Listen to conversations about law, entrepreneurship, and ideas that matter. Episodes are hosted on Podbean—use the player below or subscribe wherever you get your podcasts.</p>
+  <p>This page has moved. Visit <a href="/lectures/">Lectures</a> for audio content.</p>
 </div>
-
-<div class="podcast-embed-placeholder" aria-label="Podcast embed coming soon">
-  <p><strong>Podbean player coming soon.</strong></p>
-  <p>In the meantime, visit <a href="https://www.podbean.com" rel="noopener">Podbean</a> to subscribe.</p>
-</div>
-
-{% assign podcast_posts = site.posts | where_exp: "post", "post.categories contains 'podcast'" %}
-
-{% if podcast_posts.size > 0 %}
-<h2>Episode Notes</h2>
-<ul class="post-list">
-  {% for post in podcast_posts %}
-  <li class="post-list-item">
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <p class="post-meta">
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-    </p>
-    {% if post.excerpt %}
-    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
-    {% endif %}
-  </li>
-  {% endfor %}
-</ul>
-{% else %}
-<p>Episode notes coming soon!</p>
-{% endif %}

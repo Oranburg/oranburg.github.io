@@ -1,4 +1,4 @@
-// Theme toggle
+// Theme toggle (matching equally-poor: sun/moon SVG icons in nav)
 function toggleTheme() {
   var current = document.documentElement.getAttribute('data-theme');
   var next = current === 'dark' ? 'light' : 'dark';
@@ -8,8 +8,10 @@ function toggleTheme() {
 }
 
 function updateToggleLabel(theme) {
-  var btn = document.querySelector('.theme-toggle');
-  if (btn) btn.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+  var btns = document.querySelectorAll('.theme-toggle');
+  btns.forEach(function (btn) {
+    btn.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
+  });
 }
 
 // Initialize toggle label on load

@@ -1,3 +1,23 @@
+// Theme toggle
+function toggleTheme() {
+  var current = document.documentElement.getAttribute('data-theme');
+  var next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  updateToggleLabel(next);
+}
+
+function updateToggleLabel(theme) {
+  var btn = document.querySelector('.theme-toggle');
+  if (btn) btn.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+}
+
+// Initialize toggle label on load
+(function () {
+  var theme = document.documentElement.getAttribute('data-theme') || 'dark';
+  updateToggleLabel(theme);
+})();
+
 // Highlight the current nav link based on the page path
 (function () {
   var path = window.location.pathname;
@@ -9,3 +29,20 @@
     }
   });
 })();
+
+// Article abstract expand/collapse
+function toggleAbstract(element) {
+  if (event && event.target.tagName === 'A') return;
+  element.classList.toggle('expanded');
+  var indicator = element.querySelector('.expand-indicator');
+  if (indicator) {
+    indicator.textContent = element.classList.contains('expanded') ? '\u2212' : '+';
+  }
+}
+
+function handleArticleKey(event, element) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    toggleAbstract(element);
+  }
+}

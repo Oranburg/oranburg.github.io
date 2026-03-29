@@ -39,9 +39,9 @@ permalink: /contact/
   <div class="contact-info-box">
     <h3>Professional Information</h3>
     <p>Professor of Law</p>
-    <p style="margin-top: 1rem;">University of New Hampshire Franklin Pierce School of Law</p>
-    <p style="margin-top: 1rem;">Licensed to practice law in New Hampshire, California, and the District of Columbia</p>
-    <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.9;">Use the form to send me a message — it will open your email client with the details pre-filled.</p>
+    <p>University of New Hampshire Franklin Pierce School of Law</p>
+    <p>Licensed to practice law in New Hampshire, California, and the District of Columbia</p>
+    <p class="contact-hint">Use the form to send me a message &mdash; it will open your email client with the details pre-filled.</p>
   </div>
 </div>
 
@@ -52,10 +52,9 @@ function sendEmail(event) {
   var email   = document.getElementById('email').value;
   var subject = document.getElementById('subject').value;
   var message = document.getElementById('message').value;
-  var emailSubject = '[Website Contact] ' + subject;
-  var emailBody = 'Name: ' + name + '%0D%0AEmail: ' + email + '%0D%0A%0D%0AMessage:%0D%0A' + message;
-  window.location.href = 'mailto:sco259@nyu.edu?subject=' + encodeURIComponent(emailSubject) + '&body=' + emailBody;
-  alert('Your email client will open with the message. Please send it from there.');
+  var emailSubject = encodeURIComponent('[Website Contact] ' + subject);
+  var emailBody = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+  window.location.href = 'mailto:sco259@nyu.edu?subject=' + emailSubject + '&body=' + emailBody;
   return false;
 }
 </script>

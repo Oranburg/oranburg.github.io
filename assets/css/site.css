@@ -164,9 +164,14 @@ p {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-xs) var(--space-lg);
   max-width: var(--max-width);
   justify-content: center;
+}
+
+.site-nav li:last-child {
+  margin-left: auto;
 }
 
 .site-nav a {

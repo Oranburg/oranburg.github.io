@@ -1,0 +1,81 @@
+---
+layout: default
+title: "Contract Law"
+permalink: /courses/contracts/
+---
+<div class="hub-intro">
+  <h1>Contract Law</h1>
+  <p class="literary">When and how should law enforce voluntary agreements? This course explores the rules, cases, and problems that define contractual obligation in American law.</p>
+</div>
+
+<h2>Casebook</h2>
+<p>The course uses Oranburg's casebook, now in its second edition.</p>
+
+{% assign book = site.data.scholarship.publications | where: "id", "contract-law-2d" | first %}
+{% if book %}
+<div class="book-grid">
+  {% if book.links.published %}
+  <a href="{{ book.links.published }}" target="_blank" class="book-card">
+    <div class="book-title">{{ book.title }}</div>
+    <div class="book-publisher">{{ book.journal }} ({{ book.year }})</div>
+    <span class="book-link">Purchase &rarr;</span>
+  </a>
+  {% endif %}
+</div>
+{% endif %}
+
+<h2>Podcast: Organized</h2>
+<p>A 25-episode audio series walking through contract law from formation to remedies, with real-world cases and practical analysis.</p>
+<details class="embed">
+  <summary>Listen to the Contract Law Podcast Series</summary>
+  <div class="podcast-embed">
+    <iframe style="border: none; min-width: min(100%, 430px);" title="Organized: The Business Law Breakdown — Contracts" src="https://www.podbean.com/player-v2/?i=p6w7w-1260bda-pbblog-playlist&share=1&download=1&rtl=0&fonts=Trebuchet%20MS&skin=3267a3&font-color=auto&logo_link=episode_page&order=serial&limit=30&filter=season&season=1&ss=4fd5d0446d6f9ac6ae4a92fa2eee7c9f&btn-skin=666666&size=315" width="100%" height="315" loading="lazy" allowfullscreen="allowfullscreen"></iframe>
+  </div>
+</details>
+
+<h2>Video Lectures</h2>
+<p>Supplemental video lectures covering contract law fundamentals.</p>
+
+{% assign contracts_pl = site.data.videos.teaching_series | where: "id", "PL2OBGU7rnJY7qB7SzYmNmv0-9TD0ilkft" | first %}
+{% if contracts_pl %}
+<details class="embed">
+  <summary>Watch: {{ contracts_pl.title }} ({{ contracts_pl.video_count }} videos)</summary>
+  <div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list={{ contracts_pl.id }}" title="{{ contracts_pl.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+  </div>
+</details>
+{% endif %}
+
+{% assign review_pl = site.data.videos.teaching_series | where: "id", "PL2OBGU7rnJY5VXFCMqVohHMUNhSlEvqJY" | first %}
+{% if review_pl %}
+<details class="embed">
+  <summary>Watch: {{ review_pl.title }} ({{ review_pl.video_count }} videos)</summary>
+  <div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list={{ review_pl.id }}" title="{{ review_pl.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+  </div>
+</details>
+{% endif %}
+
+{% assign remedies_pl = site.data.videos.teaching_series | where: "id", "PL2OBGU7rnJY5L10Gbr20au--Q9UKMJP7B" | first %}
+{% if remedies_pl %}
+<details class="embed">
+  <summary>Watch: {{ remedies_pl.title }} ({{ remedies_pl.video_count }} videos)</summary>
+  <div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list={{ remedies_pl.id }}" title="{{ remedies_pl.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+  </div>
+</details>
+{% endif %}
+
+<h2>Related Scholarship</h2>
+<p>Published articles and chapters related to contract law and commercial transactions.</p>
+<ul class="article-list">
+  {% assign contract_pubs = site.data.scholarship.publications | where: "cluster", "education" %}
+  {% for pub in contract_pubs %}
+    {% if pub.tags contains "contracts" or pub.tags contains "contract law" %}
+    <li class="article-item">
+      <div class="article-title">{{ pub.title }}</div>
+      <div class="article-journal">{{ pub.journal }}, {{ pub.year }}</div>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>

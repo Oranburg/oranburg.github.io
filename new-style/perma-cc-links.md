@@ -60,3 +60,21 @@ This should be added to:
 3. commentary.yml as type: testimony
 
 Total missing from commentary.yml: 15 (6 op-eds + 6 OBLB + 2 CLS Blue Sky + 1 testimony)
+
+## Bloomberg Law — 4 pieces (1 new, 3 already tracked but need original URLs)
+
+- "GENIUS Act Revives Civil War-Era Banking Problem for States" | Bloomberg Law | Aug 18, 2025
+  - Original: https://news.bloomberglaw.com/us-law-week/genius-act-revives-civil-war-era-banking-problem-for-states
+  - Perma: https://perma.cc/R5QC-PSUG
+- "Truman-Era Securities Ruling That Governs Crypto Needs an Update" | Bloomberg Law | Oct 27, 2025
+  - Original: https://news.bloomberglaw.com/legal-exchange-insights-and-commentary/truman-era-securities-ruling-that-governs-crypto-needs-an-update
+  - Perma: https://perma.cc/U5S2-GL3Z
+- "Crypto Decentralization Era Takes Shape as CLARITY Act Advances" | Bloomberg Law | Jul 21, 2025
+  - Original: https://news.bloomberglaw.com/us-law-week/crypto-decentralization-era-takes-shape-as-clarity-act-advances
+  - Perma: https://perma.cc/6B4K-JFHW
+- **NEW** "Delaware's Corporate Law Reform Would Fortify Stable Governance" | Bloomberg Law | date TBD
+  - Original: https://news.bloomberglaw.com/us-law-week/delawares-corporate-law-reform-would-fortify-stable-governance
+  - Perma: TBD
+
+Total missing from commentary.yml: 16 (prev 15 + 1 new Bloomberg)
+Also: update existing 3 Bloomberg entries in commentary.yml to include original URLs (currently only have perma links)

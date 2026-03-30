@@ -1,0 +1,1686 @@
+# ==========================================================================
+# YouTube Video Database — @BizLaw (UCdLxnSUlcEHtrdOt5R51Q1g)
+# Channel: Business Law Education | 372 videos | 35 playlists
+# Generated: 2026-03-30 via YouTube Data API v3
+#
+# TO ADD A NEW VIDEO: it appears automatically when uploaded to YouTube.
+# To feature a video on a specific page, add its ID to the relevant
+# section below or reference it in commentary.yml.
+# ==========================================================================
+
+channel:
+  id: UCdLxnSUlcEHtrdOt5R51Q1g
+  handle: '@BizLaw'
+  name: Business Law Education
+  url: https://www.youtube.com/@BizLaw
+  video_count: 372
+
+# --- PROFESSIONAL / SCHOLARLY SERIES ---
+# These map to scholarship clusters and are suitable for embedding on the website.
+
+series:
+  - id: PL2OBGU7rnJY79HMN2RkAlET8nIyLTfo6Y
+    title: "Moral Philosophy of Business Law"
+    cluster: civil-society
+    video_count: 14
+    feature_on_site: true
+    videos:
+      - id: -mtBq26R2M4
+        title: "Professor Lynne Kiesling Connects Business Ethics to Adaptive Regulation"
+        date: 2025-07-25
+        embed: https://www.youtube.com/embed/-mtBq26R2M4
+      - id: 39xL6CarN94
+        title: "Professor Torres Responds to Professor Oranburg's Paper on Legal Architecture of Collective Wisdom"
+        date: 2025-06-20
+        embed: https://www.youtube.com/embed/39xL6CarN94
+      - id: 9QK5BvQIwZ8
+        title: "Professor Jason Stansbury on Moral Philosophy of Business Law"
+        date: 2025-07-04
+        embed: https://www.youtube.com/embed/9QK5BvQIwZ8
+      - id: BeVrUdDW5Q4
+        title: "Professor Mihailis Diamantis on How to Publish in Journal of Morality & Markets"
+        date: 2025-08-08
+        embed: https://www.youtube.com/embed/BeVrUdDW5Q4
+      - id: EK2j9verfB0
+        title: "Professor Mihailis Diamantis on Why Law and Philosophy"
+        date: 2025-08-15
+        embed: https://www.youtube.com/embed/EK2j9verfB0
+      - id: WUjnSoLnu9w
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/WUjnSoLnu9w
+      - id: YkCpqf_aVTA
+        title: "Professor John Hasnas on Whether Moral Philosophy Has Anything to Do With Business Law"
+        date: 2025-05-30
+        embed: https://www.youtube.com/embed/YkCpqf_aVTA
+      - id: eKTEp45xGYk
+        title: "Professor Oranburg Briefly How Law Scaffolds Collective Wisdom"
+        date: 2025-06-06
+        embed: https://www.youtube.com/embed/eKTEp45xGYk
+      - id: frK2zWsKNlc
+        title: "Professor Robert Miller on Why a Moral Philosophy of Business Law"
+        date: 2025-08-01
+        embed: https://www.youtube.com/embed/frK2zWsKNlc
+      - id: hW-Lt2Nfs58
+        title: "Professor Eric Chaffee Discusses Business Law and Moral Luck"
+        date: 2025-07-18
+        embed: https://www.youtube.com/embed/hW-Lt2Nfs58
+      - id: jLp-Duw4b48
+        title: "Professor Miller Comments on Professor Oranburg's Paper on Legal Architecture for Collective Wisdom"
+        date: 2025-06-27
+        embed: https://www.youtube.com/embed/jLp-Duw4b48
+      - id: pauCU0pbRY8
+        title: "The Legal Architecture of Collective Wisdom (Phrónēsis)"
+        date: 2025-06-13
+        embed: https://www.youtube.com/embed/pauCU0pbRY8
+      - id: q2fO6_fyeFQ
+        title: "Professor Richard Epstein Explains Moral Philosophy, Consideration, and Regulatory Theory"
+        date: 2025-05-19
+        embed: https://www.youtube.com/embed/q2fO6_fyeFQ
+      - id: q5dbM0XqfbQ
+        title: "Introducing the Symposium on Moral Philosophy of Business Law"
+        date: 2025-05-23
+        embed: https://www.youtube.com/embed/q5dbM0XqfbQ
+
+  - id: PL2OBGU7rnJY6TV3pzykKziO_0NyJw3a5u
+    title: "Trade Secret Law"
+    cluster: ip
+    video_count: 0
+    feature_on_site: true
+    videos:
+
+  - id: PL2OBGU7rnJY6wW-y_1zrruypofyWci9pu
+    title: "Organized: The Business Law Breakdown"
+    cluster: governance
+    video_count: 102
+    feature_on_site: true
+    videos:
+      - id: e9dOh7jSvUY
+        title: "Shareholder Litigation – Episode 5: Pre-Trial Motions"
+        date: 2025-08-24
+        embed: https://www.youtube.com/embed/e9dOh7jSvUY
+      - id: qB_rCmpnAXc
+        title: "Shareholder Litigation – Episode 4: Discovering the Evidence"
+        date: 2025-08-23
+        embed: https://www.youtube.com/embed/qB_rCmpnAXc
+      - id: OowVwVQ_-ys
+        title: "Meyer v. Uber Techologies, Inc. - A Case About Modern Contract Formation"
+        date: 2025-08-22
+        embed: https://www.youtube.com/embed/OowVwVQ_-ys
+      - id: GJnjxhyYYP8
+        title: "Shareholder Litigation – Episode 3: Pleading the Case"
+        date: 2025-08-22
+        embed: https://www.youtube.com/embed/GJnjxhyYYP8
+      - id: TJOn-Yls6d8
+        title: "Shareholder Litigation – Episode 2: Direct versus Derivative"
+        date: 2025-08-21
+        embed: https://www.youtube.com/embed/TJOn-Yls6d8
+      - id: Fx3tdlickY8
+        title: "Shareholder Litigation – Episode 1: Why Business Owners Sue Themselves"
+        date: 2025-08-20
+        embed: https://www.youtube.com/embed/Fx3tdlickY8
+      - id: rWytPDKfIDk
+        title: "Corporate Goverance - Episode 9: Why Corporate Governance Matters"
+        date: 2025-08-19
+        embed: https://www.youtube.com/embed/rWytPDKfIDk
+      - id: _WT-eJ8rRGE
+        title: "Corporate Goverance - Episode 8: When Governance Fails"
+        date: 2025-08-18
+        embed: https://www.youtube.com/embed/_WT-eJ8rRGE
+      - id: pNAM1qlxSmw
+        title: "Corporate Goverance - Episode 7: Executive Compensation"
+        date: 2025-08-17
+        embed: https://www.youtube.com/embed/pNAM1qlxSmw
+      - id: HSQVcKq6bac
+        title: "Corporate Goverance - Episode 6: Boardroom Coups"
+        date: 2025-08-16
+        embed: https://www.youtube.com/embed/HSQVcKq6bac
+      - id: fOAQSmYtdy4
+        title: "What Is Contract Law? (Chapter 1 from Contract Law: Rules, Cases, and Problems)"
+        date: 2025-08-15
+        embed: https://www.youtube.com/embed/fOAQSmYtdy4
+      - id: 0_Sl3aveXJ4
+        title: "Corporate Goverance - Episode 5: Hostile Takeovers"
+        date: 2025-08-15
+        embed: https://www.youtube.com/embed/0_Sl3aveXJ4
+      - id: cbT1SpIxvMc
+        title: "Corporate Goverance - Episode 4: Shareholder Activism"
+        date: 2025-08-14
+        embed: https://www.youtube.com/embed/cbT1SpIxvMc
+      - id: ZMEZtkqoT7k
+        title: "Corporate Goverance - Episode 3: Fidicuary Duties"
+        date: 2025-08-13
+        embed: https://www.youtube.com/embed/ZMEZtkqoT7k
+      - id: kt288QqN0G4
+        title: "Corporate Goverance - Episode 2: The Board of Directors"
+        date: 2025-08-12
+        embed: https://www.youtube.com/embed/kt288QqN0G4
+      - id: 5KTSW5Z85_s
+        title: "Corporate Goverance - Episode 1: Who Decides What Corporations Do?"
+        date: 2025-08-11
+        embed: https://www.youtube.com/embed/5KTSW5Z85_s
+      - id: MO4qGtFQpPQ
+        title: "Organizational Choices – Episode 6: Special Form"
+        date: 2025-08-10
+        embed: https://www.youtube.com/embed/MO4qGtFQpPQ
+      - id: ic8bMn5x-XI
+        title: "Organizational Choices – Episode 5: Leveraging LLC Flexability"
+        date: 2025-08-09
+        embed: https://www.youtube.com/embed/ic8bMn5x-XI
+      - id: OckMa0Qll-Q
+        title: "Organizational Choices – Episode 4: Selecting the Corporate Form"
+        date: 2025-08-08
+        embed: https://www.youtube.com/embed/OckMa0Qll-Q
+      - id: BzPhkh07lrc
+        title: "Organizational Choices – Episode 3: Utilizing Limited Partnerships"
+        date: 2025-08-07
+        embed: https://www.youtube.com/embed/BzPhkh07lrc
+      - id: 8RaZkBAcO_I
+        title: "Organizational Choices – Episode 2: Using a General Partnership"
+        date: 2025-08-06
+        embed: https://www.youtube.com/embed/8RaZkBAcO_I
+      - id: OMI4-bzeHrM
+        title: "Organizational Choices – Episode 1: A Framework for Analyzing Entity Selection"
+        date: 2025-08-04
+        embed: https://www.youtube.com/embed/OMI4-bzeHrM
+      - id: 3fdXoU5YKng
+        title: "Mastering LLCs – Episode 10: Business Entity Flexibility and Choice"
+        date: 2025-08-03
+        embed: https://www.youtube.com/embed/3fdXoU5YKng
+      - id: dYESLuWFKyo
+        title: "Mastering LLCs – Episode 9: The Future of LLCs"
+        date: 2025-08-02
+        embed: https://www.youtube.com/embed/dYESLuWFKyo
+      - id: 840BCpImNjk
+        title: "Mastering LLCs – Episode 8: LLC Mergers and Conversions - Episode 8: LLC Mergers and Conversions"
+        date: 2025-08-01
+        embed: https://www.youtube.com/embed/840BCpImNjk
+      - id: 3M1vhw07JHA
+        title: "Mastering LLCs – Episode 7: Disassociation, Dissolution, and Deadlock in LLCs"
+        date: 2025-07-31
+        embed: https://www.youtube.com/embed/3M1vhw07JHA
+      - id: k75EPpY-5Io
+        title: "Mastering LLCs – Episode 6: Veil Piercing in LLCs"
+        date: 2025-07-30
+        embed: https://www.youtube.com/embed/k75EPpY-5Io
+      - id: 9S5UCCDNkQU
+        title: "Mastering LLCs – Episode 5: Fiduciary Duties in LLCs"
+        date: 2025-07-29
+        embed: https://www.youtube.com/embed/9S5UCCDNkQU
+      - id: OJ7cOguu2ls
+        title: "Mastering LLCs – Episode 4: Operating Agreement Design"
+        date: 2025-07-28
+        embed: https://www.youtube.com/embed/OJ7cOguu2ls
+      - id: 2xog5SKSI68
+        title: "Mastering LLCs – Episode 3: Member- versus Manager-Managed LLCs"
+        date: 2025-07-27
+        embed: https://www.youtube.com/embed/2xog5SKSI68
+      - id: Wn7FVaKALj0
+        title: "Mastering LLCs – Episode 2: LLC Formation and Operating Agreement"
+        date: 2025-07-26
+        embed: https://www.youtube.com/embed/Wn7FVaKALj0
+      - id: 3TTGqb5oEhk
+        title: "Mastering LLCs – Episode 1: What Are Limited Liability Companies?"
+        date: 2025-07-25
+        embed: https://www.youtube.com/embed/3TTGqb5oEhk
+      - id: o88uAtHFz2g
+        title: "Corporations – Episode 8: The Future of Corporations"
+        date: 2025-07-24
+        embed: https://www.youtube.com/embed/o88uAtHFz2g
+      - id: NTzFFTOgd1A
+        title: "Corporations – Episode 7: Corporate Separation of Ownership and Control"
+        date: 2025-07-23
+        embed: https://www.youtube.com/embed/NTzFFTOgd1A
+      - id: 3twi861cA-E
+        title: "Corporations – Episode 5: Shareholder Limited Liability and Piercing the Corporate Veil"
+        date: 2025-07-21
+        embed: https://www.youtube.com/embed/3twi861cA-E
+      - id: _QsnuJO8VZ4
+        title: "Corporations – Episode 4: Corporate Governance Basics"
+        date: 2025-07-20
+        embed: https://www.youtube.com/embed/_QsnuJO8VZ4
+      - id: TqZHiatOMdw
+        title: "Corporations – Episode 3: Corporate Finance"
+        date: 2025-07-19
+        embed: https://www.youtube.com/embed/TqZHiatOMdw
+      - id: 9mh-pZTNNwI
+        title: "Corporations – Episode 2: Corporate Charter and Bylaws"
+        date: 2025-07-18
+        embed: https://www.youtube.com/embed/9mh-pZTNNwI
+      - id: 6Gec96coWjs
+        title: "Corporations – Episode 1: Why Corporations Exist"
+        date: 2025-07-17
+        embed: https://www.youtube.com/embed/6Gec96coWjs
+      - id: qZyHo8lIk00
+        title: "Unwrapping Warranties: Promises and Protections in Contract Law"
+        date: 2025-07-14
+        embed: https://www.youtube.com/embed/qZyHo8lIk00
+      - id: TfpZ_4QUdP0
+        title: "Episode 26: Limitations on Money Damages"
+        date: 2025-06-25
+        embed: https://www.youtube.com/embed/TfpZ_4QUdP0
+      - id: dky_aN-ff9o
+        title: "Partnerships – Episode 7: Partnership Taxation"
+        date: 2025-06-24
+        embed: https://www.youtube.com/embed/dky_aN-ff9o
+      - id: ETVTzDs6mRY
+        title: "Partnerships – Episode 6: Disassociation and Dissolution"
+        date: 2025-06-24
+        embed: https://www.youtube.com/embed/ETVTzDs6mRY
+      - id: KwK2dcR4IJU
+        title: "Partnerships – Episode 5: Fiduciary Duties"
+        date: 2025-06-24
+        embed: https://www.youtube.com/embed/KwK2dcR4IJU
+      - id: njadf46dOSg
+        title: "Partnerships – Episode 4: Entity or Aggregate?"
+        date: 2025-06-24
+        embed: https://www.youtube.com/embed/njadf46dOSg
+      - id: BLnZxydEE6o
+        title: "Partnerships – Episode 3: Partners’ Agency and Authority"
+        date: 2025-06-24
+        embed: https://www.youtube.com/embed/BLnZxydEE6o
+      - id: qRJpd1AtXuU
+        title: "Partnerships – Episode 2: Default Governance (Flat and Equal)"
+        date: 2025-06-18
+        embed: https://www.youtube.com/embed/qRJpd1AtXuU
+      - id: gkt20SU76gs
+        title: "Partnerships – Episode 1: What Are Partnerships?"
+        date: 2025-06-11
+        embed: https://www.youtube.com/embed/gkt20SU76gs
+      - id: D_wdkRCQHtY
+        title: "Economic Analysis of Agency Law – Episode 10: The Big Picture (Synthesizing Delegation and Trust)"
+        date: 2025-06-04
+        embed: https://www.youtube.com/embed/D_wdkRCQHtY
+      - id: l_RhakSGu6k
+        title: "Economic Analysis of Agency Law – Episode 9: Managing Conflict"
+        date: 2025-05-28
+        embed: https://www.youtube.com/embed/l_RhakSGu6k
+      - id: xjBm7UInsC8
+        title: "What Is Crypto, Anyway? A Functional Framework for Digital Asset Regulation"
+        date: 2025-05-26
+        embed: https://www.youtube.com/embed/xjBm7UInsC8
+      - id: a2dE8s0Wovo
+        title: "Economic Analysis of Agency Law – Episode 8: Entrepreneurial Agency (Navigating Risk and Uncertai..."
+        date: 2025-05-21
+        embed: https://www.youtube.com/embed/a2dE8s0Wovo
+      - id: Evi0zJzak54
+        title: "Economic Analysis of Agency Law – Episode 7: Aligning Incentives"
+        date: 2025-05-14
+        embed: https://www.youtube.com/embed/Evi0zJzak54
+      - id: xohDrIJsn1o
+        title: "Economic Analysis of Agency Law – Episode 6: Trust & Reputation"
+        date: 2025-05-07
+        embed: https://www.youtube.com/embed/xohDrIJsn1o
+      - id: h2YK-wQb8JQ
+        title: "Economic Analysis of Agency Law – Episode 5: When Trust Breaks  Down"
+        date: 2025-04-30
+        embed: https://www.youtube.com/embed/h2YK-wQb8JQ
+      - id: cZYU0d_BLMc
+        title: "Economic Analysis of Agency Law – Episode 4: Rules Scaffolding Trust"
+        date: 2025-04-23
+        embed: https://www.youtube.com/embed/cZYU0d_BLMc
+      - id: HHs_pnd7DAs
+        title: "Economic Analysis of Agency Law – Episode 3: Costs and Benefits of Agency"
+        date: 2025-04-16
+        embed: https://www.youtube.com/embed/HHs_pnd7DAs
+      - id: orHBvbmrO60
+        title: "Economic Analysis of Agency Law – Episode 2: How to Bond an Agent"
+        date: 2025-04-09
+        embed: https://www.youtube.com/embed/orHBvbmrO60
+      - id: TE5aIkx8q0E
+        title: "Economic Analysis of Agency Law – Episode 1: Welcome to Business Law & Economics with Dr. Seuss"
+        date: 2025-04-02
+        embed: https://www.youtube.com/embed/TE5aIkx8q0E
+      - id: qPQnaJ5Vrtc
+        title: "Agency Law – Episode 7: Review of Agency"
+        date: 2025-03-26
+        embed: https://www.youtube.com/embed/qPQnaJ5Vrtc
+      - id: pVesrxIPYck
+        title: "Agency Law – Episode 6: Agency Estoppel and Ratification"
+        date: 2025-03-19
+        embed: https://www.youtube.com/embed/pVesrxIPYck
+      - id: -qhkF6OiUeQ
+        title: "Agency Law – Episode 5: Notice of Termination of Agency"
+        date: 2025-03-12
+        embed: https://www.youtube.com/embed/-qhkF6OiUeQ
+      - id: qMT0GL9u3Xw
+        title: "Agency Law – Episode 4: Termination of Authority"
+        date: 2025-03-05
+        embed: https://www.youtube.com/embed/qMT0GL9u3Xw
+      - id: 5Da9tLsWeGk
+        title: "Agency Law – Episode 3: Fiduciary Duties in Agency Law"
+        date: 2025-02-26
+        embed: https://www.youtube.com/embed/5Da9tLsWeGk
+      - id: cBcpVN6ONB8
+        title: "Agency Law – Episode 2: Authority of Agency"
+        date: 2025-02-19
+        embed: https://www.youtube.com/embed/cBcpVN6ONB8
+      - id: 9jIrBgm8YDY
+        title: "Agency Law – Episode 1: Introduction to Agency Law"
+        date: 2025-02-12
+        embed: https://www.youtube.com/embed/9jIrBgm8YDY
+      - id: 3vTCxFqnTAs
+        title: "Tornetta v. Musk and the Future of Corporate Law (featuring Professors Bainbridge and Alon-Beck)"
+        date: 2024-12-19
+        embed: https://www.youtube.com/embed/3vTCxFqnTAs
+      - id: zZUqJdV6jWo
+        title: "Mission Drift: Can OpenAI Ditch Its Non-Profit Status?"
+        date: 2024-12-17
+        embed: https://www.youtube.com/embed/zZUqJdV6jWo
+      - id: sZ6Zxd0EB0Y
+        title: "Episode 28: Three’s Company – When Contracts Benefit Third Parties"
+        date: 2024-12-08
+        embed: https://www.youtube.com/embed/sZ6Zxd0EB0Y
+      - id: TFpuAQJY9oY
+        title: "Tornetta v. Musk – Boardroom Battles, Delaware Courts, and the Future of Corporate Governance"
+        date: 2024-12-06
+        embed: https://www.youtube.com/embed/TFpuAQJY9oY
+      - id: yeMecz49oHs
+        title: "Episode 27: Imperfect Tender – UCC Warranties"
+        date: 2024-12-06
+        embed: https://www.youtube.com/embed/yeMecz49oHs
+      - id: 224OlhPZmuU
+        title: "Episode 26: When Goods Go Bad – UCC Damages"
+        date: 2024-12-04
+        embed: https://www.youtube.com/embed/224OlhPZmuU
+      - id: 7NQ2UL0wfZo
+        title: "Bonus Episode – Mastering MBE Strategies"
+        date: 2024-12-04
+        embed: https://www.youtube.com/embed/7NQ2UL0wfZo
+      - id: DFMjHPaeFlw
+        title: "Episode 25: Equity’s Enforcers – When Money Can’t Buy Justice"
+        date: 2024-12-04
+        embed: https://www.youtube.com/embed/DFMjHPaeFlw
+      - id: vgXfYozf65w
+        title: "Episode 24: Greater Expectations – Alternative Money Damages"
+        date: 2024-12-04
+        embed: https://www.youtube.com/embed/vgXfYozf65w
+      - id: 0ETdGxjCBaQ
+        title: "Episode 23: Show Me the Money – Expectation Damages"
+        date: 2024-11-27
+        embed: https://www.youtube.com/embed/0ETdGxjCBaQ
+      - id: 1q22cHPGLS8
+        title: "Episode 22: The More Things Change – Modifying Contracts by Mutual Assent"
+        date: 2024-11-26
+        embed: https://www.youtube.com/embed/1q22cHPGLS8
+      - id: VT_7OeUF160
+        title: "Episode 21: Excuse Me - When Non-Performance Is Judicially Justified"
+        date: 2024-11-24
+        embed: https://www.youtube.com/embed/VT_7OeUF160
+      - id: DI4ebOpXZ44
+        title: "Episode 20: Here comes Trouble – Anticipatory Repudiation"
+        date: 2024-11-24
+        embed: https://www.youtube.com/embed/DI4ebOpXZ44
+      - id: LTcJbe1Owac
+        title: "Are University Speech Codes Too Restrictive? A Conversation about Free & Higher Education"
+        date: 2024-11-23
+        embed: https://www.youtube.com/embed/LTcJbe1Owac
+      - id: z7-4fZd9XXI
+        title: "Episode 19: Performance in Contracts – When Is “Good Enough” Really Enough?"
+        date: 2024-11-08
+        embed: https://www.youtube.com/embed/z7-4fZd9XXI
+      - id: Atfiri9IqW4
+        title: "Episode 14: Words in Context – How Courts Interpret Contracts"
+        date: 2024-11-07
+        embed: https://www.youtube.com/embed/Atfiri9IqW4
+      - id: hgwBqy3J31o
+        title: "Episode 18: Conditions in Contracts – When Obligations Depend on Events"
+        date: 2024-11-07
+        embed: https://www.youtube.com/embed/hgwBqy3J31o
+      - id: 9waQrSJdGCc
+        title: "Episode 17: What’s the Deal? The Parol Evidence Rule"
+        date: 2024-11-07
+        embed: https://www.youtube.com/embed/9waQrSJdGCc
+      - id: DjhKpYebMac
+        title: "Episode 16: Words and Deeds – How Parties’ Actions Impacts Contract Interpretation"
+        date: 2024-11-07
+        embed: https://www.youtube.com/embed/DjhKpYebMac
+      - id: DcCq9OBnAdw
+        title: "Celebrating First Generation Lawyers: Voices in Law (November 2024)"
+        date: 2024-11-07
+        embed: https://www.youtube.com/embed/DcCq9OBnAdw
+      - id: lgo74bGlHZE
+        title: "Episode 15: Reading Between the Lines – How Courts Decode Contract Terms"
+        date: 2024-10-21
+        embed: https://www.youtube.com/embed/lgo74bGlHZE
+      - id: KYDEkaWAmQ4
+        title: "Episode 13: Secrets and Lies – When Fraud Invalidates Contracts"
+        date: 2024-10-07
+        embed: https://www.youtube.com/embed/KYDEkaWAmQ4
+      - id: WmbsP0PLrNY
+        title: "Episode 12: Oops! When Mistakes Break Contracts"
+        date: 2024-10-07
+        embed: https://www.youtube.com/embed/WmbsP0PLrNY
+      - id: kQKRUThM4Ys
+        title: "Celebrating Hispanic Lawyering: Insights and Experiences (October 2024)"
+        date: 2024-10-06
+        embed: https://www.youtube.com/embed/kQKRUThM4Ys
+      - id: YyeFN1fMgCU
+        title: "Episode 11: Sign Here – The Power of the Statute of Frauds"
+        date: 2024-10-06
+        embed: https://www.youtube.com/embed/YyeFN1fMgCU
+      - id: x-SGU6VnHH4
+        title: "Episode 10: Payback Time – Promissory Restitution (Mastering Contracts Podcast)"
+        date: 2024-10-01
+        embed: https://www.youtube.com/embed/x-SGU6VnHH4
+      - id: WMqcUd7gWsE
+        title: "Episode 09: When a Promise is Enough – Promissory Estoppel"
+        date: 2024-10-01
+        embed: https://www.youtube.com/embed/WMqcUd7gWsE
+      - id: SXu5pmCrHMk
+        title: "Episode 08: Consideration – The Price of Commitment"
+        date: 2024-09-28
+        embed: https://www.youtube.com/embed/SXu5pmCrHMk
+      - id: 57GqFHOcjCI
+        title: "Episode 07: Mirror, Mirror – When Does Acceptance Create a Contract?"
+        date: 2024-09-28
+        embed: https://www.youtube.com/embed/57GqFHOcjCI
+      - id: a893cgLmMmI
+        title: "Episode 06: Termination – Death of an Offer"
+        date: 2024-09-01
+        embed: https://www.youtube.com/embed/a893cgLmMmI
+      - id: ClPHWlNF-NI
+        title: "Episode 05: Offer or Not? What Makes an Offer (Un) Acceptable"
+        date: 2024-08-28
+        embed: https://www.youtube.com/embed/ClPHWlNF-NI
+      - id: -C3MuuMjFCA
+        title: "Episode 02: Promises, Promises – Defining a Legal Obligation"
+        date: 2024-08-21
+        embed: https://www.youtube.com/embed/-C3MuuMjFCA
+      - id: v_VPgZwwM7c
+        title: "Episode 04: Bargains and the Objective Theory of Contract"
+        date: 2024-08-17
+        embed: https://www.youtube.com/embed/v_VPgZwwM7c
+      - id: dkgCBJYkkls
+        title: "Episode 03: Capacity to Contract – Who Can Make a Deal?"
+        date: 2024-08-17
+        embed: https://www.youtube.com/embed/dkgCBJYkkls
+      - id: EDI5PsDRpjA
+        title: "Episode 02: Promises, Promises – Defining a Legal Obligation"
+        date: 2024-08-17
+        embed: https://www.youtube.com/embed/EDI5PsDRpjA
+      - id: przp8ZuhuRI
+        title: "Episode 01: Mastering Contracts — Introduction to the Season"
+        date: 2024-08-17
+        embed: https://www.youtube.com/embed/przp8ZuhuRI
+
+  - id: PL2OBGU7rnJY6j_d82ZeJdFaVzj9D1gxqd
+    title: "Law Professors Mission to Israel"
+    cluster: civil-society
+    video_count: 26
+    feature_on_site: true
+    videos:
+      - id: wjZKS810lTA
+        title: "Bar Hinitz, Survivor of Nova Massacre, Explains What Happened on October 7, 2023"
+        date: 2024-07-15
+        embed: https://www.youtube.com/embed/wjZKS810lTA
+      - id: Ud66V8DDyV8
+        title: "Introducing the Law Professors Mission to Israel"
+        date: 2024-07-15
+        embed: https://www.youtube.com/embed/Ud66V8DDyV8
+      - id: vwUAPBAbRdI
+        title: "Tekumah Burial Ground for Cars Destroyed on October 7"
+        date: 2024-07-15
+        embed: https://www.youtube.com/embed/vwUAPBAbRdI
+      - id: oJj9bGivTfI
+        title: "Discussing Hostages Hamas Kidnapped on October 7, 2023"
+        date: 2024-07-15
+        embed: https://www.youtube.com/embed/oJj9bGivTfI
+      - id: R4hg2-cEgCA
+        title: "Professor Rona Kaufman Reflects on the Mission to Israel"
+        date: 2024-07-16
+        embed: https://www.youtube.com/embed/R4hg2-cEgCA
+      - id: gI97cX-yF14
+        title: "Israeli Female Soldiers Discuss the War with Hamas"
+        date: 2024-07-15
+        embed: https://www.youtube.com/embed/gI97cX-yF14
+      - id: z6CZbzE4WD4
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/z6CZbzE4WD4
+      - id: 7pl2Z6c81RM
+        title: "Professor Reacts to Watching October 7 Murders Filmed by Hamas"
+        date: 2024-07-15
+        embed: https://www.youtube.com/embed/7pl2Z6c81RM
+      - id: 3F64g5ipf14
+        title: "Professor Seth Oranburg Reflects on Watching Raw Footage of October 7 Massacre"
+        date: 2024-07-16
+        embed: https://www.youtube.com/embed/3F64g5ipf14
+      - id: yAB-p6hy2s4
+        title: "International Laws of War"
+        date: 2024-07-15
+        embed: https://www.youtube.com/embed/yAB-p6hy2s4
+      - id: 2K-2HXG40e4
+        title: "Professor Adam Mossoff Reflects on the Law Professors Mission to Israel"
+        date: 2024-07-15
+        embed: https://www.youtube.com/embed/2K-2HXG40e4
+      - id: s3W4f0oRJ6Q
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/s3W4f0oRJ6Q
+      - id: 12byuyzS_Dc
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/12byuyzS_Dc
+      - id: GUhzu2HemN0
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/GUhzu2HemN0
+      - id: u8D1oKoyGok
+        title: "Interviewing Israeli Gifted Students Impacted by October 7 - Daniel Golan"
+        date: 2024-07-16
+        embed: https://www.youtube.com/embed/u8D1oKoyGok
+      - id: AT8lDG1mEnw
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/AT8lDG1mEnw
+      - id: 4j3E-bVE9BA
+        title: "Law Professors Mission to Israel Part 2: The Journey Begins in the Snow"
+        date: 2025-12-05
+        embed: https://www.youtube.com/embed/4j3E-bVE9BA
+      - id: 6eOzytUMfvg
+        title: "The Zion Gate and the Israeli War of Independence"
+        date: 2025-12-06
+        embed: https://www.youtube.com/embed/6eOzytUMfvg
+      - id: iJqISlJEdho
+        title: "Introducing the Second Law Professors Mission to Israel"
+        date: 2025-12-07
+        embed: https://www.youtube.com/embed/iJqISlJEdho
+      - id: FO93tR22n7M
+        title: "Why Israel Matters for Western Civilization"
+        date: 2025-12-09
+        embed: https://www.youtube.com/embed/FO93tR22n7M
+      - id: j69RMBwSo44
+        title: "What Is the Moral Purpose of Israel's Trial on Hamas's War Crimes?"
+        date: 2025-12-10
+        embed: https://www.youtube.com/embed/j69RMBwSo44
+      - id: DCY4_nKYvmc
+        title: "Inside the Israeli Supreme Court: Prof. Eugene Mazo Reflects on Judicial Reform and Democracy"
+        date: 2025-12-11
+        embed: https://www.youtube.com/embed/DCY4_nKYvmc
+      - id: C_pZ1oktyHs
+        title: "How ESG Becomes Lawfare: Prof. Jeremy Kidd on BDS and Corporate Power"
+        date: 2025-12-11
+        embed: https://www.youtube.com/embed/C_pZ1oktyHs
+      - id: QVyZkU_hb7c
+        title: "\"Do Your Research”: Nova Survivor Mazal Tazazo’s Message to University Students"
+        date: 2025-12-12
+        embed: https://www.youtube.com/embed/QVyZkU_hb7c
+      - id: yvv451aqgBU
+        title: "“I Played Dead to Stay Alive\": The Testimony of Nova Festival Survivor Mazal Tazazo"
+        date: 2025-12-13
+        embed: https://www.youtube.com/embed/yvv451aqgBU
+      - id: o2t65p4UUXA
+        title: "Rabbi Marc Philippe Saying Kaddish at Kibbutz Kfar Aza"
+        date: 2025-12-15
+        embed: https://www.youtube.com/embed/o2t65p4UUXA
+
+  - id: PL2OBGU7rnJY4V9xMrSd5Vu05jwrlZXzN3
+    title: "What Is Antitrust Law?"
+    cluster: digital-assets
+    video_count: 14
+    feature_on_site: true
+    videos:
+      - id: 1-EcNrkjqLM
+        title: "Antitrust Mini-Series 01 Introduction and Overview"
+        date: 2024-04-07
+        embed: https://www.youtube.com/embed/1-EcNrkjqLM
+      - id: dj9sVpptkn0
+        title: "Antitrust Mini-Series 02 Antitrust in the News"
+        date: 2024-04-07
+        embed: https://www.youtube.com/embed/dj9sVpptkn0
+      - id: kvZc-OF01H0
+        title: "Antitrust Mini-Series 03 Antitrust in Ancient History"
+        date: 2024-04-07
+        embed: https://www.youtube.com/embed/kvZc-OF01H0
+      - id: zQNkxRCj8Hs
+        title: "Antitrust Mini-Series 04 Antitrust Economics"
+        date: 2024-04-07
+        embed: https://www.youtube.com/embed/zQNkxRCj8Hs
+      - id: MuKy6yNopCk
+        title: "Antitrust Mini-Series 05 Sherman Act of 1890"
+        date: 2024-04-07
+        embed: https://www.youtube.com/embed/MuKy6yNopCk
+      - id: b-QLNtpL9d4
+        title: "Antitrust Mini-Series 06 Clayton Act of 1914"
+        date: 2024-04-07
+        embed: https://www.youtube.com/embed/b-QLNtpL9d4
+      - id: 3kzYfQCiNlw
+        title: "Antitrust Mini-Series 07 FTC Act of 1914"
+        date: 2024-04-07
+        embed: https://www.youtube.com/embed/3kzYfQCiNlw
+      - id: HLbwxhu2IMc
+        title: "Antitrust Mini-Series 08 The Rule of Reason"
+        date: 2024-04-07
+        embed: https://www.youtube.com/embed/HLbwxhu2IMc
+      - id: QmVGqZlwgXw
+        title: "Antitrust Mini-Series 09 Per Se Violations"
+        date: 2024-04-07
+        embed: https://www.youtube.com/embed/QmVGqZlwgXw
+      - id: x6O2x9tMaE8
+        title: "Antitrust Mini-Series 10 Market Definition"
+        date: 2024-04-07
+        embed: https://www.youtube.com/embed/x6O2x9tMaE8
+      - id: bxggWqiQC6w
+        title: "Antitrust Mini-Series 11 Structural Presumptions"
+        date: 2024-05-05
+        embed: https://www.youtube.com/embed/bxggWqiQC6w
+      - id: VXUAc573Q3Q
+        title: "Antitrust Mini-Series 12 Merger Guidelines"
+        date: 2024-04-08
+        embed: https://www.youtube.com/embed/VXUAc573Q3Q
+      - id: a_eZTyLeqOY
+        title: "Antitrust Mini-Series 13 Remedies"
+        date: 2024-04-07
+        embed: https://www.youtube.com/embed/a_eZTyLeqOY
+      - id: yu8eWztIFBA
+        title: "Antitrust Mini-Series 14 Conclusion"
+        date: 2024-04-07
+        embed: https://www.youtube.com/embed/yu8eWztIFBA
+
+  - id: PL2OBGU7rnJY6lKd5u3MhESxRiLWmVnd3d
+    title: "Overview of Trade Secrets"
+    cluster: ip
+    video_count: 5
+    feature_on_site: true
+    videos:
+      - id: qrxKThGiIU0
+        title: "Introduction to Trade Secret Law"
+        date: 2024-04-05
+        embed: https://www.youtube.com/embed/qrxKThGiIU0
+      - id: xPnDDPo2dW0
+        title: "Defining a \"Trade Secret\""
+        date: 2024-04-05
+        embed: https://www.youtube.com/embed/xPnDDPo2dW0
+      - id: I82f3_i_41Y
+        title: "Misappropriation of Trade Secrets"
+        date: 2024-04-05
+        embed: https://www.youtube.com/embed/I82f3_i_41Y
+      - id: 7E_f3ejXIs0
+        title: "Protecting Trade Secrets via Contracts"
+        date: 2024-04-05
+        embed: https://www.youtube.com/embed/7E_f3ejXIs0
+      - id: Rh77iIkV8C4
+        title: "Remedies for Trade Secret Violations"
+        date: 2024-04-05
+        embed: https://www.youtube.com/embed/Rh77iIkV8C4
+
+  - id: PL2OBGU7rnJY7mf-h8E7-btFCMuBi1uuZM
+    title: "Law & Society"
+    cluster: governance
+    video_count: 3
+    feature_on_site: true
+    videos:
+      - id: Jx_5bSrejf8
+        title: "Religious Rights after Groff v. DeJoy: Legal Analysis and a Jewish Perspective on Religion & Work"
+        date: 2023-07-04
+        embed: https://www.youtube.com/embed/Jx_5bSrejf8
+      - id: LNvtAU6kqkY
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/LNvtAU6kqkY
+      - id: H0Mg4MVnu0E
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/H0Mg4MVnu0E
+
+  - id: PL2OBGU7rnJY6wNfBvMOzeSyzekwZgmc_L
+    title: "Virtual Economies"
+    cluster: digital-assets
+    video_count: 1
+    feature_on_site: true
+    videos:
+      - id: IPffjpXKcFk
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/IPffjpXKcFk
+
+  - id: PL2OBGU7rnJY6bLAQwozErQQ4js4wmEVge
+    title: "Financial Toolkit for Lawyers"
+    cluster: startup-finance
+    video_count: 4
+    feature_on_site: true
+    videos:
+      - id: wreLNCpS7DU
+        title: "Introduction to Financial Accounting for Lawyers (Financial Toolkit Part 1)"
+        date: 2021-01-11
+        embed: https://www.youtube.com/embed/wreLNCpS7DU
+      - id: trea1qUAOsc
+        title: "The Financial Accounting Process (For Lawyers)"
+        date: 2021-01-12
+        embed: https://www.youtube.com/embed/trea1qUAOsc
+      - id: CJkK35i3bTw
+        title: "Equity Financing for Lawyers (Financial Toolkit part 3)"
+        date: 2021-01-12
+        embed: https://www.youtube.com/embed/CJkK35i3bTw
+      - id: JkJJFqEGUaw
+        title: "Financial Ratio Analysis for Lawyers (Accounting Toolkit Part 4)"
+        date: 2021-01-13
+        embed: https://www.youtube.com/embed/JkJJFqEGUaw
+
+  - id: PL2OBGU7rnJY4ZvS1BOmeY6bZFbkjwYWqR
+    title: "Corporations & Society"
+    cluster: governance
+    video_count: 5
+    feature_on_site: true
+    videos:
+      - id: ONpjLulDAO0
+        title: "Corporations & Society 01: The Business Firm (An Introduction)"
+        date: 2018-11-28
+        embed: https://www.youtube.com/embed/ONpjLulDAO0
+      - id: fBrGxy7aPIg
+        title: "Corporations & Society 02: Delaware General Corporations Law, MCBA, and Other Fundamentals"
+        date: 2018-11-29
+        embed: https://www.youtube.com/embed/fBrGxy7aPIg
+      - id: 6Cyq4IF9qi0
+        title: "Corporations & Society 03: Corporate Federalism and Competition Among the States"
+        date: 2018-11-29
+        embed: https://www.youtube.com/embed/6Cyq4IF9qi0
+      - id: 1c3MV_99xBI
+        title: "C&E 04: Corporate Social Responsibility"
+        date: 2018-11-28
+        embed: https://www.youtube.com/embed/1c3MV_99xBI
+      - id: Rihlm0hCMKs
+        title: "C&S 05: Corporation as Political Actor"
+        date: 2018-11-28
+        embed: https://www.youtube.com/embed/Rihlm0hCMKs
+
+  - id: PL2OBGU7rnJY6hu_ot8ErHoWjjPaBlVdCS
+    title: "Corporate Issues IRL"
+    cluster: governance
+    video_count: 3
+    feature_on_site: true
+    videos:
+      - id: IcaHutZQiIA
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/IcaHutZQiIA
+      - id: Ox7NslbxYu8
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/Ox7NslbxYu8
+      - id: DVVjiD_s-Mo
+        title: "Corporations II: Directors' Duties to Shareholders;  Securities Markets & Securities Fraud"
+        date: 2019-04-25
+        embed: https://www.youtube.com/embed/DVVjiD_s-Mo
+
+  - id: PL2OBGU7rnJY7DRrQ__smZDqLLH3ThV45W
+    title: "The Sharing Economy"
+    cluster: labor
+    video_count: 2
+    feature_on_site: true
+    videos:
+      - id: Dm3ZDnT9Zag
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/Dm3ZDnT9Zag
+      - id: YQpyrFiQls0
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/YQpyrFiQls0
+
+# --- TEACHING / COURSE LECTURES ---
+# Educational content for the /lectures/ page.
+
+teaching_series:
+  - id: PL2OBGU7rnJY7olFbhRB-988pZwSWIjKJQ
+    title: "2021 Fall Business Associations"
+    video_count: 11
+    videos:
+      - id: dWJkeoeag1M
+        title: "Introduction to Business Law: The Story of Meinhard v. Salmon, 249 NY 458 (1928)"
+        date: 2021-08-23
+        embed: https://www.youtube.com/embed/dWJkeoeag1M
+      - id: V6xioGR_mfQ
+        title: "Agape, Filio, Morality, and Business Law: The Deeper Story of Meinhard v. Salmon"
+        date: 2021-08-23
+        embed: https://www.youtube.com/embed/V6xioGR_mfQ
+      - id: y3Ca7_xtzWg
+        title: "Return on Investment (ROI), Simplified"
+        date: 2021-08-29
+        embed: https://www.youtube.com/embed/y3Ca7_xtzWg
+      - id: JYhrdHqbwTM
+        title: "Selecting a Business Entity (Organizational Choices 1 of 6)"
+        date: 2021-09-08
+        embed: https://www.youtube.com/embed/JYhrdHqbwTM
+      - id: zckVPJT7Q7g
+        title: "General Partnerships (Organizational Choices 2 of 6)"
+        date: 2021-09-08
+        embed: https://www.youtube.com/embed/zckVPJT7Q7g
+      - id: nr5CLNIvvtY
+        title: "Alternative Organizational Choices and Summary of Business Entities (Organizational Choices 6 of 6)"
+        date: 2021-09-08
+        embed: https://www.youtube.com/embed/nr5CLNIvvtY
+      - id: Ev0Gx1I_UPY
+        title: "Limited Partnerships (Organizational Choices 3 of 6)"
+        date: 2021-09-08
+        embed: https://www.youtube.com/embed/Ev0Gx1I_UPY
+      - id: PmHa7OrsOTo
+        title: "Limited Liability Companies (Organizational Choices 5 of 6)"
+        date: 2021-09-08
+        embed: https://www.youtube.com/embed/PmHa7OrsOTo
+      - id: 6U3pOXfa7MA
+        title: "Corporations (Organizational Choices 4 of 6)"
+        date: 2021-09-08
+        embed: https://www.youtube.com/embed/6U3pOXfa7MA
+      - id: qQz52N__eYs
+        title: "The Incorporation Process (Formation of Corporations 1 of 3)"
+        date: 2021-09-08
+        embed: https://www.youtube.com/embed/qQz52N__eYs
+      - id: UKWUotaZVVw
+        title: "Legal Ethics for Incorporators and Summary of the Inc. Process (Formation of Corporations 3 of 3)"
+        date: 2021-09-08
+        embed: https://www.youtube.com/embed/UKWUotaZVVw
+
+  - id: PL2OBGU7rnJY6aw6O-qT7W0HzbhRXN5vvu
+    title: "2021 Fall Contracts"
+    video_count: 2
+    videos:
+      - id: 39upnemR1u8
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/39upnemR1u8
+      - id: hGcs133C09E
+        title: "How to Succeed in Law School"
+        date: 2021-08-21
+        embed: https://www.youtube.com/embed/hGcs133C09E
+
+  - id: PL2OBGU7rnJY5yfCmQwtiPSKTGZGGiVUi1
+    title: "Business Law"
+    video_count: 2
+    videos:
+      - id: cE4tEkUqPrk
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/cE4tEkUqPrk
+      - id: 4weYehKaYDY
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/4weYehKaYDY
+
+  - id: PL2OBGU7rnJY7AozH-dKNHjutM3POpxKaz
+    title: "Corporations 2020"
+    video_count: 25
+    videos:
+      - id: CJeVLe-HrM4
+        title: "BIZLAW I.A.01 Introduction to Business Law - Case Study of Meinhard v.  Salmon"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/CJeVLe-HrM4
+      - id: ssTG-zrbs8Y
+        title: "BIZLAW I.2.B Authority of Agents"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/ssTG-zrbs8Y
+      - id: iAapjXfsVWc
+        title: "BIZLAW I.2.C Liability of Agents"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/iAapjXfsVWc
+      - id: qqc5i14Ii3s
+        title: "BIZLAW C.1.01  Introduction to Business Planning"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/qqc5i14Ii3s
+      - id: bIr1CY7pZ5k
+        title: "BIZLAW A.1.02 How Do Firms Allocate Risk?"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/bIr1CY7pZ5k
+      - id: C9oHXCYP11A
+        title: "BIZLAW A.5.01 Introduction to Limited Liability Companies"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/C9oHXCYP11A
+      - id: 1t7MzMrJpT8
+        title: "BIZLAW C.2.01 Introduction to Choosing a Business Entity"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/1t7MzMrJpT8
+      - id: kFi8tJgkiqs
+        title: "BIZLAW I.3 Overview of Partnership Law"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/kFi8tJgkiqs
+      - id: R0BTakyyqZo
+        title: "BIZLAW I.2.A Introduction to Agency Law"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/R0BTakyyqZo
+      - id: qYgjgmGJmHw
+        title: "BIZLAW F.1.01 Introduction to Shareholder Voting"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/qYgjgmGJmHw
+      - id: CiHjORVjMPQ
+        title: "BIZLAW 2.1.01 Who Does the Corporation Serve?"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/CiHjORVjMPQ
+      - id: qQp3PBRLerQ
+        title: "BIZLAW E.1.02 Why Allow Limited Liability"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/qQp3PBRLerQ
+      - id: ZgeMknycZq0
+        title: "BIZLAW E.1.04 2 PCV in Contracts Cases"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/ZgeMknycZq0
+      - id: KGEzPNQ7pTE
+        title: "BIZLAW E.1.03 PCV in Torts Cases"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/KGEzPNQ7pTE
+      - id: I2ayHymFaSo
+        title: "BIZLAW G.2.01 Demand Requirement"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/I2ayHymFaSo
+      - id: v55LXzz4uOg
+        title: "BIZLAW G.3.03 The Corporate Opportunity Doctrine"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/v55LXzz4uOg
+      - id: ByiuQqcJpb4
+        title: "BIZLAW H.1.01 Brief History of the Stock Market"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/ByiuQqcJpb4
+      - id: 3fUVVgR2ePA
+        title: "BIZLAW H.1.02 Key Securities Laws"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/3fUVVgR2ePA
+      - id: xk_hTiEeweA
+        title: "BIZLAW H.1.03  Private Stock Markets"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/xk_hTiEeweA
+      - id: YQGUrBGNahE
+        title: "BIZLAW B.2.02 Dodge v  Ford"
+        date: 2019-09-17
+        embed: https://www.youtube.com/embed/YQGUrBGNahE
+      - id: AfH8F4CzWAE
+        title: "Applying the Internal Affairs Doctrine: McDermott Inc. v. Lewis, 531 A.2d 206 (Del. 1987)"
+        date: 2020-02-09
+        embed: https://www.youtube.com/embed/AfH8F4CzWAE
+      - id: Na8m4GPqA30
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/Na8m4GPqA30
+      - id: 2UmxpthybWA
+        title: "Defective Incorporation"
+        date: 2020-02-20
+        embed: https://www.youtube.com/embed/2UmxpthybWA
+      - id: qWlRlBk9Juk
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/qWlRlBk9Juk
+      - id: xCxHx4dsrqg
+        title: "Top 5 Corporate Law Topics (Business Organizations Review)"
+        date: 2020-04-23
+        embed: https://www.youtube.com/embed/xCxHx4dsrqg
+
+  - id: PL2OBGU7rnJY6y9U4Roos5N1gAawgSy1uD
+    title: "Contracts II Review (Interpretation, Conditions, Performance, Excuse, and Breach)"
+    video_count: 15
+    videos:
+      - id: X5neosDr7Y4
+        title: "Contracts II Review 01: Introduction"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/X5neosDr7Y4
+      - id: VCFe7wLfDZ8
+        title: "Contracts II Review 02: Intrinsic Evidence"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/VCFe7wLfDZ8
+      - id: KAWTSJTrMSI
+        title: "Contracts II Review 03: Extrinsic Evidence"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/KAWTSJTrMSI
+      - id: kUOnfpstilY
+        title: "Contracts II Review 04: Parol Evidence"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/kUOnfpstilY
+      - id: riAdGr7Kixg
+        title: "Contracts II Review 05: Implied Terms"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/riAdGr7Kixg
+      - id: giFJaO8dLfk
+        title: "Contracts II Review 06: Good Faith"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/giFJaO8dLfk
+      - id: gGmj4dGC8v8
+        title: "Contracts II Review 07: Conditions"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/gGmj4dGC8v8
+      - id: rZP99PF-MYo
+        title: "Contracts II Review 08 Express Conditions"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/rZP99PF-MYo
+      - id: 17EpK4y8EHo
+        title: "Contracts II Review 09: Implied Conditions"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/17EpK4y8EHo
+      - id: xMf478pOHh8
+        title: "Contracts II Review 10: Performance"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/xMf478pOHh8
+      - id: ZefcchXnORA
+        title: "Contracts II Review 11: Material Breach"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/ZefcchXnORA
+      - id: bytcz-5Qn6I
+        title: "Contracts II Review 12: Total Breach"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/bytcz-5Qn6I
+      - id: rGNNQcU2JCE
+        title: "Contracts II Review 13: Repudiation"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/rGNNQcU2JCE
+      - id: 1iY9s2PJO3w
+        title: "Contracts II Review 14: Excuse"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/1iY9s2PJO3w
+      - id: q3wWKIAau_k
+        title: "Contracts II Review 15: Wrap Up"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/q3wWKIAau_k
+
+  - id: PL2OBGU7rnJY63-0K-0koGxG09Orp9DH9y
+    title: "The Parol Evidence Rule in Contract Law"
+    video_count: 9
+    videos:
+      - id: _ApZ-5R5M-s
+        title: "Parol Evidence Rule Flow Chart Analysis"
+        date: 2019-02-12
+        embed: https://www.youtube.com/embed/_ApZ-5R5M-s
+      - id: jpKig8JgOHQ
+        title: "Contract Interpretation: Introduction"
+        date: 2019-01-31
+        embed: https://www.youtube.com/embed/jpKig8JgOHQ
+      - id: D2QaTZLz5w4
+        title: "Contract Interpretation: The Canons of Construction"
+        date: 2019-01-31
+        embed: https://www.youtube.com/embed/D2QaTZLz5w4
+      - id: A2sk9YQjNxM
+        title: "Contract Interpretation: Patent and Latent Ambiguity"
+        date: 2019-01-31
+        embed: https://www.youtube.com/embed/A2sk9YQjNxM
+      - id: 5AEY90um-xk
+        title: "Contract Interpretation: Objective and Subjective Theories"
+        date: 2019-01-31
+        embed: https://www.youtube.com/embed/5AEY90um-xk
+      - id: v0l3a_DONf0
+        title: "Contract Interpretation: The Parol Evidence Rule 1/2"
+        date: 2019-01-31
+        embed: https://www.youtube.com/embed/v0l3a_DONf0
+      - id: AfxTflMGblc
+        title: "Contract Interpretation: The Parol Evidence Rule 2/2"
+        date: 2019-01-31
+        embed: https://www.youtube.com/embed/AfxTflMGblc
+      - id: 3cG8c8Bi8dQ
+        title: "Parol Evidence Rule (Full Length Review with Cases)"
+        date: 2019-02-07
+        embed: https://www.youtube.com/embed/3cG8c8Bi8dQ
+      - id: HdsOGniYoac
+        title: "The Parol Evidence Rule (a two minute review)"
+        date: 2019-02-04
+        embed: https://www.youtube.com/embed/HdsOGniYoac
+
+  - id: PL2OBGU7rnJY5HtTPLWRwoKF96ygKxQeX4
+    title: "Stockholder Rights"
+    video_count: 3
+    videos:
+      - id: Ig7R6q5juBk
+        title: "Stockholder Rights 02: Stockholder Activism"
+        date: 2019-01-18
+        embed: https://www.youtube.com/embed/Ig7R6q5juBk
+      - id: 04jwj40_auM
+        title: "Stockholder Rights 06: Exculpation, Indemnification, and Insurance"
+        date: 2019-01-30
+        embed: https://www.youtube.com/embed/04jwj40_auM
+      - id: RVN0F6_doVk
+        title: "Stockholder Rights 07: Board Oversight"
+        date: 2019-02-07
+        embed: https://www.youtube.com/embed/RVN0F6_doVk
+
+  - id: PL2OBGU7rnJY5VXFCMqVohHMUNhSlEvqJY
+    title: "Contract Law Review"
+    video_count: 8
+    videos:
+      - id: GQeEx2KLHYI
+        title: "Contract Law Review 01 Contract Common Law and the Uniform Commercial Code"
+        date: 2018-12-11
+        embed: https://www.youtube.com/embed/GQeEx2KLHYI
+      - id: 6p8KjZ-UiXQ
+        title: "Contract Law Review 02 The Offer"
+        date: 2018-12-11
+        embed: https://www.youtube.com/embed/6p8KjZ-UiXQ
+      - id: A7CVy0xXu24
+        title: "Contract Law Review 03 Termination of Offers"
+        date: 2018-12-11
+        embed: https://www.youtube.com/embed/A7CVy0xXu24
+      - id: nx8MNkne3DI
+        title: "Contract Law Review 04 Acceptance"
+        date: 2018-12-11
+        embed: https://www.youtube.com/embed/nx8MNkne3DI
+      - id: -3AiLyYNqOo
+        title: "Contract Law Review 05 Consideration as Bargained-For Exchange"
+        date: 2018-12-11
+        embed: https://www.youtube.com/embed/-3AiLyYNqOo
+      - id: Al_bR-rwD78
+        title: "Contract Law Review 06 Alternatives to Consideration: Equitable Estoppel and Promissory Restitution"
+        date: 2018-12-11
+        embed: https://www.youtube.com/embed/Al_bR-rwD78
+      - id: PHjCueRdpU8
+        title: "Contract Law Review 07 Statute of Frauds"
+        date: 2018-12-11
+        embed: https://www.youtube.com/embed/PHjCueRdpU8
+      - id: RpSfxWvnmHM
+        title: "Lucy v. Zehmer: A Skit"
+        date: 2019-09-18
+        embed: https://www.youtube.com/embed/RpSfxWvnmHM
+
+  - id: PL2OBGU7rnJY6QaJIYyvHPK2s7AbeD7Kvu
+    title: "Corporations & Entrepreneurship (2018)"
+    video_count: 7
+    videos:
+      - id: XCcmF792YpI
+        title: "Corporations & Entrepreneurship 01: Organizational Choices 1 (GP, LP, Corp, LLC, etc.)"
+        date: 2018-11-28
+        embed: https://www.youtube.com/embed/XCcmF792YpI
+      - id: 3v9veCT4LAw
+        title: "C&S 02: Organizational Choices 2"
+        date: 2018-11-28
+        embed: https://www.youtube.com/embed/3v9veCT4LAw
+      - id: RFrfogTNNDA
+        title: "C&E 03: Forming the Corporation 1 (Legal Requirements)"
+        date: 2018-11-29
+        embed: https://www.youtube.com/embed/RFrfogTNNDA
+      - id: tW_WhpEoi84
+        title: "C&E 04: Forming the Corporation 2 (Workshop)"
+        date: 2018-11-29
+        embed: https://www.youtube.com/embed/tW_WhpEoi84
+      - id: FtQWi6EoYZ0
+        title: "C&E 05: Economic Concepts of Agency Theory"
+        date: 2018-11-29
+        embed: https://www.youtube.com/embed/FtQWi6EoYZ0
+      - id: PgWWRk2VlMM
+        title: "C&E 06: Actions Binding the Corporation 1 (Agency Law)"
+        date: 2018-11-29
+        embed: https://www.youtube.com/embed/PgWWRk2VlMM
+      - id: crMs2Esrp_Y
+        title: "C&E 07: Actions Binding the Corporation 2 (Legal Opinions)"
+        date: 2018-11-29
+        embed: https://www.youtube.com/embed/crMs2Esrp_Y
+
+  - id: PL2OBGU7rnJY5L10Gbr20au--Q9UKMJP7B
+    title: "Contract Remedies"
+    video_count: 14
+    videos:
+      - id: Uv5AwNkxRBA
+        title: "Contract Remedies 1: Review of Breach"
+        date: 2018-04-19
+        embed: https://www.youtube.com/embed/Uv5AwNkxRBA
+      - id: e-MHlqiYXx4
+        title: "Contract Remedies 2: Expectation Damages"
+        date: 2018-04-19
+        embed: https://www.youtube.com/embed/e-MHlqiYXx4
+      - id: U7yBEpsijtc
+        title: "Contract Remedies 3: Efficient Breach"
+        date: 2018-04-19
+        embed: https://www.youtube.com/embed/U7yBEpsijtc
+      - id: n6GotGvBe3U
+        title: "Contract Remedies 4: Diminution of Value versus Reasonable Cost"
+        date: 2018-04-19
+        embed: https://www.youtube.com/embed/n6GotGvBe3U
+      - id: 0wEHb87v2gc
+        title: "Contract Remedies 5: Lost Volume"
+        date: 2018-04-19
+        embed: https://www.youtube.com/embed/0wEHb87v2gc
+      - id: q2z59RS36jc
+        title: "Contract Remedies 6: Reliance Damages"
+        date: 2018-04-19
+        embed: https://www.youtube.com/embed/q2z59RS36jc
+      - id: tvZJOrow8Gk
+        title: "Contract Remedies 7: Restitution"
+        date: 2018-04-19
+        embed: https://www.youtube.com/embed/tvZJOrow8Gk
+      - id: LByNf7ZwHPU
+        title: "Contract Remedies 8: Mitigation of Damages"
+        date: 2018-04-24
+        embed: https://www.youtube.com/embed/LByNf7ZwHPU
+      - id: 2kPIY69X1p8
+        title: "Contract Remedies 9: Foreseeability"
+        date: 2018-04-24
+        embed: https://www.youtube.com/embed/2kPIY69X1p8
+      - id: ofQF5QV0fm0
+        title: "Contract Remedies 10: Speculative Losses"
+        date: 2018-04-24
+        embed: https://www.youtube.com/embed/ofQF5QV0fm0
+      - id: 1q7_UokUdps
+        title: "Contract Remedies 11: Punitive Damages, Liquidated Damages, and Penalties"
+        date: 2018-04-24
+        embed: https://www.youtube.com/embed/1q7_UokUdps
+      - id: ceTLohc8DwA
+        title: "Contract Remedies 12: Equitable Remedies (Specific Performance and Negative Injunction)"
+        date: 2018-04-24
+        embed: https://www.youtube.com/embed/ceTLohc8DwA
+      - id: _8dsyjfmkw8
+        title: "Contract Remedies 13: Summary of Breach"
+        date: 2018-04-24
+        embed: https://www.youtube.com/embed/_8dsyjfmkw8
+      - id: PRMJCXNHQ7I
+        title: "A Comprehensive Overview of Contract Remedies: Damages, Specific Performance, & Negative Injunction"
+        date: 2022-10-13
+        embed: https://www.youtube.com/embed/PRMJCXNHQ7I
+
+  - id: PL2OBGU7rnJY5hHWqZg9_NE4t64PD9Gtbm
+    title: "Corporate Fiduciary Duties"
+    video_count: 4
+    videos:
+      - id: oK1IiX0HPtA
+        title: "Corporate Law Fiduciary Duties of Directors (Review)"
+        date: 2018-03-07
+        embed: https://www.youtube.com/embed/oK1IiX0HPtA
+      - id: UpcEcxRsnR8
+        title: "Van Gorkom: The Business Judgment Rule and the Duty of Care in Modern Corporate Governance Law"
+        date: 2018-02-20
+        embed: https://www.youtube.com/embed/UpcEcxRsnR8
+      - id: RSy-FsJEQFU
+        title: "Corporations: Director's Duty of Oversight"
+        date: 2018-02-09
+        embed: https://www.youtube.com/embed/RSy-FsJEQFU
+      - id: hAeXE1KiTMc
+        title: "Corporate Directors' Duty of Loyalty (Law of Business Fiduciary Obligations)"
+        date: 2018-02-16
+        embed: https://www.youtube.com/embed/hAeXE1KiTMc
+
+  - id: PL2OBGU7rnJY7qB7SzYmNmv0-9TD0ilkft
+    title: "Contracts"
+    video_count: 56
+    videos:
+      - id: d2kYAF6qw6I
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/d2kYAF6qw6I
+      - id: QSjDJMIEY_U
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/QSjDJMIEY_U
+      - id: tmOxgoO-R9Y
+        title: "Contract Law Review: Interpretation, Performance, Breach, Excuse, and Damages (Contracts II 2017)"
+        date: 2017-04-22
+        embed: https://www.youtube.com/embed/tmOxgoO-R9Y
+      - id: 5AEY90um-xk
+        title: "Contract Interpretation: Objective and Subjective Theories"
+        date: 2019-01-31
+        embed: https://www.youtube.com/embed/5AEY90um-xk
+      - id: A2sk9YQjNxM
+        title: "Contract Interpretation: Patent and Latent Ambiguity"
+        date: 2019-01-31
+        embed: https://www.youtube.com/embed/A2sk9YQjNxM
+      - id: D2QaTZLz5w4
+        title: "Contract Interpretation: The Canons of Construction"
+        date: 2019-01-31
+        embed: https://www.youtube.com/embed/D2QaTZLz5w4
+      - id: jpKig8JgOHQ
+        title: "Contract Interpretation: Introduction"
+        date: 2019-01-31
+        embed: https://www.youtube.com/embed/jpKig8JgOHQ
+      - id: AfxTflMGblc
+        title: "Contract Interpretation: The Parol Evidence Rule 2/2"
+        date: 2019-01-31
+        embed: https://www.youtube.com/embed/AfxTflMGblc
+      - id: v0l3a_DONf0
+        title: "Contract Interpretation: The Parol Evidence Rule 1/2"
+        date: 2019-01-31
+        embed: https://www.youtube.com/embed/v0l3a_DONf0
+      - id: HdsOGniYoac
+        title: "The Parol Evidence Rule (a two minute review)"
+        date: 2019-02-04
+        embed: https://www.youtube.com/embed/HdsOGniYoac
+      - id: PgqjB5VlgQE
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/PgqjB5VlgQE
+      - id: VX1EsleH48w
+        title: "The Duty of Good Faith in Contract Interpretation"
+        date: 2019-02-15
+        embed: https://www.youtube.com/embed/VX1EsleH48w
+      - id: W5lcObHUneg
+        title: "Analysis of Market Street Associates"
+        date: 2019-02-15
+        embed: https://www.youtube.com/embed/W5lcObHUneg
+      - id: G2bxAUcBXB0
+        title: "Express Conditions in Contract Interpretation"
+        date: 2019-02-20
+        embed: https://www.youtube.com/embed/G2bxAUcBXB0
+      - id: b9sLQOz-hq4
+        title: "Conditions of Satisfaction"
+        date: 2019-02-20
+        embed: https://www.youtube.com/embed/b9sLQOz-hq4
+      - id: Ie37B7FNrxQ
+        title: "Contract Interpretation Review (Spring 2019)"
+        date: 2019-02-27
+        embed: https://www.youtube.com/embed/Ie37B7FNrxQ
+      - id: fwRFhmcfHgg
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/fwRFhmcfHgg
+      - id: KAWTSJTrMSI
+        title: "Contracts II Review 03: Extrinsic Evidence"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/KAWTSJTrMSI
+      - id: kUOnfpstilY
+        title: "Contracts II Review 04: Parol Evidence"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/kUOnfpstilY
+      - id: riAdGr7Kixg
+        title: "Contracts II Review 05: Implied Terms"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/riAdGr7Kixg
+      - id: giFJaO8dLfk
+        title: "Contracts II Review 06: Good Faith"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/giFJaO8dLfk
+      - id: gGmj4dGC8v8
+        title: "Contracts II Review 07: Conditions"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/gGmj4dGC8v8
+      - id: rZP99PF-MYo
+        title: "Contracts II Review 08 Express Conditions"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/rZP99PF-MYo
+      - id: 17EpK4y8EHo
+        title: "Contracts II Review 09: Implied Conditions"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/17EpK4y8EHo
+      - id: xMf478pOHh8
+        title: "Contracts II Review 10: Performance"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/xMf478pOHh8
+      - id: ZefcchXnORA
+        title: "Contracts II Review 11: Material Breach"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/ZefcchXnORA
+      - id: 1iY9s2PJO3w
+        title: "Contracts II Review 14: Excuse"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/1iY9s2PJO3w
+      - id: bytcz-5Qn6I
+        title: "Contracts II Review 12: Total Breach"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/bytcz-5Qn6I
+      - id: rGNNQcU2JCE
+        title: "Contracts II Review 13: Repudiation"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/rGNNQcU2JCE
+      - id: q3wWKIAau_k
+        title: "Contracts II Review 15: Wrap Up"
+        date: 2019-04-29
+        embed: https://www.youtube.com/embed/q3wWKIAau_k
+      - id: RpSfxWvnmHM
+        title: "Lucy v. Zehmer: A Skit"
+        date: 2019-09-18
+        embed: https://www.youtube.com/embed/RpSfxWvnmHM
+      - id: N-Fb2Uio58g
+        title: "Option Contracts and Irrevocable Offers"
+        date: 2019-09-27
+        embed: https://www.youtube.com/embed/N-Fb2Uio58g
+      - id: JOmo7jGktHM
+        title: "Contract Formation: Acceptance by Performance"
+        date: 2019-10-11
+        embed: https://www.youtube.com/embed/JOmo7jGktHM
+      - id: WmWJ21tyG_g
+        title: "Crushing the Bar Exam: How to Answer Multiple Choice Questions (for Law Students)"
+        date: 2019-11-12
+        embed: https://www.youtube.com/embed/WmWJ21tyG_g
+      - id: b4_F4Lacajc
+        title: "Crushing the Bar Exam: Multi-Interrogatory Essay Questions and Contractual Condition of Satisfaction"
+        date: 2020-03-10
+        embed: https://www.youtube.com/embed/b4_F4Lacajc
+      - id: H-IDYmdtY9I
+        title: "Performance and Breach Under Contracts Common Law"
+        date: 2020-03-23
+        embed: https://www.youtube.com/embed/H-IDYmdtY9I
+      - id: YaQoSyWSkh4
+        title: "Factors for Substantial Performance or Material Breach"
+        date: 2020-03-23
+        embed: https://www.youtube.com/embed/YaQoSyWSkh4
+      - id: aWGM8bqr_tE
+        title: "Q.01 Contract Repudiation (Legal Doctrine)"
+        date: 2020-03-26
+        embed: https://www.youtube.com/embed/aWGM8bqr_tE
+      - id: U-hCpD5y6CM
+        title: "Q.02 Contract Repudiation: McCloskey & Co. v. Minweld Steel Co., 220 F.2d 101 (3d Cir. 1955)"
+        date: 2020-03-26
+        embed: https://www.youtube.com/embed/U-hCpD5y6CM
+      - id: MiyqKTv63nE
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/MiyqKTv63nE
+      - id: l75HyCEc3Aw
+        title: "Q.03 Contract Repudiation by Unresolved Uncertainty"
+        date: 2020-03-31
+        embed: https://www.youtube.com/embed/l75HyCEc3Aw
+      - id: oh15nA4ltaU
+        title: "Sports Contracts versus the Coronavirus: Force Majeure Clauses in Professional Sports Agreements"
+        date: 2020-04-07
+        embed: https://www.youtube.com/embed/oh15nA4ltaU
+      - id: vmBeq9TgC4g
+        title: "How Courts Read & Interpret Contracts (The Canons of Construction)"
+        date: 2020-11-09
+        embed: https://www.youtube.com/embed/vmBeq9TgC4g
+      - id: ZjKu1YKchhM
+        title: "Frustration of Purpose: Krell v. Henry and Adbar v. New Beginnings"
+        date: 2021-03-23
+        embed: https://www.youtube.com/embed/ZjKu1YKchhM
+      - id: DLMGGZwZzEY
+        title: "Contract Remedies: Calculating Direct Expectation Damages with the Loss in Value Method"
+        date: 2021-04-07
+        embed: https://www.youtube.com/embed/DLMGGZwZzEY
+      - id: pbmuLllhiKY
+        title: "Expectation Damages: An Overview of Contractual Remedies at Law"
+        date: 2021-04-08
+        embed: https://www.youtube.com/embed/pbmuLllhiKY
+      - id: LKlDe30pGnA
+        title: "Hawkins v. McGee: What the Hairy Hand Told Us About Expectation Damages in Contract Law Remedies"
+        date: 2021-04-08
+        embed: https://www.youtube.com/embed/LKlDe30pGnA
+      - id: MGWTYPGqpME
+        title: "Long-Term Contracts: When Is a Signed Wring Required? The Statute of Frauds and Promissory Estoppel"
+        date: 2021-04-14
+        embed: https://www.youtube.com/embed/MGWTYPGqpME
+      - id: PRMJCXNHQ7I
+        title: "A Comprehensive Overview of Contract Remedies: Damages, Specific Performance, & Negative Injunction"
+        date: 2022-10-13
+        embed: https://www.youtube.com/embed/PRMJCXNHQ7I
+      - id: x6z5X4c1Jc0
+        title: "Contract Law Simplified: The Parol Evidence Rule (Halloween Edition)"
+        date: 2022-10-26
+        embed: https://www.youtube.com/embed/x6z5X4c1Jc0
+      - id: lTZLAKccatU
+        title: "Contract Law Simplified: Conditions"
+        date: 2022-11-04
+        embed: https://www.youtube.com/embed/lTZLAKccatU
+      - id: mvS69dBGCuc
+        title: "How to Ace Essay Exams"
+        date: 2022-11-23
+        embed: https://www.youtube.com/embed/mvS69dBGCuc
+      - id: 2KBkDx9RtCs
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/2KBkDx9RtCs
+      - id: F0NR5JElIAk
+        title: "UCC Article 2"
+        date: 2023-08-18
+        embed: https://www.youtube.com/embed/F0NR5JElIAk
+      - id: dMOw0RF7k9o
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/dMOw0RF7k9o
+      - id: _b8RPSWXM4M
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/_b8RPSWXM4M
+
+  - id: PL2OBGU7rnJY6ZtKea65SLZ7kbGmj51xB3
+    title: "Contract Formation"
+    video_count: 17
+    videos:
+      - id: huKLTwmF0-Q
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/huKLTwmF0-Q
+      - id: v1WfpsL9fws
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/v1WfpsL9fws
+      - id: mb-RRJYz62s
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/mb-RRJYz62s
+      - id: 2_9Olef4nf0
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/2_9Olef4nf0
+      - id: 2grchJgQkIM
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/2grchJgQkIM
+      - id: Ydlqz5XlS8I
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/Ydlqz5XlS8I
+      - id: yb93xtflMvw
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/yb93xtflMvw
+      - id: Pq1tC1fqT6A
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/Pq1tC1fqT6A
+      - id: V6AutJTinXo
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/V6AutJTinXo
+      - id: C1mDv1XACf0
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/C1mDv1XACf0
+      - id: xw1T3Irp8gg
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/xw1T3Irp8gg
+      - id: _BE8rHFcXRk
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/_BE8rHFcXRk
+      - id: eyfSJpEPpE4
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/eyfSJpEPpE4
+      - id: f2y-Kd298vg
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/f2y-Kd298vg
+      - id: U1yRWykWFck
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/U1yRWykWFck
+      - id: QXCKsK3TpAQ
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/QXCKsK3TpAQ
+      - id: JOmo7jGktHM
+        title: "Contract Formation: Acceptance by Performance"
+        date: 2019-10-11
+        embed: https://www.youtube.com/embed/JOmo7jGktHM
+
+  - id: PL2OBGU7rnJY6co2GqXPDjgcGMJJ3IPgo_
+    title: "Closely Held Businesses"
+    video_count: 3
+    videos:
+      - id: t6ubRirAULc
+        title: "Closely Held Business Organizations Review Module 1: Agency Law and Respondeat Superior"
+        date: 2015-04-16
+        embed: https://www.youtube.com/embed/t6ubRirAULc
+      - id: kBssIDeTyHs
+        title: "Closely Held Business Organizations Review Module 2: Partnership Law"
+        date: 2015-04-16
+        embed: https://www.youtube.com/embed/kBssIDeTyHs
+      - id: XIrgCvR3lvo
+        title: "Closely Held Business Organizations Review Module 3: Limited Liability Companies"
+        date: 2015-04-16
+        embed: https://www.youtube.com/embed/XIrgCvR3lvo
+
+  - id: PL2OBGU7rnJY4D1tvdSJ5fYS8y_w6EnBZl
+    title: "Corporations: An Overview"
+    video_count: 10
+    videos:
+      - id: Avam5X9WDFM
+        title: "Corporations: Module 1 (Basics)"
+        date: 2014-12-09
+        embed: https://www.youtube.com/embed/Avam5X9WDFM
+      - id: HhFPXxJgydE
+        title: "Corporations: Module 2 (Definitions)"
+        date: 2014-12-09
+        embed: https://www.youtube.com/embed/HhFPXxJgydE
+      - id: 0vMzat65cA4
+        title: "Corporations: Module 3 (Formation)"
+        date: 2014-12-08
+        embed: https://www.youtube.com/embed/0vMzat65cA4
+      - id: zrET-kuRWA8
+        title: "Corporations: Module 4 (Authority)"
+        date: 2014-12-08
+        embed: https://www.youtube.com/embed/zrET-kuRWA8
+      - id: eMtX-AysXbA
+        title: "Corporations: Module 5 (Finance)"
+        date: 2014-12-08
+        embed: https://www.youtube.com/embed/eMtX-AysXbA
+      - id: tlmy-wW-sZo
+        title: "Corporations: Module 6 (Shareholder Liability)"
+        date: 2014-12-08
+        embed: https://www.youtube.com/embed/tlmy-wW-sZo
+      - id: a3HXMP_Mid0
+        title: "Corporations: Module 7 (Shareholder Approval)"
+        date: 2014-12-09
+        embed: https://www.youtube.com/embed/a3HXMP_Mid0
+      - id: R6MDzkUnXPA
+        title: "Corporations: Module 8 (Director Liability)"
+        date: 2014-12-08
+        embed: https://www.youtube.com/embed/R6MDzkUnXPA
+      - id: PIAXG_QcQNU
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/PIAXG_QcQNU
+      - id: i3pba5hNeN4
+        title: "Unknown"
+        date: 
+        embed: https://www.youtube.com/embed/i3pba5hNeN4
+
+  - id: PL2OBGU7rnJY4Tc1jUhwiO3zuB5Cm2AWFD
+    title: "Capital Structure"
+    video_count: 3
+    videos:
+      - id: qG08X2Lx7iw
+        title: "Capital Structure Module 1: Introduction"
+        date: 2016-11-28
+        embed: https://www.youtube.com/embed/qG08X2Lx7iw
+      - id: b3iEDTubJ3E
+        title: "Capital Structure Module 2: Debt"
+        date: 2016-11-29
+        embed: https://www.youtube.com/embed/b3iEDTubJ3E
+      - id: 1P3NG9Aq6EM
+        title: "Capital Structure Module 3: Equity"
+        date: 2016-11-29
+        embed: https://www.youtube.com/embed/1P3NG9Aq6EM
+
+# --- PERSONAL / NOT FOR WEBSITE ---
+# These playlists exist on the channel but are not featured on the website.
+
+personal:
+  - id: PL2OBGU7rnJY5m2Q1sSGQNJgVcvDMQoNRl
+    title: "Live Mix"
+    video_count: 1
+  - id: PL2OBGU7rnJY5cGmhuKv5ppmUhjXNiVko2
+    title: "Psalms"
+    video_count: 9
+  - id: PL2OBGU7rnJY4MRj-A5xWjnL7BvjH5SI-G
+    title: "Tennis"
+    video_count: 2
+  - id: PL2OBGU7rnJY6VkigrzytnM1EtOJ7cR2I5
+    title: "Fitness"
+    video_count: 4
+  - id: PL2OBGU7rnJY45-6oki58gTcieXyF_q8j0
+    title: "Wedding Songs"
+    video_count: 4
+  - id: PL2OBGU7rnJY6cENkmEqcZmfXN-oZ5min9
+    title: "Physics"
+    video_count: 1
+  - id: PL2OBGU7rnJY4lPerDyeVmB7t0pOo4uul9
+    title: "music videos"
+    video_count: 25

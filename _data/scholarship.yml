@@ -112,7 +112,7 @@ publications:
     cluster: digital-assets
     tags: [stablecoin, GENIUS Act, cryptocurrency, securities law]
     links:
-      ssrn: "https://dx.doi.org/10.2139/ssrn.5366627"
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5366627"
       published:
       pdf: "/scholarship/04 Oranburg – PUBLICATION The Genius Dilemma.pdf"
       companion:
@@ -136,7 +136,7 @@ publications:
     cluster: digital-assets
     tags: [Howey test, CLARITY Act, digital assets, blockchain, securities regulation]
     links:
-      ssrn: "https://dx.doi.org/10.2139/ssrn.5288934"
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5288934"
       published:
       pdf: "/scholarship/05 Oranburg – PUBLICATION Replacing Howey with CLARITY.pdf"
       companion:
@@ -158,7 +158,7 @@ publications:
     cluster: digital-assets
     tags: [DeFi, utility tokens, safe harbor, securities regulation]
     links:
-      ssrn: "https://dx.doi.org/10.2139/ssrn.5254743"
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5254743"
       published:
       pdf: "/scholarship/06 Oranburg – PUBLICATION Function over Form.pdf"
       companion:
@@ -249,7 +249,7 @@ publications:
     cluster: digital-assets
     tags: [financial innovation, consumer protection, securities regulation, Tesla]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2982554"
       published: "https://scholar.law.colorado.edu/lawreview/vol89/iss4/2/"
       pdf: "/scholarship/25 Oranburg – PUBLICATION Hyperfunding.pdf"
       companion:
@@ -274,7 +274,7 @@ publications:
     cluster: startup-finance
     tags: [general solicitation, securities regulation, social media, JOBS Act]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3548312"
       published:
       pdf: "/scholarship/21 Oranburg – PUBLICATION Securities Regulation and Social Media.pdf"
       companion:
@@ -297,7 +297,7 @@ publications:
     cluster: startup-finance
     tags: [regulatory theory, startup innovation, RegTech, entrepreneurship]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3435274"
       published:
       pdf: "/scholarship/20 Oranburg – PUBLICATION Encouraging Entrepreneurship and Innovation through Regulatory Democratization.pdf"
       companion:
@@ -319,7 +319,7 @@ publications:
     cluster: startup-finance
     tags: [startup finance, entrepreneurship education, crowdfunding, venture capital]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2743072"
       published:
       pdf: "/scholarship/23 Oranburg – PUBLICATION Start-Up Financing 2.pdf"
       companion:
@@ -341,7 +341,7 @@ publications:
     cluster: startup-finance
     tags: [gender, entrepreneurship, equity crowdfunding, empirical legal studies]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3263521"
       published:
       pdf: "/scholarship/26 Oranburg & Geiger – PUBLICATION Female Entrepreneurs and Equity Crowdfunding in the US.pdf"
       companion:
@@ -363,7 +363,7 @@ publications:
     cluster: startup-finance
     tags: [JOBS Act, startup liquidity, secondary markets, venture exchanges]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2639879"
       published:
       pdf: "/scholarship/27 Oranburg – PUBLICATION Democratizing Startups.pdf"
       companion:
@@ -408,7 +408,7 @@ publications:
     cluster: startup-finance
     tags: [crowdfunding, Series A gap, game theory, securities regulation]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2544365"
       published:
       pdf: "/scholarship/31 Oranburg – PUBLICATION Bridgefunding - Crowdfunding and the Market for Entrepreneurial Finance.pdf"
       companion:
@@ -438,7 +438,7 @@ publications:
     cluster: digital-assets
     tags: [stablecoin, systemic risk, GENIUS Act, CLARITY Act, financial regulation, DeFi]
     links:
-      ssrn: "https://dx.doi.org/10.2139/ssrn.6421898"
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6421898"
       published:
       pdf: "/scholarship/updates/ssrn-6421898.pdf"
       companion:
@@ -468,7 +468,7 @@ publications:
     cluster: civil-society
     tags: [institutional governance, higher education, antisemitism, free speech, DEI]
     links:
-      ssrn: "https://dx.doi.org/10.2139/ssrn.6423378"
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6423378"
       published:
       pdf: "/scholarship/updates/ssrn-6423378.pdf"
       companion:
@@ -497,7 +497,7 @@ publications:
     cluster: governance
     tags: [contract law, network governance, club goods, private ordering, judicial remedies]
     links:
-      ssrn: "https://dx.doi.org/10.2139/ssrn.6433378"
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6433378"
       published:
       pdf: "/scholarship/updates/ssrn-6433378.pdf"
       companion:
@@ -525,7 +525,7 @@ publications:
     cluster: governance
     tags: [corporate governance, club goods, private ordering, ostracism, institutional design]
     links:
-      ssrn: "https://dx.doi.org/10.2139/ssrn.6439378"
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6439378"
       published:
       pdf: "/scholarship/updates/ssrn-6439378.pdf"
       companion:
@@ -570,7 +570,7 @@ publications:
     cluster: governance
     tags: [corporate governance, director onboarding, COVID-19, online education]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3648687"
       published:
       pdf: "/scholarship/18 Oranburg & Kahn – PUBLICATION Online Onboarding - Corporate Governance Training in the COVID-19 Era.pdf"
       companion:
@@ -614,7 +614,7 @@ publications:
     cluster: governance
     tags: [shareholder activism, Twitter, corporate governance, SEC Rule 14a]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2544363"
       published:
       pdf: "/scholarship/30 Oranburg – PUBLICATION A Little Birdie Said - How Twitter Is Disrupting Shareholder Activism.pdf"
       companion:
@@ -639,7 +639,7 @@ publications:
     cluster: labor
     tags: [transaction cost economics, gig economy, labor law, freelancing]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3270867"
       published:
       pdf: "/scholarship/17 Oranburg & Palagashvili – PUBLICATION Transaction Cost Economics, Labor Law, and the Gig Economy.pdf"
       companion:
@@ -661,7 +661,7 @@ publications:
     cluster: labor
     tags: [labor law reform, gig economy, worker classification, benefits]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3135936"
       published:
       pdf: "/scholarship/24 Oranburg – PUBLICATION Unbundling Employment – Flexible Benefits for the Gig Economy.pdf"
       companion:
@@ -708,7 +708,7 @@ publications:
     cluster: education
     tags: [IP education, systems thinking, legal pedagogy, curriculum reform]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4919316"
       published:
       pdf: "/scholarship/07 Oranburg - PUBLICATION A Systems Approach.pdf"
       companion:
@@ -730,7 +730,7 @@ publications:
     cluster: education
     tags: [continuing legal education, online learning, legal pedagogy, learning science]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104793"
       published:
       pdf: "/scholarship/11 Oranburg – PUBLICATION Advanced Online Continuing Legal Education.pdf"
       companion:
@@ -751,7 +751,7 @@ publications:
     cluster: education
     tags: [legal pedagogy, hybrid teaching, COVID-19, business law education]
     links:
-      ssrn:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3593027"
       published:
       pdf: "/scholarship/19 Oranburg & Tamasy – PUBLICATION Corporations Hybrid - A COVID Case Study on Innovation in Business Law Pedagogy.pdf"
       companion:

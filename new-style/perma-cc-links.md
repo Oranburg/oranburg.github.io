@@ -78,3 +78,39 @@ Total missing from commentary.yml: 15 (6 op-eds + 6 OBLB + 2 CLS Blue Sky + 1 te
 
 Total missing from commentary.yml: 16 (prev 15 + 1 new Bloomberg)
 Also: update existing 3 Bloomberg entries in commentary.yml to include original URLs (currently only have perma links)
+
+## From LinkedIn Review (2026-03-30) — Items NOT yet tracked
+
+### Op-eds / Published Commentary
+- "The Real 'Constitutional Crisis' Is Bigger Than Trump" | Daily Caller | ~May 2025 | https://lnkd.in/gihvpEcP
+- "Musk's OpenAI and Warren Clashes to Steer AI Governance's Future" | Bloomberg Law (with Anat Alon-Beck) | ~Apr 2025
+- "Right Not to Work: Why (Some) Unions Are Anti-Religion" | FIU Law Review 19:3 | SSRN 4906246
+
+### Conferences / Presentations (for presentations.yaml in cv-engine)
+- Law and Antisemitism Conference, Cardozo School of Law (Mar 8-9, 2026) — steering committee
+- Cyber Week TLV / AI Week TLV, Tel Aviv University (Jun 23-26, 2025)
+- Iowa Law Review Symposium on Climate Finance (Sep 19-20, 2024) — co-organizer with CLI/NYU
+- UNH IDEA IP Symposium (Nov 15, 2024) — presenter, "A Systems Approach"
+- Stablecoin Law Conference, U. Wyoming / IHS (Jackson, WY, ~Sep 2025)
+- Equality vs. Equity debate, Wyoming Law School / Federalist Society (~Oct 2024)
+- UNH Federalist Society panel on campus speech codes with Robert Shibley/FIRE (Nov 21, 2024)
+- Illinois Law Review Symposium — keynote speaker (~2024)
+- 2nd Law Professors Mission to Israel (Dec 2025) — co-organizer with Adam Mossoff/WJC
+- 3rd Annual Conference on Law & Antisemitism, FIU (published in FIU L. Rev.)
+- Lawctopus webinar on IP & Entrepreneurship (Nov 7, 2024)
+
+### Media Appearances
+- Decrypt interview on SEC DeFi innovation exemption (~Jun 2025) | perma: https://perma.cc/HU87-QXPW
+- NH Public Radio (Laura Knoy) — campus protests and free speech (~Sep 2024)
+- Marketplace — gig economy (Nov 2020, already tracked)
+
+### Podcast Episodes (not in podcasts.yml)
+- "Mission Drift: Can OpenAI Ditch Its Non-Profit Status?" with Anat Alon-Beck
+- "Tornetta v. Musk" with Anat Alon-Beck and Eric Chaffee
+
+### Other
+- NH Bar admission (sworn in at NH Supreme Court, ~Aug 2024)
+- Started UNH Franklin Pierce position (~Aug 2024)
+- NYU Director position (~2023)
+
+Total new items from LinkedIn: ~20+ across commentary, presentations, media

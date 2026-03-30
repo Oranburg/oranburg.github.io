@@ -25,7 +25,7 @@ The JOBS Act was supposed to fix this by making it easier to sell stock. But sel
 
 ## The illiquidity trap
 
-This is the core of My argument: the JOBS Act addressed issuance but ignored resale. It allowed startups to sell stock through crowdfunding and mini-IPOs, but securities regulations still do not permit the easy resale of that stock on exchanges.
+This is the core of my argument: the JOBS Act addressed issuance but ignored resale. It allowed startups to sell stock through crowdfunding and mini-IPOs, but securities regulations still do not permit the easy resale of that stock on exchanges.
 
 Without secondary markets, private-company stock is "illiquid" -- hard or impossible to sell after you buy it. This creates a cascade of problems.
 

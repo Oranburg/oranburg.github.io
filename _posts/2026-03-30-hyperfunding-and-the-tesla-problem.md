@@ -11,7 +11,7 @@ excerpt: "When Tesla collected $20 billion in presale deposits, it fell into a r
 
 Tesla, Inc. raised almost $400 million by selling cars that did not exist. In one week, the company presold almost 400,000 Model 3 electric vehicles, projecting nearly $20 billion in net revenue from a product that had not yet been manufactured. From a regulatory perspective, this unprecedented "presale" does not exist. There is no law designed to govern it, because nothing like it had ever happened before.
 
-In *Hyperfunding: Regulating Financial Innovations*, published in the University of Colorado Law Review, I coin a term for this phenomenon and argues that it exposes a dangerous gap in financial regulation -- one that leaves consumers unprotected and invites abuse by less scrupulous imitators.
+In *Hyperfunding: Regulating Financial Innovations*, published in the University of Colorado Law Review, I coin a term for this phenomenon and argue that it exposes a dangerous gap in financial regulation -- one that leaves consumers unprotected and invites abuse by less scrupulous imitators.
 
 ## What is hyperfunding?
 
@@ -55,13 +55,9 @@ Disclosure-based regulation assumes there is meaningful information to disclose 
 
 ## A framework for the future
 
-I do not propose a single regulatory fix. Instead, I argue that the first step is correctly classifying the phenomenon. By coining "hyperfunding" and mapping it against existing legal categories -- securities, crowdfunding, presales, and ICOs -- I creates the analytical framework needed for regulators to respond.
+I do not propose a single regulatory fix. The first step is correctly classifying the phenomenon. By coining "hyperfunding" and mapping it against existing legal categories -- securities, crowdfunding, presales, and ICOs -- I create the analytical framework needed for regulators to respond.
 
-The article examines each potential regulatory regime in detail: securities law (which would require registration or an exemption), crowdfunding law (which imposes intermediary requirements and dollar caps), consumer protection law (which offers Fair Credit Billing Act protections but was not designed for this scale), and bankruptcy law (which determines deposit-holders' priority in insolvency).
-
-None of these frameworks, individually, is adequate. The challenge for regulators is to craft protections that address the unique risks of hyperfunding -- massive scale, unproven products, consumer-investors who think they are customers -- without stifling the financial innovation that makes ventures like Tesla possible.
-
-If you are an entrepreneur considering a large-scale presale campaign, or an investor evaluating companies that fund themselves this way, the takeaway is clear: the law has not caught up. You are operating in a gap, and the protections you assume exist may not.
+I examine each potential regulatory regime: securities law (which would require registration or an exemption), crowdfunding law (which imposes intermediary requirements and dollar caps), consumer protection law (which offers Fair Credit Billing Act protections but was not designed for this scale), and bankruptcy law (which determines deposit-holders' priority in insolvency). None is individually adequate. The challenge is to craft protections that address the unique risks of hyperfunding -- massive scale, unproven products, consumer-investors who think they are customers -- without stifling the financial innovation that makes ventures like Tesla possible.
 
 ---
 

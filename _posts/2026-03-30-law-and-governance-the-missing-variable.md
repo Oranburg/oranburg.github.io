@@ -27,7 +27,7 @@ Legal scholarship has not lacked interest in governance. It has lacked a definit
 
 This book supplies the missing account. It defines governance with enough precision to travel across corporate law, administrative law, commons scholarship, nonprofit law, and network governance. It demonstrates that many governance institutions have the structure of club goods — excludable, nonrivalrous, and capable of generating positive externalities for outsiders. And it offers a seven-step method for evaluating legal rules by what they do to governance.
 
-That evaluative contribution matters most. Law is usually judged by the rights it protects, the injuries it remedies, the incentives it creates. This book adds another lens: what does a legal rule do to the institution through which a group manages a shared problem over time? Some rules enable governance. Some degrade it. Some discipline it carefully. Legal analysis often misses that difference because governance has not been cognizable as a distinct legal object. This book argues that it should be.
+That evaluative contribution matters most. Law is usually judged by the rights it protects, the injuries it remedies, the incentives it creates. I add another lens: what does a legal rule do to the institution through which a group manages a shared problem over time? Some rules enable governance. Some degrade it. Some discipline it carefully. Legal analysis misses the difference because governance has not been cognizable as a distinct legal object. Once you make it cognizable, you see damage that was invisible before — and opportunities for design that the existing frameworks cannot identify.
 
 ---
 

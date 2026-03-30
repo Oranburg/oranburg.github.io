@@ -11,7 +11,7 @@ excerpt: "DeFi tokens that grant access to a service are not investment contract
 
 You buy a token that lets you store files on a decentralized cloud network. Another token purchases compute time for an artificial intelligence program. A third grants access to a decentralized cellular network. None of these transactions look like investing in a company. They look like buying a service. Yet under current SEC enforcement practice, all of them risk being classified as securities.
 
-In *Function Over Form: Toward a Safe Harbor Framework for DeFi Regulation of Utility Tokens*, published in the Louisiana Law Review, I argue that this classification is a doctrinal error with real economic consequences -- and proposes a concrete legislative fix.
+In *Function Over Form: Toward a Safe Harbor Framework for DeFi Regulation of Utility Tokens*, published in the Louisiana Law Review, I argue that this classification is a doctrinal error with real economic consequences -- and propose a concrete legislative fix.
 
 ## The misclassification problem
 
@@ -49,7 +49,7 @@ My proposal is specific: Congress should enact a narrowly tailored, function-bas
 
 ## Function first, not form first
 
-The deeper principle behind My proposal is a shift from form-based to function-based regulation. Instead of asking "Is this a token?" and defaulting to securities treatment, regulators should ask "What does this token do?" A token that grants access to cloud storage functions differently from a token that represents equity in a company. The regulatory framework should reflect that difference.
+The deeper principle behind my proposal is a shift from form-based to function-based regulation. Instead of asking "Is this a token?" and defaulting to securities treatment, regulators should ask "What does this token do?" A token that grants access to cloud storage functions differently from a token that represents equity in a company. The regulatory framework should reflect that difference.
 
 This is the first application of what I describe as a more general function-first framework for digital-asset regulation -- one that could extend beyond utility tokens to governance tokens, collateral tokens, and other DeFi instruments, each regulated according to its actual economic function.
 

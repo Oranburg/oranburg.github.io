@@ -17,7 +17,9 @@ The delegation mechanism makes it worse. Many DAOs allow token holders to delega
 
 This matters for antitrust. Regulators cannot take "decentralized" labels at face value. I propose a dual-metric framework that integrates traditional market concentration measures (HHI) with governance concentration metrics (the Nakamoto coefficient, which counts the minimum number of entities needed to reach 51% of governance power). A DAO with a Nakamoto coefficient of 3 is not meaningfully decentralized, regardless of how many token holders appear on the ledger.
 
-The four-quadrant matrix I develop — crossing market concentration with governance concentration — determines when intervention is warranted. The key insight: some entities that look competitive by market share are dangerously concentrated by governance. And some that look monopolistic by market share are genuinely decentralized by governance. Antitrust analysis that ignores the governance dimension will get the answer wrong in both directions.
+The four-quadrant matrix I develop — crossing market concentration with governance concentration — determines when intervention is warranted. Some entities that look competitive by market share are dangerously concentrated by governance. Some that look monopolistic by market share are genuinely decentralized by governance. Antitrust analysis that ignores the governance dimension will get the answer wrong in both directions.
+
+The Beanstalk attack illustrates the stakes. In April 2022, a flash loan attacker borrowed enough governance tokens to pass a malicious proposal, drain $182 million from the protocol treasury, repay the loan, and exit — all in a single thirteen-second Ethereum block. A protocol with a Nakamoto coefficient of 1 (for those thirteen seconds) was marketed as decentralized. The label was the attack surface.
 
 ---
 

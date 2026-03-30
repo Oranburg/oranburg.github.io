@@ -27,7 +27,7 @@ The consequences of this gap are not theoretical. I trace how two federal courts
 
 In *SEC v. Ripple Labs*, Judge Analisa Torres distinguished between institutional sales and programmatic sales of XRP. Institutional sales to accredited investors under written contracts were securities. But programmatic sales to retail buyers on exchanges were not -- because those buyers could not "reasonably expect" that Ripple would use the capital to improve the XRP ecosystem.
 
-One year earlier, in *SEC v. LBRY*, Judge Paul Barbadoro took the opposite approach. Analyzing functionally similar tokens, I held that "all of LBRY's past, present, and future offers and sales" constituted investment contracts. Unlike *Ripple*, *LBRY* did not distinguish between sale methods. The court treated the token itself as the relevant unit of analysis.
+One year earlier, in *SEC v. LBRY*, Judge Paul Barbadoro took the opposite approach. Analyzing functionally similar tokens, the court held that "all of LBRY's past, present, and future offers and sales" constituted investment contracts. Unlike *Ripple*, *LBRY* did not distinguish between sale methods. The court treated the token itself as the relevant unit of analysis.
 
 > These cases present incompatible theories about what *Howey* classifies. *Ripple* asks: Did this transaction create reasonable profit expectations? *LBRY* asks: Does this asset embody an investment relationship?
 

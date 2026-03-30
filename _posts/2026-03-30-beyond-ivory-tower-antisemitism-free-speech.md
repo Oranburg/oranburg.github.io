@@ -17,13 +17,13 @@ In *Beyond the Ivory Tower*, published as a research paper by the Academic Engag
 
 The question is not merely philosophical. Title VI of the Civil Rights Act prohibits discrimination on the basis of race, color, and national origin in federally funded programs. If anti-Zionist speech creates a hostile environment for Jewish students based on their national origin or ethnicity, universities have a legal obligation to respond. If it is protected political expression, they have a legal obligation not to.
 
-I survey the legal framework -- Title VI, free speech doctrine, hate crime statutes -- and finds that existing law provides no clear answer. The courts have not definitively resolved whether anti-Zionism directed at Jewish students constitutes national-origin harassment or protected political advocacy. Universities are left to draw the line themselves, with little guidance and enormous pressure from all sides.
+I survey the legal framework -- Title VI, free speech doctrine, hate crime statutes -- and find that existing law provides no clear answer. The courts have not definitively resolved whether anti-Zionism directed at Jewish students constitutes national-origin harassment or protected political advocacy. Universities are left to draw the line themselves, with little guidance and enormous pressure from all sides.
 
 ## Firsthand observation
 
 The article's second section departs from doctrinal analysis. I traveled to Israel after October 7 and visited the sites of the attacks -- Kibbutz Nir Oz, the Nova Festival grounds. I recount what I saw in direct, first-person prose: the physical evidence of the assault, the testimonies of survivors, the scale of destruction.
 
-This section does not argue a legal point. It establishes a factual baseline. My implicit argument is that the campus debate about October 7 has proceeded in an information vacuum -- that many of the people making the loudest claims about the conflict have not reckoned with what actually happened.
+This section does not argue a legal point. It establishes a factual baseline. The implicit argument is that the campus debate about October 7 has proceeded in an information vacuum -- that many of the people making the loudest claims about the conflict have not reckoned with what actually happened.
 
 ## A liberal-realist framework
 

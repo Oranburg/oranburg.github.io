@@ -33,7 +33,7 @@ The combination reallocates authority from *ex post* enforcement (the SEC suing 
 
 ## The dilemma at the heart of the law
 
-This is where My analysis turns critical. The shift away from securities regulation involves a fundamental trade-off: GENIUS promotes innovation and regulatory clarity by moving stablecoins away from the SEC's antifraud infrastructure. But will prudential supervision, bankruptcy protections, and mandatory contractual rights prove an adequate substitute for the robust private enforcement tools of Rule 10b-5?
+This is where my analysis turns critical. The shift away from securities regulation involves a fundamental trade-off: GENIUS promotes innovation and regulatory clarity by moving stablecoins away from the SEC's antifraud infrastructure. But will prudential supervision, bankruptcy protections, and mandatory contractual rights prove an adequate substitute for the robust private enforcement tools of Rule 10b-5?
 
 > Does GENIUS resolve the doctrinal ambiguities that plagued pre-2025 enforcement, or does it merely displace them?
 
@@ -55,7 +55,7 @@ Chainalysis data underscores the stakes: an estimated $2.17 billion in stablecoi
 
 The GENIUS Act is a congressional wager. Congress bet that the benefits of regulatory clarity and innovation-friendly policy outweigh the costs of moving stablecoins away from the SEC's antifraud infrastructure. Whether that bet pays off depends not on the statute's design -- which I find principled and coherent -- but on the quality of its execution.
 
-For anyone building, investing in, or regulating stablecoins, the clock is running.
+The clock is running.
 
 ---
 

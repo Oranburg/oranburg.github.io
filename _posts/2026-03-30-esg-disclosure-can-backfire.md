@@ -31,9 +31,7 @@ I review empirical studies showing that ESG-related mandatory disclosures are no
 
 The article concludes by examining the direct costs of mandatory ESG disclosure -- legal fees, auditing, reporting infrastructure -- and argues that the SEC should be required to quantitatively weigh these costs against the expected benefits before imposing new mandates. If mandatory disclosure reduces genuine CSR activity while imposing significant compliance costs, the net social value could be negative.
 
-This is not an argument against corporate social responsibility. It is an argument that the mechanism chosen to promote it -- mandatory disclosure -- may be counterproductive. The paper does not enter the Berle-Dodd debate about whether corporations *should* serve society. It asks the narrower and more technical question: will this particular regulation achieve what its proponents claim?
-
-The answer, I argue, is likely no.
+This is not an argument against corporate social responsibility. It is an argument that the mechanism chosen to promote it -- mandatory disclosure -- may be counterproductive. I do not enter the Berle-Dodd debate about whether corporations *should* serve society. I ask the narrower and more technical question: will this particular regulation achieve what its proponents claim? The answer is likely no.
 
 ---
 

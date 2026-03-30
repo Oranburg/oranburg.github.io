@@ -11,7 +11,7 @@ excerpt: "Female-led crowdfunding campaigns raise less — and the gap widens as
 
 Equity crowdfunding was supposed to level the playing field. By allowing anyone -- not just accredited investors -- to invest in startups, the JOBS Act promised to democratize access to capital. Some scholars went further, arguing that crowdfunding would specifically help underrepresented groups, including women entrepreneurs, by reducing the gatekeeping power of a venture capital industry that is overwhelmingly male.
 
-The data tells a different story. In *Female Entrepreneurs and Equity Crowdfunding in the US: Receiving Less When Asking for More*, published in the Journal of Business Venturing Insights, Mark Geiger and Seth C. Oranburg present the first empirical study of gender and funding in the population of U.S. equity crowdfunding campaigns. Their findings challenge the optimistic narrative directly.
+The data tells a different story. In *Female Entrepreneurs and Equity Crowdfunding in the US: Receiving Less When Asking for More*, published in the Journal of Business Venturing Insights, Mark Geiger and I present the first empirical study of gender and funding in the population of U.S. equity crowdfunding campaigns. Their findings challenge the optimistic narrative directly.
 
 ## The numbers
 
@@ -27,7 +27,7 @@ This is the opposite of what crowdfunding advocates predicted. If crowdfunding t
 
 Previous research on crowdfunding and gender has produced mixed results, but the optimistic findings come almost entirely from rewards-based platforms like Kickstarter. On Kickstarter, women entrepreneurs have been found to perform as well as or better than men in meeting funding targets.
 
-Geiger and Oranburg argue that equity crowdfunding is a fundamentally different context. On Kickstarter, backers are making relatively small contributions in exchange for a product or experience. The decision is closer to a purchase than an investment. On equity crowdfunding platforms, contributors are buying a profit interest in a company. They are making investment decisions, evaluating business models, assessing growth potential, and calculating risk-adjusted returns.
+Mark Geiger and I argue that equity crowdfunding is a fundamentally different context. On Kickstarter, backers are making relatively small contributions in exchange for a product or experience. The decision is closer to a purchase than an investment. On equity crowdfunding platforms, contributors are buying a profit interest in a company. They are making investment decisions, evaluating business models, assessing growth potential, and calculating risk-adjusted returns.
 
 This distinction matters because the biases that affect investment decisions may differ from those that affect purchasing decisions. Research on venture capital consistently shows that investors evaluate male and female founders differently -- asking men "promotion" questions about growth and opportunity while asking women "prevention" questions about risk and downside. If equity crowdfunding investors exhibit similar patterns, the platform will not correct the biases of traditional finance. It will replicate them.
 
@@ -35,7 +35,7 @@ This distinction matters because the biases that affect investment decisions may
 
 The study examines the population -- not just a sample -- of U.S. equity crowdfunding campaigns. This is possible because equity crowdfunding was legalized so recently (May 16, 2016) that the total number of campaigns at the time of the study was manageable. The data comes from SEC filings, which are public records, ensuring completeness.
 
-The primary signatory of a crowdfunding campaign is the individual who signs the SEC filing -- typically the CEO or founder. Geiger and Oranburg use this as their measure of gender, which has the advantage of being objective and verifiable rather than relying on self-reporting or researcher coding.
+The primary signatory of a crowdfunding campaign is the individual who signs the SEC filing -- typically the CEO or founder. Mark Geiger and I use this as their measure of gender, which has the advantage of being objective and verifiable rather than relying on self-reporting or researcher coding.
 
 ## The structural problem
 
@@ -47,7 +47,7 @@ There is also the question of what "asking for more" signals to different audien
 
 ## What this means for the crowdfunding debate
 
-The policy implications are uncomfortable. Crowdfunding was sold partly on its democratizing potential -- the idea that removing accredited-investor requirements and allowing ordinary people to invest would diversify who gets funded. Geiger and Oranburg's research suggests this was naive.
+The policy implications are uncomfortable. Crowdfunding was sold partly on its democratizing potential -- the idea that removing accredited-investor requirements and allowing ordinary people to invest would diversify who gets funded. Geiger and My research suggests this was naive.
 
 If equity crowdfunding reproduces the gender biases of traditional venture capital, then the platform is not a solution to funding inequality. It is an expansion of the same system to a larger investor base. More people making biased decisions does not produce less bias. It may produce more.
 

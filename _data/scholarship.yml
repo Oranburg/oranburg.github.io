@@ -416,6 +416,93 @@ publications:
 
   # ---- CORPORATE GOVERNANCE & INSTITUTIONAL DESIGN ----
 
+  - id: crosstagion
+    title: "Crosstagion: The GENIUS Act, CLARITY, and the OCC-CFTC-SEC Gap in Bidirectional Stablecoin Contagion"
+    type: article
+    year: 2026
+    status: forthcoming
+    journal:
+    citation: "Seth C. Oranburg, Crosstagion: The GENIUS Act, CLARITY, and the OCC-CFTC-SEC Gap in Bidirectional Stablecoin Contagion (forthcoming 2026)."
+    coauthors: []
+    abstract: >
+      The GENIUS Act protects against systemic risk flowing in one direction
+      — from stablecoin failure into banking risk. But the empirical record
+      of crosstagion demonstrates the channel runs both ways. When Silicon
+      Valley Bank's failure briefly unpegged USDC in March 2023, the cascade
+      into decentralized markets fell into a jurisdictional gap that neither
+      GENIUS nor CLARITY resolves. No statute allocates liability or mandates
+      coordination among the OCC, CFTC, and SEC when contagion crosses their
+      boundaries. Proposes a tri-agency coordination mechanism triggered by
+      observable stress indicators that assigns jurisdictional primacy before
+      a crisis rather than after.
+    cluster: digital-assets
+    tags: [stablecoin, systemic risk, GENIUS Act, CLARITY Act, financial regulation, DeFi]
+    links:
+      ssrn: "https://dx.doi.org/10.2139/ssrn.6421898"
+      published:
+      pdf: "/scholarship/updates/ssrn-6421898.pdf"
+      companion:
+    featured: true
+
+  - id: exclusive-inclusion
+    title: "Exclusive Inclusion"
+    type: article
+    year: 2026
+    status: forthcoming
+    journal:
+    citation: "Seth C. Oranburg, Exclusive Inclusion (forthcoming 2026)."
+    coauthors: []
+    abstract: >
+      Institutions publicly committed to inclusion can produce systematic
+      identity-based exclusion as a structural output. Self-perpetuating
+      boards, unenforceable fiduciary duties, and the absence of stakeholder
+      standing create an accountability void that organized factions exploit.
+      The mechanism is architectural, not attitudinal, and operates across
+      identity categories: Jewish students, Women of Color in STEM, Black
+      students at liberal arts colleges, conservative faculty, and students
+      with disabilities all face exclusion through the same governance
+      failures. Proposes three structural reforms: stakeholder standing
+      modeled on corporate derivative suits, enforceable mission specificity,
+      and an operational test for tax exemption adapted from hospital
+      community benefit standards.
+    cluster: civil-society
+    tags: [institutional governance, higher education, antisemitism, free speech, DEI]
+    links:
+      ssrn: "https://dx.doi.org/10.2139/ssrn.6423378"
+      published:
+      pdf: "/scholarship/updates/ssrn-6423378.pdf"
+      companion:
+    featured: true
+
+  - id: wrong-plaintiff
+    title: "The Wrong Plaintiff: Contract Damages Versus Network Expulsion and the Collapse of Distributed Governance"
+    type: article
+    year: 2026
+    status: forthcoming
+    journal:
+    citation: "Seth C. Oranburg, The Wrong Plaintiff: Contract Damages Versus Network Expulsion and the Collapse of Distributed Governance (forthcoming 2026)."
+    coauthors: []
+    abstract: >
+      Courts awarding standard contract remedies can destroy private network
+      governance. In collectively governed trading networks, commercial
+      cooperation depends on the credible threat of ostracism — a club good
+      that is excludable and nonrivalrous. When judicial intervention displaces
+      the network's authority to exclude violators, it converts collective
+      exclusion from a property rule into a liability rule and degrades the
+      club good into a public good. Making one obligee whole through
+      expectation damages can produce a net welfare loss by weakening the
+      credibility of exclusion. Connects Buchanan's club goods theory to
+      Calabresi and Melamed's property/liability distinction through the
+      empirical work of Bernstein, Greif, Landa, and Ostrom.
+    cluster: governance
+    tags: [contract law, network governance, club goods, private ordering, judicial remedies]
+    links:
+      ssrn: "https://dx.doi.org/10.2139/ssrn.6433378"
+      published:
+      pdf: "/scholarship/updates/ssrn-6433378.pdf"
+      companion:
+    featured: true
+
   - id: governance-club-good
     title: "\"Private\" Governance Is Actually a Club Good"
     type: article

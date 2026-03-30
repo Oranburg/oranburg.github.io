@@ -11,11 +11,11 @@ excerpt: "When Tesla collected $20 billion in presale deposits, it fell into a r
 
 Tesla, Inc. raised almost $400 million by selling cars that did not exist. In one week, the company presold almost 400,000 Model 3 electric vehicles, projecting nearly $20 billion in net revenue from a product that had not yet been manufactured. From a regulatory perspective, this unprecedented "presale" does not exist. There is no law designed to govern it, because nothing like it had ever happened before.
 
-In *Hyperfunding: Regulating Financial Innovations*, published in the University of Colorado Law Review, Seth C. Oranburg coins a term for this phenomenon and argues that it exposes a dangerous gap in financial regulation -- one that leaves consumers unprotected and invites abuse by less scrupulous imitators.
+In *Hyperfunding: Regulating Financial Innovations*, published in the University of Colorado Law Review, I coin a term for this phenomenon and argues that it exposes a dangerous gap in financial regulation -- one that leaves consumers unprotected and invites abuse by less scrupulous imitators.
 
 ## What is hyperfunding?
 
-"Hyperfunding" is fundraising many millions of dollars in a brief campaign that directly targets a broad base of consumers or investors via the internet. Oranburg named it both for the high speed at which capital is raised and as a nod to Elon Musk's Hyperloop -- capturing the zeitgeist of accelerated financial innovation.
+"Hyperfunding" is fundraising many millions of dollars in a brief campaign that directly targets a broad base of consumers or investors via the internet. I named it both for the high speed at which capital is raised and as a nod to Elon Musk's Hyperloop -- capturing the zeitgeist of accelerated financial innovation.
 
 The critical feature of hyperfunding is what it is *not*. It is not equity financing, because consumers are placing deposits for products, not buying stock. So it does not meet the *Howey* test and is not regulated by securities laws. It is not crowdfunding, because it does not use an intermediary or portal. It is not a traditional presale, because it is several orders of magnitude larger and more uncertain than any presale program before it.
 
@@ -25,7 +25,7 @@ The result is a financial innovation that falls through every regulatory crack.
 
 ## The Elon Musk and Henry Ford parallel
 
-Oranburg draws a historical parallel between Musk and Henry Ford. Both used presales to finance manufacturing revolutions. Ford presold Model T cars to fund production in the early twentieth century, leveraging consumer demand to bypass traditional capital markets. Musk did the same thing a century later, collecting $1,000 deposits from hundreds of thousands of consumers to finance the Model 3 production line.
+I draw a historical parallel between Musk and Henry Ford. Both used presales to finance manufacturing revolutions. Ford presold Model T cars to fund production in the early twentieth century, leveraging consumer demand to bypass traditional capital markets. Musk did the same thing a century later, collecting $1,000 deposits from hundreds of thousands of consumers to finance the Model 3 production line.
 
 The difference is scale and speed. Ford's presales were local and incremental. Tesla's were global and instantaneous, powered by the internet and social media. A single tweet from Musk could generate billions in commitments overnight. This speed and scale changes the risk profile entirely.
 
@@ -41,13 +41,13 @@ Tesla had the resources and brand loyalty to follow through (eventually, after s
 
 ## The ICO connection
 
-Oranburg identifies hyperfunding as part of a broader pattern of unregulated financial innovation. Initial coin offerings (ICOs) on cryptocurrency blockchains exhibit remarkably similar characteristics: massive fundraising, direct-to-consumer, internet-enabled, and operating in a regulatory vacuum.
+I identify hyperfunding as part of a broader pattern of unregulated financial innovation. Initial coin offerings (ICOs) on cryptocurrency blockchains exhibit remarkably similar characteristics: massive fundraising, direct-to-consumer, internet-enabled, and operating in a regulatory vacuum.
 
 Both hyperfunding and ICOs exploit the same gap. They are not securities (no equity, no profit-sharing). They are not traditional presales (too large, too speculative). They are not crowdfunding (no portal, no intermediary). Existing regulatory frameworks were designed for a world where financial innovations fit neatly into established categories. These innovations do not.
 
 ## Financial regulatory theory and the problem of novelty
 
-The deeper problem, Oranburg argues, is structural. We are entering an era when innovation outpaces regulation. Public watchdogs and legislatures lack the capacity to keep up with emerging fintech. Private consumers will become increasingly responsible for their own financial security in areas where they have no expertise and no legal protection.
+The deeper problem, I argue, is structural. We are entering an era when innovation outpaces regulation. Public watchdogs and legislatures lack the capacity to keep up with emerging fintech. Private consumers will become increasingly responsible for their own financial security in areas where they have no expertise and no legal protection.
 
 Financial regulatory theory offers three traditional approaches: disclosure-based regulation (require information sharing), merit-based regulation (require government approval before offering), and antifraud regulation (punish bad actors after the fact). None works well for hyperfunding.
 
@@ -55,7 +55,7 @@ Disclosure-based regulation assumes there is meaningful information to disclose 
 
 ## A framework for the future
 
-Oranburg does not propose a single regulatory fix. Instead, he argues that the first step is correctly classifying the phenomenon. By coining "hyperfunding" and mapping it against existing legal categories -- securities, crowdfunding, presales, and ICOs -- he creates the analytical framework needed for regulators to respond.
+I do not propose a single regulatory fix. Instead, I argue that the first step is correctly classifying the phenomenon. By coining "hyperfunding" and mapping it against existing legal categories -- securities, crowdfunding, presales, and ICOs -- I creates the analytical framework needed for regulators to respond.
 
 The article examines each potential regulatory regime in detail: securities law (which would require registration or an exemption), crowdfunding law (which imposes intermediary requirements and dollar caps), consumer protection law (which offers Fair Credit Billing Act protections but was not designed for this scale), and bankruptcy law (which determines deposit-holders' priority in insolvency).
 

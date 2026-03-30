@@ -11,7 +11,7 @@ excerpt: "The JOBS Act promised to democratize startups. Instead, capital consol
 
 President Obama signed the Jumpstart Our Business Startups Act in 2012 to "help entrepreneurs raise the capital they need to put Americans back to work and create an economy that's built to last." The goal was to democratize startups -- making capital available to diverse entrepreneurs in new geographies, including women and minorities outside Silicon Valley, for new business projects beyond high technology.
 
-It has not worked. Capital has consolidated, not dispersed. And in *Democratizing Startups*, published in the Rutgers University Law Review, Seth C. Oranburg explains why the problem runs deeper than anyone in Congress anticipated.
+It has not worked. Capital has consolidated, not dispersed. And in *Democratizing Startups*, published in the Rutgers University Law Review, I explain why the problem runs deeper than anyone in Congress anticipated.
 
 ## The consolidation problem
 
@@ -25,7 +25,7 @@ The JOBS Act was supposed to fix this by making it easier to sell stock. But sel
 
 ## The illiquidity trap
 
-This is the core of Oranburg's argument: the JOBS Act addressed issuance but ignored resale. It allowed startups to sell stock through crowdfunding and mini-IPOs, but securities regulations still do not permit the easy resale of that stock on exchanges.
+This is the core of My argument: the JOBS Act addressed issuance but ignored resale. It allowed startups to sell stock through crowdfunding and mini-IPOs, but securities regulations still do not permit the easy resale of that stock on exchanges.
 
 Without secondary markets, private-company stock is "illiquid" -- hard or impossible to sell after you buy it. This creates a cascade of problems.
 
@@ -41,13 +41,13 @@ Without legal secondary markets, trading moves to the shadows. Wealthy and influ
 
 The alternative is even worse: offshore stock markets. Some private company stock is traded on exchanges in foreign jurisdictions with minimal regulatory oversight. This exposes American investors to the exact risks that American securities law was designed to prevent.
 
-Oranburg notes that firms like SharesPost, FundersClub, and AngelList have attempted to create private stock trading platforms, but all operate under severe restrictions imposed by SEC no-action letters. SecondMarket shut out retail investors completely. The market is telling us that demand for secondary trading exists, but regulation prevents it from being satisfied legally.
+I note that firms like SharesPost, FundersClub, and AngelList have attempted to create private stock trading platforms, but all operate under severe restrictions imposed by SEC no-action letters. SecondMarket shut out retail investors completely. The market is telling us that demand for secondary trading exists, but regulation prevents it from being satisfied legally.
 
 ## The Rule 144B proposal
 
-Oranburg's solution is a new "Rule 144B" safe harbor -- a regulatory provision that could be enacted by the SEC without an act of Congress. The proposal would permit transparent, web-based venture stock exchanges with two critical safeguards.
+My solution is a new "Rule 144B" safe harbor -- a regulatory provision that could be enacted by the SEC without an act of Congress. The proposal would permit transparent, web-based venture stock exchanges with two critical safeguards.
 
-First, exchanges would employ fraud-prevention intermediaries that Oranburg terms "independent analysts." These are a hybrid of public stock analyst and venture capital manager -- professionals who evaluate private companies and provide the independent assessment that retail investors need but cannot obtain on their own.
+First, exchanges would employ fraud-prevention intermediaries that I term "independent analysts." These are a hybrid of public stock analyst and venture capital manager -- professionals who evaluate private companies and provide the independent assessment that retail investors need but cannot obtain on their own.
 
 Second, the exchanges would operate publicly and transparently, eliminating the dark-pool problem. Price discovery would occur in the open, and all investors -- not just institutional players -- would have access.
 

@@ -11,7 +11,7 @@ excerpt: "Patents, trademarks, copyrights, and trade secrets are interconnected.
 
 Law schools teach intellectual property in silos. A student takes Patent Law, then Copyright Law, then Trademark Law -- each as a separate course with its own casebook, its own doctrinal framework, its own exam. Trade secrets, if covered at all, appear as an afterthought.
 
-In *A Systems Approach: Teaching Intellectual Property in Our Interconnected World*, Seth C. Oranburg argues that this fragmented approach fails students because it does not reflect how IP actually works in practice.
+In *A Systems Approach: Teaching Intellectual Property in Our Interconnected World*, I argue that this fragmented approach fails students because it does not reflect how IP actually works in practice.
 
 ## The interconnection problem
 
@@ -21,7 +21,7 @@ A student who has taken four separate IP courses may understand each doctrine in
 
 ## The systems approach
 
-Oranburg proposes an integrated curriculum that teaches IP as a connected system rather than four separate subjects. The model draws on systems thinking -- the idea that understanding components in isolation is insufficient when the behavior of the system depends on the interactions between them.
+I propose an integrated curriculum that teaches IP as a connected system rather than four separate subjects. The model draws on systems thinking -- the idea that understanding components in isolation is insufficient when the behavior of the system depends on the interactions between them.
 
 The article uses UNH Franklin Pierce School of Law's Hybrid JD program as a case study. Franklin Pierce has historically been one of the top IP law programs in the country, and its hybrid format -- combining online and in-person instruction -- creates opportunities for curricular integration that traditional formats do not.
 

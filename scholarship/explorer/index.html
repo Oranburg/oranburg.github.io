@@ -1,0 +1,533 @@
+---
+layout: default
+title: Research Explorer
+permalink: /scholarship/explorer/
+---
+
+<style>
+/* ==========================================================================
+   Research Explorer — Hex Diagram + Drill-Down
+   ========================================================================== */
+
+.explorer {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) 0;
+}
+
+.explorer-intro {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.explorer-intro h1 {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+}
+
+.explorer-intro p {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Hex Grid --- */
+
+.hex-container {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto var(--space-2xl);
+  aspect-ratio: 1 / 0.9;
+}
+
+.hex-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hex-line {
+  stroke: var(--border);
+  stroke-width: 1;
+  transition: opacity 0.4s;
+}
+
+.hex-container.cluster-active .hex-line {
+  opacity: 0.1;
+}
+
+/* --- Nodes --- */
+
+.hex-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 0.4s, transform 0.4s;
+  z-index: 2;
+}
+
+.hex-node:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+.hex-container.cluster-active .hex-node {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.hex-container.cluster-active .hex-node.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.node-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: var(--space-sm);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  margin: 0 auto;
+}
+
+.hex-node:hover .node-circle,
+.hex-node.active .node-circle {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(109, 172, 222, 0.3);
+}
+
+.node-label {
+  font-family: var(--font-headline);
+  font-size: 0.7rem;
+  color: var(--text);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.node-count {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* Center node */
+.hex-node.center .node-circle {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-soft));
+  border-color: var(--accent);
+}
+
+.hex-node.center .node-label {
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+.hex-node.center {
+  cursor: default;
+}
+
+.hex-container.cluster-active .hex-node.center {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* --- Detail Panel --- */
+
+.cluster-detail {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease, margin 0.4s ease;
+  margin: 0;
+}
+
+.cluster-detail.open {
+  max-height: 3000px;
+  opacity: 1;
+  margin: var(--space-xl) 0;
+}
+
+.cluster-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 3px solid var(--accent-red);
+}
+
+.cluster-detail-header h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.back-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--font-headline);
+  font-size: 0.85rem;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.back-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.cluster-description {
+  color: var(--muted);
+  margin-bottom: var(--space-xl);
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+}
+
+/* --- Paper Cards in Detail --- */
+
+.paper-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.paper-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.paper-card:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.paper-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.paper-card-title {
+  font-family: var(--font-accent);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: var(--space-xs);
+}
+
+.paper-card-journal {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.paper-card-abstract {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0 solid var(--border);
+}
+
+.paper-card.expanded .paper-card-abstract {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+
+.paper-card-abstract p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-md);
+}
+
+.paper-links {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.paper-links a {
+  font-family: var(--font-headline);
+  font-size: 0.85rem;
+  color: var(--accent-red);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.paper-links a:hover {
+  color: var(--accent);
+}
+
+.paper-card-expand {
+  float: right;
+  color: var(--accent);
+  font-family: var(--font-headline);
+  font-weight: bold;
+}
+
+/* --- Companion badge --- */
+.companion-badge {
+  display: inline-block;
+  background: var(--teal);
+  color: var(--blue-deep);
+  font-family: var(--font-headline);
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-left: var(--space-sm);
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+/* --- Mobile --- */
+
+@media (max-width: 600px) {
+  .hex-container {
+    display: none;
+  }
+
+  .mobile-cluster-list {
+    display: block !important;
+  }
+}
+
+.mobile-cluster-list {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-cluster-btn {
+  display: block;
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-sm);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-headline);
+  font-size: 1rem;
+  color: var(--accent);
+  transition: border-color 0.2s;
+}
+
+.mobile-cluster-btn:hover {
+  border-color: var(--accent);
+}
+
+.mobile-cluster-btn .node-count {
+  float: right;
+  color: var(--muted);
+}
+</style>
+
+<div class="explorer">
+  <div class="explorer-intro">
+    <h1>Research Explorer</h1>
+    <p>Click a research cluster to explore the publications within it. Click a paper to read the abstract and find links to the full text.</p>
+  </div>
+
+  <!-- Hex diagram (desktop/tablet) -->
+  <div class="hex-container" id="hexContainer">
+    <!-- SVG connecting lines -->
+    <svg class="hex-svg" viewBox="0 0 640 576" preserveAspectRatio="xMidYMid meet">
+      <!-- Lines drawn between adjacent hex positions -->
+      <line class="hex-line" x1="320" y1="288" x2="320" y2="72"/>
+      <line class="hex-line" x1="320" y1="288" x2="527" y2="168"/>
+      <line class="hex-line" x1="320" y1="288" x2="527" y2="408"/>
+      <line class="hex-line" x1="320" y1="288" x2="320" y2="504"/>
+      <line class="hex-line" x1="320" y1="288" x2="113" y2="408"/>
+      <line class="hex-line" x1="320" y1="288" x2="113" y2="168"/>
+      <!-- Outer ring connections -->
+      <line class="hex-line" x1="320" y1="72" x2="527" y2="168" style="opacity:0.3"/>
+      <line class="hex-line" x1="527" y1="168" x2="527" y2="408" style="opacity:0.3"/>
+      <line class="hex-line" x1="527" y1="408" x2="320" y2="504" style="opacity:0.3"/>
+      <line class="hex-line" x1="320" y1="504" x2="113" y2="408" style="opacity:0.3"/>
+      <line class="hex-line" x1="113" y1="408" x2="113" y2="168" style="opacity:0.3"/>
+      <line class="hex-line" x1="113" y1="168" x2="320" y2="72" style="opacity:0.3"/>
+    </svg>
+
+    <!-- Center node -->
+    <div class="hex-node center" style="left:50%;top:50%;" tabindex="0" aria-label="Research center: How law responds to technological disruption">
+      <div class="node-circle">
+        <div class="node-label">Law, Technology<br>&amp; Institutional Trust</div>
+      </div>
+    </div>
+
+    <!-- Cluster nodes — positioned in hex ring -->
+    {% for cluster in site.data.scholarship.clusters %}
+    {% assign cluster_pubs = site.data.scholarship.publications | where: "cluster", cluster.id %}
+    {% assign pub_count = 0 %}
+    {% for p in cluster_pubs %}{% unless p.type == "book" or p.exclude_from contains 'explorer' %}{% assign pub_count = pub_count | plus: 1 %}{% endunless %}{% endfor %}
+
+    {% case forloop.index %}
+      {% when 1 %}{% assign node_left = "50%" %}{% assign node_top = "12.5%" %}
+      {% when 2 %}{% assign node_left = "82.3%" %}{% assign node_top = "29.2%" %}
+      {% when 3 %}{% assign node_left = "82.3%" %}{% assign node_top = "70.8%" %}
+      {% when 4 %}{% assign node_left = "50%" %}{% assign node_top = "87.5%" %}
+      {% when 5 %}{% assign node_left = "17.7%" %}{% assign node_top = "70.8%" %}
+      {% when 6 %}{% assign node_left = "17.7%" %}{% assign node_top = "29.2%" %}
+      {% when 7 %}{% assign node_left = "50%" %}{% assign node_top = "50%" %}
+    {% endcase %}
+
+    <div class="hex-node" style="left:{{ node_left }};top:{{ node_top }};" data-cluster="{{ cluster.id }}" tabindex="0" role="button" aria-label="Explore {{ cluster.label }} ({{ pub_count }} articles)" onclick="openCluster('{{ cluster.id }}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCluster('{{ cluster.id }}')}">
+      <div class="node-circle">
+        <div class="node-label">{{ cluster.label }}</div>
+        <div class="node-count">{{ pub_count }} articles</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Mobile fallback: simple list -->
+  <ul class="mobile-cluster-list" id="mobileList">
+    {% for cluster in site.data.scholarship.clusters %}
+    {% assign cluster_pubs = site.data.scholarship.publications | where: "cluster", cluster.id %}
+    {% assign pub_count = 0 %}
+    {% for p in cluster_pubs %}{% unless p.type == "book" or p.exclude_from contains 'explorer' %}{% assign pub_count = pub_count | plus: 1 %}{% endunless %}{% endfor %}
+    <li>
+      <button class="mobile-cluster-btn" onclick="openCluster('{{ cluster.id }}')">
+        {{ cluster.label }}
+        <span class="node-count">{{ pub_count }}</span>
+      </button>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Detail panels (one per cluster, hidden by default) -->
+  {% for cluster in site.data.scholarship.clusters %}
+  <div class="cluster-detail" id="detail-{{ cluster.id }}">
+    <div class="cluster-detail-header">
+      <h2>{{ cluster.label }}</h2>
+      <button class="back-btn" onclick="closeCluster()" aria-label="Back to overview">&larr; All Clusters</button>
+    </div>
+    <p class="cluster-description">{{ cluster.description }}</p>
+
+    <div class="paper-grid">
+      {% assign cluster_pubs = site.data.scholarship.publications | where: "cluster", cluster.id | sort: "year" | reverse %}
+      {% for pub in cluster_pubs %}
+        {% if pub.type == "book" or pub.exclude_from contains 'explorer' %}{% continue %}{% endif %}
+        <div class="paper-card" tabindex="0" role="button" aria-label="{{ pub.title }}" onclick="togglePaper(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();togglePaper(this)}">
+          <span class="paper-card-expand">+</span>
+          <div class="paper-card-title">
+            {{ pub.title }}
+            {% if pub.links.companion %}<a href="{{ pub.links.companion }}" class="companion-badge" onclick="event.stopPropagation()">Companion Site</a>{% endif %}
+          </div>
+          <div class="paper-card-journal">
+            {% if pub.journal %}{{ pub.journal }}, {% endif %}
+            {% if pub.status == "forthcoming" %}forthcoming {% endif %}{{ pub.year }}
+            {% if pub.coauthors.size > 0 %} (with {{ pub.coauthors | join: " and " }}){% endif %}
+          </div>
+          <div class="paper-card-abstract">
+            <p>{{ pub.abstract }}</p>
+            <div class="paper-links">
+              {% if pub.links.ssrn %}<a href="{{ pub.links.ssrn }}" target="_blank" onclick="event.stopPropagation()">SSRN &rarr;</a>{% endif %}
+              {% if pub.links.published %}<a href="{{ pub.links.published }}" target="_blank" onclick="event.stopPropagation()">Full Text &rarr;</a>{% endif %}
+              {% if pub.links.pdf %}<a href="{{ pub.links.pdf }}" target="_blank" onclick="event.stopPropagation()">PDF &rarr;</a>{% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+var activeCluster = null;
+
+function openCluster(id) {
+  // Close any open cluster first
+  if (activeCluster) closeCluster();
+
+  activeCluster = id;
+  var container = document.getElementById('hexContainer');
+  container.classList.add('cluster-active');
+
+  // Highlight active node
+  var nodes = container.querySelectorAll('.hex-node[data-cluster]');
+  nodes.forEach(function (n) {
+    if (n.dataset.cluster === id) n.classList.add('active');
+  });
+
+  // Open detail panel
+  var detail = document.getElementById('detail-' + id);
+  if (detail) {
+    detail.classList.add('open');
+    // Scroll to detail panel smoothly
+    setTimeout(function () {
+      detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 100);
+  }
+}
+
+function closeCluster() {
+  var container = document.getElementById('hexContainer');
+  container.classList.remove('cluster-active');
+
+  // Remove active from all nodes
+  var nodes = container.querySelectorAll('.hex-node');
+  nodes.forEach(function (n) { n.classList.remove('active'); });
+
+  // Close all detail panels
+  var details = document.querySelectorAll('.cluster-detail');
+  details.forEach(function (d) { d.classList.remove('open'); });
+
+  // Close all expanded papers
+  var papers = document.querySelectorAll('.paper-card.expanded');
+  papers.forEach(function (p) {
+    p.classList.remove('expanded');
+    var ind = p.querySelector('.paper-card-expand');
+    if (ind) ind.textContent = '+';
+  });
+
+  activeCluster = null;
+
+  // Scroll back to hex
+  container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function togglePaper(el) {
+  // Don't toggle if clicking a link inside
+  if (event && event.target.tagName === 'A') return;
+  el.classList.toggle('expanded');
+  var ind = el.querySelector('.paper-card-expand');
+  if (ind) ind.textContent = el.classList.contains('expanded') ? '\u2212' : '+';
+}
+
+// ESC to close
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && activeCluster) closeCluster();
+});
+</script>

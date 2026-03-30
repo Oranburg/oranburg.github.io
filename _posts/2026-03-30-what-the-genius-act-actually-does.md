@@ -2,8 +2,8 @@
 layout: post
 title: "What the GENIUS Act Actually Does"
 date: 2026-03-30
-category: fintech
-tags: [stablecoin, GENIUS Act, cryptocurrency, securities law]
+tags: [fintech, securities, regulation, markets]
+kind: guide
 source_papers: [genius-dilemma]
 featured: true
 excerpt: "The first comprehensive stablecoin law resolves years of regulatory fragmentation — but creates new tensions between innovation and antifraud."

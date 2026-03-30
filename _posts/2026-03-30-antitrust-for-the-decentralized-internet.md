@@ -2,8 +2,8 @@
 layout: post
 title: "Antitrust for the Decentralized Internet"
 date: 2026-03-30
-category: fintech
-tags: [antitrust, blockchain, Big Tech, internet regulation, decentralization]
+tags: [fintech, markets, regulation, business]
+kind: essay
 source_papers: [antitrust-blockchain]
 featured: false
 excerpt: "Applying 19th-century antitrust tools to 21st-century information markets could break the internet. Here's why the analogy fails."

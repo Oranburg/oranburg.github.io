@@ -2,8 +2,8 @@
 layout: post
 title: "A Short History of Financial Technology"
 date: 2026-03-30
-category: fintech
-tags: [fintech history, financial regulation, cryptocurrency, crowdfunding]
+tags: [fintech, markets, regulation, securities]
+kind: essay
 source_papers: [history-fintech]
 featured: false
 excerpt: "From colonial-era incorporation to cryptocurrency — the recurring pattern of financial innovation outpacing regulation."

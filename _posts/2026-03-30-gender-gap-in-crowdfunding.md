@@ -11,7 +11,7 @@ excerpt: "Female-led crowdfunding campaigns raise less — and the gap widens as
 
 Equity crowdfunding was supposed to level the playing field. By allowing anyone -- not just accredited investors -- to invest in startups, the JOBS Act promised to democratize access to capital. Some scholars went further, arguing that crowdfunding would specifically help underrepresented groups, including women entrepreneurs, by reducing the gatekeeping power of a venture capital industry that is overwhelmingly male.
 
-The data tells a different story. In *Female Entrepreneurs and Equity Crowdfunding in the US: Receiving Less When Asking for More*, published in the Journal of Business Venturing Insights, Mark Geiger and I present the first empirical study of gender and funding in the population of U.S. equity crowdfunding campaigns. Their findings challenge the optimistic narrative directly.
+The data tells a different story. In *Female Entrepreneurs and Equity Crowdfunding in the US: Receiving Less When Asking for More*, published in the Journal of Business Venturing Insights, Mark Geiger and I present the first empirical study of gender and funding in the population of U.S. equity crowdfunding campaigns. Our findings challenge the optimistic narrative directly.
 
 ## The numbers
 
@@ -35,7 +35,7 @@ This distinction matters because the biases that affect investment decisions may
 
 The study examines the population -- not just a sample -- of U.S. equity crowdfunding campaigns. This is possible because equity crowdfunding was legalized so recently (May 16, 2016) that the total number of campaigns at the time of the study was manageable. The data comes from SEC filings, which are public records, ensuring completeness.
 
-The primary signatory of a crowdfunding campaign is the individual who signs the SEC filing -- typically the CEO or founder. Mark Geiger and I use this as their measure of gender, which has the advantage of being objective and verifiable rather than relying on self-reporting or researcher coding.
+The primary signatory of a crowdfunding campaign is the individual who signs the SEC filing -- typically the CEO or founder. We use this as our measure of gender, which has the advantage of being objective and verifiable rather than relying on self-reporting or researcher coding.
 
 ## The structural problem
 
@@ -47,7 +47,7 @@ There is also the question of what "asking for more" signals to different audien
 
 ## What this means for the crowdfunding debate
 
-The policy implications are uncomfortable. Crowdfunding was sold partly on its democratizing potential -- the idea that removing accredited-investor requirements and allowing ordinary people to invest would diversify who gets funded. Geiger and My research suggests this was naive.
+The policy implications are uncomfortable. Crowdfunding was sold partly on its democratizing potential -- the idea that removing accredited-investor requirements and allowing ordinary people to invest would diversify who gets funded. Our research suggests this was naive.
 
 If equity crowdfunding reproduces the gender biases of traditional venture capital, then the platform is not a solution to funding inequality. It is an expansion of the same system to a larger investor base. More people making biased decisions does not produce less bias. It may produce more.
 

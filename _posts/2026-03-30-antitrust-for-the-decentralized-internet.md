@@ -49,11 +49,9 @@ For antitrust plaintiffs seeking to apply structuralism to Big Tech, I identify 
 
 ## Why blockchain matters
 
-Blockchain technology offers the most plausible pathway for decentralized competitors to challenge Big Tech. Decentralized autonomous organizations (DAOs), peer-to-peer networks, and Web3 applications can replicate many of the services that dominant platforms currently provide -- without the centralized control that triggers antitrust concern.
+Blockchain technology offers the most plausible pathway for decentralized competitors to challenge Big Tech. DAOs, peer-to-peer networks, and Web3 applications can replicate many of the services dominant platforms currently provide -- without the centralized control that triggers antitrust concern. But this potential is realized only if the regulatory environment permits it.
 
-But this potential is realized only if the regulatory environment permits it. If antitrust enforcement is shaped by a misunderstanding of internet market structure, it will target not just today's giants but tomorrow's decentralized challengers.
-
-The choice is between an antitrust policy that understands the internet's actual architecture and one that imposes a 19th-century mental model onto a 21st-century market. I argue that policymakers and judges who recognize the web as a decentralized-distributed structure can begin to articulate an antitrust policy that facilitates technological growth and competitive online markets. Those who do not risk breaking the very system they are trying to fix.
+If antitrust enforcement treats any firm that achieves significant market share as presumptively anticompetitive, it penalizes success -- including the success of decentralized challengers that represent the very competition antitrust law exists to protect. The irony is sharp: an agenda designed to promote competition could instead calcify existing market structures by preventing entry.
 
 ---
 

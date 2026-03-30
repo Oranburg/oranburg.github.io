@@ -39,6 +39,12 @@ The second purpose is architectural — cultivating the judgment, character, and
 
 Modern law stopped building. We became obsessed with foundations. We measured success by harms prevented and never asked what we were preventing from existing.
 
+The consequences are visible everywhere once you see the pattern. Medical licensing protects patients from incompetent physicians, but the architecture of risk management has produced a system in which a doctor who exercises clinical judgment outside a protocol faces greater professional liability than one who follows a protocol that harms the patient. The protocol-follower is judgment-proof. The physician who thought — who actually exercised the faculty the profession exists to cultivate — is exposed. The system selects against its own purpose.
+
+Corporate compliance departments now consume a larger share of organizational resources than the activities they are designed to monitor. Universities have created bureaucratic structures so extensive that faculty spend more time documenting compliance with educational standards than doing the work those standards were meant to ensure. In each case, the institution has become expert at demonstrating that it followed the rules and incapable of asking whether the rules accomplished anything worth accomplishing.
+
+The question this book poses is not whether we should have rules. Of course we should have rules. The question is whether a civilization that has replaced the cultivation of judgment with the engineering of compliance can sustain the capacity to know what rules are for.
+
 ---
 
 *Judgment Proof* is a forthcoming book. This essay is drawn from Part One.

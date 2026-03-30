@@ -31,21 +31,21 @@ Decades later, the JOBS Act of 2012 attempted to update securities regulation fo
 
 ## Cryptocurrency as the latest chapter
 
-Cryptocurrency and blockchain fit neatly into My historical framework. Bitcoin, launched in 2009, is a financial technology that enables peer-to-peer value transfer without intermediaries. Ethereum, launched in 2015, extended this capability to programmable financial contracts. Initial coin offerings (ICOs) used these platforms to raise capital from global investors, often without any regulatory compliance at all.
+Cryptocurrency and blockchain fit neatly into my historical framework. Bitcoin, launched in 2009, is a financial technology that enables peer-to-peer value transfer without intermediaries. Ethereum, launched in 2015, extended this capability to programmable financial contracts. Initial coin offerings (ICOs) used these platforms to raise capital from global investors, often without any regulatory compliance at all.
 
 The predictable crisis arrived. The ICO boom of 2017-2018 produced spectacular frauds alongside legitimate projects. The SEC responded with enforcement actions, applying the *Howey* test -- a doctrine from 1946 -- to instruments that bore little resemblance to the citrus-grove contracts the test was designed to evaluate.
 
-My historical lens reveals why this response was both inevitable and insufficient. Inevitable, because the regulatory cycle demands a response to crisis. Insufficient, because the response relied on legal frameworks built for an earlier generation of financial technology. The securities laws of the 1930s assumed centralized issuers, identifiable promoters, and instruments with fixed characteristics. Decentralized protocols, pseudonymous developers, and tokens that change function over time challenge every one of those assumptions.
+my historical lens reveals why this response was both inevitable and insufficient. Inevitable, because the regulatory cycle demands a response to crisis. Insufficient, because the response relied on legal frameworks built for an earlier generation of financial technology. The securities laws of the 1930s assumed centralized issuers, identifiable promoters, and instruments with fixed characteristics. Decentralized protocols, pseudonymous developers, and tokens that change function over time challenge every one of those assumptions.
 
 ## The lesson of the long view
 
-The value of My historical approach is not antiquarian. It is diagnostic. By showing that the tension between financial innovation and regulation is centuries old, I reframes the current debates over cryptocurrency, DeFi, and stablecoin regulation as the latest iteration of a structural pattern -- not an unprecedented crisis requiring unprecedented measures.
+The value of my historical approach is not antiquarian. It is diagnostic. By showing that the tension between financial innovation and regulation is centuries old, I reframe the current debates over cryptocurrency, DeFi, and stablecoin regulation as the latest iteration of a structural pattern -- not an unprecedented crisis requiring unprecedented measures.
 
 This perspective yields a practical insight: the best regulatory responses have been those that understood the new technology on its own terms, rather than forcing it into categories designed for its predecessors. General incorporation statutes worked because they accepted the corporation as a legitimate and scalable form, rather than trying to evaluate each company through the lens of the special-charter system it replaced. The securities laws of the 1930s worked because they recognized public stock offerings as a distinct activity requiring purpose-built disclosure rules, rather than trying to regulate them under existing contract or property law.
 
 The implication for today's policymakers is clear. Regulating cryptocurrency with a test designed for orange-grove contracts, or governing DeFi with rules built for centralized exchanges, is the modern equivalent of applying special-charter logic to general incorporation. It can work in individual cases, but it cannot produce a coherent or durable framework.
 
-My book provides the historical foundation for understanding why new financial technologies demand new legal frameworks -- and why the stakes of getting this wrong have been consistently high across three centuries of American financial history.
+The book provides the historical foundation for understanding why new financial technologies demand new legal frameworks -- and why the stakes of getting this wrong have been consistently high across three centuries of American financial history.
 
 ---
 

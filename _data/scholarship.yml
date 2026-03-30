@@ -28,53 +28,61 @@
 
 clusters:
   - id: digital-assets
-    label: Digital Assets & Financial Regulation
+    label: Digital Assets, Securities Classification & Cryptocurrency Regulation
     color: blue-light
     description: >
-      Regulating digital assets, DeFi, stablecoins, and blockchain-based
-      financial instruments — from the Howey test to the GENIUS and CLARITY Acts.
+      Stablecoin regulation, token classification under the Howey test,
+      DeFi safe harbors, and the GENIUS and CLARITY Acts. Covers the legal
+      framework for determining whether a digital asset is a security, commodity,
+      or utility token.
 
   - id: startup-finance
-    label: Startup Finance & Crowdfunding
+    label: Securities Regulation, Crowdfunding & Startup Capital Formation
     color: teal
     description: >
-      Startup capital formation, crowdfunding regulation, and democratizing
-      access to investment — the JOBS Act, the Series A gap, and beyond.
+      Private securities offerings, equity crowdfunding, the JOBS Act,
+      venture stock exchanges, and the Series A gap. Includes empirical
+      research on gender disparities in crowdfunding outcomes.
 
   - id: governance
-    label: Corporate Governance & Institutional Design
+    label: Corporate Governance, ESG Disclosure & Shareholder Rights
     color: yellow
     description: >
-      Corporate governance mechanisms, ESG disclosure, shareholder activism,
-      and how institutions maintain — or lose — integrity.
+      Board governance, mandatory ESG disclosure, shareholder activism,
+      social media and corporate power, and the institutional design of
+      organizations that maintain — or lose — integrity.
 
   - id: labor
-    label: Labor, Technology & the Gig Economy
+    label: Gig Economy, Worker Classification & Labor Market Regulation
     color: red-light
     description: >
-      How technology disrupts employment, why worker classification is broken,
-      and what a better labor law framework could look like.
+      Worker classification disputes, transaction cost economics of
+      employment, labor market monopsony, and proposed regulatory
+      frameworks for gig economy benefits and platform accountability.
 
   - id: education
-    label: Legal Education & Pedagogy
+    label: Legal Education, Pedagogy & Casebooks
     color: blue-bright
     description: >
-      Teaching law in a digital age — online CLE, hybrid pedagogy, systems
-      thinking, and textbooks that work.
+      Law school pedagogy, hybrid and online teaching, continuing legal
+      education reform, systems-based IP curriculum design, and published
+      casebooks and study guides.
 
   - id: ip
-    label: Intellectual Property & Trade Secrets
+    label: Trade Secret Misappropriation, Valuation & IP Remedies
     color: red-deep
     description: >
-      Trade secret law, IP remedies, and the challenge of valuing information
-      whose worth depends on secrecy.
+      Trade secret law, the reasonable royalties remedy, epistemic limits
+      of judicial valuation for uncertain-value secrets, and the distinction
+      between market-anchored and uncertain-value trade secrets.
 
   - id: civil-society
-    label: Institutional Reform & Civil Society
+    label: Free Speech, Antisemitism & Institutional Integrity
     color: accent-2
     description: >
-      Free speech, antisemitism, democracy, and the institutions that sustain
-      — or undermine — civil society.
+      Campus free speech, the legal distinction between anti-Zionism and
+      antisemitism, social media and democratic discourse, and institutional
+      responses to ideological conflict.
 
 # ==========================================================================
 # PUBLICATIONS — ordered within each cluster by year (newest first)

@@ -149,3 +149,12 @@ Total new items from LinkedIn: ~20+ across commentary, presentations, media
 ### Still needed
 - Podbean subscriber count
 - ElevenLabs/Spotify audiobook links and stats for PTS
+
+## Additional Links from Seth (2026-03-30)
+
+- AEN Research Paper (Beyond the Ivory Tower): https://academicengagement.org/wp-content/uploads/2025/08/AEN_Research-Paper-Oranburg.pdf
+  → Add to scholarship.yml links.published for beyond-ivory-tower
+  → Convert to MD and deep-read for insights
+
+- Market Power & Governance Power (CPI / PYMNTS): https://www.pymnts.com/cpi-posts/market-power-and-governance-power-new-tools-for-antitrust-enforcement-in-the-decentralized-gig-economy/
+  → Add to scholarship.yml links.published for market-power-governance

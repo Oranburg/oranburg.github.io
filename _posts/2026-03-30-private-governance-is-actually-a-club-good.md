@@ -11,7 +11,7 @@ excerpt: "When courts override a network's power to exclude, they don't just hur
 
 The New York Diamond Dealers Club governed billions of dollars in annual unsecured credit for over a century. Its enforcement mechanism was simple: the credible threat of ostracism, propagated to every affiliated bourse worldwide. For members, this governance reduced transaction costs. For downstream buyers, retailers, and consumers who never joined the DDC, it reduced fraud. Then the system eroded, fraud costs spread to banks, retailers, and the consuming public, and the club good was destroyed.
 
-In *"Private" Governance Is Actually a Club Good*, Seth C. Oranburg argues that the conventional distinction between "public" governance (what states do through coercion) and "private" governance (what networks do through voluntary affiliation) is a false dichotomy. Economic theory recognizes not two types of goods but four: private goods, public goods, common-pool resources, and club goods. Governance, Oranburg shows, has the features of a club good.
+In *"Private" Governance Is Actually a Club Good*, I argue that the conventional distinction between "public" governance (what states do through coercion) and "private" governance (what networks do through voluntary affiliation) is a false dichotomy. Economic theory recognizes not two types of goods but four: private goods, public goods, common-pool resources, and club goods. Governance, I show, has the features of a club good.
 
 ## What makes governance a club good
 
@@ -29,7 +29,7 @@ The result is a compound welfare loss: the internal good (governance for members
 
 ## Governance as a Pigouvian subsidy
 
-Oranburg proposes that courts should recognize doctrines that defer to network governance decisions — such as the business judgment rule in corporate law — as implicit Pigouvian subsidies. A Pigouvian subsidy corrects a market failure by encouraging the production of goods that generate positive externalities. Judicial deference to network governance does the same thing: it reduces the cost of governing, which encourages networks to supply governance, which produces public benefits.
+I propose that courts should recognize doctrines that defer to network governance decisions — such as the business judgment rule in corporate law — as implicit Pigouvian subsidies. A Pigouvian subsidy corrects a market failure by encouraging the production of goods that generate positive externalities. Judicial deference to network governance does the same thing: it reduces the cost of governing, which encourages networks to supply governance, which produces public benefits.
 
 This reframing has practical consequences. It means that litigation challenging a network's exclusion decision is not merely a private dispute between the network and the excluded member. It is a question about whether the court's intervention will reduce the supply of a socially valuable good. The analysis should account for the externality, not just the parties before the court.
 

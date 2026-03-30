@@ -11,7 +11,7 @@ excerpt: "We entrusted fundamental civil liberties to corporations with obligati
 
 On January 6, 2021, a mob stormed the United States Capitol. Within days, Twitter permanently banned the President of the United States. Facebook followed. Amazon Web Services pulled the plug on Parler, an entire social media platform, overnight. The most consequential speech decisions in modern American history were made not by courts, not by legislatures, but by corporations.
 
-In *Social Media and Democracy after the Capitol Riot*, published in the Mercer Law Review, Seth C. Oranburg examines what this means -- not as a political question, but as a structural one. We have entrusted fundamental civil liberties to private companies whose obligations run to shareholders, not to democracy.
+In *Social Media and Democracy after the Capitol Riot*, published in the Mercer Law Review, I examine what this means -- not as a political question, but as a structural one. We have entrusted fundamental civil liberties to private companies whose obligations run to shareholders, not to democracy.
 
 ## Platforms are not the government
 
@@ -21,7 +21,7 @@ This distinction is legally clear and widely misunderstood. Politicians on both 
 
 ## The deputization problem
 
-But Oranburg identifies a deeper structural concern. The federal government has effectively *deputized* social media corporations to moderate speech. Through a combination of regulatory pressure, threatened legislation, and informal jawboning, government officials push platforms to remove content that the government itself could not constitutionally suppress.
+But I identify a deeper structural concern. The federal government has effectively *deputized* social media corporations to moderate speech. Through a combination of regulatory pressure, threatened legislation, and informal jawboning, government officials push platforms to remove content that the government itself could not constitutionally suppress.
 
 > We have entrusted fundamental civil liberties to corporations with obligations only to shareholders, not to democracy.
 
@@ -29,11 +29,11 @@ This creates a constitutional end-run. The government cannot ban speech directly
 
 ## The giant goldfish
 
-The article's subtitle -- "A Cautionary Tale of the Giant Goldfish" -- refers to the fable of a pet that outgrows its tank. Social media platforms were small enough, once, that their editorial choices did not matter to democracy. Now they are the primary channels of public discourse, and their choices about who speaks and who is silenced have consequences that rival government action.
+The subtitle -- "A Cautionary Tale of the Giant Goldfish" -- refers to the fable of a pet that outgrows its tank. Social media platforms were small enough, once, that their editorial choices did not matter to democracy. Now they are the primary channels of public discourse, and their choices about who speaks and who is silenced have consequences that rival government action.
 
 The question is not whether platforms have the legal right to moderate content. They do. The question is whether a democracy can function when its most important speech channels are controlled by entities with no democratic accountability.
 
-Oranburg's answer is cautious: the current arrangement is unstable, and the law has not yet developed the tools to address it.
+My answer is cautious: the current arrangement is unstable, and the law has not yet developed the tools to address it.
 
 ---
 

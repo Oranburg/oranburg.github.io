@@ -11,7 +11,7 @@ excerpt: "Transaction cost economics explains why technology makes contracting c
 
 The gig economy is not a business model innovation. It is a consequence of falling transaction costs.
 
-In *Transaction Cost Economics, Labor Law, and the Gig Economy*, published in the Journal of Legal Studies, Seth C. Oranburg and Liya Palagashvili use the transaction cost framework to explain why technology is systematically replacing employment relationships with direct contracting -- and why labor law has not caught up.
+In *Transaction Cost Economics, Labor Law, and the Gig Economy*, published in the Journal of Legal Studies, Liya Palagashvili and I use the transaction cost framework to explain why technology is systematically replacing employment relationships with direct contracting -- and why labor law has not caught up.
 
 ## Four costs that technology reduces
 
@@ -29,7 +29,7 @@ American labor law assumes that the employment relationship is the norm and inde
 
 But if technology is making direct contracting systematically cheaper than employing, then the employment relationship is shrinking not because firms are evading labor law but because the economic conditions that made employment efficient are disappearing. The gig economy is not a loophole. It is a structural shift.
 
-Oranburg and Palagashvili argue that labor law must adapt to this reality rather than trying to force new economic arrangements into old legal categories. The question is not how to make gig workers into employees but how to provide protections and benefits in a world where the employment relationship is no longer the default.
+Palagashvili and I argue that labor law must adapt to this reality rather than trying to force new economic arrangements into old legal categories. The question is not how to make gig workers into employees but how to provide protections and benefits in a world where the employment relationship is no longer the default.
 
 ---
 

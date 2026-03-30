@@ -11,7 +11,7 @@ excerpt: "Social media solves the collective action problems that have paralyzed
 
 In 1942, the SEC adopted Rule 14a to govern shareholder proxy proposals. The rule was supposed to enable shareholder democracy. Instead, over the next fifty years, a series of pro-management amendments made it nearly impossible for ordinary shareholders to coordinate, communicate, or challenge corporate boards. Shareholder democracy became a formality.
 
-In *A Little Birdie Said: How Twitter Is Disrupting Shareholder Activism*, published in the Fordham Journal of Corporate and Financial Law, Seth C. Oranburg argues that social media is poised to change this -- by solving the collective action problems that have paralyzed shareholder activism for decades.
+In *A Little Birdie Said: How Twitter Is Disrupting Shareholder Activism*, published in the Fordham Journal of Corporate and Financial Law, I argue that social media is poised to change this -- by solving the collective action problems that have paralyzed shareholder activism for decades.
 
 ## The collective action problem
 
@@ -25,13 +25,13 @@ Social media changes the economics of coordination. A tweet costs nothing. It re
 
 > Tweets provide a cheap, easy way for shareholders to coordinate, build consensus, and challenge management -- potentially tilting the playing field against management in proxy contests.
 
-Oranburg traces how activist investors like Carl Icahn began using Twitter to publicly pressure corporate boards, bypassing the traditional proxy machinery entirely. A single tweet announcing a stake in a company could move its stock price and force management to respond -- faster and more effectively than any proxy proposal.
+I trace how activist investors like Carl Icahn began using Twitter to publicly pressure corporate boards, bypassing the traditional proxy machinery entirely. A single tweet announcing a stake in a company could move its stock price and force management to respond -- faster and more effectively than any proxy proposal.
 
 ## The unfinished revolution
 
 But social media activism has limits. While communication is now cheap, the actual mechanics of corporate voting remain stuck in the analog era. Proxy votes still require physical meetings, paper ballots, and cumbersome intermediary systems. The communication revolution has outpaced the voting infrastructure.
 
-Oranburg argues that the next step is to modernize the voting system itself -- making it as easy to vote a proxy as it is to tweet about one. Until then, social media activism will remain a powerful but incomplete tool for shareholder democracy.
+I argue that the next step is to modernize the voting system itself -- making it as easy to vote a proxy as it is to tweet about one. Until then, social media activism will remain a powerful but incomplete tool for shareholder democracy.
 
 ---
 

@@ -11,11 +11,11 @@ excerpt: "DeFi tokens that grant access to a service are not investment contract
 
 You buy a token that lets you store files on a decentralized cloud network. Another token purchases compute time for an artificial intelligence program. A third grants access to a decentralized cellular network. None of these transactions look like investing in a company. They look like buying a service. Yet under current SEC enforcement practice, all of them risk being classified as securities.
 
-In *Function Over Form: Toward a Safe Harbor Framework for DeFi Regulation of Utility Tokens*, published in the Louisiana Law Review, Seth C. Oranburg argues that this classification is a doctrinal error with real economic consequences -- and proposes a concrete legislative fix.
+In *Function Over Form: Toward a Safe Harbor Framework for DeFi Regulation of Utility Tokens*, published in the Louisiana Law Review, I argue that this classification is a doctrinal error with real economic consequences -- and proposes a concrete legislative fix.
 
 ## The misclassification problem
 
-The SEC derives its authority over most cryptocurrencies from the 1946 *Howey* test, which defines a "security" as an investment of money in a common enterprise with a reasonable expectation of profits derived from the efforts of others. The test was designed to focus on "economic reality," not labels. But as Oranburg demonstrates, the SEC's application has hardened into something closer to the opposite: a formalist approach where virtually any token sale gets swept into securities jurisdiction.
+The SEC derives its authority over most cryptocurrencies from the 1946 *Howey* test, which defines a "security" as an investment of money in a common enterprise with a reasonable expectation of profits derived from the efforts of others. The test was designed to focus on "economic reality," not labels. But as I demonstrate, the SEC's application has hardened into something closer to the opposite: a formalist approach where virtually any token sale gets swept into securities jurisdiction.
 
 This is particularly problematic for what the industry calls "utility tokens" -- tokens you buy to use specific products or features. Cloud storage for files. Compute time for AI. Access to decentralized cellular networks. In-game items. These are pay-for-use instruments, not investment contracts.
 
@@ -25,7 +25,7 @@ The distinction matters in ways that go beyond labels. Utility tokens make tiny,
 
 These are not hypothetical use cases. Decentralized physical-infrastructure networks (DePIN) -- providing access to radios, cellular, WiFi, sensors, storage, and compute -- are worth roughly $30-50 billion in market value today. Blockchain-powered games relying on in-game utility tokens recorded about 7.4 million daily active users in 2024. McKinsey projects that tokenized digital-asset markets will be at least a two-trillion-dollar industry by 2030.
 
-Meanwhile, the U.S. share of open-source crypto developers fell from roughly 38% in 2015 to about 19% in 2024 -- a fifty percent relative decline during a period when global DeFi activity and market forecasts rose sharply. Oranburg connects these trends directly: the combination of the SEC's aggressive posture with the doctrinal misfit of applying *Howey* to utility tokens contributes to U.S. innovation flight.
+Meanwhile, the U.S. share of open-source crypto developers fell from roughly 38% in 2015 to about 19% in 2024 -- a fifty percent relative decline during a period when global DeFi activity and market forecasts rose sharply. I connect these trends directly: the combination of the SEC's aggressive posture with the doctrinal misfit of applying *Howey* to utility tokens contributes to U.S. innovation flight.
 
 ## Why *Howey* fails here
 
@@ -37,7 +37,7 @@ A token bought to store files is a commodity for personal consumption. But the S
 
 ## The function-based safe harbor
 
-Oranburg's proposal is specific: Congress should enact a narrowly tailored, function-based safe harbor for genuine utility tokens. Not a blanket exemption. A safe harbor with three conditions.
+My proposal is specific: Congress should enact a narrowly tailored, function-based safe harbor for genuine utility tokens. Not a blanket exemption. A safe harbor with three conditions.
 
 **First, technical resilience.** Eligible projects must demonstrate security through independent audits and maintain incident-response protocols. This is not about trusting developers; it is about verifiable infrastructure.
 
@@ -49,9 +49,9 @@ Oranburg's proposal is specific: Congress should enact a narrowly tailored, func
 
 ## Function first, not form first
 
-The deeper principle behind Oranburg's proposal is a shift from form-based to function-based regulation. Instead of asking "Is this a token?" and defaulting to securities treatment, regulators should ask "What does this token do?" A token that grants access to cloud storage functions differently from a token that represents equity in a company. The regulatory framework should reflect that difference.
+The deeper principle behind My proposal is a shift from form-based to function-based regulation. Instead of asking "Is this a token?" and defaulting to securities treatment, regulators should ask "What does this token do?" A token that grants access to cloud storage functions differently from a token that represents equity in a company. The regulatory framework should reflect that difference.
 
-This is the first application of what Oranburg describes as a more general function-first framework for digital-asset regulation -- one that could extend beyond utility tokens to governance tokens, collateral tokens, and other DeFi instruments, each regulated according to its actual economic function.
+This is the first application of what I describe as a more general function-first framework for digital-asset regulation -- one that could extend beyond utility tokens to governance tokens, collateral tokens, and other DeFi instruments, each regulated according to its actual economic function.
 
 ## The cost of inaction
 

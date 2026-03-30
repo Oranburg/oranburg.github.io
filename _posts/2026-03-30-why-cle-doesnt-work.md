@@ -11,7 +11,7 @@ excerpt: "Continuing legal education measures hours watched, not learning achiev
 
 Every state requires lawyers to complete continuing legal education. The typical requirement: watch a specified number of hours of approved programming each year. The assumption is that watching creates learning, and learning creates competence.
 
-In *Advanced Online Continuing Legal Education*, published in the Journal of Legal Education, Seth C. Oranburg argues that this assumption is wrong -- and that the social value of mandatory CLE is likely negative.
+In *Advanced Online Continuing Legal Education*, published in the Journal of Legal Education, I argue that this assumption is wrong -- and that the social value of mandatory CLE is likely negative.
 
 ## The input/output problem
 
@@ -23,9 +23,9 @@ This is not a minor design flaw. It is the core structural problem. By measuring
 
 ## What learning science says
 
-Oranburg brings cognitive science research to bear on a problem that the legal profession has largely treated as administrative. The evidence is clear: people learn by doing, not by watching. Active recall, spaced repetition, problem-solving, and peer discussion produce durable learning. Passive video consumption does not.
+I bring cognitive science research to bear on a problem that the legal profession has largely treated as administrative. The evidence is clear: people learn by doing, not by watching. Active recall, spaced repetition, problem-solving, and peer discussion produce durable learning. Passive video consumption does not.
 
-The article proposes two specific techniques from instructional design: **backward design** (starting with the desired learning outcome and designing the experience to achieve it) and **chunking** (breaking content into short, focused segments with built-in retrieval practice). Both are well-established in education research and poorly adopted in CLE.
+I propose two specific techniques from instructional design: **backward design** (starting with the desired learning outcome and designing the experience to achieve it) and **chunking** (breaking content into short, focused segments with built-in retrieval practice). Both are well-established in education research and poorly adopted in CLE.
 
 ## The regulatory fix
 

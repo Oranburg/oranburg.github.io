@@ -11,7 +11,7 @@ excerpt: "How do you calculate royalties for a secret whose value depends on no 
 
 When a patent is infringed, courts can award reasonable royalties -- the price the infringer would have paid in a hypothetical negotiation for a license. The framework is imperfect but workable because patents come with built-in valuation anchors: a fixed term, public disclosure, and often a market of comparable licenses.
 
-Trade secrets have none of these. And yet courts increasingly apply the same reasonable-royalty framework to trade secret misappropriation. In *Valuing Uncertain Trade Secrets: Epistemic Boundaries of the Reasonable Royalties Remedy*, Seth C. Oranburg argues that this borrowing creates a fundamental paradox.
+Trade secrets have none of these. And yet courts increasingly apply the same reasonable-royalty framework to trade secret misappropriation. In *Valuing Uncertain Trade Secrets: Epistemic Boundaries of the Reasonable Royalties Remedy*, I argue that this borrowing creates a fundamental paradox.
 
 ## The valuation paradox
 
@@ -23,7 +23,7 @@ Trade secrets are the opposite. Their value is a function of opacity. A hypothet
 
 ## Market-anchored vs. uncertain-value secrets
 
-Oranburg's key contribution is distinguishing two types of trade secrets. **Market-anchored secrets** have external reference points: comparable licenses, industry benchmarks, prior transactions. For these, the reasonable-royalty framework works tolerably. A customer list with quantifiable revenue impact, for example, can be valued by reference to what similar lists have sold for.
+My key contribution is distinguishing two types of trade secrets. **Market-anchored secrets** have external reference points: comparable licenses, industry benchmarks, prior transactions. For these, the reasonable-royalty framework works tolerably. A customer list with quantifiable revenue impact, for example, can be valued by reference to what similar lists have sold for.
 
 **Uncertain-value secrets** lack these anchors. A novel algorithm, an unpublished research finding, a proprietary manufacturing process with no market comparables -- these resist the hypothetical-negotiation framework because there is no basis for either party to propose a price. The valuation becomes speculative.
 
@@ -31,9 +31,9 @@ Oranburg's key contribution is distinguishing two types of trade secrets. **Mark
 
 ## The calibration principle
 
-The article proposes a calibration principle: before authorizing a reasonable-royalty award, courts should require the plaintiff to demonstrate meaningful price-discovery evidence. If the secret is market-anchored -- if there are comparable transactions, industry royalty rates, or prior licensing history -- then reasonable royalties are appropriate. If the secret is uncertain-value, with no external benchmarks, then alternative remedies (disgorgement of profits, injunctive relief) may be more appropriate than a royalty that cannot be grounded in evidence.
+I propose a calibration principle: before authorizing a reasonable-royalty award, courts should require the plaintiff to demonstrate meaningful price-discovery evidence. If the secret is market-anchored -- if there are comparable transactions, industry royalty rates, or prior licensing history -- then reasonable royalties are appropriate. If the secret is uncertain-value, with no external benchmarks, then alternative remedies (disgorgement of profits, injunctive relief) may be more appropriate than a royalty that cannot be grounded in evidence.
 
-Oranburg uses *Sorrento Therapeutics v. Mack* (Del. Ch. 2025) as a proof of concept, showing how the calibration principle would have improved the analysis in a real case.
+I use *Sorrento Therapeutics v. Mack* (Del. Ch. 2025) as a proof of concept, showing how the calibration principle would have improved the analysis in a real case.
 
 ---
 

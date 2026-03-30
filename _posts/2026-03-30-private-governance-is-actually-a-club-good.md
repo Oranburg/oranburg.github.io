@@ -5,39 +5,65 @@ date: 2026-03-30
 tags: [organizations, business, markets, regulation]
 kind: essay
 source_papers: [governance-club-good]
-featured: false
-excerpt: "When courts override a network's power to exclude, they don't just hurt the network — they destroy the benefits that outsiders received for free."
+featured: true
+excerpt: "Four legal doctrines that courts have developed independently — the business judgment rule, the FAA's arbitrability presumption, the antitrust rule of reason, and common-law deference to voluntary associations — all perform the same economic function: they are implicit Pigouvian subsidies for governance production."
 ---
 
-The New York Diamond Dealers Club governed billions of dollars in annual unsecured credit for over a century. Its enforcement mechanism was simple: the credible threat of ostracism, propagated to every affiliated bourse worldwide. For members, this governance reduced transaction costs. For downstream buyers, retailers, and consumers who never joined the DDC, it reduced fraud. Then the system eroded, fraud costs spread to banks, retailers, and the consuming public, and the club good was destroyed.
+Public versus private governance is a false dichotomy. Economic theory recognizes not two types of goods but four: private goods, public goods, common-pool resources, and club goods. So-called private governance — what trading networks, stock exchanges, and commons communities do through voluntary affiliation — is none of these familiar categories. It is a club good.
 
-In *"Private" Governance Is Actually a Club Good*, I argue that the conventional distinction between "public" governance (what states do through coercion) and "private" governance (what networks do through voluntary affiliation) is a false dichotomy. Economic theory recognizes not two types of goods but four: private goods, public goods, common-pool resources, and club goods. Governance, I show, has the features of a club good.
+A club good is excludable (the network can deny access by denying membership or expelling violators), nonrivalrous up to congestion (one member's participation does not diminish another's, until the group gets too large), voluntarily joined, and self-financing. Governance fits all four criteria. What no prior work has done is model the welfare consequences of degrading a governance club good that simultaneously generates positive externalities to non-members — and draw the implication for how courts should treat governance decisions.
 
-## What makes governance a club good
+## Three domains of governance externalities
 
-A club good is excludable (the network can kick you out), nonrivalrous up to congestion (one member's participation does not diminish another's, until the group gets too large), voluntarily joined, and financed by its members. Governance fits this description precisely. A network's rules, dispute-resolution mechanisms, and enforcement apparatus are shared by members who pay for them through dues, compliance costs, or behavioral constraints — and the network can exclude anyone who refuses to cooperate.
+The New York Diamond Dealers Club governed billions of dollars in annual unsecured credit through a single mechanism: the credible threat of ostracism propagated to every affiliated bourse worldwide. Diamond dealers routinely transacted tens to hundreds of thousands of dollars on oral agreements sealed with the phrase *mazal u'bracha*. Among Lisa Bernstein's informants, there was a single case of missed payment over decades of trading. The mechanism worked not because dealers were honest by nature, but because the cost of expulsion — the loss of access to the only marketplace where this volume of diamonds traded on trust — far exceeded the gain from cheating.
 
-The crucial insight is about externalities. Club goods can generate positive externalities — benefits for non-members who never pay. The DDC's governance didn't just protect diamond dealers. It protected every consumer who bought a diamond, because the system filtered out fraud upstream. When Barak Richman documented the DDC's decline, he confirmed the externality by documenting the counterfactual: when the trust-based trading system eroded under pressure from globalization and new market entrants, fraud costs spread to banks, retailers, and consumers who had previously benefited from the DDC's governance without bearing its costs. Vertical integration replaced trust-based exchange — a costlier institutional arrangement that eliminated the externality-generating mechanism entirely.
+The governance produced positive externalities for non-members. DDC arbitration and enforcement reduced fraud rates throughout the diamond supply chain, benefiting downstream buyers, retailers, jewelers, insurers, and consumers who never joined the bourse and paid nothing for its governance. When Barak Richman documented the DDC's decline — under pressure from De Beers's strategic shift, rising rough diamond prices, entry of Indian merchants, and intergenerational exit — he confirmed the externality by documenting the counterfactual: fraud costs spread to banks, retailers, and the consuming public. The club good was destroyed, and non-members bore the heaviest costs.
 
-Maine's lobster gangs operate at the opposite end of institutional formality from the DDC — no written bylaws, no formal tribunal, no headquarters — yet the governance mechanism is identical. Territory enforcement emerges through graduated social sanctions: verbal warnings escalate to gear interference, cutting of trap lines, and ultimately exclusion from fishing territories. The scale is substantial — Maine lobster landings have exceeded 130 million pounds annually, worth over $500 million. The governance produces a sustainably managed resource that benefits everyone who eats lobster.
+Maine's lobster gangs operate at the opposite end of institutional formality — no written bylaws, no formal tribunal, no headquarters — yet the governance mechanism is identical. Territory enforcement emerges through graduated social sanctions, from verbal warnings to gear interference to exclusion from fishing territories. The scale is substantial: Maine lobster landings have exceeded 130 million pounds annually, worth over $500 million. The governance produces a sustainably managed resource that benefits everyone who eats lobster, not just the fishers who govern it.
+
+Community-managed forests provide a third domain. Ashwini Chhatre and Arun Agrawal studied eighty forest commons across ten countries and found that forests managed by larger groups of local users stored significantly more carbon than those under government management. Carbon sequestration is a textbook global positive externality — the governance of local forest commons produces climate benefits for the entire planet. Nepal's 22,000 Community Forest User Groups managing 2.2 million hectares contributed to an increase in Nepal's forest cover from roughly 29% in the 1990s to approximately 44% by 2016.
 
 ## The compound welfare loss
 
-Here is where the argument gets counterintuitive. When a court displaces a network's authority to ostracize — by awarding damages to an excluded member, or by refusing to defer to the network's internal decision — the court does not merely redistribute wealth from the network to the excluded individual. It weakens the ostracism mechanism itself.
+When a court displaces a network's authority to ostracize, it does not merely redistribute wealth from the network to the excluded individual. It weakens the ostracism mechanism itself — the feature that distinguishes a club good from a public good.
 
-> When the ostracism mechanism loses credibility, members defect from governance obligations, governance quality declines, the club good decays into a public good, and the positive externalities governance creates for non-members disappear.
+The formal model confirms an intuition that the case studies illustrate: total welfare is maximized neither at blanket deference (which permits governance abuse without check) nor at plenary review (which destroys the ostracism mechanism's credibility), but at an interior point where courts intervene in a small fraction of governance decisions. This is precisely the structure that existing legal doctrines embody — each creates a presumption rather than an absolute immunity, allowing judicial override under defined conditions while protecting governance production as the default.
 
-The result is a compound welfare loss: the internal good (governance for members) degrades, and the external good (governance benefits for non-members) vanishes. The excluded member may win the lawsuit. Everyone else — including people who were never part of the network — loses.
+## Four doctrines as implicit Pigouvian subsidies
 
-## Governance as a Pigouvian subsidy
+This is the paper's central recharacterization. Goods generating positive externalities will be undersupplied at market equilibrium because producers cannot capture the full social benefit of their output. The corrective is a Pigouvian subsidy — like compensating a beekeeper for the pollination her hives provide to neighboring farms.
 
-I propose that courts should recognize doctrines that defer to network governance decisions — such as the business judgment rule in corporate law — as implicit Pigouvian subsidies. A Pigouvian subsidy corrects a market failure by encouraging the production of goods that generate positive externalities. Judicial deference to network governance does the same thing: it reduces the cost of governing, which encourages networks to supply governance, which produces public benefits.
+Governance is undersupplied for the same reason. Governing bodies invest less in monitoring, enforcement, and institutional infrastructure than the social optimum because they cannot charge non-members for the fraud reduction, market integrity, or environmental quality those non-members receive. Every time a governance decision is challenged in court, the cost of producing governance rises: litigation fees, discovery, management distraction, and — most importantly — the signal to other members that the ostracism threat is no longer absolute.
 
-This reframing has practical consequences. It means that litigation challenging a network's exclusion decision is not merely a private dispute between the network and the excluded member. It is a question about whether the court's intervention will reduce the supply of a socially valuable good. The analysis should account for the externality, not just the parties before the court.
+Four legal doctrines that courts developed independently, in different areas of law, for different stated reasons, all perform the same economic function: they reduce the cost of producing governance.
 
-The framework extends beyond commercial networks. Community-managed forests, irrigation systems, and fisheries provide a third domain where governance satisfies Buchanan's criteria and generates externalities beyond the governing community. Forests managed by larger groups of local users stored significantly more carbon than those under government management. Carbon sequestration is a textbook global positive externality — the governance of local forest commons produces climate benefits for the entire planet, well beyond the governing community. Community irrigation governance in systems like Valencia's Tribunal de las Aguas preserves downstream water quality for non-members who take no part in the upstream governance decisions.
+**The business judgment rule** presumes that corporate board decisions are made in good faith and on an informed basis, shielding directors from liability for outcomes that turn out badly. This reduces the cost of governance by insulating governing bodies from second-guessing.
 
-I stress-test this framework against the overruling of *Chevron* deference in *Loper Bright*, cartel objections, and discrimination concerns — and propose a standard of calibrated deference that accounts for governance quality, externality magnitude, and the availability of alternative governance arrangements.
+**The Federal Arbitration Act's presumption of arbitrability** protects network dispute-resolution systems from judicial displacement, keeping governance production inside the network where it is cheapest.
+
+**The antitrust rule of reason** recognizes that some restraints of trade — including membership exclusion — serve governance functions that produce shared benefits no individual member could create alone. The Supreme Court's *BMI v. Columbia Broadcasting System* decision acknowledged this structure directly.
+
+**Common-law deference to voluntary associations** limits judicial review of expulsion decisions to procedural fairness, preserving the network's substantive authority over membership.
+
+None of these doctrines was designed as an economic intervention. They are Pigouvian subsidies by function, not by design. Recognizing this function makes explicit what courts have been doing implicitly — and provides a principled basis for calibrating the level of deference to the magnitude of the externality at stake.
+
+## The Loper Bright stress test
+
+After the Supreme Court eliminated *Chevron* deference in *Loper Bright Enterprises v. Raimondo*, agencies can no longer fill statutory gaps through authoritative interpretation. The framework predicts that removing the Pigouvian subsidy *Chevron* provided will shift governance costs upward — making agency-supervised governance more expensive and less certain. This strengthens rather than weakens the case for judicial deference to private governance: if courts can no longer defer to agencies, they should recognize that deference to governance bodies serves the same economic function.
+
+## Calibrated deference
+
+The paper proposes a sliding-scale standard that accounts for governance quality, externality magnitude, and the availability of alternative governance arrangements. The standard confronts three objections directly:
+
+The **cartel objection**: governance-serving rhetoric can mask anticompetitive behavior. The antitrust rule of reason already provides the doctrinal framework for drawing this line — an expulsion triggered by a member's failure to pay debts serves the governance function; an expulsion triggered by a member's decision to cut prices serves cartel maintenance.
+
+The **discrimination objection**: governance exclusion can entrench bias. The standard requires courts to distinguish between exclusion that serves the governance function (maintaining the credibility of cooperation norms) and exclusion that serves no governance purpose (identity-based discrimination unrelated to member conduct).
+
+The **non-replicable club problem**: when exit is impossible — because no alternative network exists — exclusion rules can harden into barriers to innovation rather than governance mechanisms. The standard adjusts deference downward where the club is non-replicable, drawing on Lynne Kiesling's insight that physical network constraints can disable the competitive discipline that normally constrains clubs.
+
+## Experience the mechanism
+
+To see how governance degrades when courts convert exclusion from a property rule to a liability rule, try [The Ostracism Game](/demos/ostracism-game/) — an interactive simulation based on this paper's theoretical framework.
 
 ---
 

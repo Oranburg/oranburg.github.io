@@ -53,3 +53,35 @@ The paper connects Buchanan's club goods theory to Calabresi and Melamed's prope
 - Whether the paper proposes a specific doctrinal reform or only identifies the problem
 - The relationship to the Club Good paper — how do these two fit together?
 - Any data or specific court cases that would give the post litigation-grade specificity
+
+---
+
+## Paper 2: The Wrong Plaintiff (ssrn-6433378) — read 2026-03-30
+
+### What the full read revealed vs. the skim
+
+The skim captured: Buchanan + Calabresi-Melamed + empirical networks = judicial intervention degrades club good. The full read revealed:
+
+1. **Ali and Miller's calibration insight is the paper's deepest analytical contribution.** Permanent ostracism is self-defeating because it destroys truth-telling incentives. Temporary ostracism with possible readmission preserves them. When courts displace calibration authority, they don't just override one expulsion — they eliminate the system's capacity to distinguish accidental from deliberate breach. This was completely invisible from the abstract.
+
+2. **The diamond dealer hypothetical (p.14) is the paper's strongest illustration** — it shows both perspectives (contract doctrine sees $100K harm to one party; network governance sees the destruction of shared confidence across the entire bourse) in concrete, vivid terms.
+
+3. **Four live doctrinal contexts** where courts encounter this problem right now: UCC trade usage, exchange/cooperative expulsion review, antitrust treatment of network exclusion, and platform deactivation (Amazon, Uber, Airbnb). The platform context extends the analysis to trillions of dollars in digital commerce. This was absent from my earlier post.
+
+4. **The paper deliberately leaves the remedy open.** This restraint is itself an analytical move — it establishes that the diagnostic claim (identifying the network as injured party) is prior to the remedial question. The suggested possibilities (FAA-style arbitration presumption, standing doctrine for remaining members, declining to incorporate governance norms as trade usages) are sketched but not developed.
+
+5. **The crowding-out evidence** — Bohnet, Frey & Huck's experimental finding that medium-level enforcement crowds out cooperation more than either no enforcement or total enforcement — provides the behavioral mechanism for why partial judicial intervention is worse than either full intervention or no intervention.
+
+### Process improvement
+
+- Applied the Exclusive Inclusion lesson: read every page, find the original analytical move, extract specific evidence.
+- The original move here was the Ali-Miller calibration insight and the four-context doctrinal mapping. Both were invisible from pages 1-5.
+- The paper's best sentence: "Awarding damages does not transfer a right from one party who values it less to another who values it more. Awarding damages degrades the right." Used it in the post.
+
+### Next paper to read
+
+The Club Good paper (ssrn-6439378) is the companion to this one. Questions to answer:
+- How does the Pigouvian subsidy framework work specifically? What doctrines count as implicit subsidies?
+- How does it handle the Loper Bright problem (no more Chevron deference)?
+- What is the proposed standard of "calibrated deference"?
+- How do the cartel and discrimination objections get addressed?

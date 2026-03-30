@@ -38,7 +38,7 @@ Each insight post translates ONE argument from ONE published paper into an acces
 ## Writing Rules
 
 1. **One paper, one point.** The post makes one argument from one paper. Secondary insights get their own posts.
-2. **Attribution.** Use "Oranburg argues" or "the article proposes" — not "the law does X" (unless the paper establishes that the law does X).
+2. **First person.** These are posts on Seth's own website. Use "I argue" and "I propose" — NEVER "Oranburg argues" or "the article proposes." The reader understands that "I" means Seth C. Oranburg. For co-authored papers, use "Mark Geiger and I" or "Liya Palagashvili and I."
 3. **Quotes.** Include 1-2 direct quotes from the paper. Blockquote format. Verify the quote appears verbatim in the current version.
 4. **No inference.** If the paper doesn't say it, the post doesn't say it. Do not extend the author's argument beyond what is written.
 5. **Links.** End with a "Read the full article" section linking to the published source (journal website or SSRN). Include the full citation.

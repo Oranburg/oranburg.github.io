@@ -142,3 +142,39 @@ This suggests something important about Seth's intellectual trajectory. The law 
 The AEN paper is the bridge between the technical scholarship and the big books. It is where Seth stopped being a scholar who analyzes institutions and became a scholar who diagnoses what institutions have lost. The governance theory papers (Club Good, Wrong Plaintiff, Exclusive Inclusion) are the structural analysis. The AEN paper is the moral case. Judgment Proof is the synthesis.
 
 If the website is going to represent Seth's intellectual identity — not just his CV — the AEN paper deserves to be one of the most prominent pieces on the site. Not because it's the most technically rigorous, but because it's the most honest. And honesty, in a landscape of procedural equivocation, is the rarest and most valuable thing a scholar can offer.
+
+---
+
+## Paper 4: "Private" Governance Is Actually a Club Good (ssrn-6439378) — read 2026-03-30
+
+### What the deep read revealed
+
+The paper's original move is connecting three things no one has connected before:
+
+1. **Buchanan's club goods theory** — governance satisfies all four criteria (excludable via ostracism, nonrivalrous up to congestion, voluntary, self-financing)
+2. **Positive externalities to non-members** — documented across three domains (diamond bourses → downstream fraud reduction for consumers; stock exchanges → market integrity for all investors; commons → carbon sequestration and water quality for non-governing communities)
+3. **The Pigouvian subsidy recharacterization** — four existing legal doctrines (business judgment rule, FAA arbitrability presumption, antitrust rule of reason, common-law deference to voluntary associations) each function as implicit Pigouvian subsidies that reduce the cost of producing governance, partially correcting the undersupply that positive-externality theory predicts. They were not designed as economic interventions. They are Pigouvian subsidies by function, not design.
+
+**The formal model** (in the Appendix) confirms that total welfare is maximized at an interior point — neither blanket deference nor plenary review — where courts intervene in a small fraction of governance decisions. This is exactly the structure each doctrine embodies: a legal presumption (not absolute immunity), with judicial override under defined conditions.
+
+**The Loper Bright stress test:** After the Supreme Court eliminated Chevron deference, the framework predicts that removing the Pigouvian subsidy Chevron provided will shift governance costs upward — making agency-supervised governance more expensive and less certain. This strengthens rather than weakens the case for judicial deference to private governance: if courts can no longer defer to agencies, they should recognize that deference to governance bodies serves the same economic function.
+
+**The calibrated deference standard** (Part IV) proposes a sliding scale based on governance quality, externality magnitude, and the availability of alternative governance arrangements. The standard accounts for the cartel objection (governance-serving rhetoric can mask anticompetitive behavior), the discrimination objection (governance exclusion can entrench bias), and the non-replicable club problem (Kiesling's insight that when exit is impossible, exclusion rules can harden into barriers).
+
+### Game theory micro-game concept
+
+The paper's core mechanism maps perfectly to an interactive game:
+
+**The Ostracism Game:** You are a member of a trading network. Each round, you choose: cooperate (honor your agreements) or defect (cheat on a deal). If you defect:
+- The network can ostracize you (club good with property rule) → you lose access to ALL future deals
+- OR a court overrides the network (liability rule) → you pay a fine but stay in the network
+
+The game shows:
+- Under property-rule ostracism: cooperation is the equilibrium (cost of cheating > gain)
+- Under liability-rule damages: defection increases because the "fine" is less than the gain from cheating
+- The network degrades as more members defect
+- Non-members (downstream consumers) see fraud costs rise
+
+**Implementation:** Simple HTML/JS game. 5-10 rounds. Player sees their payoff, the network's governance quality score, and the non-member fraud cost. Toggle between "property rule" mode and "liability rule" mode to see the difference.
+
+### Next: Build the game, then rewrite the Club Good insight post from full reading

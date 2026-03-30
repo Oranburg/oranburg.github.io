@@ -59,7 +59,8 @@ permalink: /scholarship/
 <p>{{ cluster.description }}</p>
 
 {% assign cluster_pubs = site.data.scholarship.publications | where: "cluster", cluster.id | sort: "year" | reverse %}
-{% assign articles = cluster_pubs | where_exp: "p", "p.type != 'book'" %}
+{% assign articles = "" | split: "" %}
+{% for p in cluster_pubs %}{% unless p.type == "book" %}{% assign articles = articles | push: p %}{% endunless %}{% endfor %}
 {% if articles.size > 0 %}
 <ul class="article-list">
   {% for pub in articles %}

@@ -39,3 +39,10 @@ Many perma.cc links are to SEC filings, court cases, NVCA model documents, and n
 - "A Place of Their Own: Crowds in the New Market for Equity Crowdfunding" | Nov 2016 | https://blogs.law.ox.ac.uk/business-law-blog/blog/2016/11/place-their-own-crowds-new-market-equity-crowdfunding
 
 Total missing from commentary.yml: 12 (6 op-eds + 6 OBLB posts)
+
+## Columbia Law School Blue Sky Blog — 2 posts NOT in commentary.yml
+
+- "The Law & Economics of the Series A Gap" | Apr 6, 2015 | https://clsbluesky.law.columbia.edu/2015/04/06/the-law-economics-of-the-series-a-gap/
+- "How Twitter Is Disrupting Shareholder Activism" | Jan 14, 2015 | https://clsbluesky.law.columbia.edu/2015/01/14/how-twitter-is-disrupting-shareholder-activism/
+
+Total missing from commentary.yml: 14 (6 op-eds + 6 OBLB + 2 CLS Blue Sky)

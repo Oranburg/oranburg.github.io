@@ -134,6 +134,7 @@ Total new items from LinkedIn: ~20+ across commentary, presentations, media
 - Top cited: Female Entrepreneurs & Equity Crowdfunding, Distance Education COVID, Bridgefunding
 
 ### SSRN
+- Author Rank: 8,609 out of 2,656,546 (top 0.3%)
 - 31 papers
 - ~75,000+ total views, ~12,000+ downloads
 - Top paper by views: Distance Education (12,096 views)

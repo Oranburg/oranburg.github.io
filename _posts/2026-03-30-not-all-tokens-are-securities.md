@@ -2,8 +2,8 @@
 layout: post
 title: "Not All Tokens Are Securities"
 date: 2026-03-30
-category: fintech
-tags: [DeFi, utility tokens, safe harbor, securities regulation]
+tags: [fintech, securities, regulation, markets]
+kind: guide
 source_papers: [function-over-form]
 featured: false
 excerpt: "DeFi tokens that grant access to a service are not investment contracts. A function-based framework can tell the difference."

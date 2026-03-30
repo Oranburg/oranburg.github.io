@@ -2,8 +2,8 @@
 layout: post
 title: "The Temporal Paradox: When a Security Stops Being a Security"
 date: 2026-03-30
-category: fintech
-tags: [Howey test, CLARITY Act, digital assets, blockchain, securities regulation]
+tags: [fintech, securities, regulation, legal-innovation]
+kind: guide
 source_papers: [replacing-howey]
 featured: true
 excerpt: "A token that starts as a security can mature into something else entirely. The Supreme Court's 80-year-old test has no answer for this."

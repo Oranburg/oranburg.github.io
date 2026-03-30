@@ -804,18 +804,35 @@ publications:
     title: "Protecting Trade Secrets"
     type: book
     year: 2026
-    status: forthcoming
+    status: published
     journal: "Carolina Academic Press"
-    citation: "Seth C. Oranburg, Protecting Trade Secrets (Carolina Academic Press, forthcoming 2026)."
+    citation: "Seth C. Oranburg, Protecting Trade Secrets (1st ed., Carolina Academic Press 2026)."
     coauthors: []
     abstract: >
-      Law school casebook on trade secret law.
+      A practice-forward casebook built around a single organizing insight:
+      the best way to understand trade secret law is to design a plan that
+      applies it. Rather than starting with abstract theory, the book begins
+      with a practical challenge — how to protect a company's trade secrets —
+      and develops deeper understanding along the way. Each chapter scaffolds
+      learning around a specific output: inventorying and classifying secrets,
+      assessing risks under conditions of Knightian uncertainty, mitigating
+      internal and external vulnerabilities through contracts and operational
+      safeguards, and enforcing rights through litigation. Organized around
+      four recurring tensions — secrecy vs. mobility, confidentiality vs.
+      competition, security vs. transparency, and protection vs. innovation —
+      the book introduces the "trade secret paradox" (you cannot prove
+      misappropriation unless the information was a trade secret, but you
+      cannot prove it was a trade secret unless you tried to prevent
+      misappropriation) and teaches students to navigate the circularity
+      that distinguishes trade secrets from every other form of IP.
+      Culminates in a comprehensive capstone: a polished, portfolio-ready
+      Trade Secret Protection Plan for a simulated client.
     cluster: ip
     tags: [trade secrets, casebook, intellectual property]
     links:
       ssrn:
       published: "https://cap-press.com/books/isbn/9781531034375/Protecting-Trade-Secrets"
-      pdf: "/scholarship/01 Oranburg – PUBLICATION Protecting Trade Secrets.pdf"
+      pdf:
       companion: "/PTS/"
     featured: true
 

@@ -114,7 +114,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5366627"
       published:
-      pdf: "/scholarship/04 Oranburg – PUBLICATION The Genius Dilemma.pdf"
+      pdf: "/scholarship/04 Oranburg – PUBLICATION The Genius Dilemma.md"
       companion:
     featured: true
 
@@ -138,7 +138,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5288934"
       published:
-      pdf: "/scholarship/05 Oranburg – PUBLICATION Replacing Howey with CLARITY.pdf"
+      pdf: "/scholarship/05 Oranburg – PUBLICATION Replacing Howey with CLARITY.md"
       companion:
     featured: true
 
@@ -160,7 +160,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5254743"
       published:
-      pdf: "/scholarship/06 Oranburg – PUBLICATION Function over Form.pdf"
+      pdf: "/scholarship/06 Oranburg – PUBLICATION Function over Form.md"
       companion:
     featured: true
 
@@ -183,7 +183,7 @@ publications:
     links:
       ssrn:
       published: "https://www.pymnts.com/cpi-posts/market-power-and-governance-power-new-tools-for-antitrust-enforcement-in-the-decentralized-gig-economy/"
-      pdf: "/scholarship/03 Oranburg – PUBLICATION Market Power and Governance Power (CPI) 2025-11-11.pdf"
+      pdf: "/scholarship/03 Oranburg – PUBLICATION Market Power and Governance Power (CPI) 2025-11-11.md"
       companion:
     featured: false
 
@@ -206,7 +206,7 @@ publications:
     links:
       ssrn:
       published: "https://jcl.law.uiowa.edu/articles/2024/01/antitrust-law-blockchain-technology"
-      pdf: "/scholarship/12 Oranburg – PUBLICATION Antitrust Law for Blockchain Technology.pdf"
+      pdf: "/scholarship/12 Oranburg – PUBLICATION Antitrust Law for Blockchain Technology.md"
       companion:
     featured: false
 
@@ -228,7 +228,7 @@ publications:
     links:
       ssrn:
       published: "https://www.cambridge.org/core/books/history-of-financial-technology-and-regulation/6E37443D9BC795031FF1E5B11F7B4CB3"
-      pdf: "/scholarship/15 Oranburg – PUBLICATION A History of Financial Technology and Regulation.pdf"
+      pdf: "/scholarship/15 Oranburg – PUBLICATION A History of Financial Technology and Regulation.md"
       companion:
     featured: true
 
@@ -251,7 +251,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2982554"
       published: "https://scholar.law.colorado.edu/lawreview/vol89/iss4/2/"
-      pdf: "/scholarship/25 Oranburg – PUBLICATION Hyperfunding.pdf"
+      pdf: "/scholarship/25 Oranburg – PUBLICATION Hyperfunding.md"
       companion:
     featured: false
 
@@ -276,7 +276,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3548312"
       published:
-      pdf: "/scholarship/21 Oranburg – PUBLICATION Securities Regulation and Social Media.pdf"
+      pdf: "/scholarship/21 Oranburg – PUBLICATION Securities Regulation and Social Media.md"
       companion:
     featured: false
 
@@ -299,7 +299,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3435274"
       published:
-      pdf: "/scholarship/20 Oranburg – PUBLICATION Encouraging Entrepreneurship and Innovation through Regulatory Democratization.pdf"
+      pdf: "/scholarship/20 Oranburg – PUBLICATION Encouraging Entrepreneurship and Innovation through Regulatory Democratization.md"
       companion:
     featured: false
 
@@ -321,7 +321,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2743072"
       published:
-      pdf: "/scholarship/23 Oranburg – PUBLICATION Start-Up Financing 2.pdf"
+      pdf: "/scholarship/23 Oranburg – PUBLICATION Start-Up Financing 2.md"
       companion:
     featured: false
 
@@ -343,7 +343,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3263521"
       published:
-      pdf: "/scholarship/26 Oranburg & Geiger – PUBLICATION Female Entrepreneurs and Equity Crowdfunding in the US.pdf"
+      pdf: "/scholarship/26 Oranburg & Geiger – PUBLICATION Female Entrepreneurs and Equity Crowdfunding in the US.md"
       companion:
     featured: false
 
@@ -365,7 +365,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2639879"
       published:
-      pdf: "/scholarship/27 Oranburg – PUBLICATION Democratizing Startups.pdf"
+      pdf: "/scholarship/27 Oranburg – PUBLICATION Democratizing Startups.md"
       companion:
     featured: false
 
@@ -388,7 +388,7 @@ publications:
     links:
       ssrn:
       published:
-      pdf: "/scholarship/28 Oranburg – PUBLICATION A Place of Their Own.pdf"
+      pdf: "/scholarship/28 Oranburg – PUBLICATION A Place of Their Own.md"
       companion:
     featured: false
 
@@ -410,7 +410,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2544365"
       published:
-      pdf: "/scholarship/31 Oranburg – PUBLICATION Bridgefunding - Crowdfunding and the Market for Entrepreneurial Finance.pdf"
+      pdf: "/scholarship/31 Oranburg – PUBLICATION Bridgefunding - Crowdfunding and the Market for Entrepreneurial Finance.md"
       companion:
     featured: false
 
@@ -440,7 +440,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6421898"
       published:
-      pdf: "/scholarship/updates/ssrn-6421898.pdf"
+      pdf: "/scholarship/updates/ssrn-6421898.md"
       companion:
     featured: true
 
@@ -470,7 +470,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6423378"
       published:
-      pdf: "/scholarship/updates/ssrn-6423378.pdf"
+      pdf: "/scholarship/updates/ssrn-6423378.md"
       companion:
     featured: true
 
@@ -499,7 +499,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6433378"
       published:
-      pdf: "/scholarship/updates/ssrn-6433378.pdf"
+      pdf: "/scholarship/updates/ssrn-6433378.md"
       companion:
     featured: true
 
@@ -527,7 +527,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6439378"
       published:
-      pdf: "/scholarship/updates/ssrn-6439378.pdf"
+      pdf: "/scholarship/updates/ssrn-6439378.md"
       companion:
     featured: true
 
@@ -550,7 +550,7 @@ publications:
     links:
       ssrn:
       published: "https://www.americanbar.org/groups/business_law/resources/business-lawyer/2022-summer/the-unintended-consequences-of-mandatory-esg-disclosures/"
-      pdf: "/scholarship/14 Oranburg – PUBLICATION The Unintended Consequences of Mandatory ESG Disclosures.pdf"
+      pdf: "/scholarship/14 Oranburg – PUBLICATION The Unintended Consequences of Mandatory ESG Disclosures.md"
       companion: "/equally-poor/"
     featured: false
 
@@ -572,7 +572,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3648687"
       published:
-      pdf: "/scholarship/18 Oranburg & Kahn – PUBLICATION Online Onboarding - Corporate Governance Training in the COVID-19 Era.pdf"
+      pdf: "/scholarship/18 Oranburg & Kahn – PUBLICATION Online Onboarding - Corporate Governance Training in the COVID-19 Era.md"
       companion:
     featured: false
 
@@ -594,7 +594,7 @@ publications:
     links:
       ssrn:
       published:
-      pdf: "/scholarship/16 Oranburg – PUBLICATION Social Media and Democracy After the Capitol Riot.pdf"
+      pdf: "/scholarship/16 Oranburg – PUBLICATION Social Media and Democracy After the Capitol Riot.md"
       companion:
     featured: false
 
@@ -616,7 +616,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2544363"
       published:
-      pdf: "/scholarship/30 Oranburg – PUBLICATION A Little Birdie Said - How Twitter Is Disrupting Shareholder Activism.pdf"
+      pdf: "/scholarship/30 Oranburg – PUBLICATION A Little Birdie Said - How Twitter Is Disrupting Shareholder Activism.md"
       companion:
     featured: false
 
@@ -641,7 +641,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3270867"
       published:
-      pdf: "/scholarship/17 Oranburg & Palagashvili – PUBLICATION Transaction Cost Economics, Labor Law, and the Gig Economy.pdf"
+      pdf: "/scholarship/17 Oranburg & Palagashvili – PUBLICATION Transaction Cost Economics, Labor Law, and the Gig Economy.md"
       companion:
     featured: false
 
@@ -663,7 +663,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3135936"
       published:
-      pdf: "/scholarship/24 Oranburg – PUBLICATION Unbundling Employment – Flexible Benefits for the Gig Economy.pdf"
+      pdf: "/scholarship/24 Oranburg – PUBLICATION Unbundling Employment – Flexible Benefits for the Gig Economy.md"
       companion:
     featured: false
 
@@ -686,7 +686,7 @@ publications:
     links:
       ssrn:
       published:
-      pdf: "/scholarship/22 Oranburg – PUBLICATION Balancing Flexibility and Rigidity.pdf"
+      pdf: "/scholarship/22 Oranburg – PUBLICATION Balancing Flexibility and Rigidity.md"
       companion:
     featured: false
 
@@ -710,7 +710,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4919316"
       published:
-      pdf: "/scholarship/07 Oranburg - PUBLICATION A Systems Approach.pdf"
+      pdf: "/scholarship/07 Oranburg - PUBLICATION A Systems Approach.md"
       companion:
     featured: false
 
@@ -732,7 +732,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104793"
       published:
-      pdf: "/scholarship/11 Oranburg – PUBLICATION Advanced Online Continuing Legal Education.pdf"
+      pdf: "/scholarship/11 Oranburg – PUBLICATION Advanced Online Continuing Legal Education.md"
       companion:
     featured: false
 
@@ -753,7 +753,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3593027"
       published:
-      pdf: "/scholarship/19 Oranburg & Tamasy – PUBLICATION Corporations Hybrid - A COVID Case Study on Innovation in Business Law Pedagogy.pdf"
+      pdf: "/scholarship/19 Oranburg & Tamasy – PUBLICATION Corporations Hybrid - A COVID Case Study on Innovation in Business Law Pedagogy.md"
       companion:
     featured: false
 
@@ -766,13 +766,20 @@ publications:
     citation: "Seth C. Oranburg, Contract Law: Rules, Cases, and Problems (2d ed., Carolina Academic Press 2025)."
     coauthors: []
     abstract: >
-      Law school casebook covering contract law. Second edition.
+      A casebook that teaches contract law through rules, cases, and problems
+      organized around the lifecycle of a contractual relationship: formation
+      (mutual assent, consideration, defenses), interpretation (ambiguity,
+      parol evidence, warranties), performance and breach (conditions,
+      excuse, modification), and remedies (expectation damages, alternative
+      remedies, third-party beneficiaries). Accompanied by a 25-episode
+      podcast series (Organized: The Business Law Breakdown) and a 676-
+      question assessment bank on the Quaere platform.
     cluster: education
     tags: [contract law, casebook, legal education]
     links:
       ssrn:
       published: "https://cap-press.com/books/isbn/9781531033804/Contract-Law-Second-Edition"
-      pdf: "/scholarship/09 Oranburg – PUBLICATION Contract Law 2d.pdf"
+      pdf: "/scholarship/09 Oranburg – PUBLICATION Contract Law 2d.md"
       companion:
     featured: false
     exclude_from: [explorer]
@@ -793,7 +800,7 @@ publications:
     links:
       ssrn:
       published: "https://cap-press.com/books/isbn/9781531029586/Questions-and-Answers-Business-Associations-Third-Edition"
-      pdf: "/scholarship/10 Oranburg – PUBLICATION Business Associations Q&A 3d.pdf"
+      pdf: "/scholarship/10 Oranburg – PUBLICATION Business Associations Q&A 3d.md"
       companion:
     featured: false
     exclude_from: [explorer]
@@ -855,7 +862,7 @@ publications:
     links:
       ssrn:
       published:
-      pdf: "/scholarship/02 Oranburg – PUBLICATION Valuing Uncertain Trade Secrets.pdf"
+      pdf: "/scholarship/02 Oranburg – PUBLICATION Valuing Uncertain Trade Secrets.md"
       companion:
     featured: false
 
@@ -878,8 +885,8 @@ publications:
     tags: [antisemitism, anti-Zionism, free speech, higher education, Israel]
     links:
       ssrn:
-      published: "https://academicengagement.org/wp-content/uploads/2025/08/AEN_Research-Paper-Oranburg.pdf"
-      pdf: "/scholarship/08 Oranburg – PUBLICATION Beyond the Ivory Tower.pdf"
+      published: "https://academicengagement.org/wp-content/uploads/2025/08/AEN_Research-Paper-Oranburg.md"
+      pdf: "/scholarship/08 Oranburg – PUBLICATION Beyond the Ivory Tower.md"
       companion:
     featured: false
 
@@ -894,7 +901,13 @@ publications:
     citation: "Seth C. Oranburg, Business Associations: Law of the Firm (Aspen Press, forthcoming 2027)."
     coauthors: []
     abstract: >
-      Forthcoming casebook on business associations law.
+      A student treatise organized around the question "Why does business
+      law exist?" Covers agency, partnerships, LLCs, corporations, DAOs,
+      fiduciary duties, shareholder litigation, mergers and acquisitions,
+      capital structure, and corporate numeracy. Distinctive for integrating
+      decentralized autonomous organizations as a chapter-level entity form
+      alongside traditional business structures, and for treating corporate
+      governance as a design problem rather than a compliance exercise.
     cluster: education
     tags: [business associations, casebook, legal education]
     links:
@@ -914,8 +927,16 @@ publications:
     citation: "Seth C. Oranburg, Judgment Proof (forthcoming)."
     coauthors: []
     abstract: >
-      Forthcoming nonfiction work on compliance culture and the recovery of
-      human judgment in institutions.
+      Modern institutions have engineered out the faculty of judgment and
+      become "judgment-proof" in both the legal and epistemic sense. Drawing
+      on Maimonides's distinction between tikkun ha-guf (material
+      infrastructure) and tikkun ha-nefesh (cultivation of wisdom), Aristotle's
+      distinction between techne and phronesis, and the author's own
+      experience at the University of Chicago Law School and as an observant
+      Jew denied Sabbath accommodation, the book argues that law has two
+      purposes — foundation and scaffolding — and that modern regulatory
+      culture has become obsessed with foundations while forgetting what
+      they were built to support. The Boeing 737 MAX is the paradigm case.
     cluster: civil-society
     tags: [compliance, institutional design, wisdom, Maimonides]
     links:
@@ -935,8 +956,17 @@ publications:
     citation: "Seth C. Oranburg, Law and Governance (forthcoming)."
     coauthors: []
     abstract: >
-      Academic monograph proposing a functional definition of governance across
-      legal fields.
+      Supplies the missing variable in legal analysis: governance itself.
+      Defines governance as the organized system by which a group manages
+      a shared problem over time, with four indispensable elements
+      (decision-making, monitoring, sanctions, adjustment). Demonstrates
+      that many governance institutions have the structure of club goods,
+      distinguishes member benefits from spillover effects, and offers a
+      seven-step method for evaluating legal rules by what they do to
+      governance. Applies the framework across merchant networks, stock
+      exchanges, corporate boards, universities, nonprofits, and law reviews.
+      The theoretical foundation for the Club Good, Wrong Plaintiff, and
+      Exclusive Inclusion papers.
     cluster: governance
     tags: [governance theory, institutional design, club goods]
     links:
@@ -946,3 +976,250 @@ publications:
       companion: "/law-governance/"
     featured: false
     exclude_from: [explorer]
+
+  # ---- PAPERS ADDED FROM SSRN PROFILE (2026-03-30) ----
+
+  - id: right-not-to-work
+    title: "Right to Not Work: Why (Some) Unions Are Anti-Religion"
+    type: article
+    year: 2025
+    status: published
+    journal: "FIU Law Review"
+    citation: "Seth C. Oranburg, Right to Not Work: Why (Some) Unions Are Anti-Religion, 19 FIU L. Rev. (2025)."
+    coauthors: []
+    abstract: >
+      When union seniority systems collide with an employee's right to observe
+      the Sabbath, who wins? After the Supreme Court's unanimous decision in
+      Groff v. DeJoy raised the bar from "de minimis" to "substantial increased
+      costs," this article examines the unique double bind facing religious
+      workers in union-security states where CBA seniority rules directly
+      block religious accommodations.
+    cluster: civil-society
+    tags: [religious liberty, labor law, Title VII, unions]
+    links:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4906246"
+      published: "https://ecollections.law.fiu.edu/lawreview/vol19/iss3/"
+      pdf:
+      companion:
+    featured: false
+
+  - id: sovereign-charities
+    title: "Legitimate University Governance"
+    type: article
+    year: 2025
+    status: published
+    journal:
+    citation: "Seth C. Oranburg, Legitimate University Governance (2025)."
+    coauthors: []
+    abstract: >
+      Develops the concept of "sovereign charities" — elite private universities
+      that wield public influence, receive public subsidy, and perform public
+      functions while governing themselves as private corporations answerable
+      to no external constituency. Explains how this governance architecture
+      enables the conditions documented in Exclusive Inclusion.
+    cluster: governance
+    tags: [university governance, nonprofit law, institutional design, antisemitism]
+    links:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5260677"
+      published:
+      pdf:
+      companion:
+    featured: false
+
+  - id: university-disentanglement
+    title: "University Disentanglement: Toward a Theory of University Governance"
+    type: article
+    year: 2024
+    status: published
+    journal:
+    citation: "Seth C. Oranburg, University Disentanglement: Toward a Theory of University Governance (2024)."
+    coauthors: []
+    abstract: >
+      Develops an agency-costs framework for university governance, analyzing
+      how self-perpetuating boards, hollow fiduciary duties, and absent
+      stakeholder standing create structural conditions for institutional failure.
+      Companion to Exclusive Inclusion — provides the governance theory that
+      paper applies to identity-based exclusion.
+    cluster: governance
+    tags: [university governance, agency costs, institutional design]
+    links:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4997569"
+      published:
+      pdf: "/scholarship/updates/ssrn-4997569.md"
+      companion:
+    featured: false
+
+  - id: anti-bad-pro-good
+    title: "From Anti-Bad to Pro-Good: Legal Architecture for Collective Phronesis"
+    type: article
+    year: 2025
+    status: published
+    journal:
+    citation: "Seth C. Oranburg, From Anti-Bad to Pro-Good: Legal Architecture for Collective Phronesis (2025)."
+    coauthors: []
+    abstract: >
+      Argues that modern law has defined itself exclusively by harm prevention
+      (the "anti-bad" function) while abandoning the cultivation of practical
+      wisdom (the "pro-good" function). Proposes legal architecture that
+      recovers the conditions for collective phronesis — the institutional
+      capacity for wise judgment. Companion to Judgment Proof.
+    cluster: civil-society
+    tags: [institutional design, virtue ethics, legal philosophy, governance]
+    links:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5232171"
+      published:
+      pdf:
+      companion:
+    featured: false
+
+  - id: collective-phronesis-crowdfunding
+    title: "Collective Phronesis in Equity Crowdfunding: Structuring Financial Regulation for Practical Wisdom"
+    type: article
+    year: 2025
+    status: published
+    journal:
+    citation: "Seth C. Oranburg, Collective Phronesis in Equity Crowdfunding: Structuring Financial Regulation for Practical Wisdom (2025)."
+    coauthors: []
+    abstract: >
+      Applies the concept of collective practical wisdom (phronesis) to
+      equity crowdfunding regulation. Argues that regulatory design should
+      cultivate rather than replace the judgment of market participants.
+      Bridges the crowdfunding scholarship with the governance theory work.
+    cluster: startup-finance
+    tags: [crowdfunding, securities regulation, practical wisdom, institutional design]
+    links:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5098583"
+      published:
+      pdf:
+      companion:
+    featured: false
+
+  - id: machines-contractual-intent
+    title: "Machines and Contractual Intent"
+    type: article
+    year: 2022
+    status: published
+    journal:
+    citation: "Seth C. Oranburg, Machines and Contractual Intent (2022)."
+    coauthors: []
+    abstract: >
+      Examines what happens to the doctrine of contractual intent when
+      contracts are formed, performed, or breached by machines rather than
+      humans. When an algorithm accepts terms, who has "intended" to contract?
+    cluster: governance
+    tags: [contract law, AI, automation, legal theory]
+    links:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4002076"
+      published:
+      pdf:
+      companion:
+    featured: false
+
+  - id: distance-education-covid
+    title: "Distance Education in the Time of Coronavirus: Quick and Easy Strategies for Professors"
+    type: article
+    year: 2020
+    status: published
+    journal:
+    citation: "Seth C. Oranburg, Distance Education in the Time of Coronavirus: Quick and Easy Strategies for Professors (2020)."
+    coauthors: []
+    abstract: >
+      Practical guide for professors forced online by COVID-19. The most-
+      downloaded paper on Seth's SSRN profile (12,096 views, 3,155 downloads),
+      demonstrating widespread need for accessible guidance on emergency
+      transition to online teaching.
+    cluster: education
+    tags: [legal education, online learning, COVID-19, pedagogy]
+    links:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3553911"
+      published:
+      pdf:
+      companion:
+    featured: false
+
+  - id: female-angel-investors
+    title: "Do Female Investors Support Female Entrepreneurs? An Empirical Analysis of Angel Investor Behavior"
+    type: article
+    year: 2019
+    status: published
+    journal:
+    citation: "Seth C. Oranburg, Do Female Investors Support Female Entrepreneurs? An Empirical Analysis of Angel Investor Behavior (2019)."
+    coauthors: []
+    abstract: >
+      Empirical study of whether female angel investors preferentially fund
+      female entrepreneurs. Extends the gender-and-crowdfunding research
+      to the angel investment context.
+    cluster: startup-finance
+    tags: [gender, angel investing, entrepreneurship, empirical legal studies]
+    links:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3429077"
+      published:
+      pdf:
+      companion:
+    featured: false
+
+  - id: beyond-crypto
+    title: "Beyond 'Crypto': Reclaiming Congressional Authority Over Financial Risk Governance"
+    type: article
+    year: 2024
+    status: published
+    journal:
+    citation: "Seth C. Oranburg, Beyond 'Crypto': Reclaiming Congressional Authority Over Financial Risk Governance (2024)."
+    coauthors: []
+    abstract: >
+      Argues that the framing of digital asset regulation as a "crypto"
+      problem obscures the deeper institutional question: who has authority
+      to govern financial risk in decentralized systems? Makes the case for
+      congressional legislation rather than agency interpretation.
+    cluster: digital-assets
+    tags: [cryptocurrency, financial regulation, congressional authority, institutional design]
+    links:
+      ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5048427"
+      published:
+      pdf:
+      companion:
+    featured: false
+
+  - id: delaware-sb21
+    title: "Delaware's Corporate Law Reform Would Fortify Stable Governance"
+    type: article
+    year: 2025
+    status: published
+    journal: "Bloomberg Law"
+    citation: "Seth C. Oranburg, Delaware's Corporate Law Reform Would Fortify Stable Governance, Bloomberg Law (2025)."
+    coauthors: []
+    abstract: >
+      Defends Delaware's SB21 corporate law reform as strengthening
+      predictability and stable governance rather than weakening shareholder
+      protections. Argues that clear, bright-line rules benefit corporations,
+      investors, and the business community.
+    cluster: governance
+    tags: [corporate governance, Delaware law, corporate reform]
+    links:
+      ssrn:
+      published: "https://news.bloomberglaw.com/us-law-week/delawares-corporate-law-reform-would-fortify-stable-governance"
+      pdf:
+      companion:
+    featured: false
+
+  - id: ai-governance-musk-warren
+    title: "Musk's OpenAI and Warren Clashes to Steer AI Governance's Future"
+    type: article
+    year: 2025
+    status: published
+    journal: "Bloomberg Law"
+    citation: "Seth C. Oranburg & Anat Alon-Beck, Musk's OpenAI and Warren Clashes to Steer AI Governance's Future, Bloomberg Law (2025)."
+    coauthors: [Anat Alon-Beck]
+    abstract: >
+      Explores competing visions for AI governance through the lens of
+      Elon Musk's conflict with OpenAI and Elizabeth Warren's regulatory
+      proposals. Analyzes how these clashes will shape the future of AI
+      regulation, balancing innovation with ethical standards.
+    cluster: governance
+    tags: [AI governance, technology regulation, corporate governance]
+    links:
+      ssrn:
+      published: "https://news.bloomberglaw.com/us-law-week/musks-openai-and-warren-clashes-to-steer-ai-governances-future"
+      pdf:
+      companion:
+    featured: false

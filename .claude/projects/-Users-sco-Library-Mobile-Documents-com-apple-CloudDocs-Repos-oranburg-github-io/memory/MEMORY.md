@@ -7,3 +7,4 @@
 - [Insights tag rules](feedback_insights-consistency.md) — Posts must use tags from insights/topics/, include kind field, never invent tags
 - [First person voice](feedback_first-person.md) — All posts must be first person ("I argue"), never third person ("Oranburg argues")
 - [Deep reading protocol](feedback_deep-reading.md) — Read every page before writing; skim misses frameworks, evidence, original moves
+- [CV engine integration](reference_cv-engine.md) — cv-engine repo, CV file location, scholarship.yml as shared data, push workflow plan

@@ -178,3 +178,41 @@ The game shows:
 **Implementation:** Simple HTML/JS game. 5-10 rounds. Player sees their payoff, the network's governance quality score, and the non-member fraud cost. Toggle between "property rule" mode and "liability rule" mode to see the difference.
 
 ### Next: Build the game, then rewrite the Club Good insight post from full reading
+
+### Club Good post rewrite completed — what changed
+
+The skim-based post had the thesis (governance is a club good) and two examples (diamonds, lobsters). The full-read rewrite adds:
+
+1. **The four Pigouvian subsidy doctrines** — the paper's central original claim. Business judgment rule, FAA arbitrability, antitrust rule of reason, voluntary association deference — all independently developed, all performing the same economic function. None was designed as an economic intervention. This was entirely invisible from the abstract.
+
+2. **The formal model insight** — welfare is maximized at an interior point (partial deference), not at either extreme. This is what makes the framework actionable: it tells courts how much deference, not just whether to defer.
+
+3. **The Loper Bright stress test** — removing Chevron deference removes a Pigouvian subsidy for agency-supervised governance, which strengthens the case for deference to private governance. This connects the paper to the live constitutional law debate.
+
+4. **Three objections and responses** — cartel, discrimination, non-replicable club. The calibrated deference standard adjusts based on governance quality, externality magnitude, and exit availability (Kiesling's insight).
+
+5. **The forest commons evidence** — Chhatre/Agrawal's 80-commons study, Nepal's 22,000 Community Forest User Groups, carbon sequestration as global externality. This extends the argument from commercial networks to environmental governance.
+
+6. **Link to the Ostracism Game** — scholarship → interactive demo. This is the pattern that makes the site distinctive.
+
+### All four governance papers now have deep-read posts:
+- Club Good: the theory (governance is a club good, four Pigouvian subsidies)
+- Wrong Plaintiff: the contract law application (expectation damages destroy the club good)
+- Exclusive Inclusion: the university application (governance void produces identity-based exclusion)
+- Beyond the Ivory Tower: the moral case (universities must exercise judgment, not just process)
+
+This cluster is now the strongest part of the site. Each post is substantive, distinct, and connected to the others.
+
+---
+
+## Next paper to read: Crosstagion (ssrn-6421898)
+
+### What I expect
+The paper coins "crosstagion" for bidirectional risk contagion between TradFi and DeFi. The SVB/USDC event is the paradigm case. The gap is jurisdictional — OCC, CFTC, and SEC each own a piece but no statute coordinates among them.
+
+### Questions to answer in the full read
+- What is the specific mechanism of the reverse channel (TradFi stress → stablecoin depeg)?
+- How does DAO governance failure accelerate crosstagion? (Beanstalk is mentioned but I need the details)
+- What exactly does the proposed tri-agency coordination mechanism look like?
+- How does this paper connect to GENIUS Dilemma and Function over Form?
+- Are there specific regulatory proposals (section numbers, trigger thresholds)?

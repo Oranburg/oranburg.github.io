@@ -19,25 +19,25 @@ For most of the last decade, no single agency had decisive authority over stable
 
 Stablecoins -- digital assets pegged to the U.S. dollar and designed for payments, not speculation -- were caught in the crossfire. Were they securities? Commodities? Neither? The answer depended on which regulator you asked and which week you asked.
 
-GENIUS ends this ambiguity by doing three things.
+GENIUS ends this ambiguity with two structural moves.
 
-## Three pillars of the new law
+## The legislative architecture
 
-**First, it carves stablecoins out of securities law.** Compliant "payment stablecoins" are explicitly exempted from the Securities Act's definition of "security." This is a definitional move with enormous consequences. It means the SEC no longer has jurisdiction over these instruments. Oversight shifts to banking supervisors.
+**First, it carves stablecoins out of securities law.** Compliant "payment stablecoins" are explicitly exempted from the Securities Act's definition of "security." This is a definitional move with enormous consequences. It means the SEC no longer has jurisdiction over these instruments. Oversight shifts from securities regulators to banking supervisors.
 
 **Second, it imposes strict reserve requirements.** Issuers must maintain 100% reserve backing -- real assets like cash and U.S. Treasuries underpinning every circulating token. Think of it as bringing bank-like prudential standards to crypto. If you issue a dollar-denominated stablecoin, you need a dollar's worth of reserves behind it.
 
-**Third, it creates a tailored private right of action.** Rather than relying on the SEC's Rule 10b-5 -- the broad antifraud weapon that has governed securities markets since 1934 -- GENIUS establishes its own cause of action with calibrated remedies and specific damages caps. Individuals can sue for statutory violations, but within defined limits.
+The combination reallocates authority from *ex post* enforcement (the SEC suing after fraud occurs) to *ex ante* prudential oversight (banking regulators ensuring reserves are adequate before problems arise).
 
 ## The dilemma at the heart of the law
 
-This is where Oranburg's analysis turns critical. Each of these pillars involves a trade-off, and the trade-offs cut in the same direction: GENIUS promotes innovation by weakening traditional antifraud protections.
+This is where Oranburg's analysis turns critical. The shift from SEC to banking oversight involves a trade-off: GENIUS promotes innovation and regulatory clarity by moving stablecoins away from the SEC's antifraud infrastructure.
 
 > Does GENIUS resolve the doctrinal ambiguities that plagued pre-2025 enforcement, or does it merely displace them?
 
-Consider the shift from SEC to banking oversight. Securities regulators have decades of experience policing fraud in financial instruments. Banking supervisors are good at prudential regulation -- capital requirements, reserve adequacy, systemic risk -- but they are not fraud cops. The SEC's enforcement apparatus, whatever its flaws, was built to catch liars. GENIUS moves stablecoins to a regime better suited to catching undercapitalized institutions.
+Securities regulators have decades of experience policing fraud in financial instruments. Banking supervisors are good at prudential regulation -- capital requirements, reserve adequacy, systemic risk -- but they are not fraud cops. The SEC's enforcement apparatus, whatever its flaws, was built to catch liars. GENIUS moves stablecoins to a regime better suited to catching undercapitalized institutions than catching fraudsters.
 
-The private right of action raises similar concerns. Rule 10b-5 is a powerful tool precisely because it is broad. The GENIUS Act's tailored alternative is narrower by design. That narrowness promotes predictability and discourages frivolous suits, but it may also leave some victims without recourse.
+The question Oranburg raises is whether prudential oversight -- however rigorous -- can substitute for the antifraud tools that the securities regime provides. Reserve requirements prevent insolvency. They do not prevent deception.
 
 ## The global context
 

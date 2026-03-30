@@ -85,3 +85,26 @@ The Club Good paper (ssrn-6439378) is the companion to this one. Questions to an
 - How does it handle the Loper Bright problem (no more Chevron deference)?
 - What is the proposed standard of "calibrated deference"?
 - How do the cartel and discrimination objections get addressed?
+
+---
+
+## Paper 3: Beyond the Ivory Tower (AEN Research Paper No. 7) — STARTED 2026-03-30, NOT COMPLETE
+
+### What I've read so far
+- Full table of contents (3 parts: Is Anti-Zionism Antisemitism?; Experiencing Israel After October 7; Institutional Clarity in the Face of Ideological Violence)
+- Introduction (personal narrative: grandmother's funeral, newborn daughter, decision to join the mission)
+- Part I structure (antisemitism definition, Zionism/anti-Zionism, legal consequences under Title VI)
+
+### What I still need to read
+- Part I sections B-C (Zionism definitions, legal consequences, functional analysis of anti-Zionist speech)
+- Part II (the Israel firsthand account — Tekuma car graveyard, Kibbutz Nir Oz, Nova Festival testimony, IDF BBQ, Pain Center, Hamas raw footage, hostage families, rooftop reflections)
+- Part III (institutional clarity — limits of abstraction, virtue ethics, classical liberal mandate, liberal-realist framework)
+- Conclusion and endnotes
+
+### What's distinctive from the introduction alone
+1. This paper is PERSONAL in a way none of the other papers are — it starts with a grandmother's funeral, a newborn, and a decision to travel into a war zone. The scholarly voice comes later.
+2. The 800% increase in antisemitic incidents (3,291 in 3 months including 56 physical assaults) is a concrete data point.
+3. The paper acknowledges complexity: some Jewish students joined pro-Palestinian encampments; some Arab leaders condemned Hamas. It is not a polemic.
+4. The three-part structure mirrors the progression of the argument: theory (Part I) → experience (Part II) → framework (Part III). The experience section is the bridge that makes the framework credible.
+
+### Next session: complete the deep read, then rewrite the insight post

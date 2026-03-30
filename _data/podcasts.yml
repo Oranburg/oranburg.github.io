@@ -1,0 +1,301 @@
+# ==========================================================================
+# Podcast Database — Organized: The Business Law Breakdown
+# Feed: https://feed.podbean.com/bizlawbreakdown/feed.xml
+# Host: Professor Seth C. Oranburg
+# Generated: 2026-03-30 from Podbean RSS feed
+#
+# TO ADD A NEW EPISODE: it appears automatically in the RSS feed.
+# To feature an episode on a specific page, add its ID below or
+# reference it in commentary.yml.
+#
+# TEMPLATE (for manual additions or special episodes):
+#   - title:
+#     season:
+#     episode:
+#     date: YYYY-MM-DD
+#     duration:
+#     type: regular | special
+#     cluster:     # education | governance | civil-society | etc.
+#     tags: []
+#     audio_url:
+#     embed:       # Podbean player embed URL if different from playlist
+# ==========================================================================
+
+feed_url: https://feed.podbean.com/bizlawbreakdown/feed.xml
+
+podcast:
+  title: "Organized: The Business Law Breakdown"
+  description: >
+    Simplifies complex legal principles to make business law accessible
+    to everyone. Uses real-world cases and practical contract law strategies
+    to help business professionals, lawyers, and students master the
+    essentials of business law.
+  host: Seth C. Oranburg
+  platform: Podbean
+  url: https://bizlawbreakdown.podbean.com
+
+# Podbean playlist embed (use this for full-season embeds)
+embeds:
+  full_playlist: "https://www.podbean.com/player-v2/?i=p6w7w-1260bda-pbblog-playlist&share=1&download=1&rtl=0&fonts=Trebuchet%20MS&skin=3267a3&font-color=auto&logo_link=episode_page&order=serial&limit=30"
+  # To filter by season, append: &filter=season&season=NUMBER
+  # Example: season 12 (Trade Secrets): append &filter=season&season=12
+
+# --- SEASON 1: Contract Law ---
+
+episodes:
+
+  # Regular episodes (Season 1: Contracts)
+
+  - title: "Equity's Enforcers — When Money Can't Buy Justice"
+    season: 1
+    episode: 25
+    date: 2024-12-04
+    duration: ""
+    type: regular
+    cluster: education
+    tags: [contracts, equitable remedies]
+
+  - title: "Greater Expectations — Alternative Money Damages"
+    season: 1
+    episode: 24
+    date: 2024-12-04
+    duration: "21:58"
+    type: regular
+    cluster: education
+    tags: [contracts, damages]
+
+  - title: "Show Me the Money — Expectation Damages"
+    season: 1
+    episode: 23
+    date: 2024-11-27
+    duration: "29:27"
+    type: regular
+    cluster: education
+    tags: [contracts, damages]
+
+  - title: "The More Things Change — Modifying Contracts by Mutual Assent"
+    season: 1
+    episode: 22
+    date: 2024-11-26
+    duration: "33:49"
+    type: regular
+    cluster: education
+    tags: [contracts, modification]
+
+  - title: "Excuse Me — When Non-Performance Is Judicially Justified"
+    season: 1
+    episode: 21
+    date: 2024-11-24
+    duration: "23:55"
+    type: regular
+    cluster: education
+    tags: [contracts, excuse, impossibility]
+
+  - title: "Here Comes Trouble — Anticipatory Repudiation"
+    season: 1
+    episode: 20
+    date: 2024-11-24
+    duration: "19:33"
+    type: regular
+    cluster: education
+    tags: [contracts, breach, repudiation]
+
+  - title: "Performance in Contracts — When Is 'Good Enough' Really Enough?"
+    season: 1
+    episode: 19
+    date: 2024-11-08
+    duration: "21:25"
+    type: regular
+    cluster: education
+    tags: [contracts, performance, substantial performance]
+
+  - title: "Conditions in Contracts — When Obligations Depend on Events"
+    season: 1
+    episode: 18
+    date: 2024-11-07
+    duration: "18:49"
+    type: regular
+    cluster: education
+    tags: [contracts, conditions]
+
+  - title: "What's the Deal? The Parol Evidence Rule"
+    season: 1
+    episode: 17
+    date: 2024-11-07
+    duration: "21:42"
+    type: regular
+    cluster: education
+    tags: [contracts, parol evidence]
+
+  - title: "Words and Deeds — How Parties' Actions Impact Contract Interpretation"
+    season: 1
+    episode: 16
+    date: 2024-11-07
+    duration: "22:57"
+    type: regular
+    cluster: education
+    tags: [contracts, interpretation, course of dealing]
+
+  - title: "Reading Between the Lines — How Courts Decode Contract Terms"
+    season: 1
+    episode: 15
+    date: 2024-10-21
+    duration: "20:09"
+    type: regular
+    cluster: education
+    tags: [contracts, interpretation]
+
+  - title: "Words in Context — How Courts Interpret Contracts"
+    season: 1
+    episode: 14
+    date: 2024-11-07
+    duration: "15:14"
+    type: regular
+    cluster: education
+    tags: [contracts, interpretation]
+
+  - title: "Secrets and Lies — When Fraud Invalidates Contracts"
+    season: 1
+    episode: 13
+    date: 2024-10-07
+    duration: "19:22"
+    type: regular
+    cluster: education
+    tags: [contracts, fraud, misrepresentation]
+
+  - title: "Oops! When Mistakes Break Contracts"
+    season: 1
+    episode: 12
+    date: 2024-10-07
+    duration: "20:58"
+    type: regular
+    cluster: education
+    tags: [contracts, mistake, reformation]
+
+  - title: "Sign Here — The Power of the Statute of Frauds"
+    season: 1
+    episode: 11
+    date: 2024-10-05
+    duration: "19:36"
+    type: regular
+    cluster: education
+    tags: [contracts, statute of frauds]
+
+  - title: "Payback Time — Promissory Restitution"
+    season: 1
+    episode: 10
+    date: 2024-10-01
+    duration: "18:25"
+    type: regular
+    cluster: education
+    tags: [contracts, restitution, unjust enrichment]
+
+  - title: "When a Promise Is Enough — Promissory Estoppel"
+    season: 1
+    episode: 9
+    date: 2024-10-01
+    duration: "18:44"
+    type: regular
+    cluster: education
+    tags: [contracts, promissory estoppel, reliance]
+
+  - title: "Consideration — The Price of Commitment"
+    season: 1
+    episode: 8
+    date: 2024-09-28
+    duration: "22:51"
+    type: regular
+    cluster: education
+    tags: [contracts, consideration]
+
+  - title: "Mirror, Mirror — When Does Acceptance Create a Contract?"
+    season: 1
+    episode: 7
+    date: 2024-09-28
+    duration: "17:40"
+    type: regular
+    cluster: education
+    tags: [contracts, acceptance, mirror image rule]
+
+  - title: "Termination — Death of an Offer"
+    season: 1
+    episode: 6
+    date: 2024-09-01
+    duration: "16:07"
+    type: regular
+    cluster: education
+    tags: [contracts, offer, termination]
+
+  - title: "Offer or Not? What Makes an Offer (Un)Acceptable"
+    season: 1
+    episode: 5
+    date: 2024-08-28
+    duration: "16:52"
+    type: regular
+    cluster: education
+    tags: [contracts, offer]
+
+  - title: "Bargains and the Objective Theory of Contract"
+    season: 1
+    episode: 4
+    date: 2024-08-17
+    duration: "16:00"
+    type: regular
+    cluster: education
+    tags: [contracts, objective theory, bargain]
+
+  - title: "Capacity to Contract — Who Can Make a Deal?"
+    season: 1
+    episode: 3
+    date: 2024-08-17
+    duration: "18:16"
+    type: regular
+    cluster: education
+    tags: [contracts, capacity, minors, mental incapacity]
+
+  - title: "Promises, Promises — Defining a Legal Obligation"
+    season: 1
+    episode: 2
+    date: 2024-08-21
+    duration: "18:55"
+    type: regular
+    cluster: education
+    tags: [contracts, promises, legal obligation]
+
+  - title: "Mastering Contracts — Introduction to the Season"
+    season: 1
+    episode: 1
+    date: 2024-08-17
+    duration: "17:44"
+    type: regular
+    cluster: education
+    tags: [contracts, introduction]
+
+  # Special episodes (not part of numbered series)
+
+  - title: "Are University Speech Codes Too Restrictive? A Conversation about Free & Higher Education"
+    season:
+    episode:
+    date: 2024-11-22
+    duration: "91:35"
+    type: special
+    cluster: civil-society
+    tags: [free speech, higher education, speech codes]
+
+  - title: "Celebrating First Generation Lawyers: Voices in Law"
+    season:
+    episode:
+    date: 2024-11-07
+    duration: "62:42"
+    type: special
+    cluster: education
+    tags: [legal education, diversity, first generation]
+
+  - title: "Celebrating Hispanic Lawyering: Insights and Experiences"
+    season:
+    episode:
+    date: 2024-10-05
+    duration: "57:05"
+    type: special
+    cluster: education
+    tags: [legal education, diversity, Hispanic heritage]

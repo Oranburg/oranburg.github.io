@@ -182,7 +182,7 @@ publications:
     tags: [antitrust, DAOs, gig economy, blockchain governance, decentralization]
     links:
       ssrn:
-      published:
+      published: "https://www.pymnts.com/cpi-posts/market-power-and-governance-power-new-tools-for-antitrust-enforcement-in-the-decentralized-gig-economy/"
       pdf: "/scholarship/03 Oranburg – PUBLICATION Market Power and Governance Power (CPI) 2025-11-11.pdf"
       companion:
     featured: false
@@ -878,7 +878,7 @@ publications:
     tags: [antisemitism, anti-Zionism, free speech, higher education, Israel]
     links:
       ssrn:
-      published:
+      published: "https://academicengagement.org/wp-content/uploads/2025/08/AEN_Research-Paper-Oranburg.pdf"
       pdf: "/scholarship/08 Oranburg – PUBLICATION Beyond the Ivory Tower.pdf"
       companion:
     featured: false

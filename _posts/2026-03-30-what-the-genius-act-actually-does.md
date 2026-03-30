@@ -19,7 +19,7 @@ For most of the last decade, no single agency had decisive authority over stable
 
 Stablecoins -- digital assets pegged to the U.S. dollar and designed for payments, not speculation -- were caught in the crossfire. Were they securities? Commodities? Neither? The answer depended on which regulator you asked and which week you asked.
 
-GENIUS ends this ambiguity with two structural moves.
+GENIUS ends this ambiguity with three structural moves.
 
 ## The legislative architecture
 
@@ -27,17 +27,17 @@ GENIUS ends this ambiguity with two structural moves.
 
 **Second, it imposes strict reserve requirements.** Issuers must maintain 100% reserve backing -- real assets like cash and U.S. Treasuries underpinning every circulating token. Think of it as bringing bank-like prudential standards to crypto. If you issue a dollar-denominated stablecoin, you need a dollar's worth of reserves behind it.
 
-The combination reallocates authority from *ex post* enforcement (the SEC suing after fraud occurs) to *ex ante* prudential oversight (banking regulators ensuring reserves are adequate before problems arise).
+**Third, it protects token holders through contract and bankruptcy law.** GENIUS mandates contractual redemption rights -- issuers must redeem tokens at par on demand -- and establishes priority status for stablecoin holders in insolvency. If an issuer fails, token holders get paid before general creditors. This is not securities-style antifraud enforcement; it is consumer protection through the structural protections of contract and bankruptcy.
+
+The combination reallocates authority from *ex post* enforcement (the SEC suing after fraud occurs) to *ex ante* prudential oversight and structural consumer protections (banking regulators ensuring reserves are adequate, contract law guaranteeing redemption, bankruptcy law securing priority).
 
 ## The dilemma at the heart of the law
 
-This is where Oranburg's analysis turns critical. The shift from SEC to banking oversight involves a trade-off: GENIUS promotes innovation and regulatory clarity by moving stablecoins away from the SEC's antifraud infrastructure.
+This is where Oranburg's analysis turns critical. The shift away from securities regulation involves a fundamental trade-off: GENIUS promotes innovation and regulatory clarity by moving stablecoins away from the SEC's antifraud infrastructure. But will prudential supervision, bankruptcy protections, and mandatory contractual rights prove an adequate substitute for the robust private enforcement tools of Rule 10b-5?
 
 > Does GENIUS resolve the doctrinal ambiguities that plagued pre-2025 enforcement, or does it merely displace them?
 
-Securities regulators have decades of experience policing fraud in financial instruments. Banking supervisors are good at prudential regulation -- capital requirements, reserve adequacy, systemic risk -- but they are not fraud cops. The SEC's enforcement apparatus, whatever its flaws, was built to catch liars. GENIUS moves stablecoins to a regime better suited to catching undercapitalized institutions than catching fraudsters.
-
-The question Oranburg raises is whether prudential oversight -- however rigorous -- can substitute for the antifraud tools that the securities regime provides. Reserve requirements prevent insolvency. They do not prevent deception.
+Securities regulators have decades of experience policing fraud in financial instruments. Banking supervisors are good at prudential regulation -- capital requirements, reserve adequacy, systemic risk -- but they are not fraud cops. The SEC's enforcement apparatus, whatever its flaws, was built to catch liars. GENIUS moves stablecoins to a regime better suited to catching undercapitalized institutions than catching fraudsters. Contractual redemption rights and bankruptcy priority protect consumers against insolvency, but they do not protect consumers against deception.
 
 ## The global context
 

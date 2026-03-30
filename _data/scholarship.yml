@@ -104,8 +104,11 @@ publications:
       First doctrinal analysis of the GENIUS Act, enacted after the TerraUSD
       collapse exposed unregulated stablecoin risks in a $260 billion market.
       The statute exempts compliant payment stablecoins from the Securities
-      Act while enforcing strict reserve requirements, shifting authority
-      from ex post SEC enforcement to ex ante prudential oversight.
+      Act, enforces strict reserve requirements, requires contractual
+      redemption rights, and creates a priority claim in insolvency —
+      shifting enforcement from ex post Rule 10b-5 litigation to ex ante
+      prudential oversight while securing consumer assets via bankruptcy
+      protections.
     cluster: digital-assets
     tags: [stablecoin, GENIUS Act, cryptocurrency, securities law]
     links:
@@ -412,6 +415,34 @@ publications:
     featured: false
 
   # ---- CORPORATE GOVERNANCE & INSTITUTIONAL DESIGN ----
+
+  - id: governance-club-good
+    title: "\"Private\" Governance Is Actually a Club Good"
+    type: article
+    year: 2026
+    status: forthcoming
+    journal:
+    citation: "Seth C. Oranburg, \"Private\" Governance Is Actually a Club Good (forthcoming 2026)."
+    coauthors: []
+    abstract: >
+      Network governance is a club good: excludable through ostracism,
+      nonrivalrous up to congestion, voluntarily joined, and financed by
+      members. Courts that displace a network's authority to ostracize
+      rule-breakers weaken the excludability that makes governance valuable
+      to members and non-members alike. When the ostracism mechanism loses
+      credibility, members defect, governance quality declines, and the
+      positive externalities governance creates for non-members disappear.
+      Courts should recognize doctrines that defer to network decisions as
+      implicit Pigouvian subsidies that reduce governance costs and help
+      prevent the undersupply of socially valuable governance.
+    cluster: governance
+    tags: [corporate governance, club goods, private ordering, ostracism, institutional design]
+    links:
+      ssrn: "https://dx.doi.org/10.2139/ssrn.6439378"
+      published:
+      pdf: "/scholarship/updates/ssrn-6439378.pdf"
+      companion:
+    featured: true
 
   - id: esg-disclosures
     title: "The Unintended Consequences of Mandatory ESG Disclosures"

@@ -114,3 +114,13 @@ Also: update existing 3 Bloomberg entries in commentary.yml to include original 
 - NYU Director position (~2023)
 
 Total new items from LinkedIn: ~20+ across commentary, presentations, media
+
+## Stats Gaps — Need from Seth
+
+- Podbean subscriber/follower count
+- Google Scholar profile URL and citation count / H-index
+- ElevenLabs audiobook link for PTS (Protecting Trade Secrets)
+- Spotify audiobook/podcast link for PTS
+- Any sales/listen data from ElevenLabs or Spotify dashboards
+- Total presentation/invited talk count (LinkedIn shows 15+, likely more)
+- Quaere platform stats (users, assessments taken) if available

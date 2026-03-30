@@ -1,0 +1,805 @@
+# ==========================================================================
+# Scholarship Data — Seth C. Oranburg
+# Single source of truth for: website, explorer, CV, insights cross-refs
+#
+# TO ADD A NEW PUBLICATION: copy the template below, fill in fields,
+# paste at the top of the appropriate cluster. Push. Done.
+#
+# TEMPLATE:
+#   - id:
+#     title:
+#     type:            # article | book | chapter | working-paper
+#     year:
+#     status:          # published | forthcoming | in-progress
+#     journal:
+#     citation:        # full Bluebook/CV-ready citation string
+#     coauthors: []
+#     abstract:        >
+#       One paragraph.
+#     cluster:         # digital-assets | startup-finance | governance | labor | education | ip | civil-society
+#     tags: []
+#     links:
+#       ssrn:
+#       published:
+#       pdf:
+#       companion:
+#     featured: false  # true = appears in top-level highlights
+# ==========================================================================
+
+clusters:
+  - id: digital-assets
+    label: Digital Assets & Financial Regulation
+    color: blue-light
+    description: >
+      Regulating digital assets, DeFi, stablecoins, and blockchain-based
+      financial instruments — from the Howey test to the GENIUS and CLARITY Acts.
+
+  - id: startup-finance
+    label: Startup Finance & Crowdfunding
+    color: teal
+    description: >
+      Startup capital formation, crowdfunding regulation, and democratizing
+      access to investment — the JOBS Act, the Series A gap, and beyond.
+
+  - id: governance
+    label: Corporate Governance & Institutional Design
+    color: yellow
+    description: >
+      Corporate governance mechanisms, ESG disclosure, shareholder activism,
+      and how institutions maintain — or lose — integrity.
+
+  - id: labor
+    label: Labor, Technology & the Gig Economy
+    color: red-light
+    description: >
+      How technology disrupts employment, why worker classification is broken,
+      and what a better labor law framework could look like.
+
+  - id: education
+    label: Legal Education & Pedagogy
+    color: blue-bright
+    description: >
+      Teaching law in a digital age — online CLE, hybrid pedagogy, systems
+      thinking, and textbooks that work.
+
+  - id: ip
+    label: Intellectual Property & Trade Secrets
+    color: red-deep
+    description: >
+      Trade secret law, IP remedies, and the challenge of valuing information
+      whose worth depends on secrecy.
+
+  - id: civil-society
+    label: Institutional Reform & Civil Society
+    color: accent-2
+    description: >
+      Free speech, antisemitism, democracy, and the institutions that sustain
+      — or undermine — civil society.
+
+# ==========================================================================
+# PUBLICATIONS — ordered within each cluster by year (newest first)
+# ==========================================================================
+
+publications:
+
+  # ---- DIGITAL ASSETS & FINANCIAL REGULATION ----
+
+  - id: genius-dilemma
+    title: "The GENIUS Dilemma: Innovation Versus Antifraud in Stablecoin Regulation"
+    type: article
+    year: 2025
+    status: published
+    journal: "Stanford Journal of Blockchain Law & Policy"
+    citation: "Seth C. Oranburg, The GENIUS Dilemma: Innovation Versus Antifraud in Stablecoin Regulation, 9.1 Stan. J. Blockchain L. & Pol'y (2025)."
+    coauthors: []
+    abstract: >
+      First doctrinal analysis of the GENIUS Act, enacted after the TerraUSD
+      collapse exposed unregulated stablecoin risks in a $260 billion market.
+      The statute exempts compliant payment stablecoins from the Securities
+      Act while enforcing strict reserve requirements and creating a tailored
+      private right of action.
+    cluster: digital-assets
+    tags: [stablecoin, GENIUS Act, cryptocurrency, securities law]
+    links:
+      ssrn: "https://dx.doi.org/10.2139/ssrn.5366627"
+      published:
+      pdf: "/scholarship/04 Oranburg – PUBLICATION The Genius Dilemma.pdf"
+      companion:
+    featured: true
+
+  - id: replacing-howey
+    title: "Replacing Howey with CLARITY: Resolving Securities Regulation's Temporal Paradox"
+    type: article
+    year: 2025
+    status: forthcoming
+    journal: "Review of Banking and Financial Law — Boston University"
+    citation: "Seth C. Oranburg, Replacing Howey with CLARITY: Resolving Securities Regulation's Temporal Paradox, Rev. Banking & Fin. L. (forthcoming 2026)."
+    coauthors: []
+    abstract: >
+      Blockchain assets can transform their legal status as they decentralize,
+      evolving from securities to commodity-like instruments. The Howey test
+      provides no framework for this evolution — a gap termed the "Temporal
+      Paradox." The CLARITY Act resolves it by structuring regulation around
+      asset lifecycle phases with a conditional exemption and maturity
+      certification mechanism.
+    cluster: digital-assets
+    tags: [Howey test, CLARITY Act, digital assets, blockchain, securities regulation]
+    links:
+      ssrn: "https://dx.doi.org/10.2139/ssrn.5288934"
+      published:
+      pdf: "/scholarship/05 Oranburg – PUBLICATION Replacing Howey with CLARITY.pdf"
+      companion:
+    featured: true
+
+  - id: function-over-form
+    title: "Function Over Form: Toward a Safe Harbor Framework for DeFi Regulation of Utility Tokens"
+    type: article
+    year: 2025
+    status: published
+    journal: "Louisiana Law Review"
+    citation: "Seth C. Oranburg, Function Over Form: Toward a Safe Harbor Framework for DeFi Regulation of Utility Tokens, 86 La. L. Rev. (2025)."
+    coauthors: []
+    abstract: >
+      DeFi tokens perform distinct economic roles but existing securities
+      doctrine often misclassifies non-investment tokens as securities. Proposes
+      a narrow statutory safe harbor for utility tokens with three safeguards:
+      technical resilience, accountable control, and calibrated oversight.
+    cluster: digital-assets
+    tags: [DeFi, utility tokens, safe harbor, securities regulation]
+    links:
+      ssrn: "https://dx.doi.org/10.2139/ssrn.5254743"
+      published:
+      pdf: "/scholarship/06 Oranburg – PUBLICATION Function over Form.pdf"
+      companion:
+    featured: true
+
+  - id: market-power-governance
+    title: "Market Power and Governance Power: New Tools for Antitrust Enforcement in the Decentralized Gig Economy"
+    type: article
+    year: 2025
+    status: published
+    journal: "Competition Policy International"
+    citation: "Seth C. Oranburg, Market Power and Governance Power: New Tools for Antitrust Enforcement in the Decentralized Gig Economy, Competition Pol'y Int'l (2025)."
+    coauthors: []
+    abstract: >
+      Advances a dual-metric framework integrating traditional market
+      concentration measures (HHI) with governance concentration metrics
+      (Nakamoto coefficient, Gini coefficient) for digital-age antitrust.
+      Constructs a four-quadrant matrix of organizational types to determine
+      when intervention is warranted.
+    cluster: digital-assets
+    tags: [antitrust, DAOs, gig economy, blockchain governance, decentralization]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/03 Oranburg – PUBLICATION Market Power and Governance Power (CPI) 2025-11-11.pdf"
+      companion:
+    featured: false
+
+  - id: antitrust-blockchain
+    title: "Antitrust Law for Blockchain Technology"
+    type: article
+    year: 2024
+    status: published
+    journal: "Journal of Corporation Law"
+    citation: "Seth C. Oranburg, Antitrust Law for Blockchain Technology, 49 J. Corp. L. 379 (2024)."
+    coauthors: []
+    abstract: >
+      Applying traditional antitrust law to the modern internet could break it.
+      Critiques Neo-Brandesian approaches for relying on false analogies between
+      19th-century monopolies and today's decentralized information markets.
+      Illuminates structural distinctions between commodity and information
+      markets for correct antitrust application.
+    cluster: digital-assets
+    tags: [antitrust, blockchain, Big Tech, internet regulation, decentralization]
+    links:
+      ssrn:
+      published: "https://jcl.law.uiowa.edu/articles/2024/01/antitrust-law-blockchain-technology"
+      pdf: "/scholarship/12 Oranburg – PUBLICATION Antitrust Law for Blockchain Technology.pdf"
+      companion:
+    featured: false
+
+  - id: history-fintech
+    title: "A History of Financial Technology and Regulation: From American Incorporation to Cryptocurrency and Crowdfunding"
+    type: book
+    year: 2022
+    status: published
+    journal: "Cambridge University Press"
+    citation: "Seth C. Oranburg, A History of Financial Technology and Regulation: From American Incorporation to Cryptocurrency and Crowdfunding (Cambridge Univ. Press 2022)."
+    coauthors: []
+    abstract: >
+      Book-length historical analysis of financial technology from colonial-era
+      incorporation through cryptocurrency. Examines how law and regulation both
+      prevented some financial crises and perpetuated others, covering mutual
+      funds, stock markets, and digital investment instruments.
+    cluster: digital-assets
+    tags: [fintech history, financial regulation, cryptocurrency, crowdfunding]
+    links:
+      ssrn:
+      published: "https://www.cambridge.org/core/books/history-of-financial-technology-and-regulation/6E37443D9BC795031FF1E5B11F7B4CB3"
+      pdf: "/scholarship/15 Oranburg – PUBLICATION A History of Financial Technology and Regulation.pdf"
+      companion:
+    featured: true
+
+  - id: hyperfunding
+    title: "Hyperfunding: Regulating Financial Innovations"
+    type: article
+    year: 2018
+    status: published
+    journal: "University of Colorado Law Review"
+    citation: "Seth C. Oranburg, Hyperfunding: Regulating Financial Innovations, 89 U. Colo. L. Rev. 1033 (2018)."
+    coauthors: []
+    abstract: >
+      Coins the term "hyperfunding" for massive consumer-direct fundraising —
+      exemplified by Tesla's $20 billion Model 3 presale. This phenomenon falls
+      into a regulatory gap: not equity, not crowdfunding, not a traditional
+      presale. Proposes an initial consumer and retail-investor protection
+      framework.
+    cluster: digital-assets
+    tags: [financial innovation, consumer protection, securities regulation, Tesla]
+    links:
+      ssrn:
+      published: "https://scholar.law.colorado.edu/lawreview/vol89/iss4/2/"
+      pdf: "/scholarship/25 Oranburg – PUBLICATION Hyperfunding.pdf"
+      companion:
+    featured: false
+
+  # ---- STARTUP FINANCE & CROWDFUNDING ----
+
+  - id: securities-social-media
+    title: "Securities Regulation and Social Media"
+    type: article
+    year: 2020
+    status: published
+    journal: "Loyola University Chicago Law Journal"
+    citation: "Seth C. Oranburg, Securities Regulation and Social Media, 52 Loy. U. Chi. L.J. (2020)."
+    coauthors: []
+    abstract: >
+      The SEC's ban on general solicitation is technologically obsolete and
+      socially inequitable. It disproportionately harms rural and less-wealthy
+      entrepreneurs who depend on social media to reach investors. Reviews new
+      social media investment platforms and analyzes whether a tweet constitutes
+      general solicitation.
+    cluster: startup-finance
+    tags: [general solicitation, securities regulation, social media, JOBS Act]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/21 Oranburg – PUBLICATION Securities Regulation and Social Media.pdf"
+      companion:
+    featured: false
+
+  - id: regulatory-democratization
+    title: "Encouraging Entrepreneurship and Innovation through Regulatory Democratization"
+    type: article
+    year: 2020
+    status: published
+    journal:
+    citation: "Seth C. Oranburg, Encouraging Entrepreneurship and Innovation through Regulatory Democratization (2020)."
+    coauthors: []
+    abstract: >
+      Not all regulations are equally harmful to startups. Proposes a four-part
+      taxonomy along two axes (complex/simple, rules/standards) and finds
+      complex standards most burdensome. Introduces "regulatory democratization"
+      whereby RegTech can reduce compliance costs for small firms. Grounded in
+      88 interviews from "The Startup Study."
+    cluster: startup-finance
+    tags: [regulatory theory, startup innovation, RegTech, entrepreneurship]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/20 Oranburg – PUBLICATION Encouraging Entrepreneurship and Innovation through Regulatory Democratization.pdf"
+      companion:
+    featured: false
+
+  - id: startup-financing
+    title: "Start-Up Financing 2.0"
+    type: chapter
+    year: 2019
+    status: published
+    journal:
+    citation: "Seth C. Oranburg, Start-Up Financing 2.0 (book chapter)."
+    coauthors: []
+    abstract: >
+      Practical guide to the four main startup financing options — debt, equity,
+      convertible debt, and crowdfunding — with pros, cons, and key legal issues
+      of each. Covers P2P lending, ICOs, and venture philanthropy as emerging
+      subtypes.
+    cluster: startup-finance
+    tags: [startup finance, entrepreneurship education, crowdfunding, venture capital]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/23 Oranburg – PUBLICATION Start-Up Financing 2.pdf"
+      companion:
+    featured: false
+
+  - id: female-entrepreneurs
+    title: "Female Entrepreneurs and Equity Crowdfunding in the US: Receiving Less When Asking for More"
+    type: article
+    year: 2018
+    status: published
+    journal: "Journal of Business Venturing Insights"
+    citation: "Mark Geiger & Seth C. Oranburg, Female Entrepreneurs and Equity Crowdfunding in the US: Receiving Less When Asking for More, 10 J. Bus. Venturing Insights (2018)."
+    coauthors: [Mark Geiger]
+    abstract: >
+      Female-led equity crowdfunding campaigns receive significantly less
+      funding ($152,918 vs. $258,098), and the gap widens as target amounts
+      increase. Challenges the view that crowdfunding democratizes access to
+      capital for women.
+    cluster: startup-finance
+    tags: [gender, entrepreneurship, equity crowdfunding, empirical legal studies]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/26 Oranburg & Geiger – PUBLICATION Female Entrepreneurs and Equity Crowdfunding in the US.pdf"
+      companion:
+    featured: false
+
+  - id: democratizing-startups
+    title: "Democratizing Startups"
+    type: article
+    year: 2016
+    status: published
+    journal: "Rutgers University Law Review"
+    citation: "Seth C. Oranburg, Democratizing Startups, 68 Rutgers U. L. Rev. 101313 (2016)."
+    coauthors: []
+    abstract: >
+      The JOBS Act aimed to democratize startups but capital consolidates in
+      Unicorns instead. The key problem is illiquidity — investors can't resell
+      startup stock. Proposes a "Rule 144B" safe-harbor for web-based venture
+      stock exchanges.
+    cluster: startup-finance
+    tags: [JOBS Act, startup liquidity, secondary markets, venture exchanges]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/27 Oranburg – PUBLICATION Democratizing Startups.pdf"
+      companion:
+    featured: false
+
+  - id: place-of-their-own
+    title: "A Place of Their Own: Crowds in the New Market for Equity Crowdfunding"
+    type: article
+    year: 2016
+    status: published
+    journal: "Minnesota Law Review: Headnotes"
+    citation: "Seth C. Oranburg, A Place of Their Own: Crowds in the New Market for Equity Crowdfunding, 100 Minn. L. Rev. Headnotes 147 (2016)."
+    coauthors: []
+    abstract: >
+      Digital Shareholders cannot overcome the classic trio of problems in
+      startup investing (information asymmetry, uncertainty, agency costs).
+      Identifies a "Too Small To Succeed" phenomenon where investor-protection
+      policies designed for large firms are counterproductively applied to
+      crowdfunding offerings.
+    cluster: startup-finance
+    tags: [equity crowdfunding, wisdom of crowds, investor protection, JOBS Act]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/28 Oranburg – PUBLICATION A Place of Their Own.pdf"
+      companion:
+    featured: false
+
+  - id: bridgefunding
+    title: "Bridgefunding: Crowdfunding and the Market for Entrepreneurial Finance"
+    type: article
+    year: 2015
+    status: published
+    journal: "Cornell Journal of Law and Public Policy"
+    citation: "Seth C. Oranburg, Bridgefunding: Crowdfunding and the Market for Entrepreneurial Finance, 25 Cornell J.L. & Pub. Pol'y 397 (2015)."
+    coauthors: []
+    abstract: >
+      Identifies the Series A gap and proposes "bridgefunding" — inverting
+      crowdfunding limits ($1M floor, $5M ceiling) so crowds bridge startups
+      from angel funding to venture capital. Uses game theory to analyze the
+      gap as a market failure caused by regulation.
+    cluster: startup-finance
+    tags: [crowdfunding, Series A gap, game theory, securities regulation]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/31 Oranburg – PUBLICATION Bridgefunding - Crowdfunding and the Market for Entrepreneurial Finance.pdf"
+      companion:
+    featured: false
+
+  # ---- CORPORATE GOVERNANCE & INSTITUTIONAL DESIGN ----
+
+  - id: esg-disclosures
+    title: "The Unintended Consequences of Mandatory ESG Disclosures"
+    type: article
+    year: 2022
+    status: published
+    journal: "Business Lawyer"
+    citation: "Seth C. Oranburg, The Unintended Consequences of Mandatory ESG Disclosures, 77 Bus. Law. 697 (2022)."
+    coauthors: []
+    abstract: >
+      Mandatory ESG disclosures could lead to less CSR activity, not more. The
+      information paradox means disclosure may crowd out voluntary efforts.
+      Empirical evidence shows ESG-related mandates are not associated with
+      beneficial real-world outcomes. The SEC should quantitatively weigh costs
+      and benefits.
+    cluster: governance
+    tags: [ESG, corporate social responsibility, mandatory disclosure, securities regulation]
+    links:
+      ssrn:
+      published: "https://www.americanbar.org/groups/business_law/resources/business-lawyer/2022-summer/the-unintended-consequences-of-mandatory-esg-disclosures/"
+      pdf: "/scholarship/14 Oranburg – PUBLICATION The Unintended Consequences of Mandatory ESG Disclosures.pdf"
+      companion: "/equally-poor/"
+    featured: false
+
+  - id: online-onboarding
+    title: "Online Onboarding: Corporate Governance Training in the COVID-19 Era"
+    type: article
+    year: 2021
+    status: published
+    journal: "Arizona State University Corporate and Business Law Journal"
+    citation: "Seth C. Oranburg & Benjamin P. Kahn, Online Onboarding: Corporate Governance Training in the COVID-19 Era, 2 Ariz. St. U. Corp. & Bus. L.J. 1 (2021)."
+    coauthors: [Benjamin P. Kahn]
+    abstract: >
+      Translates director onboarding from in-person to online formats. Identifies
+      three components — information delivery, socialization, motivation — and
+      maps each to online analogs including virtual data rooms, flipped
+      boardrooms, and breakout sessions.
+    cluster: governance
+    tags: [corporate governance, director onboarding, COVID-19, online education]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/18 Oranburg & Kahn – PUBLICATION Online Onboarding - Corporate Governance Training in the COVID-19 Era.pdf"
+      companion:
+    featured: false
+
+  - id: social-media-democracy
+    title: "Social Media and Democracy after the Capitol Riot, or, A Cautionary Tale of the Giant Goldfish"
+    type: article
+    year: 2022
+    status: published
+    journal: "Mercer Law Review"
+    citation: "Seth C. Oranburg, Social Media and Democracy after the Capitol Riot, or, A Cautionary Tale of the Giant Goldfish, 73 Mercer L. Rev. (2022)."
+    coauthors: []
+    abstract: >
+      Examines free speech vs. corporate power on social media after January 6.
+      Platforms are not state actors — they exercise editorial discretion as
+      private property. The federal government has effectively deputized social
+      media corporations to moderate speech, even when platforms act for profit.
+    cluster: governance
+    tags: [social media, free speech, First Amendment, democracy, corporate power]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/16 Oranburg – PUBLICATION Social Media and Democracy After the Capitol Riot.pdf"
+      companion:
+    featured: false
+
+  - id: little-birdie
+    title: "A Little Birdie Said: How Twitter Is Disrupting Shareholder Activism"
+    type: article
+    year: 2015
+    status: published
+    journal: "Fordham Journal of Corporate and Financial Law"
+    citation: "Seth C. Oranburg, A Little Birdie Said: How Twitter Is Disrupting Shareholder Activism, 20 Fordham J. Corp. & Fin. L. 695 (2015)."
+    coauthors: []
+    abstract: >
+      Twitter and social media can rejuvenate shareholder activism by solving
+      collective action problems — rational apathy and free riding. Traces
+      SEC Rule 14a from its wartime origins through the liberalizing 1992
+      amendments to the social media era.
+    cluster: governance
+    tags: [shareholder activism, Twitter, corporate governance, SEC Rule 14a]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/30 Oranburg – PUBLICATION A Little Birdie Said - How Twitter Is Disrupting Shareholder Activism.pdf"
+      companion:
+    featured: false
+
+  # ---- LABOR, TECHNOLOGY & THE GIG ECONOMY ----
+
+  - id: transaction-cost-gig
+    title: "Transaction Cost Economics, Labor Law, and the Gig Economy"
+    type: article
+    year: 2021
+    status: published
+    journal: "Journal of Legal Studies"
+    citation: "Seth C. Oranburg & Liya Palagashvili, Transaction Cost Economics, Labor Law, and the Gig Economy, 50 J. Legal Stud. S219 (2021)."
+    coauthors: [Liya Palagashvili]
+    abstract: >
+      Technology has reduced contracting costs in labor markets — triangulation,
+      transfer, trust, and measurement — creating greater direct exchanges
+      between consumers and labor suppliers. This explains the rise of
+      freelancing, contracting, and gig work, with radical implications for
+      labor law.
+    cluster: labor
+    tags: [transaction cost economics, gig economy, labor law, freelancing]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/17 Oranburg & Palagashvili – PUBLICATION Transaction Cost Economics, Labor Law, and the Gig Economy.pdf"
+      companion:
+    featured: false
+
+  - id: unbundling-employment
+    title: "Unbundling Employment: Flexible Benefits for the Gig Economy"
+    type: article
+    year: 2019
+    status: published
+    journal: "Drexel Law Review"
+    citation: "Seth C. Oranburg, Unbundling Employment: Flexible Benefits for the Gig Economy, 11 Drex. L. Rev. 1 (2019)."
+    coauthors: []
+    abstract: >
+      The employee/independent contractor binary is a poor fit for the gig
+      economy. Proposes a "Form GW" framework — inspired by securities law —
+      where each platform specifies which benefits it offers. Creates competition
+      among platforms to attract workers with better benefit packages.
+    cluster: labor
+    tags: [labor law reform, gig economy, worker classification, benefits]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/24 Oranburg – PUBLICATION Unbundling Employment – Flexible Benefits for the Gig Economy.pdf"
+      companion:
+    featured: false
+
+  - id: balancing-flexibility
+    title: "Balancing Flexibility and Rigidity: Do Unions Make Sense in the On-Demand Economy?"
+    type: chapter
+    year: 2019
+    status: published
+    journal: "Cambridge University Press (The \"Fissured\" Workplace)"
+    citation: "Seth C. Oranburg & Liya Palagashvili, Balancing Flexibility and Rigidity: Do Unions Make Sense in the On-Demand Economy?, in The \"Fissured\" Workplace (Cambridge Univ. Press)."
+    coauthors: [Liya Palagashvili]
+    abstract: >
+      The gig economy is a competitive labor market, not a monopsony. Workers
+      multi-home across platforms, barriers to entry are low, and platforms
+      compete with traditional employers. Traditional unions impose rigid rules
+      on a sector that thrives on flexibility and can cause deadweight losses
+      in competitive markets.
+    cluster: labor
+    tags: [labor unions, gig economy, monopsony, competitive markets]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/22 Oranburg – PUBLICATION Balancing Flexibility and Rigidity.pdf"
+      companion:
+    featured: false
+
+  # ---- LEGAL EDUCATION & PEDAGOGY ----
+
+  - id: systems-approach
+    title: "A Systems Approach: Teaching Intellectual Property in Our Interconnected World"
+    type: article
+    year: 2025
+    status: forthcoming
+    journal:
+    citation: "Seth C. Oranburg, A Systems Approach: Teaching Intellectual Property in Our Interconnected World (forthcoming 2025)."
+    coauthors: []
+    abstract: >
+      IP education must shift from fragmented to integrated systems thinking.
+      Patents, trademarks, copyrights, and trade secrets should be taught as an
+      interconnected system, not in silos. Uses UNH Franklin Pierce's Hybrid JD
+      program as a case study.
+    cluster: education
+    tags: [IP education, systems thinking, legal pedagogy, curriculum reform]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/07 Oranburg - PUBLICATION A Systems Approach.pdf"
+      companion:
+    featured: false
+
+  - id: advanced-cle
+    title: "Advanced Online Continuing Legal Education: How to Leverage Technology-Mediated Education for Lawyers' Lifelong Learning"
+    type: article
+    year: 2024
+    status: published
+    journal: "Journal of Legal Education"
+    citation: "Seth C. Oranburg, Advanced Online Continuing Legal Education, 72 J. Legal Educ. (2024)."
+    coauthors: []
+    abstract: >
+      OCLE's social value is likely negative because MCLE measures inputs (hours)
+      rather than outputs (learning). Proposes backward design and chunking
+      techniques. Calls on state bars to require best practices in
+      technology-mediated education rather than prohibiting online CLE.
+    cluster: education
+    tags: [continuing legal education, online learning, legal pedagogy, learning science]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/11 Oranburg – PUBLICATION Advanced Online Continuing Legal Education.pdf"
+      companion:
+    featured: false
+
+  - id: corporations-hybrid
+    title: "Corporations Hybrid: A COVID Case Study on Innovation in Business Law Pedagogy"
+    type: article
+    year: 2020
+    status: published
+    journal: "Willamette Law Review"
+    citation: "Seth C. Oranburg & David D. Tamasy, Corporations Hybrid: A COVID Case Study on Innovation in Business Law Pedagogy, 56 Willamette L. Rev. 363 (2020)."
+    coauthors: [David D. Tamasy]
+    abstract: >
+      Case study on using asynchronous online technology synergistically with
+      synchronous live experiences in a hybrid Corporations course. When COVID
+      forced the course fully online, the hybrid format adapted remarkably well.
+    cluster: education
+    tags: [legal pedagogy, hybrid teaching, COVID-19, business law education]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/19 Oranburg & Tamasy – PUBLICATION Corporations Hybrid - A COVID Case Study on Innovation in Business Law Pedagogy.pdf"
+      companion:
+    featured: false
+
+  - id: contract-law-2d
+    title: "Contract Law: Rules, Cases, and Problems"
+    type: book
+    year: 2025
+    status: published
+    journal: "Carolina Academic Press"
+    citation: "Seth C. Oranburg, Contract Law: Rules, Cases, and Problems (2d ed., Carolina Academic Press 2025)."
+    coauthors: []
+    abstract: >
+      Law school casebook covering contract law. Second edition.
+    cluster: education
+    tags: [contract law, casebook, legal education]
+    links:
+      ssrn:
+      published: "https://cap-press.com/books/isbn/9781531033804/Contract-Law-Second-Edition"
+      pdf: "/scholarship/09 Oranburg – PUBLICATION Contract Law 2d.pdf"
+      companion:
+    featured: false
+    exclude_from: [explorer]
+
+  - id: qa-business-associations
+    title: "Questions & Answers: Business Associations"
+    type: book
+    year: 2024
+    status: published
+    journal: "Carolina Academic Press"
+    citation: "Douglas M. Branson, Seth C. Oranburg & John T. Rice, Questions & Answers: Business Associations (3d ed., Carolina Academic Press 2024)."
+    coauthors: [Douglas M. Branson, John T. Rice]
+    abstract: >
+      Study guide in the Q&A series covering business associations through
+      multiple-choice and short-answer questions. Third edition.
+    cluster: education
+    tags: [business associations, study guide, legal education]
+    links:
+      ssrn:
+      published: "https://cap-press.com/books/isbn/9781531029586/Questions-and-Answers-Business-Associations-Third-Edition"
+      pdf: "/scholarship/10 Oranburg – PUBLICATION Business Associations Q&A 3d.pdf"
+      companion:
+    featured: false
+    exclude_from: [explorer]
+
+  # ---- INTELLECTUAL PROPERTY & TRADE SECRETS ----
+
+  - id: protecting-trade-secrets
+    title: "Protecting Trade Secrets"
+    type: book
+    year: 2026
+    status: forthcoming
+    journal: "Carolina Academic Press"
+    citation: "Seth C. Oranburg, Protecting Trade Secrets (Carolina Academic Press, forthcoming 2026)."
+    coauthors: []
+    abstract: >
+      Law school casebook on trade secret law.
+    cluster: ip
+    tags: [trade secrets, casebook, intellectual property]
+    links:
+      ssrn:
+      published: "https://cap-press.com/books/isbn/9781531034375/Protecting-Trade-Secrets"
+      pdf: "/scholarship/01 Oranburg – PUBLICATION Protecting Trade Secrets.pdf"
+      companion: "/PTS/"
+    featured: true
+
+  - id: valuing-trade-secrets
+    title: "Valuing Uncertain Trade Secrets: Epistemic Boundaries of the Reasonable Royalties Remedy"
+    type: article
+    year: 2025
+    status: forthcoming
+    journal:
+    citation: "Seth C. Oranburg, Valuing Uncertain Trade Secrets: Epistemic Boundaries of the Reasonable Royalties Remedy (forthcoming 2025)."
+    coauthors: []
+    abstract: >
+      Reasonable royalties for trade secret misappropriation borrow the
+      hypothetical-negotiation framework from patent law, but trade secrets lack
+      patent's fixed duration, public disclosure, and market anchors. Distinguishes
+      "market-anchored" secrets from "uncertain-value" secrets and proposes a
+      calibration principle requiring meaningful price-discovery evidence.
+    cluster: ip
+    tags: [trade secrets, reasonable royalties, IP remedies, judicial valuation]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/02 Oranburg – PUBLICATION Valuing Uncertain Trade Secrets.pdf"
+      companion:
+    featured: false
+
+  # ---- INSTITUTIONAL REFORM & CIVIL SOCIETY ----
+
+  - id: beyond-ivory-tower
+    title: "Beyond the Ivory Tower: Confronting Antisemitism, Anti-Zionism, and Free Speech Through Firsthand Observation and Engagement"
+    type: article
+    year: 2025
+    status: published
+    journal: "Academic Engagement Network Research Paper Series"
+    citation: "Seth C. Oranburg, Beyond the Ivory Tower: Confronting Antisemitism, Anti-Zionism, and Free Speech Through Firsthand Observation and Engagement, AEN Research Paper No. 7 (2025)."
+    coauthors: []
+    abstract: >
+      Examines whether anti-Zionism constitutes antisemitism, drawing on legal
+      analysis and firsthand observations in Israel after October 7. Proposes a
+      liberal-realist framework for institutional clarity, advocating virtue
+      ethics and institutional integrity on campuses.
+    cluster: civil-society
+    tags: [antisemitism, anti-Zionism, free speech, higher education, Israel]
+    links:
+      ssrn:
+      published:
+      pdf: "/scholarship/08 Oranburg – PUBLICATION Beyond the Ivory Tower.pdf"
+      companion:
+    featured: false
+
+  # ---- FORTHCOMING BOOKS (not yet published) ----
+
+  - id: business-associations-book
+    title: "Business Associations: Law of the Firm"
+    type: book
+    year: 2027
+    status: forthcoming
+    journal: "Aspen Press"
+    citation: "Seth C. Oranburg, Business Associations: Law of the Firm (Aspen Press, forthcoming 2027)."
+    coauthors: []
+    abstract: >
+      Forthcoming casebook on business associations law.
+    cluster: education
+    tags: [business associations, casebook, legal education]
+    links:
+      ssrn:
+      published:
+      pdf:
+      companion:
+    featured: true
+    exclude_from: [explorer]
+
+  - id: judgment-proof
+    title: "Judgment Proof: The Reign of the Safety Machine versus the Recovery of Human Wisdom"
+    type: book
+    year: 2026
+    status: in-progress
+    journal:
+    citation: "Seth C. Oranburg, Judgment Proof (forthcoming)."
+    coauthors: []
+    abstract: >
+      Forthcoming nonfiction work on compliance culture and the recovery of
+      human judgment in institutions.
+    cluster: civil-society
+    tags: [compliance, institutional design, wisdom, Maimonides]
+    links:
+      ssrn:
+      published:
+      pdf:
+      companion:
+    featured: false
+    exclude_from: [explorer, web]
+
+  - id: law-and-governance
+    title: "Law and Governance: How Law Makes, Supports, and Weakens Governance"
+    type: book
+    year: 2026
+    status: in-progress
+    journal:
+    citation: "Seth C. Oranburg, Law and Governance (forthcoming)."
+    coauthors: []
+    abstract: >
+      Academic monograph proposing a functional definition of governance across
+      legal fields.
+    cluster: governance
+    tags: [governance theory, institutional design, club goods]
+    links:
+      ssrn:
+      published:
+      pdf:
+      companion: "/law-governance/"
+    featured: false
+    exclude_from: [explorer]

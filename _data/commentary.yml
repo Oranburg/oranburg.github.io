@@ -1,0 +1,123 @@
+# ==========================================================================
+# Commentary Data — Seth C. Oranburg
+# Op-eds, media appearances, podcasts, video
+#
+# TO ADD A NEW PIECE: copy the template, fill in, paste at the top. Push.
+#
+# TEMPLATE:
+#   - title:
+#     type:     # op-ed | podcast | video | quote | blog
+#     outlet:
+#     date:     # YYYY-MM-DD
+#     url:
+#     perma:    # perma.cc link (preferred for op-eds)
+#     excerpt:  # 1-2 sentences (optional — used for featured pieces)
+#     featured: false
+#     embed:    # YouTube/Podbean embed URL (for video/podcast only)
+# ==========================================================================
+
+items:
+
+  # ---- 2026 ----
+
+  - title: "Big Banks Destroying Digital Dollars"
+    type: op-ed
+    outlet: The Center Square
+    date: 2026-02-06
+    url: "https://www.thecentersquare.com/opinion/article_401b483d-71a6-4f10-98ba-603642c1d764.html"
+    perma:
+    excerpt: >
+      Wall Street gridlocks the CLARITY Act to secure its monopoly, risks
+      handing financial hegemony to China. On January 1, 2026, China made its
+      digital yuan interest-bearing. Fourteen days later, the U.S. Senate
+      postponed a critical vote on whether digital dollars can pay interest, too.
+    featured: true
+
+  # ---- 2025 ----
+
+  - title: "This Veteran's Day, Keep America's Builders Working"
+    type: op-ed
+    outlet: The Center Square
+    date: 2025-11-10
+    url:
+    perma: "https://perma.cc/5NQX-8JTF"
+    featured: false
+
+  - title: "Truman-Era Securities Ruling That Governs Crypto Needs an Update"
+    type: op-ed
+    outlet: Bloomberg Law
+    date: 2025-10-27
+    url:
+    perma: "https://perma.cc/U5S2-GL3Z"
+    featured: false
+
+  - title: "The Golden Rule of Democracy: No Murder"
+    type: op-ed
+    outlet: Washington Examiner
+    date: 2025-10-01
+    url:
+    perma: "https://perma.cc/2M2A-CQC3"
+    featured: false
+
+  - title: "GENIUS Act Revives Civil War-Era Banking Problem for States"
+    type: op-ed
+    outlet: Bloomberg Law
+    date: 2025-08-18
+    url:
+    perma: "https://perma.cc/R5QC-PSUG"
+    featured: false
+
+  - title: "Crypto Decentralization Era Takes Shape as CLARITY Act Advances"
+    type: op-ed
+    outlet: Bloomberg Law
+    date: 2025-07-21
+    url:
+    perma: "https://perma.cc/6B4K-JFHW"
+    featured: false
+
+  - title: "CLARITY Now: Congress Must Bring Truth to Crypto Markets"
+    type: op-ed
+    outlet: Daily Caller
+    date: 2025-06-21
+    url:
+    perma: "https://perma.cc/SU7S-FHHC"
+    featured: false
+
+  - title: "Challenges to Academic Freedom on College Campuses"
+    type: podcast
+    outlet: The Legal Impact Podcast
+    date: 2025-03-29
+    url:
+    perma: "https://perma.cc/7K8U-JJSL"
+    featured: false
+
+  # ---- 2024 ----
+
+  - title: "Campus Protests and Free Speech"
+    type: podcast
+    outlet: The Legal Impact Podcast
+    date: 2024-09-23
+    url:
+    perma: "https://perma.cc/45CU-MXHC"
+    featured: false
+
+  # ---- 2020 ----
+
+  - title: "California Ballot Measure Keeps 'Gig' in Gig Economy"
+    type: podcast
+    outlet: Marketplace
+    date: 2020-11-20
+    url:
+    perma:
+    featured: false
+
+  # ---- Video ----
+
+  - title: "Why Israel Matters for Western Civilization"
+    type: video
+    outlet:
+    date:
+    url:
+    perma:
+    embed: "https://www.youtube.com/embed/FO93tR22n7M?si=ziYP2zRXPSDtDk82"
+    featured: true

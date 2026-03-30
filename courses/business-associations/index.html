@@ -1,0 +1,88 @@
+---
+layout: default
+title: "Business Associations"
+permalink: /courses/business-associations/
+---
+<div class="hub-intro">
+  <h1>Business Associations</h1>
+  <p class="literary">Corporate formation, governance, fiduciary duties, and liability for entities and their managers. How law structures the organizations that drive economic life.</p>
+</div>
+
+<h2>Casebooks &amp; Study Guides</h2>
+<p>The course draws from two published texts.</p>
+
+<div class="book-grid">
+  {% assign ba_book = site.data.scholarship.publications | where: "id", "business-associations-book" | first %}
+  {% if ba_book %}
+  <div class="book-card">
+    <div class="book-title">{{ ba_book.title }}</div>
+    <div class="book-publisher">{{ ba_book.journal }} (forthcoming {{ ba_book.year }})</div>
+  </div>
+  {% endif %}
+
+  {% assign qa_book = site.data.scholarship.publications | where: "id", "qa-business-associations" | first %}
+  {% if qa_book %}
+  <a href="{{ qa_book.links.published }}" target="_blank" class="book-card">
+    <div class="book-title">{{ qa_book.title }}</div>
+    <div class="book-publisher">{{ qa_book.journal }} ({{ qa_book.year }})</div>
+    <span class="book-link">Purchase &rarr;</span>
+  </a>
+  {% endif %}
+</div>
+
+<h2>Video Lectures</h2>
+<p>Full lecture series on corporate governance, shareholder litigation, and business organization fundamentals.</p>
+
+{% assign corp_gov = site.data.videos.series | where: "id", "PL2OBGU7rnJY6wW-y_1zrruypofyWci9pu" | first %}
+{% if corp_gov %}
+<details class="embed">
+  <summary>Watch: {{ corp_gov.title }} ({{ corp_gov.video_count }} episodes)</summary>
+  <div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list={{ corp_gov.id }}" title="{{ corp_gov.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+  </div>
+</details>
+{% endif %}
+
+{% assign corp_overview = site.data.videos.teaching_series | where: "id", "PL2OBGU7rnJY4D1tvdSJ5fYS8y_w6EnBZl" | first %}
+{% if corp_overview %}
+<details class="embed">
+  <summary>Watch: {{ corp_overview.title }} ({{ corp_overview.video_count }} videos)</summary>
+  <div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list={{ corp_overview.id }}" title="{{ corp_overview.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+  </div>
+</details>
+{% endif %}
+
+{% assign fid_duties = site.data.videos.teaching_series | where: "id", "PL2OBGU7rnJY5hHWqZg9_NE4t64PD9Gtbm" | first %}
+{% if fid_duties %}
+<details class="embed">
+  <summary>Watch: {{ fid_duties.title }} ({{ fid_duties.video_count }} videos)</summary>
+  <div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list={{ fid_duties.id }}" title="{{ fid_duties.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+  </div>
+</details>
+{% endif %}
+
+{% assign stockholder = site.data.videos.teaching_series | where: "id", "PL2OBGU7rnJY5HtTPLWRwoKF96ygKxQeX4" | first %}
+{% if stockholder %}
+<details class="embed">
+  <summary>Watch: {{ stockholder.title }} ({{ stockholder.video_count }} videos)</summary>
+  <div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list={{ stockholder.id }}" title="{{ stockholder.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+  </div>
+</details>
+{% endif %}
+
+<h2>Related Scholarship</h2>
+<p>Published articles on corporate governance, shareholder activism, and institutional design.</p>
+<ul class="article-list">
+  {% assign gov_pubs = site.data.scholarship.publications | where: "cluster", "governance" %}
+  {% for pub in gov_pubs %}
+    {% unless pub.type == "book" or pub.exclude_from contains 'web' %}
+    <li class="article-item">
+      <div class="article-title">{{ pub.title }}</div>
+      <div class="article-journal">{{ pub.journal }}, {{ pub.year }}</div>
+    </li>
+    {% endunless %}
+  {% endfor %}
+</ul>

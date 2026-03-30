@@ -216,3 +216,53 @@ The paper coins "crosstagion" for bidirectional risk contagion between TradFi an
 - What exactly does the proposed tri-agency coordination mechanism look like?
 - How does this paper connect to GENIUS Dilemma and Function over Form?
 - Are there specific regulatory proposals (section numbers, trigger thresholds)?
+
+---
+
+## Paper 5: Crosstagion (ssrn-6421898) — read 2026-03-30
+
+### What the full read revealed
+
+This paper is technically the most precise of the digital assets cluster. Every claim has a specific statutory section, empirical citation, or case cite behind it. The writing is dense but clear.
+
+**The paper's original contributions:**
+
+1. **The reverse channel is structural, not episodic.** Treasury market stress events in 2020, 2022, and 2023 ALL produced stablecoin depegging. This is not a one-off SVB problem. It is an artifact of GENIUS-style reserve concentration requirements — the policy designed to make stablecoins safe by anchoring them to Treasuries is simultaneously the policy that transmits Treasury stress into stablecoins with maximum efficiency.
+
+2. **The classification cliff.** When a stablecoin breaks its peg, it may lose its GENIUS compliance status (designed for assets maintaining "consistent 1:1 value"). CLARITY's mutual exclusion clause means it then falls into the digital commodity category — shifting jurisdiction from OCC to CFTC at the exact moment of maximum market stress. The classification itself becomes unstable under stress. Nobody has identified this before.
+
+3. **The three-agency pileup.** At the moment of a crosstagion cascade: OCC owns the issuer, CFTC owns the derivatives, and the SEC may claim the depegged stablecoin as a security under Howey (because a depegged stablecoin starts to look like an investment contract). No statute designates who acts first. No statute even requires them to talk to each other.
+
+4. **DAO governance failure as a distinct transmission mechanism.** The finance literature maps crosstagion through price/liquidity channels. It does not account for the legal mechanism by which flash loan governance exploits operate — at 13-second blockchain speed, with no identifiable counterparty, no assets to freeze, no circuit breaker. The Beanstalk case ($182M in one block) is paradigmatic.
+
+5. **The OCC NPRM doesn't cite CLARITY even once.** This is a devastating finding buried in footnote 35. The OCC's implementing regulations for GENIUS were issued AFTER CLARITY had been under congressional consideration for over a year. The OCC does not view CLARITY's framework as relevant to its stablecoin supervision. The two statutes don't talk to each other even at the regulatory level.
+
+6. **The SVB containment was a policy choice, not a legal safeguard.** The FDIC was not legally required to protect uninsured depositors. Had it applied standard depositor preference rules, the USDC depeg would have been permanent, not temporary. The fact that crosstagion was contained reflects a discretionary government intervention, not the operation of any statutory framework.
+
+### Suggestions for improving the paper before law review submission
+
+1. **The title "Crosstagion" is strong but the subtitle is too long.** Consider: "Crosstagion: Bidirectional Risk in the GENIUS-CLARITY Gap" — shorter, punchier, still descriptive.
+
+2. **Part I is excellent.** The empirical documentation is precise, the SVB counterfactual is devastating, and the DAO governance section is the paper's most original contribution. No changes needed.
+
+3. **Part II's classification cliff analysis is the paper's sleeper contribution.** It deserves more prominence — perhaps its own section heading rather than being buried in Part II.B. A litigation attorney or regulator reading this paper needs to see immediately that the classification of a stablecoin can CHANGE under stress, shifting jurisdiction at the worst possible moment. This is the kind of finding that gets cited.
+
+4. **The OCC NPRM footnote 35 should be promoted to text.** The fact that the OCC doesn't cite CLARITY is not a footnote — it's evidence that the two statutes were designed in isolation. This belongs in the body of the paper as a one-paragraph point.
+
+5. **Part III (the coordination proposal) needs more specifics.** The paper identifies the gap with precision but the proposed mechanism (tri-agency coordination triggered by stress indicators) is sketched rather than developed. For law review placement, the proposal needs:
+   - What specific stress indicators trigger coordination? (Depeg threshold? % of reserves frozen? DeFi liquidation volume?)
+   - Who has primacy under what conditions?
+   - What does the "classification standstill" actually look like procedurally?
+   - Is this modeled on FSOC's existing designation process, or something different?
+
+6. **The paper could benefit from a brief comparative section.** The EU's MiCA has a coordination mechanism between EBA and ESMA for significant stablecoins. Does it address the crosstagion gap? If not, this is a global problem, which strengthens the paper. If yes, there's a model to analyze.
+
+7. **The connection to your other papers is underexplored.** Crosstagion is a governance problem — the agencies can't coordinate because no governance mechanism exists for inter-agency action at blockchain speed. This connects to the Club Good paper's Pigouvian subsidy framework: FSOC's existing coordination could be recharacterized as a Pigouvian subsidy for inter-agency governance, and Loper Bright's elimination of Chevron deference makes legislative coordination mechanisms more important, not less.
+
+8. **The paper's strongest sentence should be in the introduction:** "The policy that was designed to make stablecoins safe by anchoring them to the safest assets in the world is simultaneously the policy that transmits Treasury market stress into the stablecoin market with maximum efficiency." This is currently on page 7. It should be on page 2.
+
+### Connection to other papers
+- GENIUS Dilemma: Crosstagion identifies what GENIUS missed (the reverse channel)
+- CLARITY/Replacing Howey: Crosstagion identifies the classification cliff that CLARITY creates
+- Club Good: the tri-agency coordination gap is itself a governance undersupply problem
+- Market Power & Governance Power: the Nakamoto coefficient data on DAO concentration explains why flash loan attacks work

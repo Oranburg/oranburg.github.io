@@ -124,3 +124,27 @@ Total new items from LinkedIn: ~20+ across commentary, presentations, media
 - Any sales/listen data from ElevenLabs or Spotify dashboards
 - Total presentation/invited talk count (LinkedIn shows 15+, likely more)
 - Quaere platform stats (users, assessments taken) if available
+
+## Academic & Social Stats (as of 2026-03-30)
+
+### Google Scholar (profile: RbuzylUAAAAJ)
+- Citations: 568 (all time), 419 (since 2021)
+- h-index: 12 (all time), 10 (since 2021)
+- i10-index: 15 (all time), 10 (since 2021)
+- Top cited: Female Entrepreneurs & Equity Crowdfunding, Distance Education COVID, Bridgefunding
+
+### SSRN
+- 31 papers
+- ~75,000+ total views, ~12,000+ downloads
+- Top paper by views: Distance Education (12,096 views)
+- Top paper by downloads: Distance Education (3,155 downloads)
+
+### Social Following
+- LinkedIn: 2,463 followers
+- YouTube (@BizLaw): 8,350 subscribers, 621,149 total views, 372 videos
+- Podbean: TBD
+- Combined: ~10,800+ (before Podbean)
+
+### Still needed
+- Podbean subscriber count
+- ElevenLabs/Spotify audiobook links and stats for PTS

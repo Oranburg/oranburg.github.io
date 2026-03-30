@@ -1,87 +1,94 @@
 ---
 layout: default
-title: Lectures
+title: Courses
 permalink: /lectures/
 ---
 <div class="hub-intro">
-  <h1>Lectures</h1>
-  <p>Listen to and watch lectures on law, entrepreneurship, fintech, and ideas that matter.</p>
+  <h1>Courses</h1>
+  <p>Video lectures, podcast episodes, casebooks, and assessment tools &mdash; organized by course.</p>
 </div>
 
-<nav class="lectures-toc" aria-label="Topic directory">
-  <h2>Topics</h2>
-  <ul>
-    <li><a href="#trade-secrets">Trade Secrets</a></li>
-    <li><a href="#contracts">Contracts</a></li>
-    <li><a href="#antitrust">Antitrust</a></li>
-    <li><a href="#skills">Skills (Exam &amp; Writing)</a></li>
-  </ul>
-</nav>
+<div class="og-course-grid">
 
-<section id="trade-secrets" class="lectures-topic">
-  <h2>Trade Secrets</h2>
-  <p>A podcast series exploring the law of trade secrets, confidential business information, and competitive strategy.</p>
-  <details class="embed">
-    <summary>Listen to the Trade Secrets Podcast Playlist</summary>
-    <div class="podcast-embed">
-      <iframe style="border: none; min-width: min(100%, 430px);" title="Organized: The Business Law Breakdown" src="https://www.podbean.com/player-v2/?i=p6w7w-1260bda-pbblog-playlist&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Trebuchet%20MS&amp;skin=3267a3&amp;font-color=auto&amp;logo_link=episode_page&amp;order=serial&amp;limit=30&amp;filter=season&amp;season=12&amp;ss=4fd5d0446d6f9ac6ae4a92fa2eee7c9f&amp;btn-skin=666666&amp;size=315" width="100%" height="315" loading="lazy" allowfullscreen="allowfullscreen" data-name="pb-iframe-player"></iframe>
+  <a href="/courses/contracts/" class="og-course-card">
+    <h2>Contract Law</h2>
+    <p>Formation, interpretation, performance, breach, and remedies. 25-episode podcast series. 56+ video lectures. 676-question assessment bank.</p>
+    <span class="og-course-meta">Casebook: Contract Law 2d (Carolina Academic Press)</span>
+  </a>
+
+  <a href="/courses/business-associations/" class="og-course-card">
+    <h2>Business Associations</h2>
+    <p>Agency, partnerships, LLCs, corporations, DAOs, fiduciary duties, shareholder litigation, M&amp;A. 102-episode podcast. 25+ lecture videos. 509-question bank.</p>
+    <span class="og-course-meta">Casebook: Law of the Firm (Aspen Press, forthcoming)</span>
+  </a>
+
+  <a href="/courses/trade-secrets/" class="og-course-card">
+    <h2>Trade Secret Law</h2>
+    <p>Definition, misappropriation, reasonable efforts, employee mobility, remedies, litigation. Podcast season + 5 overview videos. 157-question bank.</p>
+    <span class="og-course-meta">Casebook: Protecting Trade Secrets (Carolina Academic Press)</span>
+  </a>
+
+</div>
+
+<h2>Additional Lecture Series</h2>
+<p>Standalone video series on specialized topics.</p>
+
+<div class="og-series-grid">
+
+  {% assign pro_series = site.data.videos.series %}
+  {% for s in pro_series %}
+    {% if s.feature_on_site %}
+    <div class="og-series-card">
+      <h3>{{ s.title }}</h3>
+      <p class="og-series-meta">{{ s.video_count }} videos</p>
+      <details class="embed">
+        <summary>Watch playlist</summary>
+        <div class="embed-container">
+          <iframe src="https://www.youtube.com/embed/videoseries?list={{ s.id }}" title="{{ s.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </details>
     </div>
-  </details>
-</section>
-
-<section id="contracts" class="lectures-topic">
-  <h2>Contracts</h2>
-  <p>Video lectures on contract law fundamentals, cases, and problems.</p>
-  <!-- TODO: Add Contracts YouTube playlist embed when available -->
-</section>
-
-<section id="antitrust" class="lectures-topic">
-  <h2>Antitrust</h2>
-  <p>Video lectures on antitrust law principles, cases, and policy.</p>
-  <details class="embed">
-    <summary>Watch the Antitrust Lecture Playlist</summary>
-    <div class="embed-container">
-      <iframe src="https://www.youtube.com/embed/videoseries?si=ScWaQpenNRzbIeOP&amp;list=PL2OBGU7rnJY4V9xMrSd5Vu05jwrlZXzN3" title="Antitrust Lecture Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-    </div>
-  </details>
-</section>
-
-<section id="skills" class="lectures-topic">
-  <h2>Skills (Exam &amp; Writing)</h2>
-  <p>Practical guides on legal analysis, IRAC, and bar exam preparation.</p>
-
-  <h3>IRAC</h3>
-  <details class="embed">
-    <summary>Watch: IRAC Explained</summary>
-    <div class="embed-container">
-      <iframe src="https://www.youtube.com/embed/0FkP0cYy5o8?si=_hBIcZImFMEq5nVm" title="IRAC Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-    </div>
-  </details>
-
-  <h3>Bar Exam Multiple Choice</h3>
-  <details class="embed">
-    <summary>Watch: Bar Exam MCQ Strategy</summary>
-    <div class="embed-container">
-      <iframe src="https://www.youtube.com/embed/WmWJ21tyG_g?si=WESxq9txYWTicK11" title="Bar Exam MCQ Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-    </div>
-  </details>
-</section>
-
-{% assign lecture_posts = site.posts | where_exp: "post", "post.categories contains 'lectures'" %}
-
-{% if lecture_posts.size > 0 %}
-<h2>Episode Notes</h2>
-<ul class="post-list">
-  {% for post in lecture_posts %}
-  <li class="post-list-item">
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <p class="post-meta">
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-    </p>
-    {% if post.excerpt %}
-    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
     {% endif %}
-  </li>
   {% endfor %}
-</ul>
-{% endif %}
+
+</div>
+
+<h2>Teaching Playlists</h2>
+<p>Full course lecture recordings and review modules.</p>
+
+<div class="og-series-grid">
+
+  {% assign teach_series = site.data.videos.teaching_series %}
+  {% for s in teach_series %}
+    {% if s.video_count > 2 %}
+    <div class="og-series-card">
+      <h3>{{ s.title }}</h3>
+      <p class="og-series-meta">{{ s.video_count }} videos</p>
+      <details class="embed">
+        <summary>Watch playlist</summary>
+        <div class="embed-container">
+          <iframe src="https://www.youtube.com/embed/videoseries?list={{ s.id }}" title="{{ s.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </details>
+    </div>
+    {% endif %}
+  {% endfor %}
+
+</div>
+
+<h2>Podcast</h2>
+<p>Organized: The Business Law Breakdown &mdash; all seasons.</p>
+
+<details class="embed">
+  <summary>Listen to the full podcast catalog</summary>
+  <div class="podcast-embed">
+    <iframe style="border: none; min-width: min(100%, 430px);" title="Organized: The Business Law Breakdown" src="https://www.podbean.com/player-v2/?i=p6w7w-1260bda-pbblog-playlist&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Trebuchet%20MS&amp;skin=3267a3&amp;font-color=auto&amp;logo_link=episode_page&amp;order=serial&amp;limit=30&amp;ss=4fd5d0446d6f9ac6ae4a92fa2eee7c9f&amp;btn-skin=666666&amp;size=315" width="100%" height="315" loading="lazy" allowfullscreen="allowfullscreen"></iframe>
+  </div>
+</details>
+
+<h2>Assessment</h2>
+<p>Self-test your knowledge with Quaere, the learning outcome assessment platform with 1,330+ multiple-choice questions across three courses.</p>
+
+<div style="margin: 1.5rem 0;">
+  <a href="https://quaere-1cgr.onrender.com" target="_blank" class="cta-link">Open Quaere &rarr;</a>
+</div>

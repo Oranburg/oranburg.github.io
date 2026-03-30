@@ -46,3 +46,17 @@ Total missing from commentary.yml: 12 (6 op-eds + 6 OBLB posts)
 - "How Twitter Is Disrupting Shareholder Activism" | Jan 14, 2015 | https://clsbluesky.law.columbia.edu/2015/01/14/how-twitter-is-disrupting-shareholder-activism/
 
 Total missing from commentary.yml: 14 (6 op-eds + 6 OBLB + 2 CLS Blue Sky)
+
+## NH Stable Token Commission
+
+- Commission membership page: https://nh-token-commission.org/Welcome#Commission%20Members
+  - Perma: https://perma.cc/Z8RS-5CWA
+- Seth's prepared testimony: https://nh-token-commission.org/_attachments/Oranburg+Prepared+Remarks+for+NH+Stable+Token+Commission.pdf
+
+NOTE: Commission website may disappear. Perma.cc link is the durable reference.
+This should be added to:
+1. _data/scholarship.yml or a new presentations/testimony section
+2. The About section on the home page (already lists "Commissioner" in identity.yaml but not on the website)
+3. commentary.yml as type: testimony
+
+Total missing from commentary.yml: 15 (6 op-eds + 6 OBLB + 2 CLS Blue Sky + 1 testimony)

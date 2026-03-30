@@ -73,7 +73,9 @@ hero_subtitle: "Researching how technological disruption destabilizes moral norm
     <h3>Recent Articles</h3>
     <p>Selected law review articles on digital assets, corporate governance, and financial regulation. Click any article to read the abstract.</p>
     <ul class="article-list">
-        {% assign articles = site.data.scholarship.publications | where_exp: "p", "p.type != 'book'" | where: "status", "published" | sort: "year" | reverse %}
+        {% assign all_pubs = site.data.scholarship.publications | where: "status", "published" | sort: "year" | reverse %}
+        {% assign articles = "" | split: "" %}
+        {% for p in all_pubs %}{% unless p.type == "book" %}{% assign articles = articles | push: p %}{% endunless %}{% endfor %}
         {% for pub in articles limit:7 %}
           {% unless pub.exclude_from contains 'web' %}
           <li class="article-item" role="button" tabindex="0" onclick="toggleAbstract(this)" onkeydown="handleArticleKey(event, this)">
@@ -90,7 +92,9 @@ hero_subtitle: "Researching how technological disruption destabilizes moral norm
           </li>
           {% endunless %}
         {% endfor %}
-        {% assign forthcoming = site.data.scholarship.publications | where_exp: "p", "p.type != 'book'" | where: "status", "forthcoming" | sort: "year" | reverse %}
+        {% assign forth_all = site.data.scholarship.publications | where: "status", "forthcoming" | sort: "year" | reverse %}
+        {% assign forthcoming = "" | split: "" %}
+        {% for p in forth_all %}{% unless p.type == "book" %}{% assign forthcoming = forthcoming | push: p %}{% endunless %}{% endfor %}
         {% for pub in forthcoming %}
           {% unless pub.exclude_from contains 'web' %}
           <li class="article-item" role="button" tabindex="0" onclick="toggleAbstract(this)" onkeydown="handleArticleKey(event, this)">
@@ -157,7 +161,9 @@ hero_subtitle: "Researching how technological disruption destabilizes moral norm
         {% endfor %}
     </div>
 
-    {% assign media = site.data.commentary.items | where_exp: "item", "item.type == 'podcast' or item.type == 'quote'" %}
+    {% assign podcasts = site.data.commentary.items | where: "type", "podcast" %}
+    {% assign quotes = site.data.commentary.items | where: "type", "quote" %}
+    {% assign media = podcasts | concat: quotes %}
     {% if media.size > 0 %}
     <h3>Media Appearances</h3>
     <p>Podcast interviews and broadcast commentary.</p>

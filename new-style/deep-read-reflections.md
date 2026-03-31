@@ -266,3 +266,33 @@ This paper is technically the most precise of the digital assets cluster. Every 
 - CLARITY/Replacing Howey: Crosstagion identifies the classification cliff that CLARITY creates
 - Club Good: the tri-agency coordination gap is itself a governance undersupply problem
 - Market Power & Governance Power: the Nakamoto coefficient data on DAO concentration explains why flash loan attacks work
+
+---
+
+## Paper 6: The GENIUS Dilemma (ssrn-5366627) — read 2026-03-30
+
+### What the full read revealed beyond the abstract
+
+1. **The doctrinal coherence argument (Part III.A) is the paper's most lawyerly contribution.** GENIUS does not repudiate Basic v. Levinson's fraud-on-the-market doctrine — it completes Halliburton II's trajectory. By mandating real-time reserve disclosures, GENIUS makes material facts continuously available, reducing the need for litigation presumptions. The securities exemption is narrower than it looks: only compliant stablecoins are carved out; non-compliant tokens remain fully subject to Rule 10b-5. Congress refined the enforcement toolkit rather than rejecting it — shifting from courtrooms to regulatory offices.
+
+2. **The scienter-to-strict-liability shift is the sleeper practical contribution.** Under Rule 10b-5, plaintiffs must prove "knowing or reckless" misconduct (scienter). GENIUS replaces this with a binary contract-law test: did the issuer redeem at par? This renders the PSLRA's heightened pleading standards and Tellabs obsolete for stablecoin holders. It is a profound simplification of the plaintiff's burden — from proving a CEO's state of mind to proving a number.
+
+3. **The Knightian uncertainty framework** distinguishes calculable risks (which regulators can manage) from Knightian uncertainty (unpredictable unknowns). GENIUS allocates calculable risks to prudential regulators while reducing Knightian uncertainty through clear rules. This framing is more sophisticated than "deregulation" — it's risk allocation under uncertainty, grounded in Frank Knight's economics.
+
+4. **The global comparatives (Part IV)** are genuinely useful. MiCA's administrative supervision model (authorization + conduct rules) vs. Singapore's PSA (reserve + issuance mandates) vs. GENIUS's hybrid (securities exemption + banking prudential). The comparison shows that GENIUS is the only regime that carves stablecoins OUT of securities law rather than layering authorization ON TOP of it.
+
+5. **The implementation roadmap (Part V)** includes actual checklists and timelines — this is unusual for a law review article and makes the paper immediately useful to compliance counsel.
+
+### Suggestions for the paper (already published, so for future editions/updates)
+
+1. The paper should note the Crosstagion problem — GENIUS addresses the forward channel but not the reverse. A footnote or brief acknowledgment connecting to the Crosstagion paper would strengthen both.
+
+2. The scienter-to-strict-liability shift deserves its own subsection heading. Currently buried in III.A, it's the argument most useful to practicing attorneys.
+
+3. The state stablecoin loophole (already identified in the insight post) is mentioned briefly but could be developed further in future work.
+
+### Connection to other papers
+- Crosstagion: identifies what GENIUS missed (reverse channel, classification cliff)
+- Function over Form: GENIUS for stablecoins, Function over Form for utility tokens — same Congress, same "function over form" methodology
+- Replacing Howey/CLARITY: GENIUS exempts stablecoins, CLARITY creates a lifecycle framework for other tokens — they are companion statutes
+- Club Good: GENIUS's prudential framework is itself a form of governance production that Pigouvian subsidy analysis would support

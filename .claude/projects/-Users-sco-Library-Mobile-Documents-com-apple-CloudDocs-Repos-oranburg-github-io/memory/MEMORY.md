@@ -1,10 +1,12 @@
 - [Scholar profile](user_scholar-profile.md) — Seth's role, research areas, affiliations, web properties
 - [Content plan location](reference_content-plan.md) — Where to find the full plan, audit, and style docs; start here for "enhance my page"
 - [Token efficiency](feedback_token-efficiency.md) — Use single agents with fail-safes, not parallel swarms; read PDFs directly when possible
-- [Site architecture](project_site-architecture.md) — Jekyll structure, file paths, theme system, current content state
+- [Site architecture](project_site-architecture.md) — COMPLETE STATE: main site, 2 companion sites, all data files, all stats, remaining work
 - [YouTube channel](reference_youtube.md) — @BizLaw channel ID, API key, 372 videos in _data/videos.yml, playlist categorization
 - [Podbean podcast](reference_podbean.md) — Organized podcast feed URL, 28 episodes in _data/podcasts.yml
 - [Insights tag rules](feedback_insights-consistency.md) — Posts must use tags from insights/topics/, include kind field, never invent tags
 - [First person voice](feedback_first-person.md) — All posts must be first person ("I argue"), never third person ("Oranburg argues")
 - [Deep reading protocol](feedback_deep-reading.md) — Read every page before writing; skim misses frameworks, evidence, original moves
 - [CV engine integration](reference_cv-engine.md) — cv-engine repo, CV file location, scholarship.yml as shared data, push workflow plan
+- [CV engine timeline](project_cv-engine-integration.md) — Ready to build, deferred until scholarship data complete
+- [Courses page](project_courses-page.md) — Lectures page rebuilt as Courses hub, may need refinement

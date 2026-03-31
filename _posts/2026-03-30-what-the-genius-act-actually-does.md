@@ -6,57 +6,53 @@ tags: [fintech, securities, regulation, markets]
 kind: guide
 source_papers: [genius-dilemma]
 featured: true
-excerpt: "The first comprehensive stablecoin law resolves years of regulatory fragmentation — but creates new tensions between innovation and antifraud."
+excerpt: "GENIUS does not abandon securities law principles. It completes the trajectory of Halliburton II — replacing litigation presumptions with continuous disclosure and shifting from scienter to strict liability."
 ---
 
-Fifty billion dollars vanished overnight. When TerraUSD collapsed in May 2022, it did not just wipe out investors -- it exposed a regulatory vacuum that had left a $260 billion market without clear federal rules. Three years later, Congress responded with the Guiding and Establishing National Innovation for U.S. Stablecoins Act of 2025, better known as the GENIUS Act. Signed into law on July 18, 2025, it is the first comprehensive federal statute governing stablecoins.
+Fifty billion dollars vanished overnight. When TerraUSD collapsed in May 2022, it did not just wipe out investors — it exposed a regulatory vacuum that had left a $260 billion market without clear federal rules. Three years later, Congress responded with the GENIUS Act. Signed into law on July 18, 2025, it is the first comprehensive federal statute governing stablecoins.
 
-In *The GENIUS Dilemma: Innovation Versus Antifraud in Stablecoin Regulation*, published in the Stanford Journal of Blockchain Law and Policy, I provide the first doctrinal analysis of this landmark legislation. My verdict is cautiously optimistic -- and sharply conditional. GENIUS represents, I argue, "a principled but precarious balance." If implemented with vigilance, it positions the United States as a global leader in digital-asset regulation. If not, it risks repeating the very failures it was designed to prevent.
+In *The GENIUS Dilemma*, published in the Stanford Journal of Blockchain Law and Policy, I provide the first doctrinal analysis of this landmark legislation.
 
-## The problem GENIUS solves
+## The pre-GENIUS chaos
 
-For most of the last decade, no single agency had decisive authority over stablecoins. The SEC pursued what critics called a "regulation-by-enforcement" strategy, filing 171 crypto-asset cases between 2019 and 2024. The result was a patchwork: state-level oversight here, federal enforcement actions there, and uncertainty everywhere.
+For most of the last decade, no single agency spoke with decisive authority on stablecoins. The SEC pursued a "regulation-by-enforcement" strategy, filing 171 crypto-asset cases between 2019 and 2024. The results were inconsistent: the Ripple court split XRP into securities (institutional sales) and non-securities (programmatic sales), while other courts treated functionally identical tokens as securities across the board. The CFTC claimed overlapping jurisdiction. FinCEN layered Bank Secrecy Act requirements. State regulators imposed bespoke licensing schemes. The result was a jurisdictional lottery.
 
-Stablecoins -- digital assets pegged to the U.S. dollar and designed for payments, not speculation -- were caught in the crossfire. Were they securities? Commodities? Neither? The answer depended on which regulator you asked and which week you asked.
+Two events finally moved Congress. The TerraUSD collapse forced Senate hearings on the absence of reserve rules. Then a series of 2023-24 mini-runs on state-chartered stablecoin issuers exposed gaps in consolidated supervision. Federal Reserve Chair Powell and Treasury Secretary Bessent urged Congress to establish a federal lane.
 
-GENIUS ends this ambiguity with three structural moves.
+## What the statute does
 
-## The legislative architecture
+GENIUS makes three structural moves.
 
-**First, it carves stablecoins out of securities law.** Compliant "payment stablecoins" are explicitly exempted from the Securities Act's definition of "security." This is a definitional move with enormous consequences. It means the SEC no longer has jurisdiction over these instruments. Oversight shifts from securities regulators to banking supervisors.
+**First, it carves compliant stablecoins out of securities law.** Section 17(c) amends the Securities Act's definition of "security" to exclude payment stablecoins issued in compliance with the Act. This is a definitional move with enormous consequences — it shifts jurisdiction from the SEC to banking supervisors. But the exemption is narrower than it looks: only fully compliant stablecoins are carved out. Non-compliant or algorithmic stablecoins remain subject to Rule 10b-5.
 
-**Second, it imposes strict reserve requirements.** Issuers must maintain 100% reserve backing -- real assets like cash and U.S. Treasuries underpinning every circulating token. Think of it as bringing bank-like prudential standards to crypto. If you issue a dollar-denominated stablecoin, you need a dollar's worth of reserves behind it.
+**Second, it imposes strict reserve requirements and continuous disclosure.** Section 4 mandates 1:1 reserves in high-quality liquid assets — primarily Treasury bills with maturities not exceeding ninety days. Monthly attestations by registered accounting firms are required. These provisions do not merely regulate; they preempt the conditions under which fraud-on-the-market claims arise, by making reserve status continuously visible.
 
-**Third, it protects token holders through contract and bankruptcy law.** GENIUS mandates contractual redemption rights -- issuers must redeem tokens at par on demand -- and establishes priority status for stablecoin holders in insolvency. If an issuer fails, token holders get paid before general creditors. This is not securities-style antifraud enforcement; it is consumer protection through the structural protections of contract and bankruptcy.
+**Third, it protects token holders through contract and bankruptcy law.** Section 4(a)(1)(B) mandates at-par redemption on demand — creating a contractual right enforceable through ordinary breach-of-contract litigation. Section 11 establishes priority status for stablecoin holders in insolvency, ahead of general creditors. This is not securities-style antifraud enforcement; it is structural consumer protection through the well-established mechanisms of contract and bankruptcy.
 
-The combination reallocates authority from *ex post* enforcement (the SEC suing after fraud occurs) to *ex ante* prudential oversight and structural consumer protections (banking regulators ensuring reserves are adequate, contract law guaranteeing redemption, bankruptcy law securing priority).
+## The doctrinal move most people miss
 
-## The dilemma at the heart of the law
+At first glance, GENIUS appears to repudiate *Basic v. Levinson*'s fraud-on-the-market doctrine by exempting stablecoins from Rule 10b-5. But the opposite is true. GENIUS completes the trajectory that *Halliburton II* began.
 
-This is where my analysis turns critical. The shift away from securities regulation involves a fundamental trade-off: GENIUS promotes innovation and regulatory clarity by moving stablecoins away from the SEC's antifraud infrastructure. But will prudential supervision, bankruptcy protections, and mandatory contractual rights prove an adequate substitute for the robust private enforcement tools of Rule 10b-5?
+*Basic* presumed that in an efficient market, public misrepresentations distort price. *Halliburton II* allowed defendants to rebut this by showing no price impact. GENIUS preempts the scenario entirely for compliant stablecoins: real-time reserve disclosures and strict asset requirements mean that price should always reflect fundamental value (one dollar). There is no room for Basic-type misinformation to affect the market price when the material facts — reserve composition and attestation — are continuously available.
 
-> Does GENIUS resolve the doctrinal ambiguities that plagued pre-2025 enforcement, or does it merely displace them?
+Section 17(c) can be read as the logical endpoint of *Halliburton II*: it preserves price integrity not through litigation presumptions but through mandatory transparency that makes litigation unnecessary.
 
-Securities regulators have decades of experience policing fraud in financial instruments. Banking supervisors are good at prudential regulation -- capital requirements, reserve adequacy, systemic risk -- but they are not fraud cops. The SEC's enforcement apparatus, whatever its flaws, was built to catch liars. GENIUS moves stablecoins to a regime better suited to catching undercapitalized institutions than catching fraudsters. Contractual redemption rights and bankruptcy priority protect consumers against insolvency, but they do not protect consumers against deception.
+## From scienter to strict liability
 
-## The global context
+This is the change that matters most to practicing attorneys. Under Rule 10b-5, a plaintiff must prove scienter — that the defendant acted "knowingly or recklessly." The PSLRA and *Tellabs* impose heightened pleading standards that make this difficult. Securities fraud litigation is expensive, slow, and uncertain.
 
-I situate GENIUS within a global regulatory landscape, comparing it to the EU's Markets in Crypto-Assets Regulation (MiCA) and Singapore's Payment Services Act. Both regimes mandate reserve backing and issuer authorization. GENIUS draws lessons from each but charts its own path -- one that emphasizes exemption from securities law rather than the layered authorization frameworks preferred in Europe and Asia.
+GENIUS replaces this with a binary test. Did the issuer redeem the token at par? Yes or no. The mandatory redemption regime imposes an objective performance standard — contract-type strict liability rather than securities-type fault-based liability. A stablecoin holder who cannot redeem at par has a breach-of-contract claim that does not require proving anyone's state of mind. It requires proving a number.
 
-The comparison is instructive. MiCA, for instance, has been fully applicable since 2024 and requires stablecoin issuers to obtain authorization to operate across EU member states. Singapore's Monetary Authority mandates reserve backing and Singapore-based issuance. GENIUS borrows the reserve discipline but adds the distinctly American innovation of a statutory carve-out from securities regulation.
+This renders the PSLRA's heightened pleading standards and *Tellabs*'s scienter inquiry obsolete for stablecoin holders. It is a profound simplification of the plaintiff's burden — from proving a CEO's mental state to proving a dollar figure.
 
-## What comes next
+## The trade-off
 
-The law is enacted. The hard part is implementation. I identify several first-order uncertainties that regulators, issuers, and courts must now navigate. GENIUS does not apply to state-issued stablecoins, creating a potential two-track system. Jurisdictional overlaps between federal agencies remain possible. And the transition from the pre-GENIUS enforcement patchwork to the new statutory framework will take time -- time during which the old ambiguities and the new rules coexist.
+The dilemma at the heart of GENIUS is real. By moving stablecoins from securities regulation to banking supervision, Congress traded one kind of protection for another. Securities regulators have decades of experience policing fraud. Banking supervisors are better at prudential regulation — capital adequacy, reserve sufficiency, systemic risk — but they are not fraud investigators. The SEC's enforcement apparatus was built to catch liars. GENIUS moves stablecoins to a regime better suited to catching undercapitalized institutions.
 
-Chainalysis data underscores the stakes: an estimated $2.17 billion in stablecoin-related thefts occurred in just the first half of 2025. The market is not waiting for regulators to sort out implementation details.
+Contractual redemption rights and bankruptcy priority protect consumers against insolvency. They do not protect consumers against deception. The question GENIUS raises — and that only implementation will answer — is whether prudential supervision, continuous disclosure, and strict contractual liability can substitute for the antifraud tools that the securities regime provides.
 
-> GENIUS's success hinges on more than statutory text -- it demands dynamic implementation informed by empirical monitoring and interagency collaboration.
-
-The GENIUS Act is a congressional wager. Congress bet that the benefits of regulatory clarity and innovation-friendly policy outweigh the costs of moving stablecoins away from the SEC's antifraud infrastructure. Whether that bet pays off depends not on the statute's design -- which I find principled and coherent -- but on the quality of its execution.
-
-The clock is running.
+The $2.17 billion in stablecoin-related thefts in the first half of 2025 alone underscores the stakes. Congress bet that regulatory clarity and innovation-friendly policy outweigh the costs of moving away from the SEC's enforcement infrastructure. Whether that bet pays off depends on the quality of execution — the rulemaking, the interagency coordination, and the willingness of banking supervisors to enforce with the vigor the market requires.
 
 ---
 
-**Read the full article:** Seth C. Oranburg, *The GENIUS Dilemma: Innovation Versus Antifraud in Stablecoin Regulation*, 9 Stanford Journal of Blockchain Law & Policy 1 (2025).
+**Read the full article:** Seth C. Oranburg, [*The GENIUS Dilemma: Innovation Versus Antifraud in Stablecoin Regulation*](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5366627), 9 Stanford Journal of Blockchain Law & Policy 1 (2025).

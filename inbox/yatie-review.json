@@ -1,0 +1,520 @@
+{
+  "review_metadata": {
+    "document": "Oranburg Law Web - Review.pdf",
+    "reviewer": "Katie",
+    "reviewer_role": "Teaching Assistant",
+    "processed_by": "AI Assistant",
+    "date_processed": "2026-04-05",
+    "source_file": "inbox/Oranburg Law Web - Review.pdf",
+    "pdf_pages": 11,
+    "site_url": "https://oranburg.law",
+    "site_description": "Personal academic website of Seth C. Oranburg, law professor at UNH Franklin Pierce School of Law. A Jekyll-based GitHub Pages site (oranburg.github.io) with five main sections: Home, Insights, Courses, Scholarship, and Contact. Built with the `default.html` layout using Liquid templating and YAML data files.",
+    "tech_stack": {
+      "generator": "Jekyll (GitHub Pages)",
+      "markdown": "kramdown",
+      "templating": "Liquid",
+      "data_layer": "_data/*.yml",
+      "layouts": ["default.html", "insights_topic.html", "post.html"],
+      "plugins": ["jekyll-feed", "jekyll-seo-tag", "jekyll-sitemap"]
+    }
+  },
+
+  "issues": [
+
+    {
+      "id": "ISSUE-01",
+      "title": "Header Tagline Inconsistency Across Pages",
+      "page_in_pdf": 1,
+      "priority": "medium",
+      "type": "content_consistency",
+      "section": "Site-wide Header",
+      "katie_verbatim": "Make subheading the same across all pages OR replace 'educator' with 'Commentator' for consistency with home page.",
+      "katie_sentiment": "clear recommendation with two specific options provided",
+      "technical_context": {
+        "explanation": "The `default.html` layout (line 76) renders the header tagline as: `{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.description }}{% endif %}`. The home page (`index.html` front matter) sets `tagline: 'Law Professor | Fintech Scholar | Public Commentator'`. All other pages (Insights, Courses, Scholarship, Contact) do not set a `tagline` front matter field, so they fall back to `site.description` from `_config.yml`. At time of review, other pages were displaying 'Law Professor, Scholar & Educator' — a different tagline variant that was apparently present in the site at that time.",
+        "files_affected": [
+          "index.html (front matter: tagline field)",
+          "_layouts/default.html (line 76: tagline rendering logic)",
+          "_config.yml (site.description fallback)",
+          "insights/index.html",
+          "courses/index.html (at /courses/ and /lectures/)",
+          "scholarship/index.html",
+          "contact/index.html"
+        ],
+        "current_home_value": "Law Professor | Fintech Scholar | Public Commentator",
+        "current_other_pages_value": "Falls back to site.description (the long research mission sentence) when no tagline is set in front matter"
+      },
+      "fix_options": [
+        {
+          "option": "A",
+          "description": "Add `tagline: 'Law Professor | Fintech Scholar | Public Commentator'` to the front matter of all non-home pages (insights/index.html, courses/index.html, scholarship/index.html, contact/index.html, lectures/index.html)",
+          "effort": "trivial"
+        },
+        {
+          "option": "B",
+          "description": "Set a global default tagline in `_config.yml` as `tagline:` and use it as the fallback in default.html, replacing the `site.description` fallback",
+          "effort": "small"
+        },
+        {
+          "option": "C",
+          "description": "Update 'Scholar & Educator' phrasing to match home page by using 'Commentator' in place of 'Educator', resulting in 'Law Professor, Scholar & Public Commentator'",
+          "effort": "trivial"
+        }
+      ]
+    },
+
+    {
+      "id": "ISSUE-02",
+      "title": "About Section Bio: Plain Language Rewrite",
+      "page_in_pdf": 2,
+      "priority": "medium",
+      "type": "content_quality",
+      "section": "Home Page → About Section",
+      "katie_verbatim": "Since this is your home page, it might be helpful to think about your audience—especially newer law students who may not be familiar with some of these concepts. To ensure anyone and everyone can connect with your work, consider using plain language!",
+      "katie_sentiment": "constructive suggestion, recognizing audience accessibility concerns",
+      "technical_context": {
+        "explanation": "The About section bio is in `index.html` as static HTML. The current bio uses academic vocabulary: 'intersection of technological disruption, institutional trust, and legal design,' 'destabilizes moral norms and social trust,' 'decentralized autonomous organizations.' Katie's concern is that prospective students (especially 1Ls) and non-legal audiences may be put off by inaccessible language.",
+        "files_affected": ["index.html (About section, approximately lines 20-60)"],
+        "current_bio_style": "Academic/scholarly — describes research themes using technical terms from law and social science",
+        "suggested_bio_style": "Plain language — explains research impact in accessible terms"
+      },
+      "katie_suggested_text": {
+        "paragraphs": [
+          "Seth C. Oranburg is a law professor who studies how new technology affects trust in business and government.",
+          "He researches how technology changes what people consider right and wrong, and how it breaks down trust in institutions. He looks for ways the law can help rebuild that trust and keep markets honest.",
+          "His work covers business law, securities rules, contracts, trade secrets, and digital money—including cryptocurrency and online autonomous organizations.",
+          "Oranburg asks: How does law create trust in organizations? What should law do when institutions fail?",
+          "Before becoming a professor, he worked as a lawyer helping startups and venture capitalists at Fenwick & West in Silicon Valley. He also worked on antitrust cases at Cadwalader, Wickersham & Taft in Washington, D.C.",
+          "He graduated with honors from the University of Chicago Law School and magna cum laude from the University of Florida."
+        ],
+        "note": "Full suggested replacement bio provided by Katie in the PDF suggestion box"
+      }
+    },
+
+    {
+      "id": "ISSUE-03",
+      "title": "About Section: Add Personal Touch",
+      "page_in_pdf": 2,
+      "priority": "low",
+      "type": "content_enhancement",
+      "section": "Home Page → About Section",
+      "katie_verbatim": "I wonder if adding a personal touch at the end of your About section would be nice? A sentence or two about your interests, hobbies, or life outside of work can help visitors and students get to know you beyond your professional accomplishments.",
+      "katie_sentiment": "gentle suggestion, framed as optional ('I wonder if')",
+      "technical_context": {
+        "explanation": "The About section in `index.html` ends with professional credentials. Katie suggests appending personal information. She provided a specific draft sentence highlighted in yellow in the PDF.",
+        "files_affected": ["index.html (About section, end of bio text)"]
+      },
+      "katie_suggested_text": "When he isn't working, Attorney Oranburg enjoys discovering new hiking trails near his home in New Hampshire, spending time with his daughter, Zeeva, and cooking with his wife, Talia.",
+      "note": "Katie highlighted this sentence in yellow in the PDF, indicating it was the specific proposed addition"
+    },
+
+    {
+      "id": "ISSUE-04",
+      "title": "Hero Subtitle: Overly Dense / Unappealing",
+      "page_in_pdf": 3,
+      "priority": "low",
+      "type": "content_quality",
+      "section": "Home Page → Hero Section",
+      "katie_verbatim": "I just don't like this IDK",
+      "katie_sentiment": "informal/personal reaction; not a strong directive but a noted aesthetic concern",
+      "technical_context": {
+        "explanation": "The hero subtitle is set in `index.html` front matter as `hero_subtitle: 'Researching how technological disruption destabilizes moral norms and social trust, and how legal design can restore integrity to markets and institutions'`. This is rendered in `_layouts/default.html` (line 77): `{% if page.hero_subtitle %}<p class=\"site-hero-subtitle\">{{ page.hero_subtitle }}</p>{% endif %}`. Katie showed a screenshot of this text and expressed displeasure — the language is dense and academic.",
+        "files_affected": [
+          "index.html (front matter: hero_subtitle field)",
+          "_layouts/default.html (line 77: hero_subtitle rendering)"
+        ],
+        "current_value": "Researching how technological disruption destabilizes moral norms and social trust, and how legal design can restore integrity to markets and institutions"
+      },
+      "fix_options": [
+        {
+          "option": "A",
+          "description": "Replace with a shorter, plainer version aligned with the plain-language bio rewrite (Issue-02)",
+          "example": "Studying how law can rebuild trust when technology disrupts institutions."
+        },
+        {
+          "option": "B",
+          "description": "Remove the hero_subtitle entirely — the tagline line already conveys identity",
+          "effort": "trivial"
+        }
+      ]
+    },
+
+    {
+      "id": "ISSUE-05",
+      "title": "Insights Page: Duplicate or Unclear Section Headings",
+      "page_in_pdf": 4,
+      "priority": "low",
+      "type": "content_clarity",
+      "section": "Insights Page → Section Headings",
+      "katie_verbatim": "Duplicated intentionally? Just flagging.",
+      "katie_sentiment": "flagging for awareness, not a strong complaint",
+      "technical_context": {
+        "explanation": "The Insights index page (`insights/index.html`) has two content sections with similar-sounding headings: 'Featured Guides & Essays' and 'Latest Notes & Commentary'. Both appear on the same page and may look redundant to a first-time visitor. The distinction is intentional — 'Featured Guides & Essays' contains curated longer-form content while 'Latest Notes & Commentary' shows recent short posts. Katie flagged the visual/structural similarity as potentially confusing.",
+        "files_affected": ["insights/index.html"],
+        "section_1": "Featured Guides & Essays",
+        "section_2": "Latest Notes & Commentary"
+      },
+      "fix_options": [
+        {
+          "option": "A",
+          "description": "Add brief sub-descriptions under each heading to clarify the distinction between guides vs. commentary",
+          "effort": "trivial"
+        },
+        {
+          "option": "B",
+          "description": "Accept as intentional — no change needed if the distinction is clear to the target audience",
+          "effort": "none"
+        }
+      ]
+    },
+
+    {
+      "id": "ISSUE-06",
+      "title": "Insights Topic Pages: Back Button Goes to Library, Not Parent Bucket",
+      "page_in_pdf": 4,
+      "priority": "medium",
+      "type": "navigation_ux",
+      "section": "Insights → Library → [Bucket] → [Topic Page]",
+      "katie_verbatim": "I would suggest having the back button go back to the prior page, not all the way to the library. I was trying to go back to the 'Lawyers & Learning' page, but only option is to skip that page and go back to library.",
+      "katie_sentiment": "clear UX recommendation with a specific navigation path described",
+      "technical_context": {
+        "explanation": "The `_layouts/insights_topic.html` layout (line 48) renders a back button: `<p class=\"back-to-library\"><a href=\"{{ '/insights/library/' | relative_url }}\">&larr; Back to the Library</a></p>`. This always links back to `/insights/library/` regardless of which bucket the topic is nested under. The navigation hierarchy is: Insights → Library → [Bucket (e.g., Lawyers & Learning)] → [Topic (e.g., Legal Education)]. When a user navigates deep and clicks 'Back to the Library,' they skip the intermediate bucket page (e.g., /insights/library/lawyers-learning/) and land at the top-level library. Katie specifically mentioned the Lawyers & Learning path.",
+        "files_affected": ["_layouts/insights_topic.html (line 48)"],
+        "navigation_path_katie_described": [
+          "/insights/",
+          "/insights/library/",
+          "/insights/library/lawyers-learning/",
+          "/insights/topics/[topic]/",
+          "BACK BUTTON → /insights/library/ (skips lawyers-learning)"
+        ],
+        "current_back_button_html": "<p class=\"back-to-library\"><a href=\"{{ '/insights/library/' | relative_url }}\">&larr; Back to the Library</a></p>",
+        "breadcrumb_present": true,
+        "breadcrumb_location": "insights_topic.html line ~15, shows: Insights › Library › [Bucket]"
+      },
+      "fix_options": [
+        {
+          "option": "A",
+          "description": "Add a `parent_bucket` (or `parent_url`) front matter field to each topic page, and use it in `insights_topic.html` to render a back link to the specific parent bucket page. Requires updating all 18 topic index.html files in /insights/topics/.",
+          "effort": "small"
+        },
+        {
+          "option": "B",
+          "description": "Use JavaScript `history.back()` or `document.referrer` to implement a dynamic back button that goes to the actual prior page",
+          "effort": "small",
+          "tradeoff": "Does not work when user arrives directly via URL or external link"
+        },
+        {
+          "option": "C",
+          "description": "Add a second back link — keep 'Back to Library' and add a contextual 'Back to [Bucket Name]' link using front matter",
+          "effort": "small"
+        }
+      ]
+    },
+
+    {
+      "id": "ISSUE-07",
+      "title": "Courses: Duplicate Page Structure (/lectures/ and /courses/)",
+      "page_in_pdf": 5,
+      "priority": "medium",
+      "type": "structural_duplication",
+      "section": "Courses",
+      "katie_verbatim": "Duplicate??",
+      "katie_sentiment": "confused/questioning; saw two pages serving similar purposes",
+      "technical_context": {
+        "explanation": "There are two separate pages that both list the three courses: (1) `/lectures/` (file: `lectures/index.html`, permalink: /lectures/) and (2) `/courses/` (file: `courses/index.html`, permalink: /courses/). The site navigation bar in `_layouts/default.html` (line 88) links 'Courses' to `/lectures/` — so clicking 'Courses' in the nav goes to `/lectures/`. But `/courses/` also exists and is the canonical base for individual course URLs (/courses/contracts/, /courses/business-associations/, /courses/trade-secrets/). Both pages list the same 3 courses but with slightly different layouts and content. The `/lectures/` page includes Additional Lecture Series, Teaching Playlists, Podcast, and Assessment sections; the `/courses/` page is a simpler course card grid with CTA link to /lectures/.",
+        "files_affected": [
+          "lectures/index.html (permalink: /lectures/)",
+          "courses/index.html (permalink: /courses/)",
+          "_layouts/default.html (line 88: nav links to /lectures/)"
+        ],
+        "nav_link_destination": "/lectures/",
+        "actual_courses_hub": "/courses/",
+        "individual_course_urls": ["/courses/contracts/", "/courses/business-associations/", "/courses/trade-secrets/"]
+      },
+      "fix_options": [
+        {
+          "option": "A",
+          "description": "Consolidate: Merge the content of /courses/ and /lectures/ into a single page at /courses/, and update the nav link in default.html from /lectures/ to /courses/. Redirect /lectures/ to /courses/.",
+          "effort": "medium"
+        },
+        {
+          "option": "B",
+          "description": "Differentiate more clearly: Give /lectures/ a distinct title (e.g., 'Video Library' or 'Lecture Archive') and position it as a media hub separate from the main courses landing page. Update nav accordingly.",
+          "effort": "small"
+        }
+      ]
+    },
+
+    {
+      "id": "ISSUE-08",
+      "title": "Course Pages: No Back Button to Courses Index",
+      "page_in_pdf": "7, 8, 9",
+      "priority": "medium",
+      "type": "navigation_ux",
+      "section": "Courses → Contracts, Business Associations, Trade Secrets",
+      "katie_verbatim": "NO BACK BUTTON FROM CONTRACTS COURSES -> CONTRACTS COURSE PAGE BACK TO COURSES [repeated for BA and TS]",
+      "katie_sentiment": "explicit UX problem identified three times across three course pages",
+      "technical_context": {
+        "explanation": "All three individual course pages (contracts, business-associations, trade-secrets) use the `default` layout and have no back navigation element. The user has no in-page way to return to the Courses hub (/lectures/ or /courses/) without using the browser back button or the top nav bar. By contrast, the Insights topic pages and library pages do have explicit back links.",
+        "files_affected": [
+          "courses/contracts/index.html",
+          "courses/business-associations/index.html",
+          "courses/trade-secrets/index.html"
+        ],
+        "pattern_for_fix": "Add a back link element (e.g., <p><a href=\"/lectures/\">&larr; Back to Courses</a></p>) near the top of each course page, following the same pattern as insights_topic.html line 48"
+      },
+      "fix_options": [
+        {
+          "option": "A",
+          "description": "Add `<p class=\"back-to-courses\"><a href=\"/lectures/\">&larr; Back to Courses</a></p>` to the top of each of the 3 course pages (after the hub-intro div)",
+          "effort": "trivial"
+        },
+        {
+          "option": "B",
+          "description": "Create a dedicated course layout (e.g., `_layouts/course.html`) that extends default.html and automatically injects the back button, then change the layout front matter in all 3 course pages",
+          "effort": "small",
+          "benefit": "More maintainable; any future courses automatically get a back button"
+        }
+      ]
+    },
+
+    {
+      "id": "ISSUE-09",
+      "title": "Contracts Course Page: Podcast Availability Concern",
+      "page_in_pdf": "6, 7",
+      "priority": "low",
+      "type": "functionality_concern",
+      "section": "Courses → Contract Law",
+      "katie_verbatim": "Possibly a webpage issue because I have access to the podcasts on Trade Secrets course page. / Possibly a webpage issue because the podcasts work for me on the Trade Secrets Course page.",
+      "katie_sentiment": "noting inconsistency, flagging as possibly a transient rendering issue rather than a code bug",
+      "technical_context": {
+        "explanation": "The Trade Secrets course page embeds a Podbean podcast player filtered by season=12. The Contracts course page embeds a Podbean player filtered by season=1 (using the same playlist ID: `p6w7w-1260bda-pbblog-playlist`). Both use `<details class='embed'>` with `<summary>Listen...</summary>` collapsible wrappers. Katie may have encountered the Contracts podcast player in a collapsed/non-expanded state, or a particular season filter not returning results at the time of her visit. The podcast embed on Trade Secrets uses `filter=season&season=12` while Contracts uses `filter=season&season=1`.",
+        "files_affected": [
+          "courses/contracts/index.html (podcast embed, season=1)",
+          "courses/trade-secrets/index.html (podcast embed, season=12)"
+        ],
+        "podbean_playlist_id": "p6w7w-1260bda-pbblog-playlist",
+        "contracts_season": "1",
+        "trade_secrets_season": "12"
+      },
+      "note": "Katie noted this twice and characterized it as 'possibly a webpage issue' — likely a rendering/timing issue rather than a structural code bug. However, it's worth verifying that season=1 returns results in the Podbean player."
+    },
+
+    {
+      "id": "ISSUE-10",
+      "title": "Contracts Course Page: Inactive Link in Related Scholarship",
+      "page_in_pdf": 7,
+      "priority": "low",
+      "type": "broken_link",
+      "section": "Courses → Contract Law → Related Scholarship",
+      "katie_verbatim": "Link not active",
+      "katie_sentiment": "direct bug report",
+      "technical_context": {
+        "explanation": "The Related Scholarship section on the Contracts page (`courses/contracts/index.html`) renders publication list items with only title and journal/year text, but NO hyperlinks. The Liquid template is: `<div class='article-title'>{{ pub.title }}</div><div class='article-journal'>{{ pub.journal }}, {{ pub.year }}</div>`. Unlike the main Scholarship page which renders SSRN/PDF/Full Text links, the course-level article lists are text-only. The publications shown here are from `cluster: education` in `_data/scholarship.yml` filtered by `tags contains 'contracts'`.",
+        "files_affected": [
+          "courses/contracts/index.html (Related Scholarship section, last ~15 lines)",
+          "_data/scholarship.yml (education cluster publications)"
+        ],
+        "current_template": "<div class=\"article-title\">{{ pub.title }}</div><div class=\"article-journal\">{{ pub.journal }}, {{ pub.year }}</div>",
+        "fix_template_example": "Add conditional links: {% if pub.links.ssrn %}<a href=\"{{ pub.links.ssrn }}\">SSRN</a>{% endif %} {% if pub.links.published %}<a href=\"{{ pub.links.published }}\">Full Text</a>{% endif %}"
+      }
+    },
+
+    {
+      "id": "ISSUE-11",
+      "title": "Business Associations Course Page: Dangling Comma in Book Display",
+      "page_in_pdf": 8,
+      "priority": "low",
+      "type": "content_bug",
+      "section": "Courses → Business Associations → Casebooks",
+      "katie_verbatim": "Looks like information is missing (see red arrows) – remove comma or add remaining information.",
+      "katie_sentiment": "UI bug report — noticing orphaned punctuation from a null data field",
+      "technical_context": {
+        "explanation": "The Business Associations casebook entry (`business-associations-book` in scholarship.yml) has `journal: null` (no publisher set yet — it is in-progress). The BA course page renders: `<div class='book-publisher'>{{ ba_book.journal }} (forthcoming {{ ba_book.year }})</div>`. When `ba_book.journal` is null, this renders as ` (forthcoming 2026)` — with a leading space but no publisher name. Additionally, in the Related Scholarship list on the BA page, articles are rendered as `{{ pub.journal }}, {{ pub.year }}`. When `pub.journal` is null for any publication, this renders as `, 2026` — a comma with no preceding text. This is what Katie saw with the red arrows.",
+        "files_affected": [
+          "courses/business-associations/index.html (book-publisher div)",
+          "_data/scholarship.yml (business-associations-book entry: journal is null)"
+        ],
+        "business_associations_book_current_data": {
+          "id": "business-associations-book",
+          "title": "Judgment Proof: The Reign of the Safety Machine versus the Recovery of Human Wisdom",
+          "journal": null,
+          "year": 2026,
+          "status": "in-progress"
+        }
+      },
+      "fix_options": [
+        {
+          "option": "A",
+          "description": "Add publisher to scholarship.yml for business-associations-book when known, or add a conditional: `{% if ba_book.journal %}{{ ba_book.journal }} {% endif %}(forthcoming {{ ba_book.year }})`",
+          "effort": "trivial"
+        },
+        {
+          "option": "B",
+          "description": "In the article list template, wrap the journal in a conditional: `{% if pub.journal %}{{ pub.journal }}, {% endif %}{{ pub.year }}`",
+          "effort": "trivial"
+        }
+      ]
+    },
+
+    {
+      "id": "ISSUE-12",
+      "title": "Business Associations Course Page: No Links in Related Scholarship List",
+      "page_in_pdf": 8,
+      "priority": "low",
+      "type": "missing_feature",
+      "section": "Courses → Business Associations → Related Scholarship",
+      "katie_verbatim": "None of the links on this list are active.",
+      "katie_sentiment": "direct bug report",
+      "technical_context": {
+        "explanation": "The Related Scholarship section on the BA course page (`courses/business-associations/index.html`) iterates over publications in `cluster: governance` and renders only text — no clickable links. Template: `<div class='article-title'>{{ pub.title }}</div><div class='article-journal'>{{ pub.journal }}, {{ pub.year }}</div>`. This is the same structural issue as ISSUE-10 (Contracts). The main Scholarship page (`scholarship/index.html`) does render SSRN/Full Text/PDF links.",
+        "files_affected": [
+          "courses/business-associations/index.html (Related Scholarship section)",
+          "_data/scholarship.yml (governance cluster publications)"
+        ],
+        "note": "Same fix applies as ISSUE-10 — add conditional link rendering using pub.links.ssrn, pub.links.published"
+      }
+    },
+
+    {
+      "id": "ISSUE-13",
+      "title": "Trade Secrets Course Page: Casebook Link & Outdated 'Forthcoming' Status",
+      "page_in_pdf": 9,
+      "priority": "medium",
+      "type": "content_accuracy",
+      "section": "Courses → Trade Secrets → Casebook",
+      "katie_verbatim": "Link not active. 'Forthcoming' 2025?",
+      "katie_sentiment": "dual concern: inactive link and stale/inaccurate publication status label",
+      "technical_context": {
+        "explanation": "At the time of Katie's review, the Trade Secrets casebook (`protecting-trade-secrets` in scholarship.yml) likely had `status: forthcoming` and `year: 2025`, with no `links.published` value, making the anchor tag render with an empty href (`<a href=''>`). The current data shows the book as `status: published`, `year: 2026`, with a valid Carolina Academic Press link. The page template still renders 'forthcoming' text: `<div class='book-publisher'>{{ pts_book.journal }} (forthcoming {{ pts_book.year }})</div>` and `<span class='book-link'>Pre-order now</span>`. These labels need to be updated to reflect published status.",
+        "files_affected": [
+          "courses/trade-secrets/index.html (casebook section — hardcoded 'forthcoming' and 'Pre-order now' text)",
+          "_data/scholarship.yml (protecting-trade-secrets entry: status, year, links.published)"
+        ],
+        "current_data": {
+          "id": "protecting-trade-secrets",
+          "status": "published",
+          "year": 2026,
+          "links_published": "https://cap-press.com/books/isbn/9781531034375/Protecting-Trade-Secrets"
+        },
+        "hardcoded_issue": "The course page template has hardcoded 'forthcoming' and 'Pre-order now' text that is not driven by the status field in scholarship.yml"
+      },
+      "fix_options": [
+        {
+          "option": "A",
+          "description": "Update the Trade Secrets page template to conditionally show 'forthcoming' vs. 'Buy now' based on `pts_book.status`: `{% if pts_book.status == 'forthcoming' %}forthcoming {% endif %}{{ pts_book.year }}`",
+          "effort": "trivial"
+        },
+        {
+          "option": "B",
+          "description": "Manually update the hardcoded text in courses/trade-secrets/index.html to say 'Buy now' instead of 'Pre-order now'",
+          "effort": "trivial"
+        }
+      ]
+    },
+
+    {
+      "id": "ISSUE-14",
+      "title": "Scholarship Page: PDF Links Open Markdown Files, Not PDFs",
+      "page_in_pdf": 10,
+      "priority": "high",
+      "type": "broken_link",
+      "section": "Scholarship Page → Publication Entries → PDF Links",
+      "katie_verbatim": "These 'PDF' links open md files. This happens with all 'PDF' links where they appear under this page.",
+      "katie_sentiment": "clear bug report — user expectation is a PDF document, not a markdown file",
+      "technical_context": {
+        "explanation": "In `_data/scholarship.yml`, 33 publication entries have `links.pdf` values pointing to paths like `/scholarship/04 Oranburg – PUBLICATION The Genius Dilemma.md`. These are markdown source files checked into the repository, not PDF documents. When the Scholarship page (`scholarship/index.html`) renders `<a href=\"{{ pub.links.pdf }}\" target=\"_blank\">PDF</a>`, GitHub Pages serves the raw markdown file (or in some cases a rendered HTML page for the .md file), not a downloadable PDF. The label 'PDF' is therefore misleading.",
+        "files_affected": [
+          "_data/scholarship.yml (33 entries with links.pdf pointing to .md files)",
+          "scholarship/index.html (PDF link rendering template, line 79)"
+        ],
+        "example_bad_link": "/scholarship/04 Oranburg – PUBLICATION The Genius Dilemma.md",
+        "affected_count": 33,
+        "scholarship_md_files_directory": "/scholarship/updates/ and root scholarship/*.md files"
+      },
+      "fix_options": [
+        {
+          "option": "A",
+          "description": "Upload actual PDF files (the published papers) to the repository under /scholarship/pdfs/ or /assets/pdfs/ and update the links.pdf values in scholarship.yml to point to the real PDF files",
+          "effort": "large",
+          "preferred": true
+        },
+        {
+          "option": "B",
+          "description": "Rename the link label from 'PDF' to 'Preprint' or 'Working Paper' in scholarship/index.html (line 79) since the .md files appear to be preprint/working versions, not final PDFs",
+          "effort": "trivial"
+        },
+        {
+          "option": "C",
+          "description": "Link to SSRN versions instead (most entries have links.ssrn) and remove or re-label the local file links",
+          "effort": "small"
+        }
+      ]
+    },
+
+    {
+      "id": "ISSUE-15",
+      "title": "Contact Page: 'Reach Out Directly' Phrase Without Direct Contact Info",
+      "page_in_pdf": 11,
+      "priority": "low",
+      "type": "content_accuracy",
+      "section": "Contact Page",
+      "katie_verbatim": "Might delete this sentence unless you provide a method for people to reach out directly (email, phone, etc.)",
+      "katie_sentiment": "conditional recommendation — delete OR add direct contact info",
+      "technical_context": {
+        "explanation": "The Contact page (`contact/index.html`) hub-intro paragraph reads: 'I welcome messages from students, journalists, researchers, and colleagues. Use the form below or reach out directly.' The phrase 'reach out directly' implies a direct contact method (visible email address, phone number) but none is listed. The contact form itself uses a JavaScript mailto handler that opens the user's local email client with `sco259@nyu.edu` pre-filled — but this email address is not displayed on the page. The form works as a contact mechanism but the 'reach out directly' phrasing is misleading without a visible direct contact option.",
+        "files_affected": ["contact/index.html (hub-intro paragraph)"],
+        "email_in_code": "sco259@nyu.edu",
+        "email_displayed_on_page": false
+      },
+      "fix_options": [
+        {
+          "option": "A",
+          "description": "Delete 'or reach out directly' from the intro sentence",
+          "effort": "trivial"
+        },
+        {
+          "option": "B",
+          "description": "Add the email address (sco259@nyu.edu) visibly to the contact-info-box section so users have a direct option",
+          "effort": "trivial"
+        },
+        {
+          "option": "C",
+          "description": "Add institutional address (UNH Franklin Pierce School of Law) to the contact info box, which is a standard academic contact method",
+          "effort": "trivial"
+        }
+      ]
+    }
+
+  ],
+
+  "summary": {
+    "total_issues": 15,
+    "by_priority": {
+      "high": 1,
+      "medium": 5,
+      "low": 9
+    },
+    "by_type": {
+      "navigation_ux": 2,
+      "content_consistency": 1,
+      "content_quality": 2,
+      "content_enhancement": 1,
+      "content_accuracy": 2,
+      "content_bug": 1,
+      "structural_duplication": 1,
+      "functionality_concern": 1,
+      "broken_link": 2,
+      "missing_feature": 1
+    },
+    "pages_reviewed": ["Home", "Insights", "Courses (index, Contracts, Business Associations, Trade Secrets)", "Scholarship", "Contact"],
+    "key_themes": [
+      "Accessibility and plain language (Issues 02, 03, 04)",
+      "Navigation UX — missing back buttons (Issues 06, 08)",
+      "Site structure duplication (Issue 07)",
+      "Broken or misleading links (Issues 10, 12, 13, 14)",
+      "Consistency across pages (Issues 01, 05)",
+      "Stale content needing updates (Issues 13)"
+    ]
+  }
+}

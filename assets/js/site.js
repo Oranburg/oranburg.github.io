@@ -33,8 +33,9 @@ function updateToggleLabel(theme) {
 })();
 
 // Article abstract expand/collapse
-function toggleAbstract(element) {
-  if (event && event.target.tagName === 'A') return;
+function toggleAbstract(element, ev) {
+  var e = ev || window.event;
+  if (e && e.target && e.target.tagName === 'A') return;
   element.classList.toggle('expanded');
   var indicator = element.querySelector('.expand-indicator');
   if (indicator) {

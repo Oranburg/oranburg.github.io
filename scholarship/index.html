@@ -67,7 +67,7 @@ description: "Books, articles, and working papers by Seth C. Oranburg on corpora
 <ul class="article-list">
   {% for pub in articles %}
     {% unless pub.exclude_from contains 'web' %}
-    <li class="article-item" role="button" tabindex="0" onclick="toggleAbstract(this)" onkeydown="handleArticleKey(event, this)">
+    <li class="article-item" role="button" tabindex="0" onclick="toggleAbstract(this, event)" onkeydown="handleArticleKey(event, this)">
       <span class="expand-indicator">+</span>
       <div class="article-title">{{ pub.title }}</div>
       <div class="article-journal">

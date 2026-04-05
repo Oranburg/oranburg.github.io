@@ -3,21 +3,23 @@ layout: default
 title: "Trade Secret Law"
 permalink: /courses/trade-secrets/
 ---
+<p class="back-to-courses"><a href="/courses/">&larr; Back to Courses</a></p>
+
 <div class="hub-intro">
   <h1>Trade Secret Law</h1>
   <p class="literary">Protection of confidential business information, misappropriation claims, workforce mobility, and the strategic tension between secrecy and disclosure.</p>
 </div>
 
 <h2>Casebook</h2>
-<p>The course uses Oranburg's forthcoming casebook on trade secret law.</p>
+<p>The course uses Oranburg's casebook on trade secret law.</p>
 
 {% assign pts_book = site.data.scholarship.publications | where: "id", "protecting-trade-secrets" | first %}
 {% if pts_book %}
 <div class="book-grid">
   <a href="{{ pts_book.links.published }}" target="_blank" class="book-card">
     <div class="book-title">{{ pts_book.title }}</div>
-    <div class="book-publisher">{{ pts_book.journal }} (forthcoming {{ pts_book.year }})</div>
-    <span class="book-link">Pre-order now &rarr;</span>
+    <div class="book-publisher">{{ pts_book.journal }} ({% if pts_book.status == "forthcoming" %}forthcoming {% endif %}{{ pts_book.year }})</div>
+    <span class="book-link">{% if pts_book.status == "forthcoming" %}Pre-order{% else %}Buy{% endif %} now &rarr;</span>
   </a>
 </div>
 <p>Companion materials and resources are available on the <a href="/PTS/">Protecting Trade Secrets companion site</a>.</p>

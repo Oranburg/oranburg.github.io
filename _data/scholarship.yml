@@ -471,7 +471,7 @@ publications:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6423378"
       published:
       pdf: "/scholarship/updates/ssrn-6423378.md"
-      companion:
+      companion: "https://oranburg.github.io/exclusive-inclusion/"
     featured: true
 
   - id: wrong-plaintiff
@@ -780,7 +780,7 @@ publications:
       ssrn:
       published: "https://cap-press.com/books/isbn/9781531033804/Contract-Law-Second-Edition"
       pdf: "/scholarship/09 Oranburg – PUBLICATION Contract Law 2d.md"
-      companion:
+      companion: "https://oranburg.github.io/K/"
     featured: false
     exclude_from: [explorer]
 
@@ -914,11 +914,9 @@ publications:
       ssrn:
       published:
       pdf:
-      companion:
+      companion: "https://oranburg.github.io/BA/"
     featured: true
     exclude_from: [explorer]
-
-  - id: judgment-proof
     title: "Judgment Proof: The Reign of the Safety Machine versus the Recovery of Human Wisdom"
     type: book
     year: 2026

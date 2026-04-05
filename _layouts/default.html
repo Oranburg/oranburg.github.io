@@ -53,10 +53,15 @@
     "sameAs": [
       "https://www.youtube.com/@BizLaw",
       "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2256355",
-      "https://bizlawbreakdown.podbean.com"
+      "https://bizlawbreakdown.podbean.com",
+      "https://oranburg.github.io/K/",
+      "https://oranburg.github.io/BA/",
+      "https://oranburg.github.io/exclusive-inclusion/",
+      "https://oranburg.github.io/safety-machine/"
     ],
     "alumniOf": [
-      { "@type": "CollegeOrUniversity", "name": "Georgetown University Law Center" }
+      { "@type": "CollegeOrUniversity", "name": "University of Chicago Law School" },
+      { "@type": "CollegeOrUniversity", "name": "University of Florida" }
     ],
     "award": ["Teaching Excellence Award 2024"],
     "mainEntityOfPage": "https://oranburg.law"
@@ -74,7 +79,7 @@
   </header>
 
   <nav class="site-nav" aria-label="Main navigation">
-    <button class="nav-toggle" onclick="this.closest('.site-nav').classList.toggle('open')" aria-label="Toggle menu">
+    <button class="nav-toggle" onclick="var nav=this.closest('.site-nav');nav.classList.toggle('open');this.setAttribute('aria-expanded',nav.classList.contains('open'))" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul>
@@ -117,7 +122,11 @@
         <a href="/equally-poor/">Equally Poor</a>
         <a href="/PTS/">Protecting Trade Secrets</a>
         <a href="/law-governance/">Law &amp; Governance</a>
-        <a href="https://actag.bio" target="_blank">ACTAG</a>
+        <a href="https://oranburg.github.io/K/" target="_blank" rel="noopener noreferrer">Contract Law Companion</a>
+        <a href="https://oranburg.github.io/BA/" target="_blank" rel="noopener noreferrer">Business Associations Companion</a>
+        <a href="https://oranburg.github.io/exclusive-inclusion/" target="_blank" rel="noopener noreferrer">Exclusive Inclusion</a>
+        <a href="https://oranburg.github.io/safety-machine/" target="_blank" rel="noopener noreferrer">Judgment Proof</a>
+        <a href="https://actag.bio" target="_blank" rel="noopener noreferrer">ACTAG</a>
       </div>
       <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
     </div>

@@ -114,7 +114,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5366627"
       published:
-      pdf: "/scholarship/04 Oranburg – PUBLICATION The Genius Dilemma.md"
+      pdf: "/assets/pdfs/04 Oranburg – PUBLICATION The Genius Dilemma.pdf"
       companion:
     featured: true
 
@@ -138,7 +138,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5288934"
       published:
-      pdf: "/scholarship/05 Oranburg – PUBLICATION Replacing Howey with CLARITY.md"
+      pdf: "/assets/pdfs/05 Oranburg – PUBLICATION Replacing Howey with CLARITY.pdf"
       companion:
     featured: true
 
@@ -160,7 +160,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5254743"
       published:
-      pdf: "/scholarship/06 Oranburg – PUBLICATION Function over Form.md"
+      pdf: "/assets/pdfs/06 Oranburg – PUBLICATION Function over Form.pdf"
       companion:
     featured: true
 
@@ -183,7 +183,7 @@ publications:
     links:
       ssrn:
       published: "https://www.pymnts.com/cpi-posts/market-power-and-governance-power-new-tools-for-antitrust-enforcement-in-the-decentralized-gig-economy/"
-      pdf: "/scholarship/03 Oranburg – PUBLICATION Market Power and Governance Power (CPI) 2025-11-11.md"
+      pdf: "/assets/pdfs/03 Oranburg – PUBLICATION Market Power and Governance Power (CPI) 2025-11-11.pdf"
       companion:
     featured: false
 
@@ -206,7 +206,7 @@ publications:
     links:
       ssrn:
       published: "https://jcl.law.uiowa.edu/articles/2024/01/antitrust-law-blockchain-technology"
-      pdf: "/scholarship/12 Oranburg – PUBLICATION Antitrust Law for Blockchain Technology.md"
+      pdf: "/assets/pdfs/12 Oranburg – PUBLICATION Antitrust Law for Blockchain Technology.pdf"
       companion:
     featured: false
 
@@ -228,7 +228,7 @@ publications:
     links:
       ssrn:
       published: "https://www.cambridge.org/core/books/history-of-financial-technology-and-regulation/6E37443D9BC795031FF1E5B11F7B4CB3"
-      pdf: "/scholarship/15 Oranburg – PUBLICATION A History of Financial Technology and Regulation.md"
+      pdf: "/assets/pdfs/15 Oranburg – PUBLICATION A History of Financial Technology and Regulation.pdf"
       companion:
     featured: true
 
@@ -251,7 +251,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2982554"
       published: "https://scholar.law.colorado.edu/lawreview/vol89/iss4/2/"
-      pdf: "/scholarship/25 Oranburg – PUBLICATION Hyperfunding.md"
+      pdf: "/assets/pdfs/25 Oranburg – PUBLICATION Hyperfunding.pdf"
       companion:
     featured: false
 
@@ -276,7 +276,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3548312"
       published:
-      pdf: "/scholarship/21 Oranburg – PUBLICATION Securities Regulation and Social Media.md"
+      pdf: "/assets/pdfs/21 Oranburg – PUBLICATION Securities Regulation and Social Media.pdf"
       companion:
     featured: false
 
@@ -299,7 +299,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3435274"
       published:
-      pdf: "/scholarship/20 Oranburg – PUBLICATION Encouraging Entrepreneurship and Innovation through Regulatory Democratization.md"
+      pdf: "/assets/pdfs/20 Oranburg – PUBLICATION Encouraging Entrepreneurship and Innovation through Regulatory Democratization.pdf"
       companion:
     featured: false
 
@@ -321,7 +321,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2743072"
       published:
-      pdf: "/scholarship/23 Oranburg – PUBLICATION Start-Up Financing 2.md"
+      pdf: "/assets/pdfs/23 Oranburg – PUBLICATION Start-Up Financing 2.pdf"
       companion:
     featured: false
 
@@ -343,7 +343,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3263521"
       published:
-      pdf: "/scholarship/26 Oranburg & Geiger – PUBLICATION Female Entrepreneurs and Equity Crowdfunding in the US.md"
+      pdf: "/assets/pdfs/26 Oranburg & Geiger – PUBLICATION Female Entrepreneurs and Equity Crowdfunding in the US.pdf"
       companion:
     featured: false
 
@@ -365,7 +365,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2639879"
       published:
-      pdf: "/scholarship/27 Oranburg – PUBLICATION Democratizing Startups.md"
+      pdf: "/assets/pdfs/27 Oranburg – PUBLICATION Democratizing Startups.pdf"
       companion:
     featured: false
 
@@ -388,7 +388,7 @@ publications:
     links:
       ssrn:
       published:
-      pdf: "/scholarship/28 Oranburg – PUBLICATION A Place of Their Own.md"
+      pdf: "/assets/pdfs/28 Oranburg – PUBLICATION A Place of Their Own.pdf"
       companion:
     featured: false
 
@@ -410,7 +410,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2544365"
       published:
-      pdf: "/scholarship/31 Oranburg – PUBLICATION Bridgefunding - Crowdfunding and the Market for Entrepreneurial Finance.md"
+      pdf: "/assets/pdfs/31 Oranburg – PUBLICATION Bridgefunding - Crowdfunding and the Market for Entrepreneurial Finance.pdf"
       companion:
     featured: false
 
@@ -550,7 +550,7 @@ publications:
     links:
       ssrn:
       published: "https://www.americanbar.org/groups/business_law/resources/business-lawyer/2022-summer/the-unintended-consequences-of-mandatory-esg-disclosures/"
-      pdf: "/scholarship/14 Oranburg – PUBLICATION The Unintended Consequences of Mandatory ESG Disclosures.md"
+      pdf: "/assets/pdfs/14 Oranburg – PUBLICATION The Unintended Consequences of Mandatory ESG Disclosures.pdf"
       companion: "/equally-poor/"
     featured: false
 
@@ -572,7 +572,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3648687"
       published:
-      pdf: "/scholarship/18 Oranburg & Kahn – PUBLICATION Online Onboarding - Corporate Governance Training in the COVID-19 Era.md"
+      pdf: "/assets/pdfs/18 Oranburg & Kahn – PUBLICATION Online Onboarding - Corporate Governance Training in the COVID-19 Era.pdf"
       companion:
     featured: false
 
@@ -594,7 +594,7 @@ publications:
     links:
       ssrn:
       published:
-      pdf: "/scholarship/16 Oranburg – PUBLICATION Social Media and Democracy After the Capitol Riot.md"
+      pdf: "/assets/pdfs/16 Oranburg – PUBLICATION Social Media and Democracy After the Capitol Riot.pdf"
       companion:
     featured: false
 
@@ -616,7 +616,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2544363"
       published:
-      pdf: "/scholarship/30 Oranburg – PUBLICATION A Little Birdie Said - How Twitter Is Disrupting Shareholder Activism.md"
+      pdf: "/assets/pdfs/30 Oranburg – PUBLICATION A Little Birdie Said - How Twitter Is Disrupting Shareholder Activism.pdf"
       companion:
     featured: false
 
@@ -641,7 +641,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3270867"
       published:
-      pdf: "/scholarship/17 Oranburg & Palagashvili – PUBLICATION Transaction Cost Economics, Labor Law, and the Gig Economy.md"
+      pdf: "/assets/pdfs/17 Oranburg & Palagashvili – PUBLICATION Transaction Cost Economics, Labor Law, and the Gig Economy.pdf"
       companion:
     featured: false
 
@@ -663,7 +663,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3135936"
       published:
-      pdf: "/scholarship/24 Oranburg – PUBLICATION Unbundling Employment – Flexible Benefits for the Gig Economy.md"
+      pdf: "/assets/pdfs/24 Oranburg – PUBLICATION Unbundling Employment – Flexible Benefits for the Gig Economy.pdf"
       companion:
     featured: false
 
@@ -686,7 +686,7 @@ publications:
     links:
       ssrn:
       published:
-      pdf: "/scholarship/22 Oranburg – PUBLICATION Balancing Flexibility and Rigidity.md"
+      pdf: "/assets/pdfs/22 Oranburg – PUBLICATION Balancing Flexibility and Rigidity.pdf"
       companion:
     featured: false
 
@@ -710,7 +710,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4919316"
       published:
-      pdf: "/scholarship/07 Oranburg - PUBLICATION A Systems Approach.md"
+      pdf: "/assets/pdfs/07 Oranburg - PUBLICATION A Systems Approach.pdf"
       companion:
     featured: false
 
@@ -732,7 +732,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104793"
       published:
-      pdf: "/scholarship/11 Oranburg – PUBLICATION Advanced Online Continuing Legal Education.md"
+      pdf: "/assets/pdfs/11 Oranburg – PUBLICATION Advanced Online Continuing Legal Education.pdf"
       companion:
     featured: false
 
@@ -753,7 +753,7 @@ publications:
     links:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3593027"
       published:
-      pdf: "/scholarship/19 Oranburg & Tamasy – PUBLICATION Corporations Hybrid - A COVID Case Study on Innovation in Business Law Pedagogy.md"
+      pdf: "/assets/pdfs/19 Oranburg & Tamasy – PUBLICATION Corporations Hybrid - A COVID Case Study on Innovation in Business Law Pedagogy.pdf"
       companion:
     featured: false
 
@@ -779,7 +779,7 @@ publications:
     links:
       ssrn:
       published: "https://cap-press.com/books/isbn/9781531033804/Contract-Law-Second-Edition"
-      pdf: "/scholarship/09 Oranburg – PUBLICATION Contract Law 2d.md"
+      pdf: "/assets/pdfs/09 Oranburg – PUBLICATION Contract Law 2d.pdf"
       companion: "https://oranburg.github.io/K/"
     featured: false
     exclude_from: [explorer]
@@ -800,7 +800,7 @@ publications:
     links:
       ssrn:
       published: "https://cap-press.com/books/isbn/9781531029586/Questions-and-Answers-Business-Associations-Third-Edition"
-      pdf: "/scholarship/10 Oranburg – PUBLICATION Business Associations Q&A 3d.md"
+      pdf: "/assets/pdfs/10 Oranburg – PUBLICATION Business Associations Q&A 3d.pdf"
       companion:
     featured: false
     exclude_from: [explorer]
@@ -862,7 +862,7 @@ publications:
     links:
       ssrn:
       published:
-      pdf: "/scholarship/02 Oranburg – PUBLICATION Valuing Uncertain Trade Secrets.md"
+      pdf: "/assets/pdfs/02 Oranburg – PUBLICATION Valuing Uncertain Trade Secrets.pdf"
       companion:
     featured: false
 
@@ -886,7 +886,7 @@ publications:
     links:
       ssrn:
       published: "https://academicengagement.org/wp-content/uploads/2025/08/AEN_Research-Paper-Oranburg.md"
-      pdf: "/scholarship/08 Oranburg – PUBLICATION Beyond the Ivory Tower.md"
+      pdf: "/assets/pdfs/08 Oranburg – PUBLICATION Beyond the Ivory Tower.pdf"
       companion:
     featured: false
 

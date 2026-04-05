@@ -1498,6 +1498,12 @@ details.embed[open] summary {
   }
 }
 
+/* ---------- Companion Site CTA Wrapper ---------- */
+
+.companion-cta-wrapper {
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
 /* ---------- Courses Page ---------- */
 
 .og-course-grid {

@@ -45,4 +45,4 @@ layout: default
 <p class="no-posts-notice">No posts in this topic yet. Check back soon.</p>
 {% endif %}
 
-<p class="back-to-library"><a href="{{ '/insights/library/' | relative_url }}">&larr; Back to the Library</a></p>
+<p class="back-to-library"><a href="{{ page.bucket_url | default: '/insights/library/' | relative_url }}">&larr; Back to {% if page.bucket_title %}{{ page.bucket_title }}{% else %}the Library{% endif %}</a></p>

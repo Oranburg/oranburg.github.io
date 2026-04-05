@@ -3,6 +3,8 @@ layout: default
 title: "Contract Law"
 permalink: /courses/contracts/
 ---
+<p class="back-to-courses"><a href="/courses/">&larr; Back to Courses</a></p>
+
 <div class="hub-intro">
   <h1>Contract Law</h1>
   <p class="literary">When and how should law enforce voluntary agreements? This course explores the rules, cases, and problems that define contractual obligation in American law.</p>
@@ -80,7 +82,11 @@ permalink: /courses/contracts/
     {% if pub.tags contains "contracts" or pub.tags contains "contract law" %}
     <li class="article-item">
       <div class="article-title">{{ pub.title }}</div>
-      <div class="article-journal">{{ pub.journal }}, {{ pub.year }}</div>
+      <div class="article-journal">
+        {% if pub.journal %}{{ pub.journal }}, {% endif %}{% if pub.status == "forthcoming" %}forthcoming {% endif %}{{ pub.year }}
+        {% if pub.links.ssrn %} | <a href="{{ pub.links.ssrn }}" target="_blank" rel="noopener">SSRN</a>{% endif %}
+        {% if pub.links.published %} | <a href="{{ pub.links.published }}" target="_blank" rel="noopener">Full Text</a>{% endif %}
+      </div>
     </li>
     {% endif %}
   {% endfor %}

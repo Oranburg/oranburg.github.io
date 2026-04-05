@@ -2,6 +2,7 @@
 layout: default
 title: Insights
 permalink: /insights/
+tagline: "Law Professor | Fintech Scholar | Public Commentator"
 ---
 <div class="hub-intro">
   <h1>Insights</h1>
@@ -27,6 +28,7 @@ permalink: /insights/
 </section>
 
 <h2>Featured Guides &amp; Essays</h2>
+<p class="section-desc">Longer-form pieces on law, institutions, and emerging legal issues — curated for depth and lasting relevance.</p>
 {% assign featured_posts = site.posts | where: "featured", true %}
 {% if featured_posts.size > 0 %}
 <ul class="post-list">
@@ -69,6 +71,7 @@ permalink: /insights/
 {% endif %}
 
 <h2>Latest Notes &amp; Commentary</h2>
+<p class="section-desc">Short observations, updates, and timely commentary from recent writing and public engagement.</p>
 {% if site.posts.size > 0 %}
 <ul class="post-list">
   {% for post in site.posts limit: 10 %}

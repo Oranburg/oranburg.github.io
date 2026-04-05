@@ -1,7 +1,35 @@
 title: Seth C. Oranburg
-description: Law Professor, Scholar & Educator
+description: "Law professor and scholar researching how technological disruption destabilizes moral norms and social trust, and how legal design can restore integrity to markets and institutions."
 baseurl: ""
 url: "https://oranburg.law"
+
+# Author (used by jekyll-seo-tag for Person schema)
+author:
+  name: Seth C. Oranburg
+  url: https://oranburg.law
+  twitter: oranburg
+
+# Social / OG defaults
+twitter:
+  username: oranburg
+social:
+  name: Seth C. Oranburg
+  links:
+    - https://www.youtube.com/@BizLaw
+    - https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2256355
+    - https://bizlawbreakdown.podbean.com
+
+# Default OG image for social sharing
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/SCO - Purple Suit.jpg
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
 # Build settings
 markdown: kramdown
@@ -20,11 +48,4 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
-# Default front matter
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+  - jekyll-sitemap

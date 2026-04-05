@@ -1572,3 +1572,49 @@ details.embed[open] summary {
   color: var(--muted);
   margin: 0 0 var(--space-sm);
 }
+
+/* ---------- Mobile Hamburger Menu ---------- */
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  position: absolute;
+  right: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  margin: 5px 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.site-nav.open .nav-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.site-nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
+.site-nav.open .nav-toggle span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+@media (max-width: 640px) {
+  .site-nav { position: sticky; top: 0; }
+  .nav-toggle { display: block; }
+  .site-nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) 0;
+  }
+  .site-nav.open ul { display: flex; }
+  .site-nav li:last-child { margin-left: 0; }
+}
+
+/* ---------- Global Focus Ring ---------- */
+
+*:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+}

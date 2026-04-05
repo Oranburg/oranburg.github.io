@@ -12,7 +12,7 @@ description: "Seth C. Oranburg is a law professor specializing in corporate law,
     <p>Seth C. Oranburg is a law professor and scholar whose work sits at the intersection of technological disruption, institutional trust, and legal design.</p>
     <div class="bio-grid">
         <div class="bio-image">
-            <img src="/images/SCO%20-%20Purple%20Suit.jpg" alt="Professor Seth Oranburg" loading="lazy">
+            <img src="/images/SCO%20-%20Purple%20Suit.jpg" alt="Professor Seth Oranburg" loading="lazy" width="801" height="1200">
         </div>
         <div>
             <p>He studies how technological disruption destabilizes moral norms and social trust, and how legal design can restore integrity to markets and institutions.</p>
@@ -85,7 +85,7 @@ description: "Seth C. Oranburg is a law professor specializing in corporate law,
         {% for p in all_pubs %}{% unless p.type == "book" %}{% assign articles = articles | push: p %}{% endunless %}{% endfor %}
         {% for pub in articles limit:7 %}
           {% unless pub.exclude_from contains 'web' %}
-          <li class="article-item" role="button" tabindex="0" onclick="toggleAbstract(this)" onkeydown="handleArticleKey(event, this)">
+          <li class="article-item" role="button" tabindex="0" onclick="toggleAbstract(this, event)" onkeydown="handleArticleKey(event, this)">
             <span class="expand-indicator">+</span>
             <div class="article-title">{{ pub.title }}</div>
             <div class="article-journal">
@@ -104,7 +104,7 @@ description: "Seth C. Oranburg is a law professor specializing in corporate law,
         {% for p in forth_all %}{% unless p.type == "book" %}{% assign forthcoming = forthcoming | push: p %}{% endunless %}{% endfor %}
         {% for pub in forthcoming %}
           {% unless pub.exclude_from contains 'web' %}
-          <li class="article-item" role="button" tabindex="0" onclick="toggleAbstract(this)" onkeydown="handleArticleKey(event, this)">
+          <li class="article-item" role="button" tabindex="0" onclick="toggleAbstract(this, event)" onkeydown="handleArticleKey(event, this)">
             <span class="expand-indicator">+</span>
             <div class="article-title">{{ pub.title }}</div>
             <div class="article-journal">
@@ -198,7 +198,7 @@ description: "Seth C. Oranburg is a law professor specializing in corporate law,
 
     <div class="award-box">
         <div class="award-photo">
-            <img src="/images/SCO%20-%20Teacher%20of%20the%20Year%20Award.jpg" alt="Seth Oranburg with 2024 Teaching Excellence Award" loading="lazy">
+            <img src="/images/SCO%20-%20Teacher%20of%20the%20Year%20Award.jpg" alt="Seth Oranburg with 2024 Teaching Excellence Award" loading="lazy" width="1200" height="900">
         </div>
         <div>
             <h4>Teaching Honors</h4>
@@ -245,7 +245,7 @@ description: "Seth C. Oranburg is a law professor specializing in corporate law,
     </ul>
 
     <div class="teaching-photo">
-        <img src="/images/SCO%20-%20Engaging%20Students%20in%20Mock%20Courtroom.jpg" alt="Professor Oranburg teaching in a courtroom setting" loading="lazy">
+        <img src="/images/SCO%20-%20Engaging%20Students%20in%20Mock%20Courtroom.jpg" alt="Professor Oranburg teaching in a courtroom setting" loading="lazy" width="1200" height="800">
         <p class="photo-caption">Teaching and engaging with students in a moot courtroom setting</p>
     </div>
 

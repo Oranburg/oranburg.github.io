@@ -1,0 +1,859 @@
+---
+layout: default
+title: "Exclusive Inclusion — Interactive Model"
+description: "Interactive game-theoretic model and diagnostic matrix for the Exclusive Inclusion governance framework by Seth C. Oranburg."
+permalink: /demos/exclusive-inclusion/
+---
+
+<style>
+  /* Override site defaults for this page */
+  .exi-app {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1e293b;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .exi-app *, .exi-app *::before, .exi-app *::after {
+    box-sizing: border-box;
+  }
+
+  /* Card base */
+  .exi-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .exi-card-dark {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 24px;
+    color: #cbd5e1;
+  }
+
+  /* Grid */
+  .exi-grid { display: grid; gap: 24px; }
+  @media (min-width: 1024px) {
+    .exi-grid-2 { grid-template-columns: 1fr 1fr; }
+  }
+  .exi-grid-2-btn { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  /* Tabs */
+  .exi-tabs {
+    display: inline-flex;
+    background: #f1f5f9;
+    padding: 4px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
+  .exi-tab {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .exi-tab.active {
+    background: #fff;
+    color: #2563eb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  /* Section headers */
+  .exi-h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 8px;
+  }
+  .exi-h2-white { color: #fff; }
+  .exi-subtitle {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0 0 20px;
+  }
+
+  /* Slider */
+  .exi-slider-wrap {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  .exi-slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .exi-slider-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1e293b;
+  }
+  .exi-slider-value {
+    font-size: 11px;
+    font-family: monospace;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #334155;
+  }
+  .exi-slider {
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #cbd5e1;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+  }
+  .exi-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: #2563eb;
+    cursor: pointer;
+  }
+  .exi-slider-range {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 4px;
+  }
+
+  /* Toggle buttons */
+  .exi-toggle {
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    color: #94a3b8;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .exi-toggle.on {
+    background: #eef2ff;
+    border-color: #a5b4fc;
+    color: #4338ca;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .exi-toggle.on-teal {
+    background: #f0fdfa;
+    border-color: #5eead4;
+    color: #0f766e;
+  }
+  .exi-toggle-symbol { font-size: 18px; font-weight: 700; display: block; }
+  .exi-toggle-name { font-size: 13px; font-weight: 500; display: block; margin-top: 4px; }
+  .exi-toggle-status {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* Computed bar */
+  .exi-bar-wrap {
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  .exi-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 8px;
+  }
+  .exi-bar-label { font-size: 13px; font-weight: 500; color: #475569; }
+  .exi-bar-qual { font-size: 11px; font-weight: 700; }
+  .exi-bar-track {
+    height: 12px;
+    background: #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .exi-bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.5s ease-out;
+  }
+  .exi-bar-num {
+    width: 48px;
+    text-align: right;
+    font-size: 11px;
+    font-family: monospace;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+  .exi-bar-row { display: flex; align-items: center; }
+
+  /* Payoff card */
+  .exi-payoff {
+    background: rgba(30,41,59,0.8);
+    border: 1px solid rgba(51,65,85,0.5);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  .exi-payoff-body { flex: 1; min-width: 200px; }
+  .exi-payoff-player {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    margin-bottom: 4px;
+  }
+  .exi-payoff-formula {
+    font-family: monospace;
+    font-size: 13px;
+    color: #cbd5e1;
+    word-break: break-all;
+    line-height: 1.6;
+  }
+  .exi-payoff-score {
+    width: 80px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid;
+    flex-shrink: 0;
+  }
+  .exi-payoff-pos { background: rgba(6,78,59,0.3); color: #34d399; border-color: rgba(6,78,59,0.5); }
+  .exi-payoff-neg { background: rgba(127,29,29,0.3); color: #f87171; border-color: rgba(127,29,29,0.5); }
+
+  /* Void alert */
+  .exi-void-alert {
+    background: rgba(69,10,10,0.8);
+    border: 1px solid rgba(239,68,68,0.5);
+    color: #fecaca;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .exi-void-alert strong { color: #fca5a5; font-size: 16px; display: block; margin-bottom: 4px; }
+
+  /* Presets */
+  .exi-presets { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .exi-preset-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .exi-preset-btn:hover { background: #f8fafc; border-color: #cbd5e1; }
+  .exi-preset-btn.active { background: #eff6ff; border-color: #bfdbfe; color: #2563eb; }
+  .exi-preset-desc {
+    font-size: 13px;
+    color: #64748b;
+    font-style: italic;
+    background: #f8fafc;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
+    margin-bottom: 16px;
+  }
+
+  /* Welfare panel */
+  .exi-welfare-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8fafc;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+    margin-bottom: 20px;
+  }
+  .exi-welfare-endpoint { text-align: center; }
+  .exi-welfare-endpoint-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #94a3b8;
+    margin-bottom: 4px;
+  }
+  .exi-welfare-endpoint-value { font-size: 24px; font-family: monospace; font-weight: 700; }
+  .exi-welfare-delta {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+  .exi-welfare-table {
+    font-family: monospace;
+    font-size: 13px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  .exi-welfare-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    color: #475569;
+  }
+  .exi-welfare-row.total {
+    border-top: 1px solid #e2e8f0;
+    margin-top: 8px;
+    padding-top: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+  }
+  .exi-welfare-lambda {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  .exi-welfare-breakeven {
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #475569;
+  }
+
+  /* Advanced panel */
+  .exi-advanced-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #64748b;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    margin-top: 12px;
+  }
+  .exi-advanced-body {
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    background: #f8fafc;
+  }
+
+  /* Matrix */
+  .exi-matrix-grid {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+    gap: 8px;
+  }
+  .exi-matrix-cell {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 120px;
+    transition: all 0.3s;
+    opacity: 0.5;
+    background: #f8fafc;
+  }
+  .exi-matrix-cell.active { opacity: 1; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  .exi-matrix-cell-name { font-weight: 700; font-size: 14px; }
+  .exi-matrix-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #94a3b8;
+  }
+  .exi-matrix-col-headers {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+    gap: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #94a3b8;
+    margin-bottom: 8px;
+  }
+  .exi-matrix-info {
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid;
+    margin-top: 20px;
+  }
+  .exi-matrix-info h3 { font-size: 18px; font-weight: 700; margin: 0 0 8px; }
+  .exi-matrix-info p { font-size: 13px; margin: 0 0 12px; opacity: 0.9; }
+  .exi-matrix-example {
+    font-size: 13px;
+    font-weight: 500;
+    background: rgba(255,255,255,0.5);
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  /* Colors */
+  .c-red { color: #dc2626; } .c-amber { color: #d97706; } .c-green { color: #059669; }
+  .c-slate { color: #94a3b8; }
+  .bg-red-light { background: #fef2f2; border-color: #fca5a5; color: #7f1d1d; }
+  .bg-green-light { background: #ecfdf5; border-color: #6ee7b7; color: #064e3b; }
+  .bg-amber-light { background: #fffbeb; border-color: #fcd34d; color: #78350f; }
+
+  /* Link bank */
+  .exi-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+  }
+  .exi-link {
+    font-size: 13px;
+    color: #2563eb;
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    background: #eff6ff;
+    transition: all 0.2s;
+  }
+  .exi-link:hover { background: #dbeafe; }
+
+  /* Separator */
+  .exi-sep { border-top: 1px solid #e2e8f0; margin: 16px 0; }
+</style>
+
+<div class="exi-app" id="exi-root"></div>
+
+<!-- CDN Dependencies -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+const { useState, useMemo } = React;
+
+// --- Equilibrium Solver (Verified) ---
+function solveEquilibrium(s, sigma, tau, phi, constants) {
+  const { alpha, beta, gamma, epsilon, delta, psi, kappa, omega } = constants;
+  let c = 0.5, m = 0.1, h = 0.0, e = 0.0;
+  for (let i = 0; i < 50; i++) {
+    const c_new = Math.max(0, Math.min(1, (1 - s*m - sigma*s*h - tau*s*e) / (2 * phi)));
+    const h_new = Math.max(0, Math.min(1, (sigma * s * c * psi) / (2 * delta)));
+    const e_new = Math.max(0, Math.min(1, (tau * s * c * omega) / (2 * kappa)));
+    const m_new = Math.max(0, Math.min(1, (sigma * s * h * beta + tau * e * gamma + epsilon) / (2 * alpha)));
+    c = c_new; m = m_new; h = h_new; e = e_new;
+  }
+  return { c, m, h, e };
+}
+
+function getQualLabel(type, val) {
+  if (type === 'capture') {
+    if (val > 0.7) return { text: 'High \u2014 Accountability void', cls: 'c-red' };
+    if (val > 0.4) return { text: 'Moderate \u2014 Partial constraint', cls: 'c-amber' };
+    return { text: 'Low \u2014 Functional governance', cls: 'c-green' };
+  }
+  if (val < 0.1) return { text: 'Inactive', cls: 'c-slate' };
+  if (val < 0.3) return { text: 'Weak', cls: 'c-amber' };
+  return { text: 'Active', cls: 'c-green' };
+}
+
+// --- Main App ---
+function App() {
+  const [tab, setTab] = useState('model');
+
+  return (
+    <div>
+      <div style={{textAlign:'center', marginBottom: 24}}>
+        <div className="exi-tabs">
+          <button className={`exi-tab ${tab === 'model' ? 'active' : ''}`} onClick={() => setTab('model')}>Formal Model Dynamics</button>
+          <button className={`exi-tab ${tab === 'matrix' ? 'active' : ''}`} onClick={() => setTab('matrix')}>Disentanglement Matrix</button>
+        </div>
+      </div>
+      {tab === 'model' ? <FormalModel /> : <Matrix />}
+      <div className="exi-links">
+        <a className="exi-link" href="/">Home</a>
+        <a className="exi-link" href="/scholarship/">Scholarship</a>
+        <a className="exi-link" href="/demos/ostracism-game/">The Ostracism Game</a>
+        <a className="exi-link" href="/demos/trade-secret-paradox/">The Trade Secret Paradox</a>
+        <a className="exi-link" href="/courses/">Courses</a>
+        <a className="exi-link" href="/insights/">Insights</a>
+      </div>
+    </div>
+  );
+}
+
+// --- Formal Model ---
+function FormalModel() {
+  const [s, setS] = useState(0);
+  const [sigma, setSigma] = useState(0);
+  const [tau, setTau] = useState(0);
+  const [phi, setPhi] = useState(0.6);
+  const [lambda, setLambda] = useState(1.0);
+  const [showAdv, setShowAdv] = useState(false);
+  const [presetDesc, setPresetDesc] = useState('Vague missions, no stakeholder standing, no external governance test.');
+
+  const C = { alpha:0.5, beta:0.8, gamma:0.8, epsilon:0.05, delta:0.5, psi:0.8, kappa:0.5, omega:0.8 };
+  const rk = { k_s: 0.1, k_sigma: 0.15, k_tau: 0.12 };
+
+  const eq = useMemo(() => solveEquilibrium(s, sigma, tau, phi, C), [s, sigma, tau, phi]);
+  const voidEq = useMemo(() => solveEquilibrium(0, 0, 0, phi, C), [phi]);
+
+  const payoffs = useMemo(() => {
+    const {c,m,h,e} = eq;
+    return {
+      F: c*(1-s*m) - sigma*s*h*c - tau*s*e*c - phi*c*c,
+      B: -C.alpha*m*m + (sigma*s*h*C.beta + tau*e*C.gamma + C.epsilon)*m,
+      S: -C.delta*h*h + sigma*s*c*C.psi*h,
+      E: -C.kappa*e*e + tau*s*c*C.omega*e,
+    };
+  }, [eq, s, sigma, tau, phi]);
+
+  const socialBenefit = lambda * (voidEq.c*voidEq.c - eq.c*eq.c);
+  const reformCost = rk.k_s*s*s + rk.k_sigma*sigma + rk.k_tau*tau;
+  const netWelfare = socialBenefit - reformCost;
+  const capReduction = voidEq.c - eq.c;
+  const breakEven = (voidEq.c !== eq.c) ? reformCost / (voidEq.c*voidEq.c - eq.c*eq.c) : null;
+  const isVoid = s === 0 || (sigma === 0 && tau === 0);
+
+  const presets = [
+    { label:'Current US Law (Void)', s:0, sigma:0, tau:0, phi:0.6, desc:'Vague missions, no stakeholder standing, no external governance test.' },
+    { label:'Specificity Only', s:0.8, sigma:0, tau:0, phi:0.6, desc:'Specific mission, but no one can enforce it.' },
+    { label:'Standing Only', s:0, sigma:1, tau:0, phi:0.6, desc:'Stakeholders can sue, but no standard to argue against.' },
+    { label:'Full Reform', s:0.8, sigma:1, tau:1, phi:0.6, desc:'All three reforms active. Watch capture drop.' },
+    { label:'Small Organized Faction', s:0.8, sigma:1, tau:1, phi:0.3, desc:'Full reform but facing a highly organized faction (low \u03c6).' },
+  ];
+
+  function applyPreset(p) {
+    setS(p.s); setSigma(p.sigma); setTau(p.tau); setPhi(p.phi); setPresetDesc(p.desc);
+  }
+
+  function fmtPay(v) { return v.toFixed(3); }
+
+  return (
+    <div>
+      {/* Presets */}
+      <div className="exi-presets">
+        {presets.map((p,i) => {
+          const active = p.s===s && p.sigma===sigma && p.tau===tau && Math.abs(p.phi-phi)<0.01;
+          return <button key={i} className={`exi-preset-btn ${active?'active':''}`} onClick={()=>applyPreset(p)}>{p.label}</button>;
+        })}
+      </div>
+      <div className="exi-preset-desc">{presetDesc}</div>
+
+      <div className="exi-grid exi-grid-2">
+        {/* Left: Controls + Equilibrium */}
+        <div className="exi-card">
+          <div className="exi-h2">1. Governance Architecture</div>
+          <p className="exi-subtitle">Modify structural levers to build the reform package.</p>
+
+          <div className="exi-slider-wrap">
+            <div className="exi-slider-header">
+              <span className="exi-slider-label">Mission Specificity (s)</span>
+              <span className="exi-slider-value">{s.toFixed(2)}</span>
+            </div>
+            <input type="range" min="0" max="1" step="0.01" value={s} onChange={e=>{setS(+e.target.value);setPresetDesc('Custom configuration.');}} className="exi-slider" />
+            <div className="exi-slider-range"><span>0 = Vague</span><span>1 = Specific</span></div>
+          </div>
+
+          <div className="exi-grid-2-btn">
+            <button className={`exi-toggle ${sigma?'on':''}`} onClick={()=>{setSigma(sigma?0:1);setPresetDesc('Custom configuration.');}}>
+              <span className="exi-toggle-symbol">&sigma; = {sigma}</span>
+              <span className="exi-toggle-name">Stakeholder Standing</span>
+              <span className="exi-toggle-status">{sigma?'Enabled':'Disabled'}</span>
+            </button>
+            <button className={`exi-toggle ${tau?'on on-teal':''}`} onClick={()=>{setTau(tau?0:1);setPresetDesc('Custom configuration.');}}>
+              <span className="exi-toggle-symbol">&tau; = {tau}</span>
+              <span className="exi-toggle-name">External Accountability</span>
+              <span className="exi-toggle-status">{tau?'Enabled':'Disabled'}</span>
+            </button>
+          </div>
+
+          <div className="exi-sep"></div>
+
+          <div className="exi-h2">2. Equilibrium Behavior</div>
+          <p className="exi-subtitle">Player strategies derived via iterative best-response. <em>Change the structure, watch the behavior follow.</em></p>
+
+          <Bar label="Faction Capture (c*)" val={eq.c} color="#ef4444" type="capture" />
+          <Bar label="Board Monitoring (m*)" val={eq.m} color="#3b82f6" type="monitoring" />
+          <Bar label="Stakeholder Challenge (h*)" val={eq.h} color="#6366f1" type="challenge" />
+          <Bar label="Enforcer Enforcement (e*)" val={eq.e} color="#14b8a6" type="enforcement" />
+        </div>
+
+        {/* Right: Payoffs */}
+        <div className="exi-card-dark">
+          <div className="exi-h2 exi-h2-white">Payoff Architecture</div>
+          <p className="exi-subtitle" style={{color:'#64748b'}}>Quadratic costs guarantee interior Nash equilibrium.</p>
+
+          {isVoid && (
+            <div className="exi-void-alert">
+              <strong>The Governance Void is Active.</strong>
+              No formal governance mechanism constrains factional capture. Equilibrium shows near-maximal capture (c* &asymp; {voidEq.c.toFixed(2)}) with only minimal informal monitoring.
+            </div>
+          )}
+
+          <Payoff player="Faction (F)" score={payoffs.F} eq={eq} s={s} sigma={sigma} tau={tau} phi={phi} type="F" />
+          <Payoff player="Board (B)" score={payoffs.B} eq={eq} s={s} sigma={sigma} tau={tau} phi={phi} type="B" C={C} />
+          <Payoff player="Stakeholders (S)" score={payoffs.S} eq={eq} s={s} sigma={sigma} tau={tau} phi={phi} type="S" C={C} />
+          <Payoff player="Enforcer (E)" score={payoffs.E} eq={eq} s={s} sigma={sigma} tau={tau} phi={phi} type="E" C={C} />
+        </div>
+      </div>
+
+      {/* Welfare Panel */}
+      <div className="exi-card">
+        <div className="exi-h2">Is Reform Worth It?</div>
+        <p className="exi-subtitle">Social benefit of reduced capture versus cost of implementing reforms.</p>
+
+        <div className="exi-grid exi-grid-2">
+          <div>
+            <div className="exi-welfare-arrow">
+              <div className="exi-welfare-endpoint">
+                <div className="exi-welfare-endpoint-label">Void</div>
+                <div className="exi-welfare-endpoint-value" style={{color:'#ef4444'}}>{voidEq.c.toFixed(2)}</div>
+              </div>
+              <div style={{flex:1, textAlign:'center'}}>
+                <span className={`exi-welfare-delta ${capReduction > 0.05 ? 'bg-green-light' : 'bg-amber-light'}`}>
+                  &Delta;c = {(-capReduction).toFixed(2)}
+                </span>
+                <div style={{fontSize:11,color:'#94a3b8',marginTop:4}}>&rarr;</div>
+              </div>
+              <div className="exi-welfare-endpoint">
+                <div className="exi-welfare-endpoint-label">Reformed</div>
+                <div className="exi-welfare-endpoint-value" style={{color: capReduction > 0.05 ? '#059669' : '#ef4444'}}>{eq.c.toFixed(2)}</div>
+              </div>
+            </div>
+
+            <div className="exi-welfare-table">
+              <div className="exi-welfare-row">
+                <span>Social benefit of reduced capture:</span>
+                <span style={{color:'#059669', fontWeight:700}}>+{socialBenefit.toFixed(3)}</span>
+              </div>
+              <div className="exi-welfare-row">
+                <span>Cost of reforms:</span>
+                <span style={{color:'#ef4444', fontWeight:700}}>-{reformCost.toFixed(3)}</span>
+              </div>
+              <div className="exi-welfare-row total">
+                <span>Net welfare change:</span>
+                <span style={{color: netWelfare > 0 ? '#059669' : '#ef4444'}}>
+                  {netWelfare > 0 ? '+' : ''}{netWelfare.toFixed(3)} {netWelfare > 0 ? '\u2713' : '\u2717'}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="exi-welfare-lambda">
+              <div className="exi-slider-header">
+                <span className="exi-slider-label" style={{color:'#92400e'}}>&lambda; &mdash; How harmful is governance capture?</span>
+                <span className="exi-slider-value">{lambda.toFixed(2)}</span>
+              </div>
+              <input type="range" min="0.1" max="3.0" step="0.1" value={lambda} onChange={e=>setLambda(+e.target.value)} className="exi-slider" />
+              <p style={{fontSize:12,color:'#92400e',marginTop:8}}>Higher &lambda; = capture is more harmful to excluded groups.</p>
+            </div>
+
+            <div className="exi-welfare-breakeven">
+              {breakEven !== null && capReduction > 0.01
+                ? <span>Reforms are welfare-positive when the social cost of capture exceeds: <strong style={{fontFamily:'monospace',background:'#e2e8f0',padding:'2px 6px',borderRadius:4}}>{breakEven.toFixed(2)}</strong></span>
+                : <span style={{color:'#94a3b8',fontStyle:'italic'}}>No meaningful reforms are currently active.</span>
+              }
+            </div>
+
+            <button className="exi-advanced-toggle" onClick={()=>setShowAdv(!showAdv)}>
+              <span>Advanced: Adjust Constants (&phi;, Costs)</span>
+              <span>{showAdv ? '\u25B2' : '\u25BC'}</span>
+            </button>
+            {showAdv && (
+              <div className="exi-advanced-body">
+                <div className="exi-slider-header">
+                  <span className="exi-slider-label">Faction Coordination Cost (&phi;)</span>
+                  <span className="exi-slider-value">{phi.toFixed(2)}</span>
+                </div>
+                <input type="range" min="0.1" max="2.0" step="0.1" value={phi} onChange={e=>{setPhi(+e.target.value);setPresetDesc('Custom configuration.');}} className="exi-slider" />
+                <p style={{fontSize:11,color:'#64748b',marginTop:4}}>Lower &phi; = more organized faction = easier capture.</p>
+                <div style={{marginTop:12,fontSize:12,color:'#64748b'}}>
+                  <div><strong>Reform costs (fixed):</strong></div>
+                  <div style={{fontFamily:'monospace',marginTop:4}}>k_s (mission drafting): {rk.k_s}</div>
+                  <div style={{fontFamily:'monospace'}}>k_&sigma; (litigation infra): {rk.k_sigma}</div>
+                  <div style={{fontFamily:'monospace'}}>k_&tau; (IRS review): {rk.k_tau}</div>
+                </div>
+                <button style={{marginTop:12,fontSize:12,color:'#2563eb',background:'none',border:'none',cursor:'pointer',fontFamily:'inherit'}} onClick={()=>{setPhi(0.6);setLambda(1.0);}}>
+                  &#x21BA; Reset defaults
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// --- Bar Component ---
+function Bar({label, val, color, type}) {
+  const q = getQualLabel(type, val);
+  return (
+    <div className="exi-bar-wrap">
+      <div className="exi-bar-header">
+        <span className="exi-bar-label">{label}</span>
+        <span className={`exi-bar-qual ${q.cls}`}>{q.text}</span>
+      </div>
+      <div className="exi-bar-row">
+        <div className="exi-bar-track" style={{flex:1}}>
+          <div className="exi-bar-fill" style={{width:`${(val*100).toFixed(0)}%`, background:color}}></div>
+        </div>
+        <span className="exi-bar-num">{val.toFixed(2)}</span>
+      </div>
+    </div>
+  );
+}
+
+// --- Payoff Component ---
+function Payoff({player, score, eq, s, sigma, tau, phi, type, C}) {
+  const {c,m,h,e} = eq;
+  const f = v => v.toFixed(2);
+  let formula;
+  if (type === 'F') {
+    formula = `${f(c)}\u00B7(1\u2212${f(s)}\u00B7${f(m)}) \u2212 ${sigma}\u00B7${f(s)}\u00B7${f(h)}\u00B7${f(c)} \u2212 ${tau}\u00B7${f(s)}\u00B7${f(e)}\u00B7${f(c)} \u2212 ${f(phi)}\u00B7${f(c)}\u00B2`;
+  } else if (type === 'B') {
+    formula = `\u2212${f(C.alpha)}\u00B7${f(m)}\u00B2 + (${sigma}\u00B7${f(s)}\u00B7${f(h)}\u00B7${f(C.beta)} + ${tau}\u00B7${f(e)}\u00B7${f(C.gamma)} + ${f(C.epsilon)})\u00B7${f(m)}`;
+  } else if (type === 'S') {
+    formula = `\u2212${f(C.delta)}\u00B7${f(h)}\u00B2 + ${sigma}\u00B7${f(s)}\u00B7${f(c)}\u00B7${f(C.psi)}\u00B7${f(h)}`;
+  } else {
+    formula = `\u2212${f(C.kappa)}\u00B7${f(e)}\u00B2 + ${tau}\u00B7${f(s)}\u00B7${f(c)}\u00B7${f(C.omega)}\u00B7${f(e)}`;
+  }
+  const neg = score < 0;
+  return (
+    <div className="exi-payoff">
+      <div className="exi-payoff-body">
+        <div className="exi-payoff-player">{player}</div>
+        <div className="exi-payoff-formula">&pi; = {formula}</div>
+      </div>
+      <div className={`exi-payoff-score ${neg ? 'exi-payoff-neg' : 'exi-payoff-pos'}`}>{score.toFixed(3)}</div>
+    </div>
+  );
+}
+
+// --- Disentanglement Matrix ---
+function Matrix() {
+  const [actor, setActor] = useState('Institutional');
+  const [target, setTarget] = useState('Identity');
+
+  const quads = {
+    'Individual-Perspective': { title:'Protected Expression', desc:'An individual exercising personal judgment over a perspective.', example:'A professor declining collaboration over a disagreement about foreign policy.', bgCls:'bg-green-light' },
+    'Individual-Identity': { title:'Personal Discrimination', desc:'An individual targeting an identity group.', example:'A professor refusing to supervise students of a specific religion (a Title VI violation).', bgCls:'bg-amber-light' },
+    'Institutional-Perspective': { title:'Governance Question', desc:'An institution deploying authority over a perspective.', example:'A faculty senate passing a political resolution.', bgCls:'bg-amber-light' },
+    'Institutional-Identity': { title:'Exclusive Inclusion', desc:'An institution deploying authority against an identity group.', example:'A department using official resources to exclude scholars by nationality. This is a structural void requiring governance reform.', bgCls:'bg-red-light' },
+  };
+
+  const key = `${actor}-${target}`;
+  const info = quads[key];
+
+  return (
+    <div className="exi-card">
+      <div className="exi-grid exi-grid-2" style={{alignItems:'start'}}>
+        <div>
+          <div className="exi-h2">Matrix Parameters</div>
+          <div style={{marginBottom:16}}>
+            <div className="exi-subtitle" style={{marginBottom:8}}>1. Who is acting?</div>
+            <div className="exi-grid-2-btn">
+              <button className={`exi-preset-btn ${actor==='Individual'?'active':''}`} onClick={()=>setActor('Individual')}>Individual</button>
+              <button className={`exi-preset-btn ${actor==='Institutional'?'active':''}`} onClick={()=>setActor('Institutional')}>Institutional</button>
+            </div>
+          </div>
+          <div style={{marginBottom:16}}>
+            <div className="exi-subtitle" style={{marginBottom:8}}>2. What is targeted?</div>
+            <div className="exi-grid-2-btn">
+              <button className={`exi-preset-btn ${target==='Perspective'?'active':''}`} onClick={()=>setTarget('Perspective')}>Perspective</button>
+              <button className={`exi-preset-btn ${target==='Identity'?'active':''}`} onClick={()=>setTarget('Identity')}>Identity</button>
+            </div>
+          </div>
+          <div className={`exi-matrix-info ${info.bgCls}`}>
+            <h3>{info.title}</h3>
+            <p>{info.desc}</p>
+            <div className="exi-matrix-example"><strong>Example:</strong> {info.example}</div>
+          </div>
+        </div>
+
+        <div>
+          <div className="exi-matrix-col-headers">
+            <div></div>
+            <div>Perspective</div>
+            <div>Identity</div>
+          </div>
+          <div className="exi-matrix-grid" style={{marginBottom:8}}>
+            <div className="exi-matrix-label">Individual</div>
+            <div className={`exi-matrix-cell ${actor==='Individual'&&target==='Perspective'?'active':''}`} style={actor==='Individual'&&target==='Perspective'?{background:'#ecfdf5',borderColor:'#34d399'}:{}}>
+              <span className="exi-matrix-cell-name" style={{color:'#065f46'}}>Protected Expression</span>
+            </div>
+            <div className={`exi-matrix-cell ${actor==='Individual'&&target==='Identity'?'active':''}`} style={actor==='Individual'&&target==='Identity'?{background:'#fff7ed',borderColor:'#fb923c'}:{}}>
+              <span className="exi-matrix-cell-name" style={{color:'#9a3412'}}>Personal Discrimination</span>
+            </div>
+          </div>
+          <div className="exi-matrix-grid">
+            <div className="exi-matrix-label">Institution</div>
+            <div className={`exi-matrix-cell ${actor==='Institutional'&&target==='Perspective'?'active':''}`} style={actor==='Institutional'&&target==='Perspective'?{background:'#f5f3ff',borderColor:'#a78bfa'}:{}}>
+              <span className="exi-matrix-cell-name" style={{color:'#5b21b6'}}>Governance Question</span>
+            </div>
+            <div className={`exi-matrix-cell ${actor==='Institutional'&&target==='Identity'?'active':''}`} style={actor==='Institutional'&&target==='Identity'?{background:'#fef2f2',borderColor:'#ef4444',boxShadow:'0 0 0 4px rgba(239,68,68,0.15)'}:{}}>
+              <span className="exi-matrix-cell-name" style={{color:'#991b1b',fontSize:16}}>Exclusive Inclusion</span>
+              <span style={{color:'#dc2626',fontSize:11,marginTop:4}}>The Accountability Void</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// --- Mount ---
+const root = ReactDOM.createRoot(document.getElementById('exi-root'));
+root.render(<App />);
+</script>

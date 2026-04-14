@@ -471,7 +471,7 @@ publications:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6423378"
       published:
       pdf: "/scholarship/updates/ssrn-6423378.md"
-      companion: "https://oranburg.github.io/exclusive-inclusion/"
+      companion: "https://oranburg.github.io/demos/exclusive-inclusion/"
     featured: true
 
   - id: wrong-plaintiff

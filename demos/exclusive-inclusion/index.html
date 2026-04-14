@@ -479,6 +479,7 @@ permalink: /demos/exclusive-inclusion/
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 <script type="text/babel">
+{% raw %}
 const { useState, useMemo } = React;
 
 // --- Equilibrium Solver (Verified) ---
@@ -856,4 +857,5 @@ function Matrix() {
 // --- Mount ---
 const root = ReactDOM.createRoot(document.getElementById('exi-root'));
 root.render(<App />);
+{% endraw %}
 </script>

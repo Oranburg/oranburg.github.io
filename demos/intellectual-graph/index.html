@@ -1,0 +1,208 @@
+---
+layout: default
+title: "Intellectual Graph — Seth C. Oranburg"
+description: "Interactive visualization of the intellectual traditions, thinkers, institutions, and projects that shape Seth C. Oranburg's scholarship."
+permalink: /demos/intellectual-graph/
+---
+
+<style>
+  .graph-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .graph-header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .graph-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  .graph-header p {
+    color: #64748b;
+    font-size: 0.95rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  #graph-svg {
+    width: 100%;
+    height: 700px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #fafbfc;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 0;
+    font-size: 0.85rem;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .tooltip {
+    position: absolute;
+    background: #0f172a;
+    color: #f1f5f9;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    max-width: 300px;
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .tooltip strong { color: #38bdf8; }
+  .synthesis {
+    background: #0f172a;
+    color: #e2e8f0;
+    border-radius: 12px;
+    padding: 24px 32px;
+    margin: 24px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .synthesis em { color: #38bdf8; font-style: normal; }
+</style>
+
+<div class="graph-container">
+  <div class="graph-header">
+    <h1>Intellectual Graph</h1>
+    <p>Five traditions converging on one research program: how organizational rules produce outcomes that diverge from their stated purposes.</p>
+  </div>
+
+  <div class="synthesis">
+    <em>Friedman</em> gives you the right to choose.<br>
+    <em>Novak</em> gives you the wisdom to choose well.
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div> Self</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#8b5cf6"></div> Intellectual Tradition</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div> Thinker</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#10b981"></div> Living Contact</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#ec4899"></div> Institution</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div> Work / Project</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#6366f1"></div> Venue</div>
+  </div>
+
+  <svg id="graph-svg"></svg>
+
+  <p style="text-align:center;color:#94a3b8;font-size:0.8rem;padding:12px 0;">
+    Generated from <a href="https://github.com/Oranburg/LawJ" style="color:#38bdf8">LawJ</a> corpus: 9,516 works, 144 people/places, 75 Oranburg publications (1.75M words).
+    Drag nodes to explore. Hover for details.
+  </p>
+</div>
+
+<div class="tooltip" id="tooltip" style="display:none"></div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+const colors = {
+  self: '#f59e0b',
+  tradition: '#8b5cf6',
+  thinker: '#3b82f6',
+  network: '#10b981',
+  institution: '#ec4899',
+  work: '#ef4444',
+  project: '#ef4444',
+  venue: '#6366f1',
+};
+
+const svg = d3.select('#graph-svg');
+const width = svg.node().getBoundingClientRect().width;
+const height = 700;
+svg.attr('viewBox', [0, 0, width, height]);
+
+const tooltip = d3.select('#tooltip');
+
+d3.json('graph-data.json').then(data => {
+  const simulation = d3.forceSimulation(data.nodes)
+    .force('link', d3.forceLink(data.links).id(d => d.id).distance(d => {
+      if (d.type === 'tradition') return 120;
+      if (d.type === 'personal') return 150;
+      return 80;
+    }))
+    .force('charge', d3.forceManyBody().strength(-200))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force('collision', d3.forceCollide().radius(d => d.size + 5));
+
+  const link = svg.append('g')
+    .selectAll('line')
+    .data(data.links)
+    .join('line')
+    .attr('stroke', d => {
+      if (d.type === 'tradition') return '#8b5cf680';
+      if (d.type === 'personal') return '#10b98140';
+      if (d.type === 'concept') return '#ef444440';
+      return '#94a3b830';
+    })
+    .attr('stroke-width', d => d.type === 'tradition' ? 2.5 : 1);
+
+  const node = svg.append('g')
+    .selectAll('circle')
+    .data(data.nodes)
+    .join('circle')
+    .attr('r', d => d.size)
+    .attr('fill', d => colors[d.group] || '#94a3b8')
+    .attr('stroke', '#fff')
+    .attr('stroke-width', 1.5)
+    .style('cursor', 'pointer')
+    .call(d3.drag()
+      .on('start', (event, d) => {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x; d.fy = d.y;
+      })
+      .on('drag', (event, d) => { d.fx = event.x; d.fy = event.y; })
+      .on('end', (event, d) => {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null; d.fy = null;
+      })
+    );
+
+  const label = svg.append('g')
+    .selectAll('text')
+    .data(data.nodes)
+    .join('text')
+    .text(d => d.label)
+    .attr('font-size', d => d.size > 14 ? '11px' : '9px')
+    .attr('font-weight', d => d.group === 'self' || d.group === 'tradition' ? 'bold' : 'normal')
+    .attr('fill', '#334155')
+    .attr('text-anchor', 'middle')
+    .attr('dy', d => d.size + 14)
+    .style('pointer-events', 'none');
+
+  node.on('mouseover', (event, d) => {
+    let html = `<strong>${d.label}</strong>`;
+    if (d.description) {
+      const desc = Array.isArray(d.description) ? d.description.join(', ') : d.description;
+      html += `<br>${desc}`;
+    }
+    if (d.connection) html += `<br><em>${d.connection}</em>`;
+    tooltip.html(html)
+      .style('display', 'block')
+      .style('left', (event.pageX + 12) + 'px')
+      .style('top', (event.pageY - 20) + 'px');
+  })
+  .on('mouseout', () => tooltip.style('display', 'none'));
+
+  simulation.on('tick', () => {
+    link
+      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    node.attr('cx', d => d.x).attr('cy', d => d.y);
+    label.attr('x', d => d.x).attr('y', d => d.y);
+  });
+});
+</script>

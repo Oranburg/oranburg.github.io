@@ -1,0 +1,1325 @@
+{
+  "nodes": [
+    {
+      "id": "oranburg",
+      "label": "Seth C. Oranburg",
+      "group": "self",
+      "size": 30,
+      "description": "75 works, 1.75M words"
+    },
+    {
+      "id": "chicago",
+      "label": "Chicago Law & Economics",
+      "group": "tradition",
+      "size": 20,
+      "description": "Coase \u2192 Posner \u2192 Epstein \u2192 Bernstein \u2192 Oranburg"
+    },
+    {
+      "id": "virginia",
+      "label": "Virginia Public Choice",
+      "group": "tradition",
+      "size": 20,
+      "description": "Knight \u2192 Buchanan \u2192 Tullock \u2192 Oranburg"
+    },
+    {
+      "id": "catholic",
+      "label": "Catholic Social Teaching",
+      "group": "tradition",
+      "size": 20,
+      "description": "Aquinas \u2192 Novak \u2192 Sacks \u2192 Covenant Fellowship"
+    },
+    {
+      "id": "realism",
+      "label": "Legal Realism / NLR",
+      "group": "tradition",
+      "size": 20,
+      "description": "Holmes \u2192 Pound \u2192 Llewellyn \u2192 Oranburg"
+    },
+    {
+      "id": "relational",
+      "label": "Relational/Network Governance",
+      "group": "tradition",
+      "size": 20,
+      "description": "Macneil \u2192 Ostrom \u2192 Hirschman \u2192 Oranburg"
+    },
+    {
+      "id": "peter-gianiodis",
+      "label": "Peter Gianiodis",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "entrepreneurship",
+        "automation",
+        "venture"
+      ],
+      "connection": "co-author"
+    },
+    {
+      "id": "liya-palagashvili",
+      "label": "Liya Palagashvili",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "gig economy",
+        "labor law",
+        "transaction cost economics"
+      ],
+      "connection": "co-author and CLI fellow"
+    },
+    {
+      "id": "albert-o-hirschman",
+      "label": "Albert O. Hirschman",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "institutional economics",
+        "political economy",
+        "organizational theory"
+      ],
+      "connection": "foundational"
+    },
+    {
+      "id": "andrew-morgan",
+      "label": "Andrew Morgan",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "ethics",
+        "philosophy of language",
+        "bioethics"
+      ],
+      "connection": "IHS contact"
+    },
+    {
+      "id": "michael-brodrick",
+      "label": "Michael Brodrick",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "liberalism",
+        "pluralism",
+        "democracy"
+      ],
+      "connection": "IHS contact"
+    },
+    {
+      "id": "alexander-j-hoffarth",
+      "label": "Alexander J. Hoffarth",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "business associations",
+        "mergers and acquisitions",
+        "law and entrepreneurship"
+      ],
+      "connection": "CUA LEP co-director"
+    },
+    {
+      "id": "henry-n-butler",
+      "label": "Henry N. Butler",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "law and economics",
+        "judicial education",
+        "regulatory policy"
+      ],
+      "connection": "acquaintance (knows reasonably well, senior to Oranburg)"
+    },
+    {
+      "id": "donald-j-kochan",
+      "label": "Donald J. Kochan",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "law and economics",
+        "property law"
+      ],
+      "connection": "acquaintance"
+    },
+    {
+      "id": "james-c-cooper",
+      "label": "James C. Cooper",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "privacy",
+        "data security",
+        "consumer protection"
+      ],
+      "connection": "knows well"
+    },
+    {
+      "id": "paolo-saguato",
+      "label": "Paolo Saguato",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "financial regulation",
+        "fintech",
+        "derivatives"
+      ],
+      "connection": "friend"
+    },
+    {
+      "id": "lee-liberman-otis",
+      "label": "Lee Liberman Otis",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "judicial selection",
+        "constitutional law",
+        "administrative law"
+      ],
+      "connection": "close contact (has cell, will answer)"
+    },
+    {
+      "id": "lisa-bernstein",
+      "label": "Lisa Bernstein",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "contracts",
+        "commercial law",
+        "private governance"
+      ],
+      "connection": "mentor and dear friend"
+    },
+    {
+      "id": "richard-a-epstein",
+      "label": "Richard A. Epstein",
+      "group": "thinker",
+      "size": 16,
+      "description": [
+        "property rights",
+        "constitutional law",
+        "administrative law"
+      ],
+      "connection": "direct supervisor at CLI"
+    },
+    {
+      "id": "mario-rizzo",
+      "label": "Mario Rizzo",
+      "group": "network",
+      "size": 16,
+      "description": [
+        "paternalism",
+        "behavioral economics",
+        "economic theory of rationality"
+      ],
+      "connection": "nominal supervisor at CLI"
+    },
+    {
+      "id": "robert-t-miller",
+      "label": "Robert T. Miller",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "corporate law",
+        "securities law",
+        "fiduciary duties"
+      ],
+      "connection": "close professional friend"
+    },
+    {
+      "id": "miriam-f-elman",
+      "label": "Miriam F. Elman",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "antisemitism",
+        "academic freedom",
+        "Israel studies"
+      ],
+      "connection": "recruited Oranburg to AEN"
+    },
+    {
+      "id": "joshua-suchoff",
+      "label": "Joshua Suchoff",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "nonprofit management",
+        "Jewish education"
+      ],
+      "connection": "close with Rona Kaufman (Oranburg's good friend)"
+    },
+    {
+      "id": "rona-kaufman",
+      "label": "Rona Kaufman",
+      "group": "network",
+      "size": 8,
+      "description": [
+        "family law",
+        "children's rights"
+      ],
+      "connection": "good friend"
+    },
+    {
+      "id": "michael-novak",
+      "label": "Michael Novak",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "democratic capitalism",
+        "Catholic social teaching",
+        "political theology"
+      ],
+      "connection": "foundational intellectual influence (deceased 2017)"
+    },
+    {
+      "id": "israel-kirzner",
+      "label": "Israel Kirzner",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "entrepreneurship",
+        "Austrian economics",
+        "market process"
+      ],
+      "connection": "foundational intellectual influence"
+    },
+    {
+      "id": "frank-knight",
+      "label": "Frank Knight",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "uncertainty",
+        "entrepreneurship",
+        "profit theory"
+      ],
+      "connection": "foundational intellectual influence (deceased)"
+    },
+    {
+      "id": "friedrich-a-hayek",
+      "label": "Friedrich A. Hayek",
+      "group": "thinker",
+      "size": 16,
+      "description": [
+        "spontaneous order",
+        "knowledge problem",
+        "rule of law"
+      ],
+      "connection": "foundational intellectual influence (deceased 1992)"
+    },
+    {
+      "id": "joseph-schumpeter",
+      "label": "Joseph Schumpeter",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "creative destruction",
+        "innovation",
+        "entrepreneurship"
+      ],
+      "connection": "foundational intellectual influence (deceased)"
+    },
+    {
+      "id": "james-m-buchanan",
+      "label": "James M. Buchanan",
+      "group": "thinker",
+      "size": 16,
+      "description": [
+        "public choice",
+        "constitutional economics",
+        "club goods"
+      ],
+      "connection": "foundational intellectual influence (deceased)"
+    },
+    {
+      "id": "richard-a-posner",
+      "label": "Richard A. Posner",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "law and economics",
+        "antitrust",
+        "judicial pragmatism"
+      ],
+      "connection": "foundational intellectual influence; appears in 12 Oranburg "
+    },
+    {
+      "id": "gordon-tullock",
+      "label": "Gordon Tullock",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "public choice",
+        "rent-seeking",
+        "constitutional economics"
+      ],
+      "connection": "foundational intellectual influence (deceased 2014)"
+    },
+    {
+      "id": "ronald-coase",
+      "label": "Ronald Coase",
+      "group": "thinker",
+      "size": 16,
+      "description": [
+        "transaction costs",
+        "theory of the firm",
+        "law and economics"
+      ],
+      "connection": "foundational intellectual influence (deceased)"
+    },
+    {
+      "id": "m-todd-henderson",
+      "label": "M. Todd Henderson",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "corporations",
+        "securities regulation",
+        "law and economics"
+      ],
+      "connection": "professor who taught Oranburg corporations at UChicago"
+    },
+    {
+      "id": "oliver-williamson",
+      "label": "Oliver Williamson",
+      "group": "thinker",
+      "size": 16,
+      "description": [
+        "transaction cost economics",
+        "governance",
+        "opportunism"
+      ],
+      "connection": "foundational (6 texts)"
+    },
+    {
+      "id": "elinor-ostrom",
+      "label": "Elinor Ostrom",
+      "group": "thinker",
+      "size": 16,
+      "description": [
+        "commons",
+        "polycentric governance",
+        "collective action"
+      ],
+      "connection": "foundational (9 texts)"
+    },
+    {
+      "id": "guido-calabresi",
+      "label": "Guido Calabresi",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "law and economics",
+        "property rules",
+        "liability rules"
+      ],
+      "connection": "foundational (8 texts); co-author of framework used in Club "
+    },
+    {
+      "id": "a-douglas-melamed",
+      "label": "A. Douglas Melamed",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "property rules",
+        "liability rules",
+        "antitrust"
+      ],
+      "connection": "foundational (7 texts); co-author of framework used in Club "
+    },
+    {
+      "id": "henry-g-manne",
+      "label": "Henry G. Manne",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "law and economics",
+        "insider trading",
+        "market for corporate control"
+      ],
+      "connection": "foundational (3 texts); founded LEC (model for CUA LEP)"
+    },
+    {
+      "id": "mancur-olson",
+      "label": "Mancur Olson",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "collective action",
+        "public goods",
+        "interest groups"
+      ],
+      "connection": "foundational (10 texts)"
+    },
+    {
+      "id": "frank-easterbrook",
+      "label": "Frank Easterbrook",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "corporate law",
+        "law and economics",
+        "contracts"
+      ],
+      "connection": "foundational (9 texts)"
+    },
+    {
+      "id": "daniel-fischel",
+      "label": "Daniel Fischel",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "corporate law",
+        "securities regulation",
+        "law and economics"
+      ],
+      "connection": "foundational (6 texts)"
+    },
+    {
+      "id": "jonathan-sacks",
+      "label": "Jonathan Sacks",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "covenant",
+        "morality of markets",
+        "dignity of difference"
+      ],
+      "connection": "foundational intellectual influence (2 texts); key to Covena"
+    },
+    {
+      "id": "maimonides",
+      "label": "Maimonides",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "Jewish law",
+        "philosophy",
+        "theology"
+      ],
+      "connection": "foundational; appears in 5 texts; key to body/spirit framing"
+    },
+    {
+      "id": "rabbi-meir-y-soloveichik",
+      "label": "Rabbi Meir Y. Soloveichik",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "Jewish theology",
+        "bioethics",
+        "wartime ethics"
+      ],
+      "connection": "one degree of separation (via Tikvah network)"
+    },
+    {
+      "id": "ze'ev-jabotinsky",
+      "label": "Ze'ev Jabotinsky",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "Revisionist Zionism",
+        "Jewish self-defense",
+        "political philosophy"
+      ],
+      "connection": "foundational intellectual influence (Jewish political though"
+    },
+    {
+      "id": "milton-friedman",
+      "label": "Milton Friedman",
+      "group": "thinker",
+      "size": 16,
+      "description": [
+        "monetarism",
+        "free markets",
+        "shareholder primacy"
+      ],
+      "connection": "foundational (9 texts); taught by Knight"
+    },
+    {
+      "id": "gary-becker",
+      "label": "Gary Becker",
+      "group": "thinker",
+      "size": 16,
+      "description": [
+        "human capital",
+        "economics of discrimination",
+        "family economics"
+      ],
+      "connection": "Oranburg took a course with Becker at UChicago"
+    },
+    {
+      "id": "adam-smith",
+      "label": "Adam Smith",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "political economy",
+        "moral philosophy",
+        "free markets"
+      ],
+      "connection": "foundational (22 texts)"
+    },
+    {
+      "id": "john-locke",
+      "label": "John Locke",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "property rights",
+        "social contract",
+        "natural law"
+      ],
+      "connection": "foundational (5 texts)"
+    },
+    {
+      "id": "thomas-aquinas",
+      "label": "Thomas Aquinas",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "natural law",
+        "theology",
+        "ethics"
+      ],
+      "connection": "foundational (4 texts); namesake of Aquinas Fellowship model"
+    },
+    {
+      "id": "john-rawls",
+      "label": "John Rawls",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "justice as fairness",
+        "veil of ignorance",
+        "political liberalism"
+      ],
+      "connection": "foundational (4 texts); foil for Oranburg's approach"
+    },
+    {
+      "id": "max-weber",
+      "label": "Max Weber",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "Protestant ethic",
+        "bureaucracy",
+        "rationalization"
+      ],
+      "connection": "foundational (3 texts); the thesis the CUA bootcamp flips"
+    },
+    {
+      "id": "aristotle",
+      "label": "Aristotle",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "practical wisdom",
+        "virtue ethics",
+        "politics"
+      ],
+      "connection": "foundational (5 texts); phronesis concept"
+    },
+    {
+      "id": "douglass-north",
+      "label": "Douglass North",
+      "group": "thinker",
+      "size": 16,
+      "description": [
+        "institutional economics",
+        "transaction costs",
+        "economic history"
+      ],
+      "connection": "foundational (21 texts)"
+    },
+    {
+      "id": "oliver-wendell-holmes-jr",
+      "label": "Oliver Wendell Holmes Jr.",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "legal realism",
+        "common law",
+        "pragmatism"
+      ],
+      "connection": "foundational (appears in texts as judge AND thinker); father"
+    },
+    {
+      "id": "karl-llewellyn",
+      "label": "Karl Llewellyn",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "legal realism",
+        "UCC",
+        "commercial law"
+      ],
+      "connection": "foundational intellectual tradition"
+    },
+    {
+      "id": "roscoe-pound",
+      "label": "Roscoe Pound",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "sociological jurisprudence",
+        "law in action",
+        "legal realism"
+      ],
+      "connection": "foundational; coined 'law in action vs law on the books'"
+    },
+    {
+      "id": "ian-macneil",
+      "label": "Ian Macneil",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "relational contract theory",
+        "contract norms",
+        "long-term contracts"
+      ],
+      "connection": "foundational; relational contract theory"
+    },
+    {
+      "id": "stewart-macaulay",
+      "label": "Stewart Macaulay",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "law in action",
+        "non-contractual relations",
+        "empirical contract law"
+      ],
+      "connection": "foundational; pioneer of empirical contract studies"
+    },
+    {
+      "id": "martin-buber",
+      "label": "Martin Buber",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "I-Thou",
+        "dialogue",
+        "existentialism"
+      ],
+      "connection": "foundational (needs Oranburg verification of engagement)"
+    },
+    {
+      "id": "abraham-joshua-heschel",
+      "label": "Abraham Joshua Heschel",
+      "group": "thinker",
+      "size": 12,
+      "description": [
+        "prophetic theology",
+        "Sabbath",
+        "prayer"
+      ],
+      "connection": "foundational (needs Oranburg verification of engagement)"
+    },
+    {
+      "id": "cli",
+      "label": "Classical Liberal Institute",
+      "group": "institution",
+      "size": 14
+    },
+    {
+      "id": "lec",
+      "label": "Law and Economics Center",
+      "group": "institution",
+      "size": 14
+    },
+    {
+      "id": "ihs",
+      "label": "Institute for Humane Studies",
+      "group": "institution",
+      "size": 14
+    },
+    {
+      "id": "aen",
+      "label": "Academic Engagement Network",
+      "group": "institution",
+      "size": 14
+    },
+    {
+      "id": "fedsoc",
+      "label": "Federalist Society for Law and",
+      "group": "institution",
+      "size": 14
+    },
+    {
+      "id": "tikvah",
+      "label": "Tikvah Fund",
+      "group": "institution",
+      "size": 14
+    },
+    {
+      "id": "cit",
+      "label": "Center for the Constitution and the Catholic Intellectual Tradition",
+      "group": "institution",
+      "size": 14
+    },
+    {
+      "id": "ihe",
+      "label": "Institute for Human Ecology",
+      "group": "institution",
+      "size": 14
+    },
+    {
+      "id": "conversation",
+      "label": "The Conversation",
+      "group": "venue",
+      "size": 14
+    },
+    {
+      "id": "cua",
+      "label": "CUA Columbus School of Law",
+      "group": "institution",
+      "size": 14
+    },
+    {
+      "id": "jp",
+      "label": "Judgment Proof",
+      "group": "work",
+      "size": 14
+    },
+    {
+      "id": "lg",
+      "label": "Law & Governance",
+      "group": "work",
+      "size": 14
+    },
+    {
+      "id": "club-good",
+      "label": "Governance as Club Good",
+      "group": "work",
+      "size": 12
+    },
+    {
+      "id": "exi",
+      "label": "Exclusive Inclusion",
+      "group": "work",
+      "size": 10
+    },
+    {
+      "id": "rluipa",
+      "label": "Religious Discrimination",
+      "group": "work",
+      "size": 10
+    },
+    {
+      "id": "covenant",
+      "label": "Covenant Fellowship",
+      "group": "project",
+      "size": 14
+    },
+    {
+      "id": "bootcamp",
+      "label": "CUA Bootcamp",
+      "group": "project",
+      "size": 12
+    },
+    {
+      "id": "templeton",
+      "label": "Templeton OFI",
+      "group": "project",
+      "size": 10
+    }
+  ],
+  "links": [
+    {
+      "source": "oranburg",
+      "target": "chicago",
+      "type": "tradition"
+    },
+    {
+      "source": "oranburg",
+      "target": "virginia",
+      "type": "tradition"
+    },
+    {
+      "source": "oranburg",
+      "target": "catholic",
+      "type": "tradition"
+    },
+    {
+      "source": "oranburg",
+      "target": "realism",
+      "type": "tradition"
+    },
+    {
+      "source": "oranburg",
+      "target": "relational",
+      "type": "tradition"
+    },
+    {
+      "source": "oranburg",
+      "target": "peter-gianiodis",
+      "type": "personal"
+    },
+    {
+      "source": "oranburg",
+      "target": "liya-palagashvili",
+      "type": "personal"
+    },
+    {
+      "source": "albert-o-hirschman",
+      "target": "relational",
+      "type": "member"
+    },
+    {
+      "source": "oranburg",
+      "target": "andrew-morgan",
+      "type": "personal"
+    },
+    {
+      "source": "oranburg",
+      "target": "michael-brodrick",
+      "type": "personal"
+    },
+    {
+      "source": "oranburg",
+      "target": "alexander-j-hoffarth",
+      "type": "personal"
+    },
+    {
+      "source": "oranburg",
+      "target": "henry-n-butler",
+      "type": "personal"
+    },
+    {
+      "source": "oranburg",
+      "target": "donald-j-kochan",
+      "type": "personal"
+    },
+    {
+      "source": "oranburg",
+      "target": "james-c-cooper",
+      "type": "personal"
+    },
+    {
+      "source": "oranburg",
+      "target": "paolo-saguato",
+      "type": "personal"
+    },
+    {
+      "source": "oranburg",
+      "target": "lee-liberman-otis",
+      "type": "personal"
+    },
+    {
+      "source": "lisa-bernstein",
+      "target": "chicago",
+      "type": "member"
+    },
+    {
+      "source": "richard-a-epstein",
+      "target": "chicago",
+      "type": "member"
+    },
+    {
+      "source": "oranburg",
+      "target": "mario-rizzo",
+      "type": "personal"
+    },
+    {
+      "source": "oranburg",
+      "target": "robert-t-miller",
+      "type": "personal"
+    },
+    {
+      "source": "oranburg",
+      "target": "miriam-f-elman",
+      "type": "personal"
+    },
+    {
+      "source": "oranburg",
+      "target": "joshua-suchoff",
+      "type": "personal"
+    },
+    {
+      "source": "oranburg",
+      "target": "rona-kaufman",
+      "type": "personal"
+    },
+    {
+      "source": "michael-novak",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "israel-kirzner",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "frank-knight",
+      "target": "virginia",
+      "type": "member"
+    },
+    {
+      "source": "friedrich-a-hayek",
+      "target": "virginia",
+      "type": "member"
+    },
+    {
+      "source": "joseph-schumpeter",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "james-m-buchanan",
+      "target": "virginia",
+      "type": "member"
+    },
+    {
+      "source": "richard-a-posner",
+      "target": "chicago",
+      "type": "member"
+    },
+    {
+      "source": "gordon-tullock",
+      "target": "virginia",
+      "type": "member"
+    },
+    {
+      "source": "ronald-coase",
+      "target": "chicago",
+      "type": "member"
+    },
+    {
+      "source": "m-todd-henderson",
+      "target": "chicago",
+      "type": "member"
+    },
+    {
+      "source": "oliver-williamson",
+      "target": "relational",
+      "type": "member"
+    },
+    {
+      "source": "elinor-ostrom",
+      "target": "relational",
+      "type": "member"
+    },
+    {
+      "source": "guido-calabresi",
+      "target": "relational",
+      "type": "member"
+    },
+    {
+      "source": "a-douglas-melamed",
+      "target": "relational",
+      "type": "member"
+    },
+    {
+      "source": "henry-g-manne",
+      "target": "chicago",
+      "type": "member"
+    },
+    {
+      "source": "mancur-olson",
+      "target": "virginia",
+      "type": "member"
+    },
+    {
+      "source": "frank-easterbrook",
+      "target": "chicago",
+      "type": "member"
+    },
+    {
+      "source": "daniel-fischel",
+      "target": "chicago",
+      "type": "member"
+    },
+    {
+      "source": "jonathan-sacks",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "maimonides",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "rabbi-meir-y-soloveichik",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "ze'ev-jabotinsky",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "milton-friedman",
+      "target": "chicago",
+      "type": "member"
+    },
+    {
+      "source": "gary-becker",
+      "target": "chicago",
+      "type": "member"
+    },
+    {
+      "source": "adam-smith",
+      "target": "chicago",
+      "type": "member"
+    },
+    {
+      "source": "john-locke",
+      "target": "realism",
+      "type": "member"
+    },
+    {
+      "source": "thomas-aquinas",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "john-rawls",
+      "target": "realism",
+      "type": "member"
+    },
+    {
+      "source": "max-weber",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "aristotle",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "douglass-north",
+      "target": "virginia",
+      "type": "member"
+    },
+    {
+      "source": "oliver-wendell-holmes-jr",
+      "target": "realism",
+      "type": "member"
+    },
+    {
+      "source": "karl-llewellyn",
+      "target": "realism",
+      "type": "member"
+    },
+    {
+      "source": "roscoe-pound",
+      "target": "realism",
+      "type": "member"
+    },
+    {
+      "source": "ian-macneil",
+      "target": "relational",
+      "type": "member"
+    },
+    {
+      "source": "stewart-macaulay",
+      "target": "realism",
+      "type": "member"
+    },
+    {
+      "source": "martin-buber",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "abraham-joshua-heschel",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "oranburg",
+      "target": "cli",
+      "type": "institution"
+    },
+    {
+      "source": "cli",
+      "target": "chicago",
+      "type": "member"
+    },
+    {
+      "source": "oranburg",
+      "target": "lec",
+      "type": "institution"
+    },
+    {
+      "source": "lec",
+      "target": "virginia",
+      "type": "member"
+    },
+    {
+      "source": "oranburg",
+      "target": "ihs",
+      "type": "institution"
+    },
+    {
+      "source": "ihs",
+      "target": "virginia",
+      "type": "member"
+    },
+    {
+      "source": "oranburg",
+      "target": "aen",
+      "type": "institution"
+    },
+    {
+      "source": "oranburg",
+      "target": "fedsoc",
+      "type": "institution"
+    },
+    {
+      "source": "oranburg",
+      "target": "tikvah",
+      "type": "institution"
+    },
+    {
+      "source": "tikvah",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "oranburg",
+      "target": "cit",
+      "type": "institution"
+    },
+    {
+      "source": "cit",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "oranburg",
+      "target": "ihe",
+      "type": "institution"
+    },
+    {
+      "source": "ihe",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "oranburg",
+      "target": "conversation",
+      "type": "institution"
+    },
+    {
+      "source": "oranburg",
+      "target": "cua",
+      "type": "institution"
+    },
+    {
+      "source": "cua",
+      "target": "catholic",
+      "type": "member"
+    },
+    {
+      "source": "oranburg",
+      "target": "jp",
+      "type": "work"
+    },
+    {
+      "source": "oranburg",
+      "target": "lg",
+      "type": "work"
+    },
+    {
+      "source": "oranburg",
+      "target": "club-good",
+      "type": "work"
+    },
+    {
+      "source": "oranburg",
+      "target": "exi",
+      "type": "work"
+    },
+    {
+      "source": "oranburg",
+      "target": "rluipa",
+      "type": "work"
+    },
+    {
+      "source": "oranburg",
+      "target": "covenant",
+      "type": "work"
+    },
+    {
+      "source": "oranburg",
+      "target": "bootcamp",
+      "type": "work"
+    },
+    {
+      "source": "oranburg",
+      "target": "templeton",
+      "type": "work"
+    },
+    {
+      "source": "jp",
+      "target": "virginia",
+      "type": "concept"
+    },
+    {
+      "source": "jp",
+      "target": "catholic",
+      "type": "concept"
+    },
+    {
+      "source": "jp",
+      "target": "realism",
+      "type": "concept"
+    },
+    {
+      "source": "lg",
+      "target": "virginia",
+      "type": "concept"
+    },
+    {
+      "source": "lg",
+      "target": "relational",
+      "type": "concept"
+    },
+    {
+      "source": "club-good",
+      "target": "virginia",
+      "type": "concept"
+    },
+    {
+      "source": "exi",
+      "target": "realism",
+      "type": "concept"
+    },
+    {
+      "source": "exi",
+      "target": "virginia",
+      "type": "concept"
+    },
+    {
+      "source": "rluipa",
+      "target": "virginia",
+      "type": "concept"
+    },
+    {
+      "source": "rluipa",
+      "target": "realism",
+      "type": "concept"
+    },
+    {
+      "source": "covenant",
+      "target": "catholic",
+      "type": "concept"
+    },
+    {
+      "source": "bootcamp",
+      "target": "catholic",
+      "type": "concept"
+    },
+    {
+      "source": "bootcamp",
+      "target": "chicago",
+      "type": "concept"
+    },
+    {
+      "source": "templeton",
+      "target": "covenant",
+      "type": "concept"
+    }
+  ]
+}

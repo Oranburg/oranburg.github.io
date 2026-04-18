@@ -551,7 +551,7 @@ publications:
       ssrn:
       published: "https://www.americanbar.org/groups/business_law/resources/business-lawyer/2022-summer/the-unintended-consequences-of-mandatory-esg-disclosures/"
       pdf: "/assets/pdfs/the-unintended-consequences-of-mandatory-esg-disclosures.pdf"
-      companion: "/equally-poor/"
+      companion:
     featured: false
 
   - id: online-onboarding
@@ -840,7 +840,7 @@ publications:
       ssrn:
       published: "https://cap-press.com/books/isbn/9781531034375/Protecting-Trade-Secrets"
       pdf:
-      companion: "/PTS/"
+      companion: "/courses/trade-secrets/"
     featured: true
 
   - id: valuing-trade-secrets
@@ -885,7 +885,7 @@ publications:
     tags: [antisemitism, anti-Zionism, free speech, higher education, Israel]
     links:
       ssrn:
-      published: "https://academicengagement.org/wp-content/uploads/2025/08/AEN_Research-Paper-Oranburg.md"
+      published: "https://academicengagement.org/wp-content/uploads/2025/08/AEN_Research-Paper-Oranburg.pdf"
       pdf: "/assets/pdfs/beyond-the-ivory-tower.pdf"
       companion:
     featured: false
@@ -917,6 +917,8 @@ publications:
       companion: "https://oranburg.github.io/BA/"
     featured: true
     exclude_from: [explorer]
+
+  - id: judgment-proof
     title: "Judgment Proof: The Reign of the Safety Machine versus the Recovery of Human Wisdom"
     type: book
     year: 2026
@@ -971,7 +973,7 @@ publications:
       ssrn:
       published:
       pdf:
-      companion: "/law-governance/"
+      companion:
     featured: false
     exclude_from: [explorer]
 

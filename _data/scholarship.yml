@@ -868,6 +868,27 @@ publications:
 
   # ---- INSTITUTIONAL REFORM & CIVIL SOCIETY ----
 
+  - id: why-not-zionist
+    title: "Why I Am Not a Zionist"
+    type: article
+    year: 2026
+    status: forthcoming
+    journal: "Shofar: An Interdisciplinary Journal of Jewish Studies"
+    citation: "Seth C. Oranburg, Why I Am Not a Zionist, Shofar (forthcoming 2026)."
+    coauthors: []
+    abstract: >
+      Examines the distinction between Jewish identity and political Zionism
+      through a legal and philosophical lens. Develops a framework grounded
+      in classical Jewish thought and liberal legal theory.
+    cluster: civil-society
+    tags: [Jewish identity, Zionism, political philosophy, religious liberty]
+    links:
+      ssrn:
+      published:
+      pdf:
+      companion:
+    featured: false
+
   - id: beyond-ivory-tower
     title: "Beyond the Ivory Tower: Confronting Antisemitism, Anti-Zionism, and Free Speech Through Firsthand Observation and Engagement"
     type: article
@@ -1006,10 +1027,10 @@ publications:
   - id: sovereign-charities
     title: "Legitimate University Governance"
     type: article
-    year: 2025
-    status: published
+    year: 2026
+    status: forthcoming
     journal:
-    citation: "Seth C. Oranburg, Legitimate University Governance (2025)."
+    citation: "Seth C. Oranburg, Legitimate University Governance (forthcoming 2026)."
     coauthors: []
     abstract: >
       Develops the concept of "sovereign charities" — elite private universities

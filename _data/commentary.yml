@@ -20,18 +20,41 @@ items:
 
   # ---- 2026 ----
 
+  - title: "Local Municipalities Weaponize Bureaucracy Against Prayer"
+    type: op-ed
+    outlet: Daily Caller
+    date: 2026-04-19
+    url: "https://dailycaller.com/2026/04/19/opinion-local-municipalities-weaponize-bureaucracy-against-prayer-seth-c-oranburg/"
+    perma:
+    excerpt: >
+      Local zoning boards and permitting offices have become unlikely weapons
+      against religious communities. When bureaucratic process replaces
+      outright prohibition, the effect on houses of worship is the same.
+    featured: true
+
+  - title: "Two Jews, Three Opinions on Campus Antisemitism"
+    type: op-ed
+    outlet: Daily Signal
+    date: 2026-02-28
+    url: "https://www.dailysignal.com/2026/02/28/two-jews-three-opinions-on-campus-antisemitism/"
+    perma:
+    featured: false
+
+  - title: "Rebranded DEI Offices Won't Ensure Religious Liberty"
+    type: op-ed
+    outlet: Washington Examiner
+    date: 2026-02-26
+    url:
+    perma: "https://perma.cc/H5A8-S49Z"
+    featured: false
+
   - title: "Big Banks Destroying Digital Dollars"
     type: op-ed
     outlet: The Center Square
     date: 2026-02-06
     url: "https://www.thecentersquare.com/opinion/article_401b483d-71a6-4f10-98ba-603642c1d764.html"
     perma:
-    excerpt: >
-      Wall Street gridlocks the CLARITY Act to secure its monopoly, risks
-      handing financial hegemony to China. On January 1, 2026, China made its
-      digital yuan interest-bearing. Fourteen days later, the U.S. Senate
-      postponed a critical vote on whether digital dollars can pay interest, too.
-    featured: true
+    featured: false
 
   # ---- 2025 ----
 

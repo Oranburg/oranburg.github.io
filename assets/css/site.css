@@ -601,7 +601,6 @@ details.embed[open] summary {
 
 .contact-form-status {
   margin: var(--space-md) 0 0;
-  min-height: var(--space-lg);
   font-size: 0.95rem;
 }
 

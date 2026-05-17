@@ -12,7 +12,7 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
 <div class="contact-page-grid">
   <div class="contact-form-box">
     <h2>Send Me a Message</h2>
-    <form id="contactForm" onsubmit="return sendEmail(event)">
+    <form id="contactForm" action="{{ site.contact_form_endpoint }}" method="POST" onsubmit="return submitContactForm(event)">
       <div class="form-group">
         <label for="name">Name *</label>
         <input type="text" id="name" name="name" required>
@@ -33,7 +33,14 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
         <textarea id="message" name="message" required></textarea>
       </div>
 
-      <button type="submit" class="submit-btn">Send Message</button>
+      <div class="contact-form-honeypot" aria-hidden="true">
+        <label for="website">Website</label>
+        <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+
+      <input type="hidden" name="_subject" value="[Website Contact] New message from oranburg.law">
+      <button type="submit" class="submit-btn" id="contactSubmitBtn">Send Message</button>
+      <p id="contactFormStatus" class="contact-form-status" role="status" aria-live="polite"></p>
     </form>
   </div>
 
@@ -42,20 +49,48 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
     <p>Professor of Law</p>
     <p>University of New Hampshire Franklin Pierce School of Law</p>
     <p>Licensed to practice law in New Hampshire, California, and the District of Columbia</p>
-    <p class="contact-hint">Use the form to send me a message &mdash; it will open your email client with the details pre-filled.</p>
+    <p class="contact-hint">Use the form to send me a private message directly.</p>
   </div>
 </div>
 
 <script>
-function sendEmail(event) {
+async function submitContactForm(event) {
   event.preventDefault();
-  var name    = document.getElementById('name').value;
-  var email   = document.getElementById('email').value;
-  var subject = document.getElementById('subject').value;
-  var message = document.getElementById('message').value;
-  var emailSubject = encodeURIComponent('[Website Contact] ' + subject);
-  var emailBody = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
-  window.location.href = 'mailto:sco259@nyu.edu?subject=' + emailSubject + '&body=' + emailBody;
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('contactFormStatus');
+  var submitBtn = document.getElementById('contactSubmitBtn');
+
+  if (!form.action || form.action.trim() === '') {
+    status.textContent = 'Contact form is not configured yet. Please check back shortly.';
+    status.className = 'contact-form-status error';
+    return false;
+  }
+
+  status.textContent = 'Sending...';
+  status.className = 'contact-form-status';
+  submitBtn.disabled = true;
+
+  try {
+    var response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (!response.ok) {
+      throw new Error('Submission failed');
+    }
+
+    form.reset();
+    status.textContent = 'Thank you — your message was sent.';
+    status.className = 'contact-form-status success';
+  } catch (error) {
+    status.textContent = 'Sorry, your message could not be sent. Please try again.';
+    status.className = 'contact-form-status error';
+  } finally {
+    submitBtn.disabled = false;
+  }
+
   return false;
 }
 </script>

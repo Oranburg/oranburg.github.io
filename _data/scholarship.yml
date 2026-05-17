@@ -1029,8 +1029,8 @@ publications:
     type: article
     year: 2026
     status: forthcoming
-    journal:
-    citation: "Seth C. Oranburg, Legitimate University Governance (forthcoming 2026)."
+    journal: "Dartmouth Law Review"
+    citation: "Seth C. Oranburg, Legitimate University Governance, Dartmouth L. Rev. (forthcoming 2026)."
     coauthors: []
     abstract: >
       Develops the concept of "sovereign charities" — elite private universities
@@ -1045,7 +1045,7 @@ publications:
       published:
       pdf:
       companion:
-    featured: false
+    featured: true
 
   - id: university-disentanglement
     title: "University Disentanglement: Toward a Theory of University Governance"

@@ -2,7 +2,9 @@ title: Seth C. Oranburg
 description: "Law professor and scholar researching how technological disruption destabilizes moral norms and social trust, and how legal design can restore integrity to markets and institutions."
 baseurl: ""
 url: "https://oranburg.law"
-contact_form_endpoint: ""
+# Web3Forms access key — get one free at https://web3forms.com (no account needed,
+# just enter your email and they send you a key). Paste it between the quotes.
+web3forms_access_key: "1f621cd8-66ab-4b92-9f3c-1b3805e67a52"
 
 # Author (used by jekyll-seo-tag for Person schema)
 author:

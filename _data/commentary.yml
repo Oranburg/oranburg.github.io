@@ -20,6 +20,19 @@ items:
 
   # ---- 2026 ----
 
+  - title: "End the Crypto Culture Wars with CLARITY"
+    type: op-ed
+    outlet: Washington Reporter
+    date: 2026-05-14
+    url: "https://washingtonreporter.news/op-ed-seth-oranburg-end-the-crypto-culture-wars-with-clarity/"
+    perma: "https://perma.cc/485P-T376"
+    excerpt: >
+      The CLARITY Act offers Congress a way out of the partisan stalemate over
+      digital assets. Replacing the seventy-five-year-old Howey test with a
+      lifecycle-phase framework would give markets a rule that reflects how
+      crypto actually works.
+    featured: true
+
   - title: "Local Municipalities Weaponize Bureaucracy Against Prayer"
     type: op-ed
     outlet: Daily Caller
@@ -30,7 +43,7 @@ items:
       Local zoning boards and permitting offices have become unlikely weapons
       against religious communities. When bureaucratic process replaces
       outright prohibition, the effect on houses of worship is the same.
-    featured: true
+    featured: false
 
   - title: "Two Jews, Three Opinions on Campus Antisemitism"
     type: op-ed

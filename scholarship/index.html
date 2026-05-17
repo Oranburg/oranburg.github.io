@@ -15,6 +15,30 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
   <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2256355" target="_blank" rel="noopener" class="cta-link">View All Papers on SSRN &rarr;</a>
 </div>
 
+<h2>Research Highlights</h2>
+<p>Selected recent work and flagship publications.</p>
+{% assign highlights = site.data.scholarship.publications | where: "featured", true | sort: "year" | reverse %}
+{% if highlights.size > 0 %}
+<ul class="article-list">
+  {% for pub in highlights %}
+    {% unless pub.exclude_from contains 'web' %}
+    <li class="article-item">
+      <div class="article-title">{{ pub.title }}</div>
+      <div class="article-journal">
+        {% if pub.journal %}{{ pub.journal }}{% endif %}
+        {% if pub.year %}{% if pub.journal %}, {% endif %}{% if pub.status == 'forthcoming' %}forthcoming {% endif %}{{ pub.year }}{% endif %}
+        {% if pub.coauthors.size > 0 %} (with {{ pub.coauthors | array_to_sentence_string }}){% endif %}
+        {% if pub.links.ssrn %} | <a href="{{ pub.links.ssrn }}" target="_blank">SSRN</a>{% endif %}
+        {% if pub.links.published %} | <a href="{{ pub.links.published }}" target="_blank">Full Text</a>{% endif %}
+        {% if pub.links.pdf %} | <a href="{{ pub.links.pdf }}" target="_blank">PDF</a>{% endif %}
+      </div>
+      <div class="article-abstract">{{ pub.abstract }}</div>
+    </li>
+    {% endunless %}
+  {% endfor %}
+</ul>
+{% endif %}
+
 <h2>Featured Video</h2>
 <p>Chump Protection Technology &mdash; a talk on how law can protect ordinary people from exploitation in digital markets.</p>
 <details class="embed">

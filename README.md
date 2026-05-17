@@ -16,6 +16,18 @@ bundle exec jekyll serve --livereload
 
 Open <http://localhost:4000> in your browser. Changes to posts and layouts are picked up automatically.
 
+### Contact form setup
+
+The contact page submits to a backend form endpoint configured in `_config.yml`:
+
+```yml
+contact_form_endpoint: ""
+```
+
+Set it to your real endpoint (for example, from Formspree) so messages are delivered without exposing your email address in page source.
+
+Note: the contact form currently includes Formspree-style helper fields (`_subject` and `_gotcha`). If you use a different backend service, update those field names to match that service’s API.
+
 ---
 
 ## Adding a New Post from iA Writer

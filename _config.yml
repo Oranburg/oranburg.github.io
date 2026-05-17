@@ -2,6 +2,7 @@ title: Seth C. Oranburg
 description: "Law professor and scholar researching how technological disruption destabilizes moral norms and social trust, and how legal design can restore integrity to markets and institutions."
 baseurl: ""
 url: "https://oranburg.law"
+contact_form_endpoint: ""
 
 # Author (used by jekyll-seo-tag for Person schema)
 author:

@@ -1670,7 +1670,7 @@ details.embed[open] summary {
 }
 
 .section-desc {
-  color: var(--accent-2);
+  color: var(--muted);
   margin-bottom: var(--space-lg);
   font-style: italic;
 }
@@ -1728,5 +1728,5 @@ details.embed[open] summary {
 .media-kit-photo figcaption {
   margin-top: var(--space-sm);
   font-size: 0.85rem;
-  color: var(--accent-2);
+  color: var(--muted);
 }

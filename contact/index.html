@@ -12,7 +12,7 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
 <div class="contact-page-grid">
   <div class="contact-form-box">
     <h2>Send Me a Message</h2>
-    <form id="contactForm" action="{{ site.contact_form_endpoint }}" method="POST" onsubmit="return submitContactForm(event)">
+    <form id="contactForm" action="{{ site.contact_form_endpoint }}" data-endpoint="{{ site.contact_form_endpoint }}" method="POST" onsubmit="return submitContactForm(event)">
       <div class="form-group">
         <label for="name">Name *</label>
         <input type="text" id="name" name="name" required>
@@ -49,7 +49,7 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
     <p>Professor of Law</p>
     <p>University of New Hampshire Franklin Pierce School of Law</p>
     <p>Licensed to practice law in New Hampshire, California, and the District of Columbia</p>
-    <p class="contact-hint">Use the form to send me a private message directly.</p>
+    <p class="contact-hint">Use the form to send me a private message.</p>
   </div>
 </div>
 
@@ -57,10 +57,11 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
 async function submitContactForm(event) {
   event.preventDefault();
   var form = document.getElementById('contactForm');
+  var endpoint = (form.getAttribute('data-endpoint') || '').trim();
   var status = document.getElementById('contactFormStatus');
   var submitBtn = document.getElementById('contactSubmitBtn');
 
-  if (!form.action || form.action.trim() === '') {
+  if (!endpoint) {
     status.textContent = 'Contact form is not configured yet. Please check back shortly.';
     status.className = 'contact-form-status error';
     return false;
@@ -71,7 +72,7 @@ async function submitContactForm(event) {
   submitBtn.disabled = true;
 
   try {
-    var response = await fetch(form.action, {
+    var response = await fetch(endpoint, {
       method: 'POST',
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }

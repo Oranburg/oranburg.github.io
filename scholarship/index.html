@@ -27,7 +27,7 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
       <div class="article-journal">
         {% if pub.journal %}{{ pub.journal }}{% endif %}
         {% if pub.year %}{% if pub.journal %}, {% endif %}{% if pub.status == 'forthcoming' %}forthcoming {% endif %}{{ pub.year }}{% endif %}
-        {% if pub.coauthors.size > 0 %} (with {{ pub.coauthors | join: " and " }}){% endif %}
+        {% if pub.coauthors.size > 0 %} (with {{ pub.coauthors | array_to_sentence_string }}){% endif %}
         {% if pub.links.ssrn %} | <a href="{{ pub.links.ssrn }}" target="_blank">SSRN</a>{% endif %}
         {% if pub.links.published %} | <a href="{{ pub.links.published }}" target="_blank">Full Text</a>{% endif %}
         {% if pub.links.pdf %} | <a href="{{ pub.links.pdf }}" target="_blank">PDF</a>{% endif %}

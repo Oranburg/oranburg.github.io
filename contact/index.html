@@ -79,7 +79,7 @@ async function submitContactForm(event) {
     });
 
     if (!response.ok) {
-      throw new Error('Submission failed');
+      throw new Error('Submission failed with status ' + response.status);
     }
 
     form.reset();

@@ -35,7 +35,7 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
 
       <div class="contact-form-honeypot" aria-hidden="true">
         <label for="website">Website</label>
-        <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+        <input type="text" id="website" name="_gotcha" autocomplete="off">
       </div>
 
       <input type="hidden" name="_subject" value="[Website Contact] New message from {{ site.url | default: site.title }}">
@@ -60,7 +60,7 @@ async function submitContactForm(event) {
   var status = document.getElementById('contactFormStatus');
   var submitBtn = document.getElementById('contactSubmitBtn');
 
-  if (!form.action || form.action.trim() === '' || form.action.indexOf('/your-form-id') !== -1) {
+  if (!form.action || form.action.trim() === '') {
     status.textContent = 'Contact form is not configured yet. Please check back shortly.';
     status.className = 'contact-form-status error';
     return false;

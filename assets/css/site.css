@@ -1657,16 +1657,44 @@ details.embed[open] summary {
 
 .press-section,
 .media-kit-section,
-.cv-section {
+.cv-section,
+.start-section,
+.now-section {
   margin: var(--space-2xl) 0;
 }
 
 .press-section h2,
 .media-kit-section h2,
-.cv-section h2 {
+.cv-section h2,
+.start-section h2,
+.now-section h2 {
   border-bottom: 2px solid var(--accent);
   padding-bottom: var(--space-sm);
   margin-bottom: var(--space-md);
+}
+
+.start-list,
+.start-ordered {
+  line-height: 1.8;
+  padding-left: var(--space-lg);
+}
+
+.start-list li,
+.start-ordered li {
+  margin-bottom: var(--space-md);
+}
+
+.start-section h3 {
+  color: var(--accent);
+  margin-top: var(--space-xl);
+}
+
+.start-here-cta {
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--yellow);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 4px;
+  margin: var(--space-lg) 0;
 }
 
 .section-desc {

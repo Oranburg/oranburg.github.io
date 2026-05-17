@@ -914,12 +914,12 @@ publications:
   # ---- FORTHCOMING BOOKS (not yet published) ----
 
   - id: business-associations-book
-    title: "Business Associations: Law of the Firm"
+    title: "Business Associations: Law in Theory and Practice"
     type: book
     year: 2027
     status: forthcoming
     journal: "Aspen Press"
-    citation: "Seth C. Oranburg, Business Associations: Law of the Firm (Aspen Press, forthcoming 2027)."
+    citation: "Seth C. Oranburg, Business Associations: Law in Theory and Practice (Aspen Press, forthcoming 2027)."
     coauthors: []
     abstract: >
       A student treatise organized around the question "Why does business

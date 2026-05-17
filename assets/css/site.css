@@ -1652,3 +1652,81 @@ details.embed[open] summary {
   outline: 2px solid var(--yellow);
   outline-offset: 2px;
 }
+
+/* ---------- Press, Media Kit, CV pages ---------- */
+
+.press-section,
+.media-kit-section,
+.cv-section {
+  margin: var(--space-2xl) 0;
+}
+
+.press-section h2,
+.media-kit-section h2,
+.cv-section h2 {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.section-desc {
+  color: var(--accent-2);
+  margin-bottom: var(--space-lg);
+  font-style: italic;
+}
+
+.cv-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cv-list li {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--bg-soft);
+  line-height: 1.6;
+}
+
+.cv-list li:last-child {
+  border-bottom: none;
+}
+
+.bio-block {
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--accent);
+  padding: var(--space-lg);
+  border-radius: 4px;
+  margin-bottom: var(--space-lg);
+}
+
+.bio-block p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.media-kit-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.media-kit-photo {
+  margin: 0;
+  background: var(--bg-secondary);
+  padding: var(--space-sm);
+  border-radius: 4px;
+}
+
+.media-kit-photo img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.media-kit-photo figcaption {
+  margin-top: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--accent-2);
+}

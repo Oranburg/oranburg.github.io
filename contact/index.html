@@ -62,7 +62,7 @@ async function submitContactForm(event) {
   var submitBtn = document.getElementById('contactSubmitBtn');
 
   if (!endpoint) {
-    status.textContent = 'Contact form is not configured yet. Please check back shortly.';
+    status.textContent = 'Contact form is not configured yet. Please try again later.';
     status.className = 'contact-form-status error';
     return false;
   }

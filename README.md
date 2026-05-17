@@ -21,10 +21,10 @@ Open <http://localhost:4000> in your browser. Changes to posts and layouts are p
 The contact page submits to a backend form endpoint configured in `_config.yml`:
 
 ```yml
-contact_form_endpoint: "https://formspree.io/f/your-form-id"
+contact_form_endpoint: ""
 ```
 
-Replace this with your real endpoint (for example, from Formspree) so messages are delivered without exposing your email address in page source.
+Set it to your real endpoint (for example, from Formspree) so messages are delivered without exposing your email address in page source.
 
 ---
 

@@ -22,8 +22,7 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
 <ul class="article-list">
   {% for pub in highlights %}
     {% unless pub.exclude_from contains 'web' %}
-    <li class="article-item" role="button" tabindex="0" onclick="toggleAbstract(this, event)" onkeydown="handleArticleKey(event, this)">
-      <span class="expand-indicator">+</span>
+    <li class="article-item">
       <div class="article-title">{{ pub.title }}</div>
       <div class="article-journal">
         {% if pub.journal %}{{ pub.journal }}{% endif %}

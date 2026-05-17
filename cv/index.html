@@ -1,0 +1,119 @@
+---
+layout: default
+title: Curriculum Vitae
+permalink: /cv/
+tagline: "Law Professor | Fintech Scholar | Public Commentator"
+description: "Curriculum vitae of Professor Seth C. Oranburg: positions, education, books, articles, op-eds, and public service."
+---
+
+<div class="hub-intro">
+  <h1>Curriculum Vitae</h1>
+  <p>Last updated {{ site.time | date: "%B %Y" }}. This page is generated from the same data that drives the site, so it reflects current state.</p>
+</div>
+
+<section class="cv-section">
+  <h2>Positions</h2>
+  <ul class="cv-list">
+    <li><strong>Professor of Law</strong>, Catholic University of America Columbus School of Law (beginning August 2026)</li>
+    <li><strong>Co-Director</strong>, Law and Entrepreneurship Program, Catholic University of America Columbus School of Law (beginning August 2026)</li>
+    <li><strong>Commissioner</strong>, New Hampshire Commission to Study Stable Tokens (HB 310)</li>
+    <li><strong>Director</strong>, Program on Organizations, Business and Markets, NYU School of Law Classical Liberal Institute</li>
+    <li><strong>Chair</strong>, Law Faculty Section, Academic Engagement Network</li>
+    <li><strong>Fellow</strong>, Faculty of Law, Haifa Center for Law and Technology</li>
+  </ul>
+</section>
+
+<section class="cv-section">
+  <h2>Education</h2>
+  <ul class="cv-list">
+    <li><strong>J.D., with honors</strong>, University of Chicago Law School</li>
+    <li><strong>B.A., magna cum laude</strong>, University of Florida</li>
+  </ul>
+</section>
+
+<section class="cv-section">
+  <h2>Bar Admissions</h2>
+  <ul class="cv-list">
+    <li>New Hampshire</li>
+    <li>California</li>
+    <li>District of Columbia</li>
+  </ul>
+</section>
+
+<section class="cv-section">
+  <h2>Teaching Honors</h2>
+  <ul class="cv-list">
+    <li>University Excellence in Teaching Award (2024)</li>
+    <li>Center for Teaching Excellence Inclusive Teaching Award (2021)</li>
+    <li>Presidential Scholarship Award (2019)</li>
+  </ul>
+</section>
+
+<section class="cv-section">
+  <h2>Books</h2>
+  {% assign books = site.data.scholarship.publications | where: "type", "book" | sort: "year" | reverse %}
+  <ul class="cv-list">
+    {% for pub in books %}
+    <li>
+      <strong>{{ pub.title }}</strong>
+      {% if pub.journal %} ({{ pub.journal }}{% if pub.status == 'forthcoming' %}, forthcoming {{ pub.year }}{% elsif pub.year %}, {{ pub.year }}{% endif %}){% endif %}
+      {% if pub.coauthors.size > 0 %} with {{ pub.coauthors | join: " and " }}{% endif %}
+      {% if pub.links.published %} (<a href="{{ pub.links.published }}" target="_blank" rel="noopener noreferrer">publisher</a>){% endif %}
+      {% if pub.links.companion %} (<a href="{{ pub.links.companion }}" target="_blank" rel="noopener noreferrer">companion site</a>){% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="cv-section">
+  <h2>Articles</h2>
+  {% assign all_pubs = site.data.scholarship.publications %}
+  {% assign articles = "" | split: "" %}
+  {% for p in all_pubs %}{% unless p.type == "book" %}{% assign articles = articles | push: p %}{% endunless %}{% endfor %}
+  {% assign articles_sorted = articles | sort: "year" | reverse %}
+  <ul class="cv-list">
+    {% for pub in articles_sorted %}
+    <li>
+      {% if pub.citation %}{{ pub.citation }}{% else %}<em>{{ pub.title }}</em>{% if pub.journal %}, {{ pub.journal }}{% endif %} ({% if pub.status == 'forthcoming' %}forthcoming {% endif %}{{ pub.year }}){% endif %}
+      {% if pub.links.ssrn %} <a href="{{ pub.links.ssrn }}" target="_blank" rel="noopener noreferrer">[SSRN]</a>{% endif %}
+      {% if pub.links.published %} <a href="{{ pub.links.published }}" target="_blank" rel="noopener noreferrer">[full text]</a>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="cv-section">
+  <h2>Op-Eds &amp; Public Commentary</h2>
+  {% assign opeds = site.data.commentary.items | where: "type", "op-ed" | sort: "date" | reverse %}
+  <ul class="cv-list">
+    {% for item in opeds %}
+    <li>
+      <em>{{ item.title }}</em>, {{ item.outlet }}{% if item.date %} ({{ item.date | date: "%B %-d, %Y" }}){% endif %}
+      {% if item.perma %} <a href="{{ item.perma }}" target="_blank" rel="noopener noreferrer">[perma]</a>
+      {% elsif item.url %} <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">[link]</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="cv-section">
+  <h2>Podcast Appearances</h2>
+  {% assign podcasts = site.data.commentary.items | where: "type", "podcast" | sort: "date" | reverse %}
+  <ul class="cv-list">
+    {% for item in podcasts %}
+    <li>
+      <em>{{ item.title }}</em>, {{ item.outlet }}{% if item.date %} ({{ item.date | date: "%B %-d, %Y" }}){% endif %}
+      {% if item.perma %} <a href="{{ item.perma }}" target="_blank" rel="noopener noreferrer">[perma]</a>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="cv-section">
+  <h2>Practice</h2>
+  <ul class="cv-list">
+    <li>Venture finance and emerging-company law, <strong>Fenwick &amp; West LLP</strong>, Silicon Valley</li>
+    <li>Antitrust law, <strong>Cadwalader, Wickersham &amp; Taft</strong>, Washington, D.C.</li>
+  </ul>
+</section>

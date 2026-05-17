@@ -1,0 +1,108 @@
+---
+layout: default
+title: Press &amp; Public Commentary
+permalink: /press/
+tagline: "Law Professor | Fintech Scholar | Public Commentator"
+description: "Op-eds, podcast appearances, and media commentary by Professor Seth C. Oranburg on financial regulation, digital assets, university governance, and the rule of law."
+---
+
+<div class="hub-intro">
+  <h1>Press &amp; Public Commentary</h1>
+  <p>Op-eds, podcast appearances, broadcast quotes, and video commentary on financial regulation, digital assets, governance, and academic freedom. For interview requests or speaking inquiries, see the <a href="/media-kit/">media kit</a>.</p>
+</div>
+
+<section class="press-section">
+  <h2>Op-Eds</h2>
+  <p class="section-desc">Opinion pieces in national outlets on financial regulation, digital assets, and institutional governance.</p>
+  {% assign opeds = site.data.commentary.items | where: "type", "op-ed" | sort: "date" | reverse %}
+  <ul class="article-list">
+    {% for item in opeds %}
+    <li class="article-item">
+      {% if item.perma or item.url %}
+      <a href="{{ item.perma | default: item.url }}" target="_blank" rel="noopener noreferrer">
+        <div class="article-title">{{ item.title }}</div>
+        <div class="article-journal">
+          {{ item.outlet }}{% if item.date %}, {{ item.date | date: "%B %-d, %Y" }}{% endif %}
+        </div>
+      </a>
+      {% else %}
+      <div class="article-title">{{ item.title }}</div>
+      <div class="article-journal">
+        {{ item.outlet }}{% if item.date %}, {{ item.date | date: "%B %-d, %Y" }}{% endif %}
+      </div>
+      {% endif %}
+      {% if item.excerpt %}<div class="article-abstract">{{ item.excerpt }}</div>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="press-section">
+  <h2>Podcast Appearances</h2>
+  <p class="section-desc">Interviews and panel discussions on academic freedom, financial regulation, and the law.</p>
+  {% assign podcasts = site.data.commentary.items | where: "type", "podcast" | sort: "date" | reverse %}
+  <ul class="article-list">
+    {% for item in podcasts %}
+    <li class="article-item">
+      {% if item.perma or item.url %}
+      <a href="{{ item.perma | default: item.url }}" target="_blank" rel="noopener noreferrer">
+        <div class="article-title">{{ item.title }}</div>
+        <div class="article-journal">
+          {{ item.outlet }}{% if item.date %}, {{ item.date | date: "%B %-d, %Y" }}{% endif %}
+        </div>
+      </a>
+      {% else %}
+      <div class="article-title">{{ item.title }}</div>
+      <div class="article-journal">
+        {{ item.outlet }}{% if item.date %}, {{ item.date | date: "%B %-d, %Y" }}{% endif %}
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% assign videos = site.data.commentary.items | where: "type", "video" %}
+{% if videos.size > 0 %}
+<section class="press-section">
+  <h2>Video</h2>
+  <p class="section-desc">Selected video commentary and presentations.</p>
+  {% for item in videos %}
+  <details class="embed">
+    <summary>Watch: {{ item.title }}</summary>
+    <div class="embed-container">
+      <iframe src="{{ item.embed }}" title="{{ item.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </details>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% assign quotes = site.data.commentary.items | where: "type", "quote" %}
+{% if quotes.size > 0 %}
+<section class="press-section">
+  <h2>Quoted In</h2>
+  <p class="section-desc">News outlets that have cited Professor Oranburg as a source.</p>
+  <ul class="article-list">
+    {% for item in quotes %}
+    <li class="article-item">
+      {% if item.perma or item.url %}
+      <a href="{{ item.perma | default: item.url }}" target="_blank" rel="noopener noreferrer">
+        <div class="article-title">{{ item.title }}</div>
+        <div class="article-journal">{{ item.outlet }}{% if item.date %}, {{ item.date | date: "%B %-d, %Y" }}{% endif %}</div>
+      </a>
+      {% else %}
+      <div class="article-title">{{ item.title }}</div>
+      <div class="article-journal">{{ item.outlet }}{% if item.date %}, {{ item.date | date: "%B %-d, %Y" }}{% endif %}</div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="press-section">
+  <h2>For Journalists &amp; Bookers</h2>
+  <p>Professor Oranburg is available for interviews and commentary on: digital asset regulation (CLARITY Act, GENIUS Act, stablecoins, DeFi, DAOs), corporate governance, securities regulation, contract law, university governance and academic freedom, the gig economy, and trade secret law.</p>
+  <p>Reach him via the <a href="/contact/">contact form</a> or see the <a href="/media-kit/">media kit</a> for bios, photos, and booking details.</p>
+</section>

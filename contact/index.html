@@ -12,7 +12,11 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
 <div class="contact-page-grid">
   <div class="contact-form-box">
     <h2>Send Me a Message</h2>
-    <form id="contactForm" action="{{ site.contact_form_endpoint }}" data-endpoint="{{ site.contact_form_endpoint }}" method="POST" onsubmit="return submitContactForm(event)">
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="return submitContactForm(event)">
+      <input type="hidden" name="access_key" value="{{ site.web3forms_access_key }}">
+      <input type="hidden" name="from_name" value="Oranburg.law contact form">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
       <div class="form-group">
         <label for="name">Name *</label>
         <input type="text" id="name" name="name" required>
@@ -33,12 +37,6 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
         <textarea id="message" name="message" required></textarea>
       </div>
 
-      <div class="contact-form-honeypot" aria-hidden="true">
-        <label for="website">Website</label>
-        <input type="text" id="website" name="_gotcha" autocomplete="off">
-      </div>
-
-      <input type="hidden" name="_subject" value="[Website Contact] New message from {{ site.title }}">
       <button type="submit" class="submit-btn" id="contactSubmitBtn">Send Message</button>
       <p id="contactFormStatus" class="contact-form-status" role="status" aria-live="polite"></p>
     </form>
@@ -57,11 +55,11 @@ tagline: "Law Professor | Fintech Scholar | Public Commentator"
 async function submitContactForm(event) {
   event.preventDefault();
   var form = document.getElementById('contactForm');
-  var endpoint = (form.getAttribute('data-endpoint') || '').trim();
   var status = document.getElementById('contactFormStatus');
   var submitBtn = document.getElementById('contactSubmitBtn');
+  var accessKey = form.querySelector('input[name="access_key"]').value.trim();
 
-  if (!endpoint) {
+  if (!accessKey) {
     status.textContent = 'Contact form is not configured yet. Please try again later.';
     status.className = 'contact-form-status error';
     return false;
@@ -72,19 +70,20 @@ async function submitContactForm(event) {
   submitBtn.disabled = true;
 
   try {
-    var response = await fetch(endpoint, {
+    var response = await fetch(form.action, {
       method: 'POST',
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
     });
+    var result = await response.json();
 
-    if (!response.ok) {
-      throw new Error('Submission failed with status ' + response.status);
+    if (response.ok && result.success) {
+      form.reset();
+      status.textContent = 'Thank you — your message was sent.';
+      status.className = 'contact-form-status success';
+    } else {
+      throw new Error(result.message || 'Submission failed');
     }
-
-    form.reset();
-    status.textContent = 'Thank you — your message was sent.';
-    status.className = 'contact-form-status success';
   } catch (error) {
     status.textContent = 'Sorry, your message could not be sent. Please try again.';
     status.className = 'contact-form-status error';

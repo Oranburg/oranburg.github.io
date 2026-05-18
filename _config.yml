@@ -46,6 +46,11 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor/
+  - ba/                  # vestigial manuscript chapters; canonical companion lives at oranburg.law/BA
+  - inbox/
+  - reports/
+  - new-style/           # design-system experiments
+  - .claude/
 
 # Plugins supported by GitHub Pages
 plugins:

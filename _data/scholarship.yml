@@ -98,7 +98,8 @@ publications:
     year: 2025
     status: published
     journal: "Stanford Journal of Blockchain Law & Policy"
-    citation: "Seth C. Oranburg, The GENIUS Dilemma: Innovation Versus Antifraud in Stablecoin Regulation, 9.1 Stan. J. Blockchain L. & Pol'y (2025)."
+    citation: "Seth C. Oranburg, The GENIUS Dilemma: Innovation Versus Antifraud in Stablecoin Regulation, 9 Stan. J. Blockchain L. & Pol'y (online 2025; print forthcoming Summer 2026)."
+    published_online_url: "https://stanford-jblp.pubpub.org/pub/genius-dilemma/release/1"
     coauthors: []
     abstract: >
       First doctrinal analysis of the GENIUS Act, enacted after the TerraUSD
@@ -121,9 +122,9 @@ publications:
   - id: replacing-howey
     title: "Replacing Howey with CLARITY: Resolving Securities Regulation's Temporal Paradox"
     type: article
-    year: 2025
+    year: 2026
     status: forthcoming
-    journal: "Review of Banking and Financial Law — Boston University"
+    journal: "Review of Banking and Financial Law, Boston University"
     citation: "Seth C. Oranburg, Replacing Howey with CLARITY: Resolving Securities Regulation's Temporal Paradox, Rev. Banking & Fin. L. (forthcoming 2026)."
     coauthors: []
     abstract: >
@@ -471,7 +472,7 @@ publications:
       ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6423378"
       published:
       pdf: "/scholarship/updates/ssrn-6423378.md"
-      companion: "https://oranburg.github.io/demos/exclusive-inclusion/"
+      companion: "https://oranburg.law/demos/exclusive-inclusion/"
     featured: true
 
   - id: wrong-plaintiff
@@ -780,7 +781,7 @@ publications:
       ssrn:
       published: "https://cap-press.com/books/isbn/9781531033804/Contract-Law-Second-Edition"
       pdf: "/assets/pdfs/contract-law-2d.pdf"
-      companion: "https://oranburg.github.io/K/"
+      companion: "https://oranburg.law/K/"
     featured: false
     exclude_from: [explorer]
 
@@ -868,6 +869,29 @@ publications:
 
   # ---- INSTITUTIONAL REFORM & CIVIL SOCIETY ----
 
+  - id: scfa-speech-conduct
+    title: "Speech, Conduct, and the Coddling of the American Faculty"
+    type: essay
+    year: 2026
+    status: under-review
+    journal: "Mercer Law Review (Volume 78, Issue 1A, fit-check submitted)"
+    citation: "Seth C. Oranburg, Speech, Conduct, and the Coddling of the American Faculty, 78 Mercer L. Rev. (forthcoming 2026)."
+    coauthors: []
+    abstract: >
+      Carries a speech-versus-conduct through-line across recent campus
+      controversies, arguing that faculty governance has substituted
+      conduct-regulation for the harder work of defending speech.
+      Fit-check submitted to Mercer Law Review's first-amendment issue
+      on 2026-05-15.
+    cluster: civil-society
+    tags: [free speech, campus, faculty governance, first amendment]
+    links:
+      ssrn:
+      published:
+      pdf:
+      companion:
+    featured: false
+
   - id: why-not-zionist
     title: "Why I Am Not a Zionist"
     type: article
@@ -935,7 +959,7 @@ publications:
       ssrn:
       published:
       pdf:
-      companion: "https://oranburg.github.io/BA/"
+      companion: "https://oranburg.law/BA/"
     featured: true
     exclude_from: [explorer]
 

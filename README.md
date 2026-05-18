@@ -1,71 +1,64 @@
 # oranburg.github.io
 
-Personal site and blog for Seth C. Oranburg, built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/).
+Personal site for Seth C. Oranburg, served at [oranburg.law](https://oranburg.law) via GitHub Pages. Built with [Jekyll](https://jekyllrb.com/).
 
 ---
 
 ## Local Preview
 
 ```bash
-# Install dependencies (first time only)
-bundle install
-
-# Start a local server with live-reload
+bundle install                              # first time only
 bundle exec jekyll serve --livereload
 ```
 
-Open <http://localhost:4000> in your browser. Changes to posts and layouts are picked up automatically.
-
-### Contact form setup
-
-The contact page submits to a backend form endpoint configured in `_config.yml`:
-
-```yml
-contact_form_endpoint: ""
-```
-
-Set it to your real endpoint (for example, from Formspree) so messages are delivered without exposing your email address in page source.
-
-Note: the contact form currently includes Formspree-style helper fields (`_subject` and `_gotcha`). If you use a different backend service, update those field names to match that service’s API.
+Open <http://localhost:4000>. Changes to posts and layouts reload automatically.
 
 ---
 
-## Adding a New Post from iA Writer
+## Contact Form
 
-### Filename convention
+The contact form at `/contact/` posts to [Web3Forms](https://web3forms.com). The public access key lives in `_config.yml`:
 
-Posts live in `_posts/` and must follow this pattern:
-
-```
-YYYY-MM-DD-slug-here.md
+```yml
+web3forms_access_key: "1f621cd8-66ab-4b92-9f3c-1b3805e67a52"
 ```
 
-For example: `_posts/2026-03-15-teaching-with-cases.md`
+The destination email is configured in the Web3Forms dashboard, not in this repo. A hidden `botcheck` honeypot field handles spam. To rotate the key, paste a new one and commit.
 
-### Front matter template
+---
 
-Paste this at the top of every new post in iA Writer:
+## Adding a New Post
+
+Posts live in `_posts/` with the filename pattern `YYYY-MM-DD-slug.md`. Example: `_posts/2026-05-17-business-associations-law-in-theory-and-practice.md`.
+
+Front matter template:
 
 ```yaml
 ---
 layout: post
-title: "Your Post Title Here"
-date: YYYY-MM-DD HH:MM:SS -0500
-categories: [philosophy]   # pick one or more: philosophy, teaching, podcast
+title: "Title"
+date: 2026-05-17
 tags: [tag1, tag2]
-excerpt: "One or two sentences that describe the post. Used in the blog listing."
+kind: announcement       # or oped-companion, essay, note
+featured: false
+excerpt: "One or two sentences for the blog index."
 ---
 ```
 
-- **`layout`**: always `post`
-- **`categories`**: determines which hub page the post appears on (`/philosophy/`, `/teaching/`, `/podcast/`)
-- **`excerpt`**: shown on the blog index; keep it under ~160 characters
+Save the Markdown file to `_posts/`, commit, and push. GitHub Pages rebuilds automatically.
 
-### Saving from iA Writer
+---
 
-1. In iA Writer, go to **File → Save…** (or use the share sheet on iOS/iPadOS).
-2. Save or export as **Markdown** to `_posts/` with the correct filename.
-3. Commit and push. GitHub Pages will rebuild the site automatically.
+## Data Files
+
+Most page content is data-driven from `_data/`:
+
+- `scholarship.yml` — books and articles (rendered on home, /cv/, /scholarship/, course pages)
+- `commentary.yml` — op-eds, podcasts, quotes (rendered on home, /press/)
+- `videos.yml` — YouTube series IDs (rendered on home, course pages)
+- `podcasts.yml` — podcast metadata
+
+Edit the YAML; do not hand-edit the rendered pages.
 
 ---
 
@@ -73,17 +66,25 @@ excerpt: "One or two sentences that describe the post. Used in the blog listing.
 
 ```
 .
-├── _config.yml          # Jekyll configuration
-├── _layouts/
-│   ├── default.html     # Shared HTML shell (header, nav, footer)
-│   └── post.html        # Individual blog post template
-├── _posts/              # Blog posts (Markdown)
+├── _config.yml             Jekyll configuration
+├── _layouts/               default.html, post.html
+├── _data/                  YAML data files
+├── _posts/                 Blog posts
 ├── assets/
-│   ├── css/site.css     # Shared stylesheet
-│   └── js/site.js       # Minimal JavaScript
-├── blog/index.html      # Blog listing page
-├── philosophy/index.html
-├── teaching/index.html
-├── podcast/index.html
-└── index.html           # Landing page (static, not processed by Jekyll layouts)
+│   ├── css/site.css
+│   ├── js/site.js
+│   └── images-webp/        WebP-optimized images
+├── images/                 Original JPEGs
+├── cv/                     Curriculum vitae
+├── press/                  Press hub
+├── media-kit/              Bios and photos for journalists
+├── start-here/             Curated reading guide
+├── now/                    Current-state page
+├── insights/               Essays and notes
+├── courses/                Course pages (contracts, BA, trade-secrets)
+├── scholarship/            Cluster pages and updates
+├── contact/                Contact form
+└── index.html              Home
 ```
+
+Excluded from build: `Gemfile*`, `vendor/`, `ba/` (vestigial chapter manuscript), `inbox/`, `reports/`, `new-style/`, `.claude/`.

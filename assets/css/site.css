@@ -76,6 +76,19 @@ body {
   line-height: 1.7;
   color: var(--text);
   background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Modern typography: balance multi-line headings, prettify body paragraphs.
+   Progressive enhancement; ignored by older browsers. */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p, li {
+  text-wrap: pretty;
 }
 
 a {

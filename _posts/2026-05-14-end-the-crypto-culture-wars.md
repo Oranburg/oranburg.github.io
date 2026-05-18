@@ -14,6 +14,6 @@ The Howey test was written in 1946 to deal with orange groves sold as investment
 
 The CLARITY Act offers a lifecycle-phase framework. Tokens are evaluated by what they do at the time of the transaction, in light of where the underlying protocol sits in its maturity. That moves the question from labels to function, and from political contest to administrable rule.
 
-The op-ed makes the policy case in lay register. The doctrinal case lives in *Replacing Howey with CLARITY: Resolving Securities Regulation's Temporal Paradox*, forthcoming in the Stanford Journal of Blockchain Law & Policy. The two pieces share thesis architecture.
+The op-ed makes the policy case in lay register. The doctrinal case lives in *Replacing Howey with CLARITY: Resolving Securities Regulation's Temporal Paradox*, forthcoming in the Review of Banking & Financial Law at Boston University. The two pieces share thesis architecture.
 
 Read the op-ed: [End the Crypto Culture Wars with CLARITY](https://washingtonreporter.news/op-ed-seth-oranburg-end-the-crypto-culture-wars-with-clarity/) ([perma](https://perma.cc/485P-T376)).

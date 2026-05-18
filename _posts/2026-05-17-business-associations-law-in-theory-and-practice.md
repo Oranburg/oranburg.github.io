@@ -24,4 +24,4 @@ Across sixteen chapters, the manuscript carries nineteen annotated deal-document
 
 Aspen Press received the manuscript a full year ahead of the contract delivery date. Publisher-requested structural fixes are integrated. Peer review came back positive. The work that remains is finish-carpentry: citation harmonization, the final DOCX conversion, and the cross-references that only become possible once everything has its final form.
 
-A companion website at [oranburg.law/BA](https://oranburg.github.io/BA/) hosts chapter materials, the new [Knight RUP restoration project](https://oranburg.law/BA/RUP), and supplementary resources for adopters.
+A companion website at [oranburg.law/BA](https://oranburg.law/BA/) hosts chapter materials, the new [Knight RUP restoration project](https://oranburg.law/BA/RUP), and supplementary resources for adopters.

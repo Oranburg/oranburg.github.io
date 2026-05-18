@@ -164,7 +164,7 @@ These five traditions converge on a single research program with two major outpu
 
 **Law and Governance** (monograph, in progress) constructs the formal theory: a functional definition of governance that travels across doctrinal fields ("the organized system by which a group manages a shared problem over time"), four minimum elements (decision-making, monitoring, sanctions, adjustment), six legal conditions, and the book's central contribution — governance as a club good (Buchanan). The applications span merchant networks, the NYSE, corporate boards, universities, nonprofits, DAOs, and religious communities.
 
-Together, these two books represent what Oranburg is building at CUA's Columbus School of Law: a Law and Entrepreneurship Program grounded in the conviction that the lawyer who builds the legal scaffolding of a business is engaged in a moral act — not merely a technical one. The Covenant Fellowship, modeled on CUA's Aquinas Fellowship, will bring early-career lawyers and MBAs together for intensive formation in the traditions that make enterprise meaningful.
+Together, these two books represent the research program Oranburg is building: a body of work grounded in the conviction that the lawyer who builds the legal scaffolding of a business is engaged in a moral act, and a planned Covenant Fellowship that would bring early-career lawyers and MBAs together for intensive formation in the traditions that make enterprise meaningful.
 
 As the Talmud teaches: "Much have I learned from my teachers, more from my colleagues, but from my students most of all."
 

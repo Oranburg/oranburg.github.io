@@ -6,6 +6,8 @@ tags: [career, teaching, law-and-entrepreneurship]
 kind: announcement
 featured: true
 excerpt: "Beginning August 20, 2026, I will join the Catholic University of America Columbus School of Law as Professor of Law and co-director of the Law and Entrepreneurship Program."
+published: false
+# unpublished pending final faculty vote (June 2, 2026); restore by removing this line
 ---
 
 I will be joining the Catholic University of America Columbus School of Law in August as Professor of Law and co-director of the Law and Entrepreneurship Program. The appointment begins August 20, 2026.

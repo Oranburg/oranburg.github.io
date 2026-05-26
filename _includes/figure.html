@@ -1,0 +1,36 @@
+{%- comment -%}
+House figure include for Jekyll sites (oranburg.law, LEP, PTS).
+
+Usage in a page:
+  {% include figure.html name="lineage-flowchart" alt="Genealogy from Roman ius to modern partnership doctrine" caption="The doctrinal lineage as a single argument." %}
+
+Looks for SVG primary at /assets/figures/web/<name>.svg with PNG fallback at
+/assets/figures/web/<name>.png. Both produced by `lawj graphics render`.
+
+Required parameters:
+  name    short slug (no extension)
+  alt     screen-reader text; required for accessibility
+
+Optional parameters:
+  caption rendered as <figcaption> below the figure
+  class   extra CSS class for the <figure> wrapper
+{%- endcomment -%}
+
+{%- assign og_name = include.name -%}
+{%- assign og_alt = include.alt -%}
+{%- assign og_caption = include.caption -%}
+{%- assign og_class = include.class | default: "" -%}
+{%- assign og_base = "/assets/figures/web/" | append: og_name -%}
+
+<figure class="og-figure {{ og_class }}" role="figure" aria-label="{{ og_alt | escape }}">
+  <picture>
+    <source srcset="{{ og_base }}.svg" type="image/svg+xml">
+    <img src="{{ og_base }}.png"
+         alt="{{ og_alt | escape }}"
+         loading="lazy"
+         decoding="async">
+  </picture>
+  {%- if og_caption %}
+  <figcaption>{{ og_caption }}</figcaption>
+  {%- endif %}
+</figure>

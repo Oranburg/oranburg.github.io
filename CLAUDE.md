@@ -1,35 +1,13 @@
-## LawJ tooling — read first
+## Voice and tooling rules — see LawJ/CLAUDE.md
 
-This repo is part of Seth Oranburg's writing/teaching ecosystem. The shared toolchain lives at:
+This repo is Seth Oranburg's personal website (oranburg.law). Voice rules apply to every page, post, and prose fragment shipped here.
 
-`/Users/sco/Library/Mobile Documents/com~apple~CloudDocs/Repos/LawJ/LawJ/`
+The authoritative operating manual lives at:
 
-Before reaching for an agent or hand-writing utility code, check whether there is already a script in LawJ that does what you need. The pattern Seth prefers is **scripts over agents**: mechanical work belongs in a versioned, tested script, not in agent-improvised code.
+`/Users/sco/Library/Mobile Documents/com~apple~CloudDocs/Repos/LawJ/LawJ/CLAUDE.md`
 
-### Graphics (figures, diagrams, charts)
+Read it before drafting or editing. The Markdown Checklist governs voice across all of Seth's prose work (no em dashes, no AI prose patterns, no "load-bearing," no cadence-as-AI-tell, no meta-negation, no signposted insight or stakes-elevation closers, voids not vapidity, full sentences always).
 
-This repo has the `lawj graphics` toolchain installed. Use it for any diagram, chart, or figure that ends up on a page in this repo:
+Mechanical enforcement: a global PostToolUse hook at `~/.claude/hooks/voice-check.sh` flags forbidden patterns on every Write/Edit. The canonical pattern inventory lives at `~/.claude/hooks/forbidden-patterns.txt`.
 
-```
-cd "/Users/sco/Library/Mobile Documents/com~apple~CloudDocs/Repos/LawJ/LawJ"
-PYTHONPATH=. .venv/bin/python -m lawj.cli graphics new mermaid <name> --type flowchart-lr
-PYTHONPATH=. .venv/bin/python -m lawj.cli graphics render <file.mmd> --out-root <this-repo>/public/figures
-PYTHONPATH=. .venv/bin/python -m lawj.cli graphics audit <file.mmd>
-PYTHONPATH=. .venv/bin/python -m lawj.cli graphics register <name> <source> --alt "..." --used-in "<this-repo>:<page>"
-```
-
-The repo-local figure component (`Figure.astro`, `Figure.jsx`, or `figure.html` depending on stack) reads from `public/figures/web/` (or `assets/figures/web/` for Jekyll). The CSS palette at `src/styles/lawj-palette.css` (or `assets/css/`) is generated from `lawj/graphics/style.toml` — never edit by hand. After any palette change in LawJ, regenerate with `lawj graphics style css --out <this-repo>/<css path>`.
-
-Full guide: `LawJ/docs/graphics-toolchain.md`. The graphics-editor subagent at `~/.claude/agents/graphics-editor.md` knows the CLI and the house aesthetic.
-
-### Other LawJ subsystems worth knowing about
-
-- `lawj export` for Markdown → DOCX (never pandoc directly).
-- `lawj scrub-docx` before any DOCX leaves Seth's hands.
-- `lawj ingest` for new documents into the scholarship library.
-- `lawj add-person` / `add-place` / `people search` for the address book.
-- `lawj verify-batch` / `verify-status` for citation verification rounds.
-- Slide decks: PptxGenJS skill, not python-pptx.
-- Books: `scripts/book_to_typst_pdf.py` (Typst) for production PDF.
-
-See `LawJ/CLAUDE.md` for the full operating system. The LawJ CLAUDE.md is authoritative; this pointer just keeps a reminder in this repo.
+The shared toolchain (lawj CLI, graphics pipeline, /now page curator) lives in LawJ. The `/now` page on this site is curated by `lawj now audit` / `refresh` / `trim`; never edit `BOOK-OF-NOW.md` directly. Graphics use the lawj graphics toolchain.

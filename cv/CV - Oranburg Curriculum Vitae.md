@@ -1,6 +1,6 @@
 **Seth C. Oranburg**
 
-Professor of Law, University of New Hampshire Franklin Pierce School of Law
+Ordinary Professor of Law and Director of the Law and Entrepreneurship Program, The Catholic University of America, Columbus School of Law
 
 Director, Program on Organizations, Business and Markets, NYU School of Law
 
@@ -24,9 +24,13 @@ sco259@nyu.edu • 603.703.6133
 
 **Doctrinal Appointments**
 
+**The Catholic University of America, Columbus School of Law**, Washington, DC
+
+> Ordinary Professor of Law and Director, Law and Entrepreneurship Program 2026 -- Present
+
 **University of New Hampshire, Franklin Pierce School of Law**, Concord, NH
 
-> Professor of Law 2024 -- Present
+> Professor of Law 2024 -- 2026
 >
 > Associate Professor of Law 2022 -- 2024
 

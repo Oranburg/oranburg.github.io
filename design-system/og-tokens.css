@@ -32,7 +32,7 @@
   --og-bg: #FFFFFF; --og-bg-panel: #F8F9FA; --og-bg-soft: #E9ECEF;
   --og-ink: #1A1A1A; --og-ink-muted: #555555; --og-rule: #D0D8E4;
   --og-link: #2459A9; --og-link-onpanel: #2459A9;
-  --og-accent: #176D6D; /* non-brand a11y substitution, pending approval */
+  --og-accent: #176D6D; /* non-brand a11y substitution, approved 2026-06-20 by Seth Oranburg */
   --og-accent-red: #B21F2C;
   --og-heading-1: #0A3255; --og-heading-2: #0A3255; --og-heading-3: #2459A9;
 }

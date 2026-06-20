@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Oswald:wght@500..700&family=Roboto:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/og-tokens.css">
   <link rel="stylesheet" href="/assets/css/site.css?v={{ site.time | date: '%s' }}">
   {% if page.home %}<link rel="stylesheet" href="/assets/css/home.css?v={{ site.time | date: '%s' }}">{% endif %}
   <script>
@@ -132,8 +133,13 @@
   {% endif %}
 
   <main class="site-content" id="main-content">
+    {% include og-breadcrumb.html %}
     {{ content }}
   </main>
+
+  {% include og-footer.html
+     links="Home::https://oranburg.law,Insights::/insights/,Courses::/courses/,Scholarship::/scholarship/,Press::/press/,Contact::/contact/"
+     copyright="© 2026 Seth C. Oranburg. All rights reserved." %}
 
   <footer class="site-footer">
     <div class="footer-inner">

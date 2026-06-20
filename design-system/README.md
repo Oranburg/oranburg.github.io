@@ -267,14 +267,15 @@ remaining users are migrated).
 
 ## Flagged for Seth's sign-off
 
-These were not decided silently. Each needs an explicit yes before it lands in
-production:
+Signed off by Seth Oranburg on 2026-06-20. Status recorded per item below.
 
-1. The cool palette is canonical over the warm `lawj-palette.css`.
-2. The non-brand dark teal `#176D6D` as the light-mode `--og-accent` (an
-   accessibility substitution, since brand teal fails as text on light).
-3. Run the `og-accent-` / `og-series-` grep across LawJ before deleting
-   `lawj-palette.css`.
-4. The `#f5f3ee` theme-color fix in `default.html`.
-5. The minimal app-footer link set (the single `oranburg.law` default, with the
-   hub keeping its own full inventory).
+1. APPROVED. The cool palette is canonical over the warm `lawj-palette.css`.
+2. APPROVED. The non-brand dark teal `#176D6D` as the light-mode `--og-accent`
+   (an accessibility substitution, since brand teal fails as text on light).
+3. PENDING AT RETIREMENT. Run the `og-accent-` / `og-series-` grep across LawJ
+   before deleting `lawj-palette.css`. The file is not being retired yet, so this
+   guardrail runs when retirement is scheduled.
+4. APPROVED and APPLIED. The `#f5f3ee` theme-color fix in `default.html` is done;
+   the light-mode `theme-color` is now `#FFFFFF`.
+5. APPROVED. The minimal app-footer link set (the single `oranburg.law` default,
+   with the hub keeping its own full inventory).

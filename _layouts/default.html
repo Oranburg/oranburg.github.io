@@ -133,33 +133,13 @@
   {% endif %}
 
   <main class="site-content" id="main-content">
-    {% include og-breadcrumb.html %}
+    {% include og-breadcrumb.html current=page.title %}
     {{ content }}
   </main>
 
   {% include og-footer.html
      links="Home::https://oranburg.law,Insights::/insights/,Courses::/courses/,Scholarship::/scholarship/,Press::/press/,Contact::/contact/"
      copyright="© 2026 Seth C. Oranburg. All rights reserved." %}
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-links">
-        <a href="/start-here/">Start Here</a>
-        <a href="/now/">Now</a>
-        <a href="/cv/">CV</a>
-        <a href="/media-kit/">Media Kit</a>
-        <a href="/feed.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS feed">RSS</a>
-        <a href="https://oranburg.law/BA/" target="_blank" rel="noopener noreferrer">Business Associations Companion</a>
-        <a href="https://oranburg.law/BA/RUP" target="_blank" rel="noopener noreferrer">Knight RUP Restoration</a>
-        <a href="https://oranburg.law/K/" target="_blank" rel="noopener noreferrer">Contract Law Companion</a>
-        <a href="/courses/trade-secrets/">Protecting Trade Secrets</a>
-        <a href="https://oranburg.law/safety-machine/" target="_blank" rel="noopener noreferrer">Judgment Proof</a>
-        <a href="/demos/exclusive-inclusion/">Exclusive Inclusion</a>
-        <a href="https://actag.bio" target="_blank" rel="noopener noreferrer">ACTAG</a>
-      </div>
-      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-    </div>
-  </footer>
 
   <script src="/assets/js/site.js?v={{ site.time | date: '%s' }}"></script>
 </body>

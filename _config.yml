@@ -47,6 +47,7 @@ exclude:
   - README.md
   - vendor/
   - ba/                  # vestigial manuscript chapters; canonical companion lives at oranburg.law/BA
+  - scholarship/wip/     # unpublished drafts; not linked from any live page
   - inbox/
   - reports/
   - new-style/           # design-system experiments

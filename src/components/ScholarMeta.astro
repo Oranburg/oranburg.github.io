@@ -1,0 +1,27 @@
+---
+// Highwire Press + Dublin Core tags so Google Scholar can index and cite the
+// essay (ported from the aotv essay template).
+interface Props {
+  title: string;
+  date: Date;
+  abstract?: string;
+  path: string;
+}
+const { title, date, abstract, path } = Astro.props;
+const iso = date.toISOString().slice(0, 10).replace(/-/g, "/");
+const fullUrl = new URL(path, Astro.site ?? "https://oranburg.law").href;
+---
+
+<meta name="citation_title" content={title} />
+<meta name="citation_author" content="Seth C. Oranburg" />
+<meta name="citation_publication_date" content={iso} />
+<meta name="citation_online_date" content={iso} />
+<meta name="citation_fulltext_html_url" content={fullUrl} />
+<meta name="citation_journal_title" content="Seth C. Oranburg" />
+<meta name="citation_publisher" content="oranburg.law" />
+<meta name="DC.title" content={title} />
+<meta name="DC.creator" content="Seth C. Oranburg" />
+<meta name="DC.date" content={date.toISOString().slice(0, 10)} />
+<meta name="DC.type" content="Text" />
+<meta name="DC.format" content="text/html" />
+{abstract && <meta name="DC.description" content={abstract} />}

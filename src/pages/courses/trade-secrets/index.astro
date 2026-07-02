@@ -5,7 +5,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import PlaylistEmbed from "../../../components/PlaylistEmbed.astro";
 import BookCardById from "../../../components/BookCardById.astro";
 import RelatedPubs from "../../../components/RelatedPubs.astro";
-const schol = yaml.load(fs.readFileSync("src/data/scholarship.yml", "utf8"));
+const schol = yaml.load(fs.readFileSync("_data/scholarship.yml", "utf8"));
 const pub = (id) => (schol.publications ?? []).find((p) => p.id === id);
 ---
 

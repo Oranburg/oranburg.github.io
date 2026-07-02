@@ -3,8 +3,8 @@ import yaml from "js-yaml";
 import fs from "node:fs";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const schol = yaml.load(fs.readFileSync("src/data/scholarship.yml", "utf8"));
-const comm = yaml.load(fs.readFileSync("src/data/commentary.yml", "utf8"));
+const schol = yaml.load(fs.readFileSync("_data/scholarship.yml", "utf8"));
+const comm = yaml.load(fs.readFileSync("_data/commentary.yml", "utf8"));
 const pubs = (schol.publications ?? []).filter((p) => !(p.exclude_from ?? []).includes("web"));
 const items = comm.items ?? [];
 const byYearDesc = (a, b) => (b.year ?? 0) - (a.year ?? 0);

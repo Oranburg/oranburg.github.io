@@ -3,7 +3,7 @@ import yaml from "js-yaml";
 import fs from "node:fs";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
-const taxonomy = yaml.load(fs.readFileSync("src/data/insights_taxonomy.yml", "utf8"));
+const taxonomy = yaml.load(fs.readFileSync("_data/insights_taxonomy.yml", "utf8"));
 ---
 
 <BaseLayout title="Insights Library" current="Insights Library">

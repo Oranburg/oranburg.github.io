@@ -3,7 +3,7 @@
 import yaml from "js-yaml";
 import fs from "node:fs";
 const { id } = Astro.props;
-const schol = yaml.load(fs.readFileSync("src/data/scholarship.yml", "utf8"));
+const schol = yaml.load(fs.readFileSync("_data/scholarship.yml", "utf8"));
 const book = (schol.publications ?? []).find((p) => p.id === id);
 ---
 

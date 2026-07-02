@@ -6,7 +6,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import PostListItem from "../../components/PostListItem.astro";
 import { byDateDesc } from "../../lib/posts.js";
 
-const taxonomy = yaml.load(fs.readFileSync("src/data/insights_taxonomy.yml", "utf8"));
+const taxonomy = yaml.load(fs.readFileSync("_data/insights_taxonomy.yml", "utf8"));
 const posts = (await getCollection("insights")).sort(byDateDesc);
 const featured = posts.filter((p) => p.data.featured);
 ---

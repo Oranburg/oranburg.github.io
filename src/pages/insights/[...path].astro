@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ScholarMeta from "../../components/ScholarMeta.astro";
+import CiteThis from "../../components/CiteThis.astro";
 
 // URL parity with Jekyll: /insights/YYYY/MM/DD/slug/ from the post filename.
 export async function getStaticPaths() {
@@ -32,6 +34,10 @@ const dateLabel = post.data.date.toLocaleDateString("en-US", {
   day: "numeric",
   timeZone: "UTC",
 });
+// Essays and guides carry the scholarly apparatus (Scholar meta, citation
+// box, margin sidenotes built from footnotes), ported from the aotv template.
+const scholarly = post.data.kind === "essay" || post.data.kind === "guide";
+const path = Astro.url.pathname;
 ---
 
 <BaseLayout
@@ -43,6 +49,12 @@ const dateLabel = post.data.date.toLocaleDateString("en-US", {
   ]}
   current={post.data.title}
 >
+  {scholarly && (
+    <Fragment slot="head">
+      <link rel="stylesheet" href="/assets/css/essay-apparatus.css" />
+      <ScholarMeta title={post.data.title} date={post.data.date} abstract={post.data.excerpt} path={path} />
+    </Fragment>
+  )}
   <article class="post">
     <header class="post-header">
       <h1 class="post-title">{post.data.title}</h1>
@@ -60,6 +72,42 @@ const dateLabel = post.data.date.toLocaleDateString("en-US", {
     <div class="post-content">
       <Content />
     </div>
+
+    {scholarly && (
+      <script is:inline>
+        // Build margin sidenotes from GFM footnotes (from the aotv template).
+        // Without JS the endnote section stays visible, so nothing is lost.
+        (function () {
+          var essay = document.querySelector(".post-content");
+          if (!essay) return;
+          var refs = essay.querySelectorAll("a[data-footnote-ref]");
+          refs.forEach(function (ref) {
+            var href = ref.getAttribute("href");
+            if (!href) return;
+            var li = essay.querySelector(href);
+            if (!li) return;
+            var clone = li.cloneNode(true);
+            clone.querySelectorAll("a[data-footnote-backref]").forEach(function (b) { b.remove(); });
+            var aside = document.createElement("aside");
+            aside.className = "sidenote";
+            aside.innerHTML = '<sup class="sidenote-num">' + (ref.textContent || "") + "</sup> " + clone.innerHTML.trim();
+            var sup = ref.closest("sup") || ref;
+            var block = sup.parentElement;
+            while (block && block.parentElement !== essay && !/^(P|LI|BLOCKQUOTE|H2|H3|H4)$/.test(block.tagName)) {
+              block = block.parentElement;
+            }
+            var anchorEl = block && block.parentElement === essay ? block : sup;
+            while (anchorEl.nextElementSibling && anchorEl.nextElementSibling.classList.contains("sidenote")) {
+              anchorEl = anchorEl.nextElementSibling;
+            }
+            anchorEl.insertAdjacentElement("afterend", aside);
+          });
+          document.documentElement.classList.add("sidenotes-ready");
+        })();
+      </script>
+    )}
+
+    {scholarly && <CiteThis title={post.data.title} date={post.data.date} path={path} />}
 
     <nav class="post-nav" aria-label="Post navigation">
       {prev && <a class="prev" href={postUrl(prev)}>&larr; {prev.data.title}</a>}

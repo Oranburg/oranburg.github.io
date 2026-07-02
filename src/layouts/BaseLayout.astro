@@ -80,6 +80,7 @@ const imageUrl = new URL(image, Astro.site).href;
         }
       })();
     </script>
+    <slot name="head" />
     <!-- Structured data for AI/search discovery -->
     <script type="application/ld+json">
   {

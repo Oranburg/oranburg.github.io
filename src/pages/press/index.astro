@@ -4,7 +4,7 @@ import fs from "node:fs";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PressItem from "../../components/PressItem.astro";
 
-const data = yaml.load(fs.readFileSync("src/data/commentary.yml", "utf8"));
+const data = yaml.load(fs.readFileSync("_data/commentary.yml", "utf8"));
 const items = data.items ?? [];
 const byDateDesc = (a, b) => new Date(b.date ?? 0) - new Date(a.date ?? 0);
 const opeds = items.filter((i) => i.type === "op-ed").sort(byDateDesc);

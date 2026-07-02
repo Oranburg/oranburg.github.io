@@ -1,0 +1,56 @@
+/* Scholarly apparatus for essay-kind insight posts, adapted from the aotv
+   essay template. Sidenotes are built client-side from GFM footnotes; on
+   narrow screens (or without JS) the bottom endnote section stays visible,
+   so footnotes never disappear. */
+
+.sidenote {
+  display: none;
+}
+
+@media (min-width: 1180px) {
+  html.sidenotes-ready .post-content section[data-footnotes] {
+    display: none;
+  }
+  .sidenote {
+    display: block;
+    float: right;
+    clear: right;
+    width: 15rem;
+    margin-right: -17.5rem;
+    margin-bottom: 1.1rem;
+    font-family: var(--font-accent, sans-serif);
+    font-size: 0.77rem;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .sidenote .sidenote-num {
+    color: var(--accent);
+    font-weight: 700;
+    margin-right: 0.3em;
+  }
+  .sidenote p {
+    margin: 0 0 0.5rem;
+  }
+}
+
+.citebox {
+  margin: 2.5rem 0 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md, 8px);
+  background: var(--bg-secondary, transparent);
+}
+.citebox h3 {
+  margin-top: 0;
+}
+.citebox .bibtex {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  overflow-x: auto;
+}
+
+@media print {
+  .sidenote {
+    display: none !important;
+  }
+}

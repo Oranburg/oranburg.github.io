@@ -3,7 +3,7 @@ import yaml from "js-yaml";
 import fs from "node:fs";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const data = yaml.load(fs.readFileSync("src/data/scholarship.yml", "utf8"));
+const data = yaml.load(fs.readFileSync("_data/scholarship.yml", "utf8"));
 const pubs = (data.publications ?? []).filter((p) => !(p.exclude_from ?? []).includes("web"));
 const byYearDesc = (a, b) => (b.year ?? 0) - (a.year ?? 0);
 const highlights = pubs.filter((p) => p.featured).sort(byYearDesc);

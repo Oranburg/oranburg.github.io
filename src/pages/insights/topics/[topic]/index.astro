@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { def } = Astro.props;
-const taxonomy = yaml.load(fs.readFileSync("src/data/insights_taxonomy.yml", "utf8"));
+const taxonomy = yaml.load(fs.readFileSync("_data/insights_taxonomy.yml", "utf8"));
 const bucket = (taxonomy.buckets ?? []).find((b) => b.url === def.bucket_url);
 const posts = (await getCollection("insights"))
   .filter((p) => p.data.tags.includes(def.topic_tag))

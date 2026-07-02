@@ -1,0 +1,22 @@
+---
+const { item } = Astro.props;
+const href = item.perma || item.url;
+const dateLabel = item.date
+  ? new Date(item.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })
+  : null;
+---
+
+<li class="article-item">
+  {href ? (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <div class="article-title">{item.title}</div>
+      <div class="article-journal">{item.outlet}{dateLabel && `, ${dateLabel}`}</div>
+    </a>
+  ) : (
+    <>
+      <div class="article-title">{item.title}</div>
+      <div class="article-journal">{item.outlet}{dateLabel && `, ${dateLabel}`}</div>
+    </>
+  )}
+  {item.excerpt && <div class="article-abstract">{item.excerpt}</div>}
+</li>

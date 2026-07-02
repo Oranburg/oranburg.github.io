@@ -1,0 +1,77 @@
+---
+// % voice-check: skip (CSS var() and JSX/Astro syntax require --)
+// Footer.astro: canonical Oranburg footer.
+// Landmark footer[role="contentinfo"] (explicit, survives nesting). Link
+// cluster is its own nav[aria-label="Footer"] > ul. The navy band is a fixed
+// brand element in both themes; text colors are hard-set against navy.
+// No invented links: callers supply their own real links. The shared default
+// asserts only oranburg.law.
+//
+// Usage:
+//   <Footer
+//     year={2026}
+//     links={[
+//       { label: 'oranburg.law', href: 'https://oranburg.law' },
+//       { label: 'Sefaria', href: 'https://www.sefaria.org' }
+//     ]}
+//     note="Chumash by Seth Oranburg. The text is fetched from Sefaria at read time."
+//   />
+export interface FooterLink {
+  label: string;
+  href: string;
+}
+const {
+  year = new Date().getFullYear(),
+  links = [{ label: 'oranburg.law', href: 'https://oranburg.law' }],
+  note = `© ${year} Seth Oranburg. All rights reserved.`,
+} = Astro.props as { year?: number; links?: FooterLink[]; note?: string };
+---
+
+<footer class="og-footer" role="contentinfo">
+  <div class="og-footer__inner">
+    <nav class="og-footer__links" aria-label="Footer">
+      <ul>
+        {links.map((link) => (
+          <li><a href={link.href}>{link.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <p class="og-footer__note">{note}</p>
+  </div>
+</footer>
+
+<style>
+  .og-footer {
+    background: var(--og-blue-deep);
+    color: #FFFFFF;
+    text-align: center;
+    padding: var(--og-space-xl) var(--og-space-md);
+    font-size: var(--og-size-small);
+    margin-top: var(--og-space-2xl);
+  }
+  .og-footer__inner {
+    max-width: var(--og-max-width);
+    margin: 0 auto;
+  }
+  .og-footer__links ul {
+    list-style: none;
+    margin: 0 0 var(--og-space-md);
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--og-space-sm) var(--og-space-lg);
+  }
+  .og-footer__links a {
+    color: #E8EEF5;
+    text-decoration: none;
+    font-family: var(--og-font-headline);
+  }
+  .og-footer__links a:hover {
+    color: var(--og-yellow);
+  }
+  .og-footer a:focus-visible {
+    outline: 2px solid var(--og-yellow);
+    outline-offset: 2px;
+  }
+</style>

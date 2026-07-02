@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+const body = "<div class=\"hub-intro\">\n  <h1>Law &amp; Entrepreneurship</h1>\n  <p>Startup law, legal innovation, regulatory strategy, and the intersection of law and enterprise.</p>\n</div>\n\n<p class=\"topic-breadcrumb\">\n  <a href=\"/insights/\">Insights</a> &rsaquo;\n  <a href=\"/insights/library/\">Library</a> &rsaquo;\n  Law &amp; Entrepreneurship\n</p>\n\n<div class=\"topic-grid\">\n\n  <a class=\"topic-tile\" href=\"/insights/topics/startup-law/\">\n    <h3 class=\"topic-tile-title\">Startup Law</h3>\n    <p class=\"topic-tile-desc\">Equity structures, term sheets, founder agreements, and early-stage legal issues.</p>\n  </a>\n\n  <a class=\"topic-tile\" href=\"/insights/topics/legal-innovation/\">\n    <h3 class=\"topic-tile-title\">Legal Innovation</h3>\n    <p class=\"topic-tile-desc\">Access to justice, legal technology, alternative business structures, and the future of law.</p>\n  </a>\n\n  <a class=\"topic-tile\" href=\"/insights/topics/regulation/\">\n    <h3 class=\"topic-tile-title\">Regulatory Strategy</h3>\n    <p class=\"topic-tile-desc\">Navigating regulation, compliance, administrative law, and regulatory arbitrage.</p>\n  </a>\n\n  <a class=\"topic-tile\" href=\"/insights/topics/entrepreneurship/\">\n    <h3 class=\"topic-tile-title\">Entrepreneurship</h3>\n    <p class=\"topic-tile-desc\">Founder mindset, innovation ecosystems, risk, and the economics of new ventures.</p>\n  </a>\n\n</div>\n\n<p class=\"back-to-library\"><a href=\"/insights/library/\">&larr; Back to the Library</a></p>\n";
+---
+
+<BaseLayout title="Law &amp; Entrepreneurship" current="Law &amp; Entrepreneurship">
+  <Fragment set:html={body} />
+</BaseLayout>

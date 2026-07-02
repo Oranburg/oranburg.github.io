@@ -1,0 +1,19 @@
+---
+// A YouTube playlist behind a details fold, looked up by playlist id in
+// src/data/videos.yml (series or teaching_series). Renders nothing when the
+// id is absent so a data refresh can never break the page.
+import yaml from "js-yaml";
+import fs from "node:fs";
+const { id } = Astro.props;
+const videos = yaml.load(fs.readFileSync("src/data/videos.yml", "utf8"));
+const s = [...(videos.series ?? []), ...(videos.teaching_series ?? [])].find((x) => x.id === id);
+---
+
+{s && (
+  <details class="embed">
+    <summary>Watch: {s.title} ({s.video_count} videos)</summary>
+    <div class="embed-container">
+      <iframe src={`https://www.youtube.com/embed/videoseries?list=${s.id}`} title={s.title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </details>
+)}

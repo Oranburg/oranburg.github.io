@@ -1,0 +1,125 @@
+---
+import yaml from "js-yaml";
+import fs from "node:fs";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const data = yaml.load(fs.readFileSync("src/data/scholarship.yml", "utf8"));
+const pubs = (data.publications ?? []).filter((p) => !(p.exclude_from ?? []).includes("web"));
+const byYearDesc = (a, b) => (b.year ?? 0) - (a.year ?? 0);
+const highlights = pubs.filter((p) => p.featured).sort(byYearDesc);
+const books = pubs.filter((p) => p.type === "book").sort(byYearDesc);
+const clusters = data.clusters ?? [];
+
+function journalLine(pub, joiner = " and ") {
+  let s = pub.journal ?? "";
+  if (pub.year) {
+    if (s) s += ", ";
+    if (pub.status === "forthcoming") s += "forthcoming ";
+    s += pub.year;
+  }
+  if (pub.coauthors?.length) s += ` (with ${pub.coauthors.join(joiner)})`;
+  return s;
+}
+---
+
+<BaseLayout
+  title="Scholarship"
+  description="Books, articles, and working papers by Seth C. Oranburg on corporate law, fintech regulation, trade secrets, and the intersection of technology, markets, and legal design."
+  tagline="Law Professor | Fintech Scholar | Public Commentator"
+  current="Scholarship"
+>
+  <div class="hub-intro">
+    <h1>Scholarship</h1>
+    <p>Books, articles, and working papers on corporate law, fintech regulation, trade secrets, and the intersection of technology, markets, and legal design.</p>
+  </div>
+
+  <div style="margin: 1.5rem 0 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+    <a href="/scholarship/explorer/" class="cta-link">Interactive Research Explorer &rarr;</a>
+    <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2256355" target="_blank" rel="noopener" class="cta-link">View All Papers on SSRN &rarr;</a>
+  </div>
+
+  <h2>Research Highlights</h2>
+  <p>Selected recent work and flagship publications.</p>
+  {highlights.length > 0 && (
+    <ul class="article-list">
+      {highlights.map((pub) => (
+        <li class="article-item">
+          <div class="article-title">{pub.title}</div>
+          <div class="article-journal">
+            {journalLine(pub)}
+            {pub.links?.ssrn && <> | <a href={pub.links.ssrn} target="_blank">SSRN</a></>}
+            {pub.links?.published && <> | <a href={pub.links.published} target="_blank">Full Text</a></>}
+            {pub.links?.pdf && <> | <a href={pub.links.pdf} target="_blank">PDF</a></>}
+          </div>
+          <div class="article-abstract">{pub.abstract}</div>
+        </li>
+      ))}
+    </ul>
+  )}
+
+  <h2>Featured Video</h2>
+  <p>Chump Protection Technology &mdash; a talk on how law can protect ordinary people from exploitation in digital markets.</p>
+  <details class="embed">
+    <summary>Watch: Chump Protection Technology</summary>
+    <div class="embed-container">
+      <iframe src="https://www.youtube.com/embed/W0ydwsYDgiM?si=jK0HD29gUkEMKDgH" title="Chump Protection Technology" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </details>
+
+  <h2>Books</h2>
+  <p>Casebooks, treatises, and monographs on business law, contracts, trade secrets, and financial technology.</p>
+  <div class="book-grid">
+    {books.map((pub) =>
+      pub.links?.published ? (
+        <a href={pub.links.published} target="_blank" class="book-card">
+          <div class="book-title">{pub.title}</div>
+          <div class="book-publisher">
+            {pub.journal}{pub.year && ` (${pub.status === "forthcoming" ? "forthcoming " : ""}${pub.year})`}
+            {pub.coauthors?.length > 0 && <><br />with {pub.coauthors.join(" and ")}</>}
+          </div>
+          {pub.status === "forthcoming" && <span class="book-link">Pre-order now &rarr;</span>}
+          {pub.status === "published" && <span class="book-link">Purchase &rarr;</span>}
+        </a>
+      ) : (
+        <div class="book-card">
+          <div class="book-title">{pub.title}</div>
+          <div class="book-publisher">
+            {pub.journal}{pub.year && ` (${pub.status === "forthcoming" || pub.status === "in-progress" ? "forthcoming " : ""}${pub.year})`}
+            {pub.coauthors?.length > 0 && <><br />with {pub.coauthors.join(" and ")}</>}
+          </div>
+          {pub.links?.companion && <a href={pub.links.companion} class="book-link">Companion site &rarr;</a>}
+        </div>
+      )
+    )}
+  </div>
+
+  {clusters.map((cluster) => {
+    const articles = pubs
+      .filter((p) => p.cluster === cluster.id && p.type !== "book")
+      .sort(byYearDesc);
+    return (
+      <>
+        <h2>{cluster.label}</h2>
+        <p>{cluster.description}</p>
+        {articles.length > 0 && (
+          <ul class="article-list">
+            {articles.map((pub) => (
+              <li class="article-item" role="button" tabindex="0" onclick="toggleAbstract(this, event)" onkeydown="handleArticleKey(event, this)">
+                <span class="expand-indicator">+</span>
+                <div class="article-title">{pub.title}</div>
+                <div class="article-journal">
+                  {journalLine(pub)}
+                  {pub.links?.ssrn && <> | <a href={pub.links.ssrn} target="_blank">SSRN</a></>}
+                  {pub.links?.published && <> | <a href={pub.links.published} target="_blank">Full Text</a></>}
+                  {pub.links?.pdf && <> | <a href={pub.links.pdf} target="_blank">PDF</a></>}
+                </div>
+                {pub.links?.companion && <div class="article-companion"><a href={pub.links.companion}>Companion site &rarr;</a></div>}
+                <div class="article-abstract">{pub.abstract}</div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </>
+    );
+  })}
+</BaseLayout>

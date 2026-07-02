@@ -1,0 +1,14 @@
+---
+import { postUrl, dateLabel, stripHtml } from "../lib/posts.js";
+const { post, showKind = false } = Astro.props;
+const blurb = post.data.deck || stripHtml(post.data.excerpt);
+---
+
+<li class="post-list-item">
+  <h3><a href={postUrl(post)}>{post.data.title}</a></h3>
+  <p class="post-meta">
+    <time datetime={post.data.date.toISOString()}>{dateLabel(post.data.date)}</time>
+    {showKind && post.data.kind && <span class="post-kind-badge">{post.data.kind}</span>}
+  </p>
+  {blurb && <p class="post-excerpt">{blurb}</p>}
+</li>

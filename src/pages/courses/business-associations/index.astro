@@ -1,0 +1,58 @@
+---
+import yaml from "js-yaml";
+import fs from "node:fs";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PlaylistEmbed from "../../../components/PlaylistEmbed.astro";
+import BookCardById from "../../../components/BookCardById.astro";
+import RelatedPubs from "../../../components/RelatedPubs.astro";
+const schol = yaml.load(fs.readFileSync("src/data/scholarship.yml", "utf8"));
+const pub = (id) => (schol.publications ?? []).find((p) => p.id === id);
+---
+
+<BaseLayout title="Business Associations" current="Business Associations">
+  <p class="back-to-courses"><a href="/courses/">&larr; Back to Courses</a></p>
+
+  <div class="hub-intro">
+    <h1>Business Associations</h1>
+    <p class="literary">Corporate formation, governance, fiduciary duties, and liability for entities and their managers. How law structures the organizations that drive economic life.</p>
+  </div>
+
+  <h2>Interactive Companion Site</h2>
+  <p>The <strong>Business Associations: Law in Theory and Practice</strong> companion is a full 16-chapter interactive course application — including doctrine primers, simulations, and a searchable Tome of Law with 711 entries across the DGCL, MBCA, RUPA, ULLCA, securities statutes, and case law.</p>
+  <div class="companion-cta-wrapper">
+    <a href="https://oranburg.law/BA/" target="_blank" rel="noopener noreferrer" class="cta-link">Open Business Associations Companion Site &rarr;</a>
+  </div>
+
+  <h2>Casebooks &amp; Study Guides</h2>
+  <p>The course draws from two published texts.</p>
+
+  <div class="book-grid">
+    {pub("business-associations-book") && (
+      <div class="book-card">
+        <div class="book-title">{pub("business-associations-book").title}</div>
+        <div class="book-publisher">
+          {pub("business-associations-book").journal && `${pub("business-associations-book").journal} `}
+          ({["forthcoming", "in-progress"].includes(pub("business-associations-book").status) ? "forthcoming " : ""}{pub("business-associations-book").year})
+        </div>
+      </div>
+    )}
+    {pub("qa-business-associations") && (
+      <a href={pub("qa-business-associations").links?.published} target="_blank" class="book-card">
+        <div class="book-title">{pub("qa-business-associations").title}</div>
+        <div class="book-publisher">{pub("qa-business-associations").journal} ({pub("qa-business-associations").year})</div>
+        <span class="book-link">Purchase &rarr;</span>
+      </a>
+    )}
+  </div>
+
+  <h2>Video Lectures</h2>
+  <p>Full lecture series on corporate governance, shareholder litigation, and business organization fundamentals.</p>
+  <PlaylistEmbed id="PL2OBGU7rnJY6wW-y_1zrruypofyWci9pu" />
+  <PlaylistEmbed id="PL2OBGU7rnJY4D1tvdSJ5fYS8y_w6EnBZl" />
+  <PlaylistEmbed id="PL2OBGU7rnJY5hHWqZg9_NE4t64PD9Gtbm" />
+  <PlaylistEmbed id="PL2OBGU7rnJY5HtTPLWRwoKF96ygKxQeX4" />
+
+  <h2>Related Scholarship</h2>
+  <p>Published articles on corporate governance, shareholder activism, and institutional design.</p>
+  <RelatedPubs cluster="governance" />
+</BaseLayout>

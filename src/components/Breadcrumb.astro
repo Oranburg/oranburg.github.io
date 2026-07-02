@@ -1,0 +1,77 @@
+---
+// % voice-check: skip (CSS var() and JSX/Astro syntax require --)
+// Breadcrumb.astro: canonical Oranburg breadcrumb.
+// Landmark nav[aria-label="Breadcrumb"] > ol > li. CSS-generated separators
+// (assistive tech never voices the glyph). Current crumb is plain text with
+// aria-current="page". On a sub-site, pass the leading oranburg.law crumb as
+// the first trail item; on oranburg.law itself omit it. No invented links:
+// callers supply the trail.
+//
+// Usage:
+//   <Breadcrumb trail={[
+//     { label: 'oranburg.law', href: 'https://oranburg.law' },
+//     { label: 'Chumash', href: '/' },
+//     { label: 'This week' }            // no href => current page
+//   ]} />
+export interface Crumb {
+  label: string;
+  href?: string;
+}
+const { trail = [] } = Astro.props as { trail: Crumb[] };
+---
+
+<nav class="og-breadcrumb" aria-label="Breadcrumb">
+  <ol class="og-breadcrumb__list">
+    {trail.map((crumb) => (
+      <li class="og-breadcrumb__item">
+        {crumb.href
+          ? <a href={crumb.href}>{crumb.label}</a>
+          : <span aria-current="page">{crumb.label}</span>}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .og-breadcrumb {
+    background: var(--og-bg-soft);
+    border-bottom: 1px solid var(--og-rule);
+    padding: var(--og-space-xs) var(--og-space-md);
+    font-family: var(--og-font-headline);
+    font-size: var(--og-size-small);
+    letter-spacing: 0.02em;
+  }
+  .og-breadcrumb__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--og-space-xs);
+  }
+  .og-breadcrumb__item {
+    display: flex;
+    align-items: center;
+  }
+  .og-breadcrumb__item + .og-breadcrumb__item::before {
+    content: "/";
+    color: var(--og-ink-muted);
+    margin: 0 var(--og-space-xs);
+  }
+  .og-breadcrumb__item a {
+    color: var(--og-link-onpanel);
+    text-decoration: none;
+  }
+  .og-breadcrumb__item a:hover {
+    text-decoration: underline;
+  }
+  .og-breadcrumb__item [aria-current="page"] {
+    color: var(--og-ink);
+  }
+  .og-breadcrumb a:focus-visible {
+    outline: 2px solid var(--og-link-onpanel);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+</style>

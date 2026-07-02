@@ -1,0 +1,48 @@
+---
+import yaml from "js-yaml";
+import fs from "node:fs";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PlaylistEmbed from "../../../components/PlaylistEmbed.astro";
+import BookCardById from "../../../components/BookCardById.astro";
+import RelatedPubs from "../../../components/RelatedPubs.astro";
+const schol = yaml.load(fs.readFileSync("src/data/scholarship.yml", "utf8"));
+const pub = (id) => (schol.publications ?? []).find((p) => p.id === id);
+---
+
+<BaseLayout title="Contract Law" current="Contract Law">
+  <p class="back-to-courses"><a href="/courses/">&larr; Back to Courses</a></p>
+
+  <div class="hub-intro">
+    <h1>Contract Law</h1>
+    <p class="literary">When and how should law enforce voluntary agreements? This course explores the rules, cases, and problems that define contractual obligation in American law.</p>
+  </div>
+
+  <h2>Interactive Companion Site</h2>
+  <p>The <strong>Contract Law Companion</strong> includes interactive exercises — including the Bilbo's Burglar Agreement contract anatomy, a Remedies simulation, and a Battle of the Forms UCC 2-207 game — plus a statutory supplement and supplementary resources organized by chapter.</p>
+  <div class="companion-cta-wrapper">
+    <a href="https://oranburg.law/K/" target="_blank" rel="noopener noreferrer" class="cta-link">Open Contract Law Companion Site &rarr;</a>
+  </div>
+
+  <h2>Casebook</h2>
+  <p>The course uses Oranburg's casebook, now in its second edition.</p>
+  <BookCardById id="contract-law-2d" />
+
+  <h2>Podcast: Organized</h2>
+  <p>A 25-episode audio series walking through contract law from formation to remedies, with real-world cases and practical analysis.</p>
+  <details class="embed">
+    <summary>Listen to the Contract Law Podcast Series</summary>
+    <div class="podcast-embed">
+      <iframe title="Organized: The Business Law Breakdown" allowtransparency="true" height="315" width="100%" style="border: none; min-width: min(100%, 430px);height:315px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=p6w7w-1260bda-pbblog-playlist&share=1&download=1&rtl=0&fonts=Trebuchet%20MS&skin=60a0c8&font-color=auto&logo_link=episode_page&order=serial&limit=30&filter=season&season=1&ss=36989106ea2c3b304f98d49d293c1598&btn-skin=3267a3&size=315" loading="lazy" allowfullscreen=""></iframe>
+    </div>
+  </details>
+
+  <h2>Video Lectures</h2>
+  <p>Supplemental video lectures covering contract law fundamentals.</p>
+  <PlaylistEmbed id="PL2OBGU7rnJY7qB7SzYmNmv0-9TD0ilkft" />
+  <PlaylistEmbed id="PL2OBGU7rnJY5VXFCMqVohHMUNhSlEvqJY" />
+  <PlaylistEmbed id="PL2OBGU7rnJY5L10Gbr20au--Q9UKMJP7B" />
+
+  <h2>Related Scholarship</h2>
+  <p>Published articles and chapters related to contract law and commercial transactions.</p>
+  <RelatedPubs cluster="education" tags={["contracts", "contract law"]} />
+</BaseLayout>

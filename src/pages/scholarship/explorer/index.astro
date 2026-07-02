@@ -1,0 +1,84 @@
+---
+import yaml from "js-yaml";
+import fs from "node:fs";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const schol = yaml.load(fs.readFileSync("src/data/scholarship.yml", "utf8"));
+const clusters = schol.clusters ?? [];
+const pubsOf = (id) =>
+  (schol.publications ?? []).filter(
+    (p) => p.cluster === id && p.type !== "book" && !(p.exclude_from ?? []).includes("explorer")
+  );
+const NODE_POS = [
+  { left: "50%", top: "12.5%" },
+  { left: "82.3%", top: "29.2%" },
+  { left: "82.3%", top: "70.8%" },
+  { left: "50%", top: "87.5%" },
+  { left: "17.7%", top: "70.8%" },
+  { left: "17.7%", top: "29.2%" },
+  { left: "50%", top: "50%" },
+];
+const staticA = "\n<style>\n/* ==========================================================================\n   Research Explorer \u2014 Hex Diagram + Drill-Down\n   ========================================================================== */\n\n.explorer {\n  position: relative;\n  max-width: var(--max-width);\n  margin: 0 auto;\n  padding: var(--space-xl) 0;\n}\n\n.explorer-intro {\n  text-align: center;\n  margin-bottom: var(--space-xl);\n}\n\n.explorer-intro h1 {\n  font-family: var(--font-headline);\n  font-size: 2rem;\n  color: var(--accent);\n  margin-bottom: var(--space-sm);\n}\n\n.explorer-intro p {\n  color: var(--muted);\n  max-width: 600px;\n  margin: 0 auto;\n}\n\n/* --- Hex Grid --- */\n\n.hex-container {\n  position: relative;\n  width: 100%;\n  max-width: 640px;\n  margin: 0 auto var(--space-2xl);\n  aspect-ratio: 1 / 0.9;\n}\n\n.hex-svg {\n  position: absolute;\n  inset: 0;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n}\n\n.hex-line {\n  stroke: var(--border);\n  stroke-width: 1;\n  transition: opacity 0.4s;\n}\n\n.hex-container.cluster-active .hex-line {\n  opacity: 0.1;\n}\n\n/* --- Nodes --- */\n\n.hex-node {\n  position: absolute;\n  transform: translate(-50%, -50%);\n  text-align: center;\n  cursor: pointer;\n  transition: opacity 0.4s, transform 0.4s;\n  z-index: 2;\n}\n\n.hex-node:focus-visible {\n  outline: 2px solid var(--accent);\n  outline-offset: 4px;\n  border-radius: 50%;\n}\n\n.hex-container.cluster-active .hex-node {\n  opacity: 0;\n  pointer-events: none;\n  transform: translate(-50%, -50%) scale(0.7);\n}\n\n.hex-container.cluster-active .hex-node.active {\n  opacity: 1;\n  pointer-events: auto;\n  transform: translate(-50%, -50%) scale(1.1);\n}\n\n.node-circle {\n  width: 110px;\n  height: 110px;\n  border-radius: 50%;\n  background: var(--bg-secondary);\n  border: 2px solid var(--border);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  padding: var(--space-sm);\n  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;\n  margin: 0 auto;\n}\n\n.hex-node:hover .node-circle,\n.hex-node.active .node-circle {\n  border-color: var(--accent);\n  box-shadow: 0 0 20px rgba(109, 172, 222, 0.3);\n}\n\n.node-label {\n  font-family: var(--font-headline);\n  font-size: 0.7rem;\n  color: var(--text);\n  line-height: 1.2;\n  text-align: center;\n}\n\n.node-count {\n  font-family: var(--font-body);\n  font-size: 0.65rem;\n  color: var(--muted);\n  margin-top: 2px;\n}\n\n/* Center node */\n.hex-node.center .node-circle {\n  width: 140px;\n  height: 140px;\n  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-soft));\n  border-color: var(--accent);\n}\n\n.hex-node.center .node-label {\n  font-size: 0.75rem;\n  color: var(--accent);\n}\n\n.hex-node.center {\n  cursor: default;\n}\n\n.hex-container.cluster-active .hex-node.center {\n  opacity: 0.3;\n  pointer-events: none;\n}\n\n/* --- Detail Panel --- */\n\n.cluster-detail {\n  max-height: 0;\n  overflow: hidden;\n  opacity: 0;\n  transition: max-height 0.5s ease, opacity 0.4s ease, margin 0.4s ease;\n  margin: 0;\n}\n\n.cluster-detail.open {\n  max-height: 3000px;\n  opacity: 1;\n  margin: var(--space-xl) 0;\n}\n\n.cluster-detail-header {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  margin-bottom: var(--space-lg);\n  padding-bottom: var(--space-sm);\n  border-bottom: 3px solid var(--accent-red);\n}\n\n.cluster-detail-header h2 {\n  border-bottom: none;\n  padding-bottom: 0;\n  margin-bottom: 0;\n}\n\n.back-btn {\n  background: transparent;\n  border: 1px solid var(--border);\n  color: var(--muted);\n  font-family: var(--font-headline);\n  font-size: 0.85rem;\n  padding: var(--space-xs) var(--space-md);\n  border-radius: var(--radius-sm);\n  cursor: pointer;\n  transition: border-color 0.2s, color 0.2s;\n  white-space: nowrap;\n}\n\n.back-btn:hover {\n  border-color: var(--accent);\n  color: var(--accent);\n}\n\n.cluster-description {\n  color: var(--muted);\n  margin-bottom: var(--space-xl);\n  font-family: var(--font-accent);\n  font-size: 1.1rem;\n}\n\n/* --- Paper Cards in Detail --- */\n\n.paper-grid {\n  display: grid;\n  gap: var(--space-md);\n}\n\n.paper-card {\n  background: var(--bg-secondary);\n  border: 1px solid var(--border);\n  border-radius: var(--radius-md);\n  padding: var(--space-lg);\n  cursor: pointer;\n  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;\n}\n\n.paper-card:hover {\n  border-color: var(--accent);\n  transform: translateX(4px);\n}\n\n.paper-card:focus-visible {\n  outline: 2px solid var(--accent);\n  outline-offset: 2px;\n}\n\n.paper-card-title {\n  font-family: var(--font-accent);\n  font-size: 1.15rem;\n  font-weight: 600;\n  color: var(--accent);\n  margin-bottom: var(--space-xs);\n}\n\n.paper-card-journal {\n  font-size: 0.9rem;\n  color: var(--muted);\n  font-style: italic;\n}\n\n.paper-card-abstract {\n  max-height: 0;\n  overflow: hidden;\n  opacity: 0;\n  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease;\n  margin-top: 0;\n  padding-top: 0;\n  border-top: 0 solid var(--border);\n}\n\n.paper-card.expanded .paper-card-abstract {\n  max-height: 500px;\n  opacity: 1;\n  margin-top: var(--space-md);\n  padding-top: var(--space-md);\n  border-top: 1px solid var(--border);\n}\n\n.paper-card-abstract p {\n  color: var(--muted);\n  font-size: 0.95rem;\n  margin-bottom: var(--space-md);\n}\n\n.paper-links {\n  display: flex;\n  gap: var(--space-md);\n  flex-wrap: wrap;\n}\n\n.paper-links a {\n  font-family: var(--font-headline);\n  font-size: 0.85rem;\n  color: var(--accent-red);\n  text-decoration: none;\n  transition: color 0.2s;\n}\n\n.paper-links a:hover {\n  color: var(--accent);\n}\n\n.paper-card-expand {\n  float: right;\n  color: var(--accent);\n  font-family: var(--font-headline);\n  font-weight: bold;\n}\n\n/* --- Companion badge --- */\n.companion-badge {\n  display: inline-block;\n  background: var(--teal);\n  color: var(--blue-deep);\n  font-family: var(--font-headline);\n  font-size: 0.7rem;\n  padding: 1px 6px;\n  border-radius: 3px;\n  margin-left: var(--space-sm);\n  vertical-align: middle;\n  text-decoration: none;\n}\n\n/* --- Mobile --- */\n\n@media (max-width: 600px) {\n  .hex-container {\n    display: none;\n  }\n\n  .mobile-cluster-list {\n    display: block !important;\n  }\n}\n\n.mobile-cluster-list {\n  display: none;\n  list-style: none;\n  padding: 0;\n}\n\n.mobile-cluster-btn {\n  display: block;\n  width: 100%;\n  background: var(--bg-secondary);\n  border: 1px solid var(--border);\n  border-radius: var(--radius-md);\n  padding: var(--space-md) var(--space-lg);\n  margin-bottom: var(--space-sm);\n  cursor: pointer;\n  text-align: left;\n  font-family: var(--font-headline);\n  font-size: 1rem;\n  color: var(--accent);\n  transition: border-color 0.2s;\n}\n\n.mobile-cluster-btn:hover {\n  border-color: var(--accent);\n}\n\n.mobile-cluster-btn .node-count {\n  float: right;\n  color: var(--muted);\n}\n</style>\n\n<div class=\"explorer\">\n  <div class=\"explorer-intro\">\n    <h1>Research Explorer</h1>\n    <p>Click a research cluster to explore the publications within it. Click a paper to read the abstract and find links to the full text.</p>\n  </div>\n\n  <!-- Hex diagram (desktop/tablet) -->\n  <div class=\"hex-container\" id=\"hexContainer\">\n    <!-- SVG connecting lines -->\n    <svg class=\"hex-svg\" viewBox=\"0 0 640 576\" preserveAspectRatio=\"xMidYMid meet\">\n      <!-- Lines drawn between adjacent hex positions -->\n      <line class=\"hex-line\" x1=\"320\" y1=\"288\" x2=\"320\" y2=\"72\"/>\n      <line class=\"hex-line\" x1=\"320\" y1=\"288\" x2=\"527\" y2=\"168\"/>\n      <line class=\"hex-line\" x1=\"320\" y1=\"288\" x2=\"527\" y2=\"408\"/>\n      <line class=\"hex-line\" x1=\"320\" y1=\"288\" x2=\"320\" y2=\"504\"/>\n      <line class=\"hex-line\" x1=\"320\" y1=\"288\" x2=\"113\" y2=\"408\"/>\n      <line class=\"hex-line\" x1=\"320\" y1=\"288\" x2=\"113\" y2=\"168\"/>\n      <!-- Outer ring connections -->\n      <line class=\"hex-line\" x1=\"320\" y1=\"72\" x2=\"527\" y2=\"168\" style=\"opacity:0.3\"/>\n      <line class=\"hex-line\" x1=\"527\" y1=\"168\" x2=\"527\" y2=\"408\" style=\"opacity:0.3\"/>\n      <line class=\"hex-line\" x1=\"527\" y1=\"408\" x2=\"320\" y2=\"504\" style=\"opacity:0.3\"/>\n      <line class=\"hex-line\" x1=\"320\" y1=\"504\" x2=\"113\" y2=\"408\" style=\"opacity:0.3\"/>\n      <line class=\"hex-line\" x1=\"113\" y1=\"408\" x2=\"113\" y2=\"168\" style=\"opacity:0.3\"/>\n      <line class=\"hex-line\" x1=\"113\" y1=\"168\" x2=\"320\" y2=\"72\" style=\"opacity:0.3\"/>\n    </svg>\n\n    <!-- Center node -->\n    <div class=\"hex-node center\" style=\"left:50%;top:50%;\" tabindex=\"0\" aria-label=\"Research center: How law responds to technological disruption\">\n      <div class=\"node-circle\">\n        <div class=\"node-label\">Law, Technology<br>&amp; Institutional Trust</div>\n      </div>\n    </div>\n\n    <!-- Cluster nodes \u2014 positioned in hex ring -->\n";
+const midA = "  </div>\n\n  <!-- Mobile fallback: simple list -->\n  <ul class=\"mobile-cluster-list\" id=\"mobileList\">\n";
+const midB = "  </ul>\n\n  <!-- Detail panels (one per cluster, hidden by default) -->\n";
+const staticB = "</div>\n\n<script>\nvar activeCluster = null;\n\nfunction openCluster(id) {\n  // Close any open cluster first\n  if (activeCluster) closeCluster();\n\n  activeCluster = id;\n  var container = document.getElementById('hexContainer');\n  container.classList.add('cluster-active');\n\n  // Highlight active node\n  var nodes = container.querySelectorAll('.hex-node[data-cluster]');\n  nodes.forEach(function (n) {\n    if (n.dataset.cluster === id) n.classList.add('active');\n  });\n\n  // Open detail panel\n  var detail = document.getElementById('detail-' + id);\n  if (detail) {\n    detail.classList.add('open');\n    // Scroll to detail panel smoothly\n    setTimeout(function () {\n      detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });\n    }, 100);\n  }\n}\n\nfunction closeCluster() {\n  var container = document.getElementById('hexContainer');\n  container.classList.remove('cluster-active');\n\n  // Remove active from all nodes\n  var nodes = container.querySelectorAll('.hex-node');\n  nodes.forEach(function (n) { n.classList.remove('active'); });\n\n  // Close all detail panels\n  var details = document.querySelectorAll('.cluster-detail');\n  details.forEach(function (d) { d.classList.remove('open'); });\n\n  // Close all expanded papers\n  var papers = document.querySelectorAll('.paper-card.expanded');\n  papers.forEach(function (p) {\n    p.classList.remove('expanded');\n    var ind = p.querySelector('.paper-card-expand');\n    if (ind) ind.textContent = '+';\n  });\n\n  activeCluster = null;\n\n  // Scroll back to hex\n  container.scrollIntoView({ behavior: 'smooth', block: 'center' });\n}\n\nfunction togglePaper(el) {\n  // Don't toggle if clicking a link inside\n  if (event && event.target.tagName === 'A') return;\n  el.classList.toggle('expanded');\n  var ind = el.querySelector('.paper-card-expand');\n  if (ind) ind.textContent = el.classList.contains('expanded') ? '\\u2212' : '+';\n}\n\n// ESC to close\ndocument.addEventListener('keydown', function (e) {\n  if (e.key === 'Escape' && activeCluster) closeCluster();\n});\n</script>\n";
+---
+
+<BaseLayout title="Research Explorer" current="Research Explorer">
+  <Fragment set:html={staticA} />
+  {clusters.map((cluster, i) => {
+    const count = pubsOf(cluster.id).length;
+    const pos = NODE_POS[i] ?? NODE_POS[6];
+    return (
+      <div class="hex-node" style={`left:${pos.left};top:${pos.top};`} data-cluster={cluster.id} tabindex="0" role="button" aria-label={`Explore ${cluster.label} (${count} articles)`} onclick={`openCluster('${cluster.id}')`} onkeydown={`if(event.key==='Enter'||event.key===' '){event.preventDefault();openCluster('${cluster.id}')}`}>
+        <div class="node-circle">
+          <div class="node-label">{cluster.label}</div>
+          <div class="node-count">{count} articles</div>
+        </div>
+      </div>
+    );
+  })}
+  <Fragment set:html={midA} />
+  {clusters.map((cluster) => (
+    <button class="mobile-cluster-btn" onclick={`openCluster('${cluster.id}')`}>
+      {cluster.label}
+      <span class="node-count">{pubsOf(cluster.id).length}</span>
+    </button>
+  ))}
+  <Fragment set:html={midB} />
+  {clusters.map((cluster) => (
+    <div class="cluster-detail" id={`detail-${cluster.id}`}>
+      <div class="cluster-detail-header">
+        <h2>{cluster.label}</h2>
+        <button class="back-btn" onclick="closeCluster()" aria-label="Back to overview">&larr; All Clusters</button>
+      </div>
+      <p class="cluster-description">{cluster.description}</p>
+      <div class="paper-grid">
+        {pubsOf(cluster.id)
+          .sort((a, b) => (b.year ?? 0) - (a.year ?? 0))
+          .map((pub) => (
+            <div class="paper-card" tabindex="0" role="button" aria-label={pub.title} onclick="togglePaper(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();togglePaper(this)}">
+              <span class="paper-card-expand">+</span>
+              <div class="paper-card-title">
+                {pub.title}
+                {pub.links?.companion && <a href={pub.links.companion} class="companion-badge" onclick="event.stopPropagation()">Companion Site</a>}
+              </div>
+              <div class="paper-card-journal">
+                {pub.journal && `${pub.journal}, `}{pub.status === "forthcoming" ? "forthcoming " : ""}{pub.year}
+                {pub.coauthors?.length > 0 && ` (with ${pub.coauthors.join(" and ")})`}
+              </div>
+              <div class="paper-card-abstract">
+                <p>{pub.abstract}</p>
+                <div class="paper-links">
+                  {pub.links?.ssrn && <a href={pub.links.ssrn} target="_blank" onclick="event.stopPropagation()">SSRN &rarr;</a>}
+                  {pub.links?.published && <a href={pub.links.published} target="_blank" onclick="event.stopPropagation()">Full Text &rarr;</a>}
+                  {pub.links?.pdf && <a href={pub.links.pdf} target="_blank" onclick="event.stopPropagation()">PDF &rarr;</a>}
+                </div>
+              </div>
+            </div>
+          ))}
+      </div>
+    </div>
+  ))}
+  <Fragment set:html={staticB} />
+</BaseLayout>

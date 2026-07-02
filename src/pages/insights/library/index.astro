@@ -1,0 +1,28 @@
+---
+import yaml from "js-yaml";
+import fs from "node:fs";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const taxonomy = yaml.load(fs.readFileSync("src/data/insights_taxonomy.yml", "utf8"));
+---
+
+<BaseLayout title="Insights Library" current="Insights Library">
+  <div class="hub-intro">
+    <h1>Insights Library</h1>
+    <p>Browse by area of focus. Each section collects essays, guides, and commentary on a distinct lane of legal thought.</p>
+  </div>
+
+  <p class="topic-breadcrumb"><a href="/insights/">Insights</a> &rsaquo; Library</p>
+
+  <div class="library-grid">
+    {(taxonomy.buckets ?? []).map((bucket) => (
+      <a class="library-tile" href={bucket.url}>
+        {bucket.image && (
+          <img class="library-tile-image" src={encodeURI(bucket.image)} alt={bucket.name} />
+        )}
+        <h2 class="library-tile-title">{bucket.name}</h2>
+        <p class="library-tile-desc">{bucket.description}</p>
+      </a>
+    ))}
+  </div>
+</BaseLayout>

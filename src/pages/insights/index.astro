@@ -1,0 +1,81 @@
+---
+import { getCollection } from "astro:content";
+import yaml from "js-yaml";
+import fs from "node:fs";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostListItem from "../../components/PostListItem.astro";
+import { byDateDesc } from "../../lib/posts.js";
+
+const taxonomy = yaml.load(fs.readFileSync("src/data/insights_taxonomy.yml", "utf8"));
+const posts = (await getCollection("insights")).sort(byDateDesc);
+const featured = posts.filter((p) => p.data.featured);
+---
+
+<BaseLayout
+  title="Insights"
+  tagline="Law Professor | Fintech Scholar | Public Commentator"
+  current="Insights"
+>
+  <div class="hub-intro">
+    <h1>Insights</h1>
+    <p>Essays and guides on law, institutions, and the organizations&mdash;public and private&mdash;that govern modern life.</p>
+  </div>
+
+  <div class="explore-library-callout">
+    <p>Looking for a topic? Browse the structured <a href="/insights/library/">Insights Library &rarr;</a></p>
+  </div>
+
+  <section class="browse-area-strip" aria-label="Browse by Area">
+    <h2 class="browse-area-title">Browse by Area</h2>
+    <div class="browse-area-grid">
+      {(taxonomy.buckets ?? []).map((bucket) => (
+        <a class="browse-area-item" href={bucket.url}>
+          {bucket.image && (
+            <img class="browse-area-thumb" src={encodeURI(bucket.image)} alt={bucket.name} />
+          )}
+          <span class="browse-area-name">{bucket.name}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <h2>Featured Guides &amp; Essays</h2>
+  <p class="section-desc">Longer-form pieces on law, institutions, and emerging legal issues — curated for depth and lasting relevance.</p>
+  {featured.length > 0 ? (
+    <>
+      <ul class="post-list">
+        {featured.slice(0, 6).map((post) => <PostListItem post={post} />)}
+      </ul>
+      {featured.length > 6 && (
+        <details class="show-more">
+          <summary>Show more</summary>
+          <ul class="post-list">
+            {featured.slice(6).map((post) => <PostListItem post={post} />)}
+          </ul>
+        </details>
+      )}
+    </>
+  ) : (
+    <p>No featured posts yet.</p>
+  )}
+
+  <h2>Latest Notes &amp; Commentary</h2>
+  <p class="section-desc">Short observations, updates, and timely commentary from recent writing and public engagement.</p>
+  {posts.length > 0 ? (
+    <>
+      <ul class="post-list">
+        {posts.slice(0, 10).map((post) => <PostListItem post={post} showKind={true} />)}
+      </ul>
+      {posts.length > 10 && (
+        <details class="show-more">
+          <summary>Show more</summary>
+          <ul class="post-list">
+            {posts.slice(10).map((post) => <PostListItem post={post} showKind={true} />)}
+          </ul>
+        </details>
+      )}
+    </>
+  ) : (
+    <p>No posts yet. Check back soon!</p>
+  )}
+</BaseLayout>

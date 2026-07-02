@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const body = "<div class=\"hub-intro\">\n  <h1>Blog</h1>\n  <p>This page has moved. All posts are now published under <strong>Insights</strong>.</p>\n  <p><a href=\"/insights/\" style=\"color: var(--bright-blue); font-weight: 500;\">Visit Insights \u2192</a></p>\n</div>\n";
+---
+
+<BaseLayout title="Blog" current="Blog">
+  <Fragment set:html={body} />
+</BaseLayout>

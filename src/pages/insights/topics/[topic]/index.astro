@@ -1,0 +1,71 @@
+---
+import { getCollection } from "astro:content";
+import yaml from "js-yaml";
+import fs from "node:fs";
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { byDateDesc, postUrl, dateLabel, stripHtml } from "../../../../lib/posts.js";
+
+export async function getStaticPaths() {
+  const defs = JSON.parse(fs.readFileSync("src/data/topics.json", "utf8"));
+  return defs.map((t) => ({ params: { topic: t.slug }, props: { def: t } }));
+}
+
+const { def } = Astro.props;
+const taxonomy = yaml.load(fs.readFileSync("src/data/insights_taxonomy.yml", "utf8"));
+const bucket = (taxonomy.buckets ?? []).find((b) => b.url === def.bucket_url);
+const posts = (await getCollection("insights"))
+  .filter((p) => p.data.tags.includes(def.topic_tag))
+  .sort(byDateDesc);
+---
+
+<BaseLayout title={def.title} description={def.description} current={def.title}>
+  <div class="hub-intro">
+    <h1 set:html={def.title} />
+    {bucket?.image && (
+      <img class="topic-bucket-hero" src={encodeURI(bucket.image)} alt={bucket.name} />
+    )}
+    {def.description && <p>{def.description}</p>}
+  </div>
+
+  <p class="topic-breadcrumb">
+    <a href="/insights/">Insights</a> &rsaquo;
+    <a href="/insights/library/">Library</a> &rsaquo;
+    {def.bucket_title && (
+      <>
+        <a href={def.bucket_url} set:html={def.bucket_title} /> &rsaquo;{" "}
+      </>
+    )}
+    <span set:html={def.title} />
+  </p>
+
+  {posts.length > 0 ? (
+    <ul class="post-list">
+      {posts.map((post) => (
+        <li class="post-list-item">
+          <h3><a href={postUrl(post)}>{post.data.title}</a></h3>
+          <p class="post-meta">
+            <time datetime={post.data.date.toISOString()}>{dateLabel(post.data.date)}</time>
+            {post.data.kind && <span class="post-kind-badge">{post.data.kind}</span>}
+          </p>
+          {(post.data.deck || post.data.excerpt) && (
+            <p class="post-excerpt">{post.data.deck || stripHtml(post.data.excerpt)}</p>
+          )}
+          {post.data.tags.length > 0 && (
+            <details class="post-tags-detail">
+              <summary>Tags</summary>
+              <p>{post.data.tags.map((tag) => <span class="post-tag">{tag} </span>)}</p>
+            </details>
+          )}
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p class="no-posts-notice">No posts in this topic yet. Check back soon.</p>
+  )}
+
+  <p class="back-to-library">
+    <a href={def.bucket_url || "/insights/library/"}>
+      &larr; Back to <span set:html={def.bucket_title || "the Library"} />
+    </a>
+  </p>
+</BaseLayout>

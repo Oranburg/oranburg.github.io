@@ -1,0 +1,142 @@
+---
+import yaml from "js-yaml";
+import fs from "node:fs";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const schol = yaml.load(fs.readFileSync("src/data/scholarship.yml", "utf8"));
+const comm = yaml.load(fs.readFileSync("src/data/commentary.yml", "utf8"));
+const pubs = schol.publications ?? [];
+const items = comm.items ?? [];
+const byYearDesc = (a, b) => (b.year ?? 0) - (a.year ?? 0);
+const byDateDesc = (a, b) => new Date(b.date ?? 0) - new Date(a.date ?? 0);
+const books = pubs.filter((p) => p.type === "book").sort(byYearDesc);
+const articles = pubs.filter((p) => p.type !== "book").sort(byYearDesc);
+const opeds = items.filter((i) => i.type === "op-ed").sort(byDateDesc);
+const podcasts = items.filter((i) => i.type === "podcast").sort(byDateDesc);
+const fmtDate = (d) =>
+  d ? new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }) : "";
+const buildMonth = new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" });
+---
+
+<BaseLayout
+  title="Curriculum Vitae"
+  tagline="Law Professor | Fintech Scholar | Public Commentator"
+  description="Curriculum vitae of Professor Seth C. Oranburg: positions, education, books, articles, op-eds, and public service."
+  current="Curriculum Vitae"
+>
+  <div class="hub-intro">
+    <h1>Curriculum Vitae</h1>
+    <p>Last updated {buildMonth}. This page is generated from the same data that drives the site, so it reflects current state.</p>
+  </div>
+
+  <section class="cv-section">
+    <h2>Positions</h2>
+    <ul class="cv-list">
+      <li><strong>Ordinary Professor of Law and Director of the Law and Entrepreneurship Program</strong>, The Catholic University of America, Columbus School of Law</li>
+      <li><strong>Commissioner</strong>, New Hampshire Commission to Study Stable Tokens (HB 310)</li>
+      <li><strong>Director</strong>, Program on Organizations, Business and Markets, NYU School of Law Classical Liberal Institute</li>
+      <li><strong>Chair</strong>, Law Faculty Section, Academic Engagement Network</li>
+      <li><strong>Fellow</strong>, Faculty of Law, Haifa Center for Law and Technology</li>
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Education</h2>
+    <ul class="cv-list">
+      <li><strong>J.D., with honors</strong>, University of Chicago Law School</li>
+      <li><strong>B.A., magna cum laude</strong>, University of Florida</li>
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Bar Admissions</h2>
+    <ul class="cv-list">
+      <li>New Hampshire</li>
+      <li>California</li>
+      <li>District of Columbia</li>
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Teaching Honors</h2>
+    <ul class="cv-list">
+      <li>University Excellence in Teaching Award (2024)</li>
+      <li>Center for Teaching Excellence Inclusive Teaching Award (2021)</li>
+      <li>Presidential Scholarship Award (2019)</li>
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Books</h2>
+    <ul class="cv-list">
+      {books.map((pub) => (
+        <li>
+          <strong>{pub.title}</strong>
+          {pub.journal && (
+            <>
+              {" "}({pub.journal}{pub.status === "forthcoming" ? `, forthcoming ${pub.year}` : pub.year ? `, ${pub.year}` : ""})
+            </>
+          )}
+          {pub.coauthors?.length > 0 && ` with ${pub.coauthors.join(" and ")}`}
+          {pub.links?.published && <> (<a href={pub.links.published} target="_blank" rel="noopener noreferrer">publisher</a>)</>}
+          {pub.links?.companion && <> (<a href={pub.links.companion} target="_blank" rel="noopener noreferrer">companion site</a>)</>}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Articles</h2>
+    <ul class="cv-list">
+      {articles.map((pub) => (
+        <li>
+          {pub.citation ? (
+            <Fragment set:html={pub.citation} />
+          ) : (
+            <>
+              <em>{pub.title}</em>{pub.journal && `, ${pub.journal}`} ({pub.status === "forthcoming" ? "forthcoming " : ""}{pub.year})
+            </>
+          )}
+          {pub.links?.ssrn && <> <a href={pub.links.ssrn} target="_blank" rel="noopener noreferrer">[SSRN]</a></>}
+          {pub.links?.published && <> <a href={pub.links.published} target="_blank" rel="noopener noreferrer">[full text]</a></>}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Op-Eds &amp; Public Commentary</h2>
+    <ul class="cv-list">
+      {opeds.map((item) => (
+        <li>
+          <em>{item.title}</em>, {item.outlet}{item.date && ` (${fmtDate(item.date)})`}
+          {item.perma ? (
+            <> <a href={item.perma} target="_blank" rel="noopener noreferrer">[perma]</a></>
+          ) : item.url ? (
+            <> <a href={item.url} target="_blank" rel="noopener noreferrer">[link]</a></>
+          ) : null}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Podcast Appearances</h2>
+    <ul class="cv-list">
+      {podcasts.map((item) => (
+        <li>
+          <em>{item.title}</em>, {item.outlet}{item.date && ` (${fmtDate(item.date)})`}
+          {item.perma && <> <a href={item.perma} target="_blank" rel="noopener noreferrer">[perma]</a></>}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Practice</h2>
+    <ul class="cv-list">
+      <li>Venture finance and emerging-company law, <strong>Fenwick &amp; West LLP</strong>, Silicon Valley</li>
+      <li>Antitrust law, <strong>Cadwalader, Wickersham &amp; Taft</strong>, Washington, D.C.</li>
+    </ul>
+  </section>
+</BaseLayout>

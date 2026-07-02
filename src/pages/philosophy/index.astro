@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const body = "<div class=\"hub-intro\">\n  <h1>Philosophy</h1>\n  <p>Explorations in legal philosophy, ethics, and the foundations of law are published under <strong>Insights</strong>.</p>\n  <p><a href=\"/insights/\">Visit Insights &rarr;</a></p>\n</div>\n";
+---
+
+<BaseLayout title="Philosophy" current="Philosophy">
+  <Fragment set:html={body} />
+</BaseLayout>

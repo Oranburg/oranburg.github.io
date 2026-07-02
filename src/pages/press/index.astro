@@ -1,0 +1,73 @@
+---
+import yaml from "js-yaml";
+import fs from "node:fs";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PressItem from "../../components/PressItem.astro";
+
+const data = yaml.load(fs.readFileSync("src/data/commentary.yml", "utf8"));
+const items = data.items ?? [];
+const byDateDesc = (a, b) => new Date(b.date ?? 0) - new Date(a.date ?? 0);
+const opeds = items.filter((i) => i.type === "op-ed").sort(byDateDesc);
+const podcasts = items.filter((i) => i.type === "podcast").sort(byDateDesc);
+const videos = items.filter((i) => i.type === "video");
+const quotes = items.filter((i) => i.type === "quote");
+---
+
+<BaseLayout
+  title="Press & Public Commentary"
+  tagline="Law Professor | Fintech Scholar | Public Commentator"
+  description="Op-eds, podcast appearances, and media commentary by Professor Seth C. Oranburg on financial regulation, digital assets, university governance, and the rule of law."
+  current="Press & Public Commentary"
+>
+  <div class="hub-intro">
+    <h1>Press &amp; Public Commentary</h1>
+    <p>Op-eds, podcast appearances, broadcast quotes, and video commentary on financial regulation, digital assets, governance, and academic freedom. For interview requests or speaking inquiries, see the <a href="/media-kit/">media kit</a>.</p>
+  </div>
+
+  <section class="press-section">
+    <h2>Op-Eds</h2>
+    <p class="section-desc">Opinion pieces in national outlets on financial regulation, digital assets, and institutional governance.</p>
+    <ul class="article-list">
+      {opeds.map((item) => <PressItem item={item} />)}
+    </ul>
+  </section>
+
+  <section class="press-section">
+    <h2>Podcast Appearances</h2>
+    <p class="section-desc">Interviews and panel discussions on academic freedom, financial regulation, and the law.</p>
+    <ul class="article-list">
+      {podcasts.map((item) => <PressItem item={item} />)}
+    </ul>
+  </section>
+
+  {videos.length > 0 && (
+    <section class="press-section">
+      <h2>Video</h2>
+      <p class="section-desc">Selected video commentary and presentations.</p>
+      {videos.map((item) => (
+        <details class="embed">
+          <summary>Watch: {item.title}</summary>
+          <div class="embed-container">
+            <iframe src={item.embed} title={item.title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </details>
+      ))}
+    </section>
+  )}
+
+  {quotes.length > 0 && (
+    <section class="press-section">
+      <h2>Quoted In</h2>
+      <p class="section-desc">News outlets that have cited Professor Oranburg as a source.</p>
+      <ul class="article-list">
+        {quotes.map((item) => <PressItem item={item} />)}
+      </ul>
+    </section>
+  )}
+
+  <section class="press-section">
+    <h2>For Journalists &amp; Bookers</h2>
+    <p>Professor Oranburg is available for interviews and commentary on: digital asset regulation (CLARITY Act, GENIUS Act, stablecoins, DeFi, DAOs), corporate governance, securities regulation, contract law, university governance and academic freedom, the gig economy, and trade secret law.</p>
+    <p>Reach him via the <a href="/contact/">contact form</a> or see the <a href="/media-kit/">media kit</a> for bios, photos, and booking details.</p>
+  </section>
+</BaseLayout>

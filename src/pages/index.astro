@@ -1,0 +1,142 @@
+---
+import yaml from "js-yaml";
+import fs from "node:fs";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const schol = yaml.load(fs.readFileSync("src/data/scholarship.yml", "utf8"));
+const comm = yaml.load(fs.readFileSync("src/data/commentary.yml", "utf8"));
+const pubs = (schol.publications ?? []).filter((p) => !(p.exclude_from ?? []).includes("web"));
+const items = comm.items ?? [];
+const byYearDesc = (a, b) => (b.year ?? 0) - (a.year ?? 0);
+const books = pubs.filter((p) => p.type === "book").sort(byYearDesc);
+const recentArticles = pubs.filter((p) => p.status === "published" && p.type !== "book").sort(byYearDesc).slice(0, 7);
+const forthcoming = pubs.filter((p) => p.status === "forthcoming" && p.type !== "book").sort(byYearDesc);
+const featuredOped = items.find((i) => i.featured && i.type === "op-ed");
+const featuredVideo = items.find((i) => i.featured && i.type === "video");
+const recentOpeds = items.filter((i) => i.type === "op-ed" && !i.featured);
+const media = [...items.filter((i) => i.type === "podcast"), ...items.filter((i) => i.type === "quote")];
+
+const fmtDate = (d) =>
+  d ? new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }) : "";
+
+const staticA = "\n<section id=\"about\">\n    <h2>About</h2>\n    <p>Seth C. Oranburg is a three-time award-winning law professor who studies how law creates and destroys governance in organizations, markets, and civil society.</p>\n    <p class=\"start-here-cta\"><strong>New here?</strong> The <a href=\"/start-here/\">curated reading guide</a> is the shortcut into the work. For current state, see <a href=\"/now/\">what I'm working on this month</a>.</p>\n    <div class=\"bio-grid\">\n        <div class=\"bio-image\">\n            <picture>\n              <source srcset=\"/assets/images-webp/SCO%20-%20Purple%20Suit.webp\" type=\"image/webp\">\n              <img src=\"/images/SCO%20-%20Purple%20Suit.jpg\" alt=\"Professor Seth Oranburg\" loading=\"lazy\" width=\"801\" height=\"1200\">\n            </picture>\n        </div>\n        <div>\n            <p>His research spans corporate governance, securities regulation, contracts, trade secrets, and digital assets&mdash;including cryptocurrency, stablecoins, and decentralized autonomous organizations. Oranburg asks: How does law create governance in organizations? What happens when legal rules destroy the institutions they were meant to protect?</p>\n\n            <p>In 2025&ndash;2026 alone, Oranburg published articles in the Stanford Journal of Blockchain Law &amp; Policy, the Louisiana Law Review, and Bloomberg Law, with forthcoming articles in the Dartmouth Law Review and the Review of Banking &amp; Financial Law at Boston University; testified before the U.S. Commission on Civil Rights; and delivered op-eds in the Washington Reporter, Washington Examiner, Daily Caller, and Daily Signal. He completed three book-length manuscripts in two years and submitted his Aspen treatise, <em>Business Associations: Law in Theory and Practice</em>, a full year ahead of contract. He also launched the <a href=\"https://oranburg.law/BA/RUP\">Knight RUP restoration</a>, a crowdsourced cleanup of Frank Knight's 1921 <em>Risk, Uncertainty and Profit</em>.</p>\n\n            <p>Before becoming a professor, he practiced venture finance and emerging-company law at Fenwick &amp; West in Silicon Valley, and antitrust law at Cadwalader, Wickersham &amp; Taft in Washington, D.C. He graduated with honors from the University of Chicago Law School and magna cum laude from the University of Florida.</p>\n\n            <p>When he isn&rsquo;t working, Oranburg enjoys spending time with his daughter, Zeeva, and cooking with his wife, Talia.</p>\n\n            <div class=\"positions\">\n                <h4>Current Positions</h4>\n                <ul>\n                    <li><strong>Ordinary Professor of Law and Director of the Law and Entrepreneurship Program</strong>, The Catholic University of America, Columbus School of Law</li>\n                    <li><strong>Commissioner</strong>, New Hampshire Commission to Study Stable Tokens (HB 310)</li>\n                    <li><strong>Director</strong>, Program on Organizations, Business and Markets, NYU Law Classical Liberal Institute</li>\n                    <li><strong>Chair</strong>, Law Faculty Section, Academic Engagement Network</li>\n                    <li><strong>Fellow</strong>, Faculty of Law, Haifa Center for Law and Technology</li>\n                </ul>\n                <h4>Bar Admissions &amp; Practice</h4>\n                <ul>\n                    <li>Licensed in <strong>New Hampshire</strong>, <strong>California</strong>, and the <strong>District of Columbia</strong></li>\n                    <li>Venture finance and emerging-company law, <strong>Fenwick &amp; West LLP</strong> (Silicon Valley)</li>\n                    <li>Antitrust law, <strong>Cadwalader, Wickersham &amp; Taft</strong> (Washington, DC)</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>\n\n<section id=\"triptych\">\n    <h2>The Governance Triptych</h2>\n    <p>Three book-length manuscripts, completed in 2025&ndash;2026, that develop a unified theory of how law creates, supports, and destroys governance.</p>\n    <div class=\"book-grid\">\n        <div class=\"book-card\">\n            <div class=\"book-title\">Law and Governance</div>\n            <div class=\"book-publisher\">The theoretical framework. Defines governance as a club good and shows how legal rules systematically undersupply it. Targeting Cambridge UP / Stanford UP.</div>\n        </div>\n        <div class=\"book-card\">\n            <div class=\"book-title\">Open Secrets</div>\n            <div class=\"book-publisher\">The application. Shows how DAO governance reconfigures value capture in open innovation ecosystems, bridging trade secret law and blockchain governance.</div>\n        </div>\n        <div class=\"book-card\">\n            <div class=\"book-title\">Judgment Proof</div>\n            <div class=\"book-publisher\">The trade press companion. Argues that modern institutions have engineered out the faculty of judgment&mdash;and that law has two purposes, foundation and scaffolding, but has forgotten the second.</div>\n        </div>\n    </div>\n</section>\n\n<section id=\"research\">\n    <h2>Research &amp; Publications</h2>\n    <p>Oranburg's scholarship examines how law structures organizations, governs markets, and responds to technological change. His books and articles span corporate law, securities regulation, governance theory, and trade secrets.</p>\n\n    <h3>Books</h3>\n    <p>Casebooks, treatises, and monographs on business law, contracts, trade secrets, and financial technology.</p>\n    <div class=\"book-grid\">\n";
+const midA = "    </div>\n\n    <h3>Recent Articles</h3>\n    <p>Selected law review articles on digital assets, corporate governance, and financial regulation. Click any article to read the abstract.</p>\n    <ul class=\"article-list\">\n";
+const midB = "    </ul>\n\n    <p><a href=\"/scholarship/\">View all publications &rarr;</a></p>\n</section>\n\n<section id=\"commentary\">\n    <h2>Public Commentary</h2>\n    <p>Oranburg writes and speaks on financial regulation, digital assets, academic freedom, and the rule of law. His commentary appears in Bloomberg Law, the Washington Examiner, the Daily Caller, and other outlets.</p>\n\n";
+const midC = "\n    <h3>Recent Op-Eds &amp; Blog Posts</h3>\n    <p>Selected opinion pieces on financial regulation and public policy.</p>\n    <div class=\"commentary-grid\">\n";
+const midD = "    </div>\n\n";
+const staticB = "</section>\n\n<section id=\"teaching\">\n    <h2>Teaching</h2>\n    <p>Oranburg teaches foundational and advanced courses in business law, contracts, and financial regulation. He has received university-level recognition for teaching excellence and inclusive pedagogy.</p>\n\n    <div class=\"award-box\">\n        <div class=\"award-photo\">\n            <picture>\n              <source srcset=\"/assets/images-webp/SCO%20-%20Teacher%20of%20the%20Year%20Award.webp\" type=\"image/webp\">\n              <img src=\"/images/SCO%20-%20Teacher%20of%20the%20Year%20Award.jpg\" alt=\"Seth Oranburg with 2024 Teaching Excellence Award\" loading=\"lazy\" width=\"1200\" height=\"900\">\n            </picture>\n        </div>\n        <div>\n            <h4>Teaching Honors</h4>\n            <ul class=\"award-list\">\n                <li><strong>University Excellence in Teaching Award</strong> (2024)</li>\n                <li><strong>Center for Teaching Excellence Inclusive Teaching Award</strong> (2021)</li>\n                <li><strong>Presidential Scholarship Award</strong> (2019)</li>\n            </ul>\n        </div>\n    </div>\n\n    <h3>Course Offerings</h3>\n    <p>Current and recent courses taught at the law school level.</p>\n    <ul class=\"article-list\">\n        <li class=\"article-item\">\n            <div class=\"article-title\">Contract Law</div>\n            <div class=\"article-journal\">Foundational course exploring when and how law should enforce voluntary agreements</div>\n        </li>\n\n        <li class=\"article-item\">\n            <div class=\"article-title\">Business Associations</div>\n            <div class=\"article-journal\">Corporate formation, governance, and liability for entities and managers</div>\n        </li>\n\n        <li class=\"article-item\">\n            <div class=\"article-title\">Securities Regulation</div>\n            <div class=\"article-journal\">Federal securities laws and capital markets regulation</div>\n        </li>\n\n        <li class=\"article-item\">\n            <div class=\"article-title\">Venture Capital Transactions</div>\n            <div class=\"article-journal\">Practical course on startup financing and deal structures</div>\n        </li>\n\n        <li class=\"article-item\">\n            <div class=\"article-title\">Trade Secret Law</div>\n            <div class=\"article-journal\">Protection of confidential business information and competitive strategy</div>\n        </li>\n\n        <li class=\"article-item\">\n            <div class=\"article-title\">Corporate Finance</div>\n            <div class=\"article-journal\">Financial tools and concepts for legal practice</div>\n        </li>\n    </ul>\n\n    <div class=\"teaching-photo\">\n        <picture>\n          <source srcset=\"/assets/images-webp/SCO%20-%20Engaging%20Students%20in%20Mock%20Courtroom.webp\" type=\"image/webp\">\n          <img src=\"/images/SCO%20-%20Engaging%20Students%20in%20Mock%20Courtroom.jpg\" alt=\"Professor Oranburg teaching in a courtroom setting\" loading=\"lazy\" width=\"1200\" height=\"800\">\n        </picture>\n        <p class=\"photo-caption\">Teaching and engaging with students in a moot courtroom setting</p>\n    </div>\n\n    <p>For in-depth teaching resources and lecture notes, visit <a href=\"/lectures/\">Courses</a>.</p>\n</section>\n\n<section id=\"contact-cta\">\n    <div class=\"contact-cta\">\n        <h3>Get in Touch</h3>\n        <p>Questions about research, speaking engagements, or consulting? I'd love to hear from you.</p>\n        <a href=\"/contact/\" class=\"btn\">Contact Me</a>\n    </div>\n</section>\n";
+---
+
+<BaseLayout
+  title="Home"
+  home={true}
+  tagline="Law Professor | Governance Scholar | Public Commentator"
+  heroSubtitle="Studying how law creates and destroys the capacity to govern"
+  description="Seth C. Oranburg is a law professor specializing in governance, corporate law, contracts, trade secrets, and digital assets. Author of 8 books and 50+ publications."
+  current="Home"
+>
+  <Fragment set:html={staticA} />
+  {books.map((pub) =>
+    pub.links?.published ? (
+      <a href={pub.links.published} target="_blank" class="book-card">
+        <div class="book-title">{pub.title}</div>
+        <div class="book-publisher">
+          {pub.journal}{pub.year && ` (${pub.status === "forthcoming" ? "forthcoming " : ""}${pub.year})`}
+          {pub.coauthors?.length > 0 && <><br />with {pub.coauthors.join(" and ")}</>}
+        </div>
+        {pub.status === "forthcoming" && <span class="book-link">Pre-order now &rarr;</span>}
+        {pub.status === "published" && <span class="book-link">Purchase &rarr;</span>}
+      </a>
+    ) : (
+      <div class="book-card">
+        <div class="book-title">{pub.title}</div>
+        <div class="book-publisher">
+          {pub.journal}{pub.year && ` (${pub.status === "forthcoming" || pub.status === "in-progress" ? "forthcoming " : ""}${pub.year})`}
+          {pub.coauthors?.length > 0 && <><br />with {pub.coauthors.join(" and ")}</>}
+        </div>
+        {pub.links?.companion && <a href={pub.links.companion} class="book-link">Companion site &rarr;</a>}
+      </div>
+    )
+  )}
+  <Fragment set:html={midA} />
+  {recentArticles.map((pub) => (
+    <li class="article-item" role="button" tabindex="0" onclick="toggleAbstract(this, event)" onkeydown="handleArticleKey(event, this)">
+      <span class="expand-indicator">+</span>
+      <div class="article-title">{pub.title}</div>
+      <div class="article-journal">
+        {pub.journal}{pub.year && `${pub.journal ? ", " : ""}${pub.year}`}
+        {pub.coauthors?.length > 0 && ` (with ${pub.coauthors.join(" and ")})`}
+        {pub.links?.ssrn && <> | <a href={pub.links.ssrn} target="_blank">SSRN</a></>}
+        {pub.links?.published && <> | <a href={pub.links.published} target="_blank">Full Text</a></>}
+      </div>
+      <div class="article-abstract">{pub.abstract}</div>
+    </li>
+  ))}
+  {forthcoming.map((pub) => (
+    <li class="article-item" role="button" tabindex="0" onclick="toggleAbstract(this, event)" onkeydown="handleArticleKey(event, this)">
+      <span class="expand-indicator">+</span>
+      <div class="article-title">{pub.title}</div>
+      <div class="article-journal">
+        {pub.journal} (forthcoming {pub.year})
+        {pub.links?.ssrn && <> | <a href={pub.links.ssrn} target="_blank">SSRN</a></>}
+      </div>
+      <div class="article-abstract">{pub.abstract}</div>
+    </li>
+  ))}
+  <Fragment set:html={midB} />
+  {featuredOped && (
+    <>
+      <h3>Latest Op-Ed</h3>
+      <p>The most recent published commentary.</p>
+      <div class="featured-oped">
+        <h4>
+          <a href={featuredOped.url || featuredOped.perma} target="_blank">{featuredOped.title}</a>
+        </h4>
+        <p class="oped-source">{featuredOped.outlet}, {fmtDate(featuredOped.date)}</p>
+        {featuredOped.excerpt && <p class="oped-excerpt">{featuredOped.excerpt}</p>}
+        <a href={featuredOped.url || featuredOped.perma} target="_blank" class="oped-link">Read full article &rarr;</a>
+      </div>
+    </>
+  )}
+  {featuredVideo && (
+    <details class="embed">
+      <summary>Watch: {featuredVideo.title}</summary>
+      <div class="embed-container">
+        <iframe src={featuredVideo.embed} title={featuredVideo.title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </details>
+  )}
+  <Fragment set:html={midC} />
+  {recentOpeds.map((item) => (
+    <a href={item.perma || item.url} target="_blank" class="commentary-card">
+      <div class="commentary-title">{item.title}</div>
+      <div class="commentary-source">{item.outlet}</div>
+      <div class="commentary-date">{fmtDate(item.date)}</div>
+    </a>
+  ))}
+  <Fragment set:html={midD} />
+  {media.length > 0 && (
+    <>
+      <h3>Media Appearances</h3>
+      <p>Podcast interviews and broadcast commentary.</p>
+      <ul class="article-list">
+        {media.map((item) =>
+          item.perma || item.url ? (
+            <li class="article-item">
+              <a href={item.perma || item.url} target="_blank">
+                <div class="article-title">{item.title}</div>
+                <div class="article-journal">{item.outlet} ({fmtDate(item.date)})</div>
+              </a>
+            </li>
+          ) : (
+            <li class="article-item">
+              <div class="article-title">{item.title}</div>
+              <div class="article-journal">{item.outlet} ({fmtDate(item.date)})</div>
+            </li>
+          )
+        )}
+      </ul>
+    </>
+  )}
+  <Fragment set:html={staticB} />
+</BaseLayout>

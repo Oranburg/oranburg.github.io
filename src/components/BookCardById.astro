@@ -1,0 +1,20 @@
+---
+// A purchase card for one publication, looked up by id in scholarship.yml.
+import yaml from "js-yaml";
+import fs from "node:fs";
+const { id } = Astro.props;
+const schol = yaml.load(fs.readFileSync("src/data/scholarship.yml", "utf8"));
+const book = (schol.publications ?? []).find((p) => p.id === id);
+---
+
+{book && (
+  <div class="book-grid">
+    {book.links?.published && (
+      <a href={book.links.published} target="_blank" class="book-card">
+        <div class="book-title">{book.title}</div>
+        <div class="book-publisher">{book.journal} ({book.year})</div>
+        <span class="book-link">Purchase &rarr;</span>
+      </a>
+    )}
+  </div>
+)}

@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const body = "<section style=\"text-align: center; padding: var(--space-3xl) var(--space-xl);\">\n  <h1 style=\"font-size: 4rem; color: var(--accent-red); margin-bottom: var(--space-sm);\">404</h1>\n  <h2 style=\"margin-bottom: var(--space-lg);\">Page Not Found</h2>\n  <p style=\"color: var(--muted); max-width: 500px; margin: 0 auto var(--space-xl);\">The page you were looking for has moved or never existed. Try one of these.</p>\n  <div style=\"display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; max-width: 700px; margin: 0 auto;\">\n    <a href=\"/\" class=\"cta-link\">Home</a>\n    <a href=\"/start-here/\" class=\"cta-link\">Start Here</a>\n    <a href=\"/scholarship/\" class=\"cta-link\">Scholarship</a>\n    <a href=\"/insights/\" class=\"cta-link\">Insights</a>\n    <a href=\"/press/\" class=\"cta-link\">Press</a>\n    <a href=\"/lectures/\" class=\"cta-link\">Courses &amp; Lectures</a>\n    <a href=\"/cv/\" class=\"cta-link\">CV</a>\n    <a href=\"/contact/\" class=\"cta-link\">Contact</a>\n  </div>\n</section>\n";
+---
+
+<BaseLayout title="Page Not Found" current="Page Not Found">
+  <Fragment set:html={body} />
+</BaseLayout>

@@ -1,0 +1,179 @@
+/* % voice-check: skip (CSS custom-property names require -- syntax) */
+/* ==========================================================================
+   Oranburg Style: Canonical Design Tokens (--og- namespace)
+   One namespace for every web property (hub, chumash, havruta, and any
+   plain-HTML or python-gen page). Palette tokens are constant across modes.
+   Functional tokens are theme-adaptive. Every text/background pair below
+   clears WCAG 2.2 AA for normal text (>= 4.5:1) unless marked large-only
+   (>= 3:1), in which case usage is restricted in the comment.
+   Dark is the default theme; light is opt-in via [data-theme="light"].
+
+   Palette hexes verified against the published CUA brand palette
+   (brand.catholic.edu/color/) and confirmed identical across the live
+   site.css, chumash/tokens.css, and havruta/tokens.css.
+
+   Migration note: the prior short-name system (--bg, --accent, --blue-deep,
+   ...) is renamed into this --og- namespace. Ship the compatibility shim at
+   the bottom of this file for ONE release so old and new names both resolve,
+   then delete the shim once site.css, chumash, and havruta are converted.
+   ========================================================================== */
+
+:root,
+[data-theme="dark"] {
+
+  /* --- Brand palette (constant across modes) --- */
+  --og-blue-deep:    #0A3255;
+  --og-blue-bright:  #2459A9;
+  --og-blue-light:   #6DACDE;
+  --og-red-deep:     #B21F2C;   /* CUA Cardinal Red. AA on white (6.7:1) and as
+                                   white-on-red fill; large-only as text on black */
+  --og-red-bright:   #E82F35;
+  --og-red-light:    #E96955;
+  --og-yellow:       #FFD65C;   /* tertiary; accent only, <= 5-10% visual weight */
+  --og-teal:         #B5E1E1;   /* tertiary; FILL/badge only, never text on white */
+
+  /* --- Functional, dark mode (pure black for OLED) --- */
+  --og-bg:           #000000;   /* page background */
+  --og-bg-panel:     #0A3255;   /* cards/panels: white text = 13.1:1 */
+  --og-bg-soft:      #12466F;   /* raised bars (breadcrumb). Raised from #0D3D68
+                                   so muted text clears AA on the bar */
+  --og-ink:          #FFFFFF;   /* body text on --og-bg: 21:1 */
+  --og-ink-muted:    #B6BEC9;   /* secondary text. Raised from #9CA3AF so it
+                                   clears 4.5:1 on --og-bg-soft (5.25:1) */
+  --og-rule:         #1E5080;   /* borders only, never text */
+  --og-link:         #6DACDE;   /* links on --og-bg: 8.6:1 */
+  --og-link-onpanel: #9CC9E8;   /* links on --og-bg-panel/--og-bg-soft: 7.46:1 */
+  --og-accent:       #B5E1E1;   /* secondary accent (teal). Text-safe on dark only */
+  --og-accent-red:   #E96955;   /* red that is AA as text on black (5.9:1).
+                                   Brand #B21F2C on black is 3.1:1 = large-only;
+                                   reserve --og-red-deep for >=24px/bold headings
+                                   and solid fills, never small red text on black */
+
+  /* --- Heading text colors, dark mode --- */
+  --og-heading-1:    #6DACDE;   /* H1 = --og-blue-light on black: 8.6:1 */
+  --og-heading-2:    #FFFFFF;   /* H2 text white; any red underline is decorative */
+  --og-heading-3:    #9CC9E8;   /* H3 lightened blue on black: 11.9:1. NOT teal
+                                   (fails on white) and NOT raw blue-light */
+
+  /* --- Typography --- */
+  --og-font-headline: 'Oswald', sans-serif;
+  --og-font-body:     'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  --og-font-accent:   'Crimson Text', 'Georgia', serif;
+  --og-font-mono:     'Roboto Mono', 'Consolas', 'Courier New', monospace;
+  --og-font-hebrew:   'Frank Ruhl Libre', 'Noto Serif Hebrew', serif;
+
+  /* Fluid type scale (clamp: min, preferred vw-based, max).
+     Body floor is 1rem (16px), the readability floor in web-typography.md. */
+  --og-size-body:     clamp(1rem, 0.95rem + 0.25vw, 1.125rem);   /* 16 -> 18px */
+  --og-size-small:    clamp(0.85rem, 0.82rem + 0.15vw, 0.95rem); /* fine print */
+  --og-size-h3:       clamp(1.3rem, 1.15rem + 0.7vw, 1.6rem);
+  --og-size-h2:       clamp(1.6rem, 1.35rem + 1.1vw, 2rem);
+  --og-size-h1:       clamp(2rem, 1.6rem + 1.8vw, 2.75rem);
+  --og-line-body:     1.7;
+  --og-line-heading:  1.15;
+
+  /* --- Layout --- */
+  --og-max-width:     1100px;
+  --og-radius-sm:     4px;
+  --og-radius-md:     8px;     /* standard for cards and panels (web-typography.md D-010;
+                                 the 16px landing radius is retired) */
+  --og-radius-pill:   999px;
+
+  /* --- Spacing --- */
+  --og-space-xs:  0.25rem;
+  --og-space-sm:  0.5rem;
+  --og-space-md:  1rem;
+  --og-space-lg:  1.5rem;
+  --og-space-xl:  2rem;
+  --og-space-2xl: 3rem;
+  --og-space-3xl: 4rem;
+}
+
+[data-theme="light"] {
+
+  /* --- Functional, light mode --- */
+  --og-bg:           #FFFFFF;
+  --og-bg-panel:     #F8F9FA;   /* black text: ~20:1 */
+  --og-bg-soft:      #E9ECEF;   /* raised bars: muted #555 = 6.3:1 */
+  --og-ink:          #1A1A1A;   /* near-black body: 17.4:1 (softer than pure black) */
+  --og-ink-muted:    #555555;   /* 7.5:1 on white, 6.3:1 on --og-bg-soft */
+  --og-rule:         #D0D8E4;   /* borders only */
+  --og-link:         #2459A9;   /* links on white: 6.8:1 */
+  --og-link-onpanel: #2459A9;   /* 5.8:1 on --og-bg-soft */
+  --og-accent:       #176D6D;   /* teal #B5E1E1 is unreadable as text on white
+                                   (1.42:1); light mode uses a dark teal at 5.6:1
+                                   so the secondary accent stays AA in both modes.
+                                   NON-BRAND HUE, accessibility substitution,
+                                   pending Seth's approval */
+  --og-accent-red:   #B21F2C;   /* 6.7:1 on white = AA normal text */
+
+  /* --- Heading text colors, light mode --- */
+  --og-heading-1:    #0A3255;   /* --og-blue-deep on white: 13.1:1 */
+  --og-heading-2:    #0A3255;   /* H2 text; any red underline is decorative */
+  --og-heading-3:    #2459A9;   /* --og-blue-bright on white: 6.8:1. Replaces the
+                                   shipping --og-blue-light H3 (2.44:1 FAIL) and
+                                   the hub's teal H3 (1.42:1 FAIL) */
+}
+
+/* App-local tokens are NOT promoted to the hub. chumash owns its scroll surface
+   (--og-gold, --og-parchment, --og-parchment-edge, --og-parchment-ink), layered
+   after this file. They describe the Torah scroll, not the shared brand, and the
+   parchment cream/gold hexes are not in the CUA palette. --og-font-hebrew above
+   is the one shared exception, since both apps render Hebrew. */
+
+/* --------------------------------------------------------------------------
+   Reduced motion: honored by every property, not only the two apps.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   COMPATIBILITY SHIM. Keep for one release during the og- migration, then
+   delete. Aliases the retired short names to the canonical --og- values so a
+   half-converted file never renders with an unset background.
+   -------------------------------------------------------------------------- */
+:root,
+[data-theme="dark"],
+[data-theme="light"] {
+  --bg:           var(--og-bg);
+  --bg-secondary: var(--og-bg-panel);
+  --bg-soft:      var(--og-bg-soft);
+  --text:         var(--og-ink);
+  --muted:        var(--og-ink-muted);
+  --border:       var(--og-rule);
+  --accent:       var(--og-link);
+  --accent-2:     var(--og-accent);
+  --accent-red:   var(--og-accent-red);
+  --blue-deep:    var(--og-blue-deep);
+  --blue-bright:  var(--og-blue-bright);
+  --blue-light:   var(--og-blue-light);
+  --red-deep:     var(--og-red-deep);
+  --red-bright:   var(--og-red-bright);
+  --red-light:    var(--og-red-light);
+  --yellow:       var(--og-yellow);
+  --teal:         var(--og-teal);
+  --font-headline: var(--og-font-headline);
+  --font-body:     var(--og-font-body);
+  --font-accent:   var(--og-font-accent);
+  --font-mono:     var(--og-font-mono);
+  --font-hebrew:   var(--og-font-hebrew);
+  --max-width:   var(--og-max-width);
+  --radius-sm:   var(--og-radius-sm);
+  --radius-md:   var(--og-radius-md);
+  --radius-pill: var(--og-radius-pill);
+  --space-xs:  var(--og-space-xs);
+  --space-sm:  var(--og-space-sm);
+  --space-md:  var(--og-space-md);
+  --space-lg:  var(--og-space-lg);
+  --space-xl:  var(--og-space-xl);
+  --space-2xl: var(--og-space-2xl);
+  --space-3xl: var(--og-space-3xl);
+}

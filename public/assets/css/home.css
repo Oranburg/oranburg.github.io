@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Home Page Overrides
+   Loaded only when page.home is true.
+   All component styles live in site.css — this file holds home-only tweaks.
+   ========================================================================== */
+
+/* Wider content area on the home page */
+.site-content {
+  max-width: var(--max-width);
+  padding: var(--space-xl);
+  margin: 0 auto;
+}

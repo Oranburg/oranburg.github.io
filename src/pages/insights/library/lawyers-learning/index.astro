@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+const body = "<div class=\"hub-intro\">\n  <h1>Lawyers &amp; Learning</h1>\n  <p>Legal education, pedagogical theory, bar preparation, and the craft of teaching law.</p>\n</div>\n\n<p class=\"topic-breadcrumb\">\n  <a href=\"/insights/\">Insights</a> &rsaquo;\n  <a href=\"/insights/library/\">Library</a> &rsaquo;\n  Lawyers &amp; Learning\n</p>\n\n<div class=\"topic-grid\">\n\n  <a class=\"topic-tile\" href=\"/insights/topics/legal-education/\">\n    <h3 class=\"topic-tile-title\">Legal Education</h3>\n    <p class=\"topic-tile-desc\">Law school culture, curriculum reform, access to legal education, and professional formation.</p>\n  </a>\n\n  <a class=\"topic-tile\" href=\"/insights/topics/pedagogy/\">\n    <h3 class=\"topic-tile-title\">Law School Pedagogy</h3>\n    <p class=\"topic-tile-desc\">Socratic method, case method teaching, classroom design, and student engagement.</p>\n  </a>\n\n  <a class=\"topic-tile\" href=\"/insights/topics/bar-prep/\">\n    <h3 class=\"topic-tile-title\">Bar Preparation</h3>\n    <p class=\"topic-tile-desc\">Bar exam structure, preparation strategies, success factors, and reform debates.</p>\n  </a>\n\n  <a class=\"topic-tile\" href=\"/insights/topics/experiential-learning/\">\n    <h3 class=\"topic-tile-title\">Experiential Learning</h3>\n    <p class=\"topic-tile-desc\">Clinics, simulations, moot court, practicum courses, and learning by doing.</p>\n  </a>\n\n</div>\n\n<p class=\"back-to-library\"><a href=\"/insights/library/\">&larr; Back to the Library</a></p>\n";
+---
+
+<BaseLayout title="Lawyers &amp; Learning" current="Lawyers &amp; Learning">
+  <Fragment set:html={body} />
+</BaseLayout>

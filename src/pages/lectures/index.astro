@@ -1,0 +1,47 @@
+---
+import yaml from "js-yaml";
+import fs from "node:fs";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const videos = yaml.load(fs.readFileSync("src/data/videos.yml", "utf8"));
+const proSeries = (videos.series ?? []).filter((s) => s.feature_on_site);
+const teachSeries = (videos.teaching_series ?? []).filter((s) => s.video_count > 2);
+const staticA = "<p class=\"back-to-courses\"><a href=\"/courses/\">&larr; Back to Courses</a></p>\n\n<div class=\"hub-intro\">\n  <h1>Video Lectures &amp; Podcasts</h1>\n  <p>Video lectures, podcast episodes, casebooks, and assessment tools &mdash; organized by course.</p>\n</div>\n\n<div class=\"og-course-grid\">\n\n  <a href=\"/courses/contracts/\" class=\"og-course-card\">\n    <h2>Contract Law</h2>\n    <p>Formation, interpretation, performance, breach, and remedies. 25-episode podcast series. 56+ video lectures. 676-question assessment bank.</p>\n    <span class=\"og-course-meta\">Casebook: Contract Law 2d (Carolina Academic Press)</span>\n  </a>\n\n  <a href=\"/courses/business-associations/\" class=\"og-course-card\">\n    <h2>Business Associations</h2>\n    <p>Agency, partnerships, LLCs, corporations, DAOs, fiduciary duties, shareholder litigation, M&amp;A. 102-episode podcast. 25+ lecture videos. 509-question bank.</p>\n    <span class=\"og-course-meta\">Casebook: Law in Theory and Practice (Aspen Press, forthcoming)</span>\n  </a>\n\n  <a href=\"/courses/trade-secrets/\" class=\"og-course-card\">\n    <h2>Trade Secret Law</h2>\n    <p>Definition, misappropriation, reasonable efforts, employee mobility, remedies, litigation. Podcast season + 5 overview videos. 157-question bank.</p>\n    <span class=\"og-course-meta\">Casebook: Protecting Trade Secrets (Carolina Academic Press)</span>\n  </a>\n\n</div>\n\n<h2>Additional Lecture Series</h2>\n<p>Standalone video series on specialized topics.</p>\n\n<div class=\"og-series-grid\">\n\n";
+const staticB = "\n\n</div>\n\n<h2>Teaching Playlists</h2>\n<p>Full course lecture recordings and review modules.</p>\n\n<div class=\"og-series-grid\">\n\n";
+const staticC = "\n\n</div>\n\n<h2>Podcast</h2>\n<p>Organized: The Business Law Breakdown &mdash; all seasons.</p>\n\n<details class=\"embed\">\n  <summary>Listen to the full podcast catalog</summary>\n  <div class=\"podcast-embed\">\n    <iframe style=\"border: none; min-width: min(100%, 430px);\" title=\"Organized: The Business Law Breakdown\" src=\"https://www.podbean.com/player-v2/?i=p6w7w-1260bda-pbblog-playlist&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Trebuchet%20MS&amp;skin=3267a3&amp;font-color=auto&amp;logo_link=episode_page&amp;order=serial&amp;limit=30&amp;ss=4fd5d0446d6f9ac6ae4a92fa2eee7c9f&amp;btn-skin=666666&amp;size=315\" width=\"100%\" height=\"315\" loading=\"lazy\" allowfullscreen=\"allowfullscreen\"></iframe>\n  </div>\n</details>\n\n<h2>Assessment</h2>\n<p>Self-test your knowledge with Quaere, the learning outcome assessment platform with 1,330+ multiple-choice questions across three courses.</p>\n\n<div style=\"margin: 1.5rem 0;\">\n  <a href=\"https://quaere-1cgr.onrender.com\" target=\"_blank\" class=\"cta-link\">Open Quaere &rarr;</a>\n</div>\n";
+---
+
+<BaseLayout
+  title="Video Lectures & Podcasts"
+  tagline="Law Professor | Fintech Scholar | Public Commentator"
+  description="372 video lectures, 147 podcast episodes, and interactive exercises for Contract Law, Business Associations, and Trade Secrets courses by Professor Seth C. Oranburg."
+  current="Video Lectures & Podcasts"
+>
+  <Fragment set:html={staticA} />
+  {proSeries.map((s) => (
+    <div class="og-series-card">
+      <h3>{s.title}</h3>
+      <p class="og-series-meta">{s.video_count} videos</p>
+      <details class="embed">
+        <summary>Watch playlist</summary>
+        <div class="embed-container">
+          <iframe src={`https://www.youtube.com/embed/videoseries?list=${s.id}`} title={s.title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </details>
+    </div>
+  ))}
+  <Fragment set:html={staticB} />
+  {teachSeries.map((s) => (
+    <div class="og-series-card">
+      <h3>{s.title}</h3>
+      <p class="og-series-meta">{s.video_count} videos</p>
+      <details class="embed">
+        <summary>Watch playlist</summary>
+        <div class="embed-container">
+          <iframe src={`https://www.youtube.com/embed/videoseries?list=${s.id}`} title={s.title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </details>
+    </div>
+  ))}
+  <Fragment set:html={staticC} />
+</BaseLayout>

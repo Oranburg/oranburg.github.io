@@ -1,0 +1,138 @@
+[
+ {
+  "slug": "bar-prep",
+  "title": "Bar Preparation",
+  "topic_tag": "bar-prep",
+  "description": "Bar exam structure, preparation strategies, success factors, and reform debates.",
+  "bucket_title": "Lawyers &amp; Learning",
+  "bucket_url": "/insights/library/lawyers-learning/"
+ },
+ {
+  "slug": "business",
+  "title": "Business Formation &amp; Ventures",
+  "topic_tag": "business",
+  "description": "Startups, venture capital, deal structures, and early-stage business law.",
+  "bucket_title": "Organizations, Business &amp; Markets",
+  "bucket_url": "/insights/library/organizations-business-markets/"
+ },
+ {
+  "slug": "civil-society",
+  "title": "Civil Society Institutions",
+  "topic_tag": "civil-society",
+  "description": "The role of voluntary associations, intermediary institutions, and civil organizations in law.",
+  "bucket_title": "Pluralism &amp; Civil Society",
+  "bucket_url": "/insights/library/pluralism-civil-society/"
+ },
+ {
+  "slug": "democracy",
+  "title": "Democracy &amp; Governance",
+  "topic_tag": "democracy",
+  "description": "Constitutional design, administrative state, democratic legitimacy, and rule of law.",
+  "bucket_title": "Pluralism &amp; Civil Society",
+  "bucket_url": "/insights/library/pluralism-civil-society/"
+ },
+ {
+  "slug": "entrepreneurship",
+  "title": "Entrepreneurship",
+  "topic_tag": "entrepreneurship",
+  "description": "Founder mindset, innovation ecosystems, risk, and the economics of new ventures.",
+  "bucket_title": "Law &amp; Entrepreneurship",
+  "bucket_url": "/insights/library/law-entrepreneurship/"
+ },
+ {
+  "slug": "experiential-learning",
+  "title": "Experiential Learning",
+  "topic_tag": "experiential-learning",
+  "description": "Clinics, simulations, moot court, practicum courses, and learning by doing.",
+  "bucket_title": "Lawyers &amp; Learning",
+  "bucket_url": "/insights/library/lawyers-learning/"
+ },
+ {
+  "slug": "fintech",
+  "title": "Financial Technology",
+  "topic_tag": "fintech",
+  "description": "Fintech regulation, digital assets, payments, and banking innovation.",
+  "bucket_title": "Organizations, Business &amp; Markets",
+  "bucket_url": "/insights/library/organizations-business-markets/"
+ },
+ {
+  "slug": "legal-education",
+  "title": "Legal Education",
+  "topic_tag": "legal-education",
+  "description": "Law school culture, curriculum reform, access to legal education, and professional formation.",
+  "bucket_title": "Lawyers &amp; Learning",
+  "bucket_url": "/insights/library/lawyers-learning/"
+ },
+ {
+  "slug": "legal-innovation",
+  "title": "Legal Innovation",
+  "topic_tag": "legal-innovation",
+  "description": "Access to justice, legal technology, alternative business structures, and the future of law.",
+  "bucket_title": "Law &amp; Entrepreneurship",
+  "bucket_url": "/insights/library/law-entrepreneurship/"
+ },
+ {
+  "slug": "markets",
+  "title": "Market Regulation",
+  "topic_tag": "markets",
+  "description": "Antitrust, market structure, competition policy, and regulatory economics.",
+  "bucket_title": "Organizations, Business &amp; Markets",
+  "bucket_url": "/insights/library/organizations-business-markets/"
+ },
+ {
+  "slug": "nonprofit",
+  "title": "Nonprofit &amp; Social Enterprise",
+  "topic_tag": "nonprofit",
+  "description": "Tax-exempt organizations, social benefit corporations, and mission-driven law.",
+  "bucket_title": "Pluralism &amp; Civil Society",
+  "bucket_url": "/insights/library/pluralism-civil-society/"
+ },
+ {
+  "slug": "organizations",
+  "title": "Organizations &amp; Corporate Law",
+  "topic_tag": "organizations",
+  "description": "Entity formation, governance, fiduciary duties, and corporate structure.",
+  "bucket_title": "Organizations, Business &amp; Markets",
+  "bucket_url": "/insights/library/organizations-business-markets/"
+ },
+ {
+  "slug": "pedagogy",
+  "title": "Law School Pedagogy",
+  "topic_tag": "pedagogy",
+  "description": "Socratic method, case method teaching, classroom design, and student engagement.",
+  "bucket_title": "Lawyers &amp; Learning",
+  "bucket_url": "/insights/library/lawyers-learning/"
+ },
+ {
+  "slug": "pluralism",
+  "title": "Religious Liberty &amp; Pluralism",
+  "topic_tag": "pluralism",
+  "description": "Free exercise, establishment clause, conscientious objection, and moral diversity.",
+  "bucket_title": "Pluralism &amp; Civil Society",
+  "bucket_url": "/insights/library/pluralism-civil-society/"
+ },
+ {
+  "slug": "regulation",
+  "title": "Regulatory Strategy",
+  "topic_tag": "regulation",
+  "description": "Navigating regulation, compliance, administrative law, and regulatory arbitrage.",
+  "bucket_title": "Law &amp; Entrepreneurship",
+  "bucket_url": "/insights/library/law-entrepreneurship/"
+ },
+ {
+  "slug": "securities",
+  "title": "Securities &amp; Capital Markets",
+  "topic_tag": "securities",
+  "description": "Public and private securities, crowdfunding, disclosure, and investor protection.",
+  "bucket_title": "Organizations, Business &amp; Markets",
+  "bucket_url": "/insights/library/organizations-business-markets/"
+ },
+ {
+  "slug": "startup-law",
+  "title": "Startup Law",
+  "topic_tag": "startup-law",
+  "description": "Equity structures, term sheets, founder agreements, and early-stage legal issues.",
+  "bucket_title": "Law &amp; Entrepreneurship",
+  "bucket_url": "/insights/library/law-entrepreneurship/"
+ }
+]

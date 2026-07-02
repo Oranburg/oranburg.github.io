@@ -8,3 +8,8 @@ nohup.out
 ba/
 scholarship/wip/
 .claude/
+
+# Astro build artifacts (astro-rebuild branch)
+node_modules/
+dist/
+.astro/

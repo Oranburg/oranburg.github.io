@@ -1,0 +1,490 @@
+/* % voice-check: skip (CSS custom-property names require -- syntax) */
+/* ==========================================================================
+   Oranburg Style: Shared Component Classes (.og- namespace)
+   Canonical source: /Users/sco/design-system/og-components.css
+   Vendored copies are written by sync-to-repos.py; edit here, then sync.
+
+   One sheet styles every stack. HTML partials, Astro components, and React
+   components emit the same class names and the same structure, so these
+   rules apply identically everywhere. Every rule is driven by the canonical
+   --og- tokens (og-tokens.css must be linked first). No world (palette,
+   imagery, metaphor) is baked in here; a site skins these components by
+   overriding token values, never by editing this sheet.
+
+   Components: breadcrumb, footer, gloss, socratic, godeeper, dropcap,
+   journey-progress.
+   ========================================================================== */
+
+/* ---- Breadcrumb (WCAG 2.4.7 / 2.4.11) ---------------------------------- */
+.og-breadcrumb {
+  font-size: var(--og-size-small);
+  line-height: var(--og-line-body);
+  color: var(--og-ink-muted);
+  background: var(--og-bg-soft);
+  padding: var(--og-space-sm) var(--og-space-md);
+  border-radius: var(--og-radius-md);
+}
+.og-breadcrumb ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--og-space-xs);
+}
+.og-breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+}
+/* CSS-generated separator, never an in-DOM glyph. */
+.og-breadcrumb li + li::before {
+  content: "/";
+  margin: 0 var(--og-space-xs);
+  color: var(--og-ink-muted);
+}
+.og-breadcrumb a {
+  color: var(--og-link-onpanel);
+  text-decoration: none;
+}
+.og-breadcrumb a:hover {
+  text-decoration: underline;
+}
+.og-breadcrumb [aria-current="page"] {
+  color: var(--og-ink);
+  font-weight: 600;
+}
+.og-breadcrumb a:focus-visible {
+  outline: 2px solid var(--og-link-onpanel);
+  outline-offset: 2px;
+  border-radius: var(--og-radius-sm);
+}
+
+/* ---- Footer (one contentinfo per page) --------------------------------- */
+.og-footer {
+  background: var(--og-bg-panel);
+  color: var(--og-ink);
+  border-top: 1px solid var(--og-rule);
+  padding: var(--og-space-2xl) var(--og-space-md);
+}
+.og-footer-inner {
+  max-width: var(--og-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--og-space-lg);
+}
+.og-footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--og-space-md);
+}
+.og-footer a {
+  color: var(--og-link-onpanel);
+  text-decoration: none;
+}
+.og-footer a:hover {
+  text-decoration: underline;
+}
+.og-footer a:focus-visible {
+  outline: 2px solid var(--og-link-onpanel);
+  outline-offset: 2px;
+  border-radius: var(--og-radius-sm);
+}
+.og-footer-copyright {
+  font-size: var(--og-size-small);
+  color: var(--og-ink-muted);
+  margin: 0;
+}
+
+/* ---- Gloss: term-of-art with a plain-language reveal --------------------
+   Markup contract:
+   <span class="og-gloss" tabindex="0" role="button" aria-label="Definition of TERM">
+     <span class="og-gloss-term">TERM</span>
+     <span class="og-gloss-pop" role="tooltip">
+       <span class="og-gloss-pop-term">TERM</span>
+       <span class="og-gloss-pop-body">definition</span>
+     </span>
+   </span>
+   Zero-JS reveal (hover/focus). A small optional script may clamp the
+   popover to the viewport; behavior degrades gracefully without it. */
+.og-gloss {
+  position: relative;
+  display: inline;
+  cursor: help;
+  outline: none;
+}
+.og-gloss-term {
+  border-bottom: 1px dotted var(--og-yellow);
+}
+.og-gloss:focus-visible .og-gloss-term {
+  outline: 2px solid var(--og-yellow);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.og-gloss-pop {
+  position: absolute;
+  left: 0;
+  top: 1.7em;
+  z-index: 60;
+  width: max-content;
+  max-width: min(22rem, 84vw);
+  padding: var(--og-space-sm) var(--og-space-md);
+  background: var(--og-bg-panel);
+  color: var(--og-ink);
+  border: 1px solid var(--og-yellow);
+  border-radius: var(--og-radius-md);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.5);
+  font-family: var(--og-font-accent);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  font-style: normal;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  pointer-events: none;
+}
+.og-gloss:hover .og-gloss-pop,
+.og-gloss:focus .og-gloss-pop,
+.og-gloss:focus-within .og-gloss-pop {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.og-gloss-pop-term {
+  display: block;
+  font-family: var(--og-font-headline);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--og-yellow);
+  margin-bottom: 0.25rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .og-gloss-pop {
+    transition: opacity 0.01ms;
+    transform: none;
+  }
+}
+
+/* ---- Socratic: question first, answer behind a think-first reveal ------
+   Markup contract:
+   <aside class="og-socratic">
+     <p class="og-socratic-q">question</p>
+     <details class="og-socratic-reveal">
+       <summary>prompt</summary>
+       <div class="og-socratic-a">answer</div>
+     </details>
+   </aside>
+   Native <details>, zero JS. */
+.og-socratic {
+  border-left: 4px solid var(--og-yellow);
+  background: var(--og-bg-panel);
+  padding: var(--og-space-md) var(--og-space-lg);
+  border-radius: 0 var(--og-radius-md) var(--og-radius-md) 0;
+  margin: var(--og-space-lg) 0;
+}
+.og-socratic-q {
+  font-family: var(--og-font-accent);
+  font-size: 1.12rem;
+  font-style: italic;
+  margin: 0 0 var(--og-space-sm);
+}
+.og-socratic-reveal > summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--og-font-headline);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  color: var(--og-yellow);
+  padding: 0.3rem 0;
+}
+.og-socratic-reveal > summary::-webkit-details-marker {
+  display: none;
+}
+.og-socratic-reveal > summary::before {
+  content: "\25B8";
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+.og-socratic-reveal[open] > summary::before {
+  transform: rotate(90deg);
+}
+.og-socratic-a {
+  margin-top: var(--og-space-sm);
+  font-family: var(--og-font-accent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .og-socratic-reveal > summary::before {
+    transition: none;
+  }
+}
+
+/* ---- GoDeeper: unfold the next reading depth ----------------------------
+   Markup contract:
+   <details class="og-godeeper">
+     <summary><span class="og-godeeper-label">label</span></summary>
+     <div class="og-godeeper-body">deeper material</div>
+   </details>
+   Native <details>, zero JS. */
+.og-godeeper {
+  border: 1px solid var(--og-rule);
+  border-radius: var(--og-radius-md);
+  margin: var(--og-space-md) 0;
+  background: var(--og-bg-panel);
+}
+.og-godeeper > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: var(--og-space-sm) var(--og-space-md);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--og-font-headline);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  color: var(--og-accent);
+}
+.og-godeeper > summary::-webkit-details-marker {
+  display: none;
+}
+.og-godeeper > summary::before {
+  content: "+";
+  font-size: 1.15rem;
+  line-height: 1;
+  width: 1rem;
+  text-align: center;
+}
+.og-godeeper[open] > summary::before {
+  content: "\2212";
+}
+.og-godeeper-body {
+  padding: 0 var(--og-space-md) var(--og-space-md);
+  font-family: var(--og-font-accent);
+}
+.og-godeeper-body :first-child {
+  margin-top: 0;
+}
+
+/* ---- Dropcap: illuminated first letter on long reading ------------------
+   Apply the class to the reading container (e.g. <main class="og-dropcap">);
+   only the first paragraph's first letter is drawn. */
+main.og-dropcap > p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--og-font-headline);
+  font-weight: 700;
+  font-size: 3.4em;
+  line-height: 0.78;
+  margin: 0.04em 0.1em 0 0;
+  color: var(--og-yellow);
+}
+
+/* ---- AudioLesson: a token-styled lecture player --------------------------
+   Markup contract (see the AudioLesson component; one shared script wires
+   every .og-audio on the page):
+   <section class="og-audio">
+     <div class="og-audio-head">
+       <span class="og-audio-kicker">Listen</span>
+       <span class="og-audio-title">episode title</span>
+       <span class="og-audio-meta">duration and series</span>
+     </div>
+     <audio preload="none" src="..."></audio>
+     <div class="og-audio-controls"> buttons + range + time </div>
+     <details class="og-audio-fold"> transcript </details>
+     <details class="og-audio-fold"> more ways to study </details>
+   </section>
+   The player never autoplays; deep links seek on the first user play. */
+.og-audio {
+  border: 1px solid var(--og-rule);
+  border-left: 4px solid var(--og-yellow);
+  border-radius: 0 var(--og-radius-md) var(--og-radius-md) 0;
+  background: var(--og-bg-panel);
+  padding: var(--og-space-md) var(--og-space-lg);
+  margin: var(--og-space-lg) 0;
+}
+.og-audio-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--og-space-xs) var(--og-space-sm);
+  margin-bottom: var(--og-space-sm);
+}
+.og-audio-kicker {
+  font-family: var(--og-font-headline);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  color: var(--og-yellow);
+}
+.og-audio-title {
+  font-family: var(--og-font-accent);
+  font-size: 1.05rem;
+}
+.og-audio-meta {
+  font-size: var(--og-size-small);
+  color: var(--og-ink-muted);
+}
+.og-audio-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--og-space-sm);
+}
+.og-audio-controls button {
+  font-family: var(--og-font-headline);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--og-ink);
+  background: transparent;
+  border: 1px solid var(--og-rule);
+  border-radius: var(--og-radius-sm);
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+.og-audio-controls button:hover,
+.og-audio-controls button:focus-visible {
+  border-color: var(--og-yellow);
+  outline: none;
+}
+.og-audio-controls button:focus-visible {
+  outline: 2px solid var(--og-yellow);
+  outline-offset: 2px;
+}
+.og-audio-play {
+  min-width: 4.5rem;
+}
+.og-audio-seek {
+  flex: 1 1 8rem;
+  accent-color: var(--og-yellow);
+  min-width: 6rem;
+}
+.og-audio-seek:focus-visible {
+  outline: 2px solid var(--og-yellow);
+  outline-offset: 2px;
+}
+.og-audio-time {
+  font-family: var(--og-font-mono);
+  font-size: var(--og-size-small);
+  color: var(--og-ink-muted);
+  white-space: nowrap;
+}
+.og-audio-links {
+  margin-top: var(--og-space-sm);
+  font-size: var(--og-size-small);
+}
+.og-audio-links a {
+  color: var(--og-link-onpanel);
+}
+.og-audio-fold {
+  margin-top: var(--og-space-sm);
+  border-top: 1px solid var(--og-rule);
+  padding-top: var(--og-space-sm);
+}
+.og-audio-fold > summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--og-font-headline);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  color: var(--og-accent);
+}
+.og-audio-fold > summary::-webkit-details-marker {
+  display: none;
+}
+.og-audio-fold > summary::before {
+  content: "+";
+  font-size: 1.15rem;
+  line-height: 1;
+  width: 1rem;
+  text-align: center;
+}
+.og-audio-fold[open] > summary::before {
+  content: "\2212";
+}
+.og-audio-fold-body {
+  margin-top: var(--og-space-sm);
+  font-family: var(--og-font-accent);
+}
+.og-audio-ts {
+  font-family: var(--og-font-mono);
+  font-size: 0.78rem;
+  color: var(--og-yellow);
+  background: transparent;
+  border: none;
+  padding: 0 0.35rem 0 0;
+  cursor: pointer;
+}
+.og-audio-ts:hover {
+  text-decoration: underline;
+}
+.og-audio-ts:focus-visible {
+  text-decoration: underline;
+  outline: 2px solid var(--og-yellow);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.og-audio-fold > summary:focus-visible {
+  outline: 2px solid var(--og-yellow);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.og-audio-more-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--og-space-sm);
+}
+.og-audio-more-list a {
+  color: var(--og-link-onpanel);
+}
+.og-audio-tag {
+  display: inline-block;
+  font-family: var(--og-font-headline);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.65rem;
+  color: var(--og-ink-muted);
+  border: 1px solid var(--og-rule);
+  border-radius: var(--og-radius-pill);
+  padding: 0.05rem 0.5rem;
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+
+/* ---- Journey progress: a thin rail that fills as the reader travels -----
+   Markup contract: <div class="og-journey-progress" aria-hidden="true"></div>
+   fixed at the top of <body>; a small script sets width as scroll progress. */
+.og-journey-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--og-red-deep), var(--og-yellow));
+  box-shadow: 0 0 8px rgba(255, 214, 92, 0.5);
+  z-index: 200;
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+@media (prefers-reduced-motion: reduce) {
+  .og-journey-progress {
+    transition: none;
+  }
+}

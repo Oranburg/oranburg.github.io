@@ -1,0 +1,11 @@
+// oranburg.law hub (Astro static build) served as Worker static assets.
+// Preview lives at hub-preview.<account>.workers.dev; the production route
+// stays unset until Seth's cutover gate.
+{
+  "name": "hub-preview",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

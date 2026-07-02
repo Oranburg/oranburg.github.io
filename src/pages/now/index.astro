@@ -1,9 +1,24 @@
 ---
+import fs from "node:fs";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+// The /now page's source of truth stays at now/index.html, which the lawj
+// now pipeline (audit / refresh / trim) writes. This page reads it at build
+// time, so the pipeline needs no retargeting.
+const raw = fs.readFileSync("now/index.html", "utf8");
+const m = raw.match(/^---\n[\s\S]*?\n---\n([\s\S]*)$/);
 const buildMonth = new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" });
-const body = "\n<div class=\"hub-intro\">\n  <h1>Now</h1>\n  <p>What I'm working on this month. This page updates when the work changes (a <a href=\"https://nownownow.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">/now</a> page in the Derek Sivers tradition). Last updated __BUILD_MONTH__.</p>\n</div>\n\n<section class=\"now-section\">\n  <h2>Writing</h2>\n  <ul>\n    <li><strong>Business Associations: Law in Theory and Practice</strong> (Aspen Press, forthcoming 2027). Converting the manuscript to DOCX and working through the pre-submission polish. Companion site at <a href=\"https://oranburg.law/BA/\">oranburg.law/BA</a>.</li>\n    <li><strong>Legitimate University Governance</strong> (Dartmouth Law Review, forthcoming). Working through the Word accept/reject pass on the editorial revision before returning to the journal.</li>\n    <li><strong>An Informed, Independent Bar</strong> (Mercer Law Review, forthcoming). Drafting the full manuscript toward a late-August submission deadline. The article argues that the bar-licensing pipeline selectively chills protected speech and that <em>Speiser v. Randall</em>'s burden-shifting doctrine reaches it.</li>\n    <li><strong>Architects of the Void</strong>. Completing physical-source verifications on a law-review essay on the entrepreneurial lawyer as sub-creator in the Catholic intellectual tradition, then submitting.</li>\n  </ul>\n</section>\n\n<section class=\"now-section\">\n  <h2>Teaching</h2>\n  <ul>\n    <li>Preparing courses for the August start at Columbus School of Law, Catholic University of America. The Law and Entrepreneurship Program's 2026-27 year theme is <em>Entrepreneurship: Curing Poverty</em>, and the curriculum design is running in parallel with the course prep.</li>\n  </ul>\n</section>\n\n<section class=\"now-section\">\n  <h2>Programs and organizing</h2>\n  <ul>\n    <li>Designing the <em>Law and New Things</em> symposium with Robert T. Miller (Scalia Law, GMU). The symposium is scheduled for fall 2026 at CUA Columbus Law and will publish in the <em>Catholic University Law Review</em>. The panel architecture and participant list are the current decisions.</li>\n    <li>Drafting the Templeton application against a July 15 deadline. The proposed research connects a decade of iterative entrepreneurship pedagogy to a five-phase study in Athens, Jerusalem, and Rome.</li>\n  </ul>\n</section>\n\n<section class=\"now-section\">\n  <h2>Public engagement</h2>\n  <ul>\n    <li>Serving on the New Hampshire Commission to Study Stable Tokens.</li>\n    <li>Two short essays on artificial intelligence, Jewish text, and Catholic social thought are out with editors. Both turn on the same question: what does older doctrine about responsibility for created things say about who answers for what an AI does.</li>\n  </ul>\n</section>\n\n<section class=\"now-section\">\n  <h2>Side projects</h2>\n  <ul>\n    <li>The <a href=\"https://oranburg.law/BA/RUP\">Knight RUP restoration</a>: a crowdsourced cleanup of Frank Knight's <em>Risk, Uncertainty and Profit</em> (1921), aiming to produce the canonical free digital edition.</li>\n    <li>Companion sites for <a href=\"https://oranburg.law/K/\">Contract Law</a>, <a href=\"https://oranburg.law/BA/\">Business Associations</a>, and <a href=\"https://oranburg.law/safety-machine/\">Judgment Proof</a>.</li>\n  </ul>\n</section>\n\n<section class=\"now-section\">\n  <h2>Reading and thinking</h2>\n  <p>Maimonides on the two purposes of law and the highest form of charity. Pope Leo XIV's <em>Magnifica Humanitas</em>. Aristotle on practical wisdom and the conditions under which a craftsman's judgment becomes a habit of excellence. The legal literature on entrepreneurship as vocation, and what it would mean for a law school's curriculum to take that seriously.</p>\n</section>\n";
+const body = (m ? m[1] : raw).replace('{{ site.time | date: "%B %Y" }}', buildMonth);
+if (/{[{%]/.test(body)) {
+  throw new Error("now/index.html grew Liquid this page cannot render; update src/pages/now/index.astro");
+}
 ---
 
-<BaseLayout title="Now" tagline="What I'm working on this month" description="A snapshot of Seth C. Oranburg's current projects, teaching, and writing, updated periodically." current="Now">
-  <Fragment set:html={body.replace("__BUILD_MONTH__", buildMonth)} />
+<BaseLayout
+  title="Now"
+  tagline="What I'm working on this month"
+  description="A snapshot of Seth C. Oranburg's current projects, teaching, and writing, updated periodically."
+  current="Now"
+>
+  <Fragment set:html={body} />
 </BaseLayout>
